@@ -3,12 +3,14 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
+import { DEV_NO_AUTH } from "@/lib/devauth";
 
 export default function Home() {
   const router = useRouter();
   const [checking, setChecking] = useState(true);
 
   useEffect(() => {
+    if (DEV_NO_AUTH) { router.replace("/dashboard"); return; }
     supabase.auth.getSession().then(({ data }) => {
       if (data.session) router.replace("/dashboard");
       else setChecking(false);

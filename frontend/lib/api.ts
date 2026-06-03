@@ -1,8 +1,10 @@
 import { supabase } from "./supabase";
+import { DEV_NO_AUTH } from "./devauth";
 
 const API = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
 
 async function authHeaders(): Promise<Record<string, string>> {
+  if (DEV_NO_AUTH) return { Authorization: "Bearer dev" };
   const { data } = await supabase.auth.getSession();
   const token = data.session?.access_token;
   return token ? { Authorization: `Bearer ${token}` } : {};

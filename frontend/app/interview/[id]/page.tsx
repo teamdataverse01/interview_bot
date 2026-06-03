@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import { apiGet, apiPost } from "@/lib/api";
+import { DEV_NO_AUTH } from "@/lib/devauth";
 import type { AnswerResponse, Evaluation, Message, Report, SessionDetail } from "@/lib/types";
 import { Scorecard } from "@/components/Scorecard";
 
@@ -24,8 +25,7 @@ export default function InterviewPage() {
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    supabase.auth.getSession().then(async ({ data }) => {
-      if (!data.session) { router.replace("/login"); return; }
+    async function load() {
       try {
         const d: SessionDetail = await apiGet(`/sessions/${id}`);
         setMessages(d.messages);
@@ -45,6 +45,11 @@ export default function InterviewPage() {
       } catch (e) {
         setError(e instanceof Error ? e.message : "Failed to load session.");
       }
+    }
+    if (DEV_NO_AUTH) { load(); return; }
+    supabase.auth.getSession().then(({ data }) => {
+      if (!data.session) { router.replace("/login"); return; }
+      load();
     });
   }, [id, router]);
 

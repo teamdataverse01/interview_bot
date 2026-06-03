@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import { apiGet, apiPost } from "@/lib/api";
+import { DEV_NO_AUTH } from "@/lib/devauth";
 import type { AppConfig, SessionListItem, StartResponse } from "@/lib/types";
 
 function Select({
@@ -45,9 +46,7 @@ export default function Dashboard() {
   const [mode, setMode] = useState("Coached");
 
   useEffect(() => {
-    supabase.auth.getSession().then(async ({ data }) => {
-      if (!data.session) { router.replace("/login"); return; }
-      setEmail(data.session.user.email ?? "");
+    async function load() {
       try {
         const [cfg, me, list] = await Promise.all([
           apiGet("/config"),
@@ -56,10 +55,17 @@ export default function Dashboard() {
         ]);
         setConfig(cfg);
         setCredits(me.credits);
+        setEmail(me.email ?? "");
         setSessions(list.sessions ?? []);
       } catch (e) {
         setError(e instanceof Error ? e.message : "Failed to load.");
       }
+    }
+    if (DEV_NO_AUTH) { load(); return; }
+    supabase.auth.getSession().then(({ data }) => {
+      if (!data.session) { router.replace("/login"); return; }
+      setEmail(data.session.user.email ?? "");
+      load();
     });
   }, [router]);
 
@@ -102,8 +108,13 @@ export default function Dashboard() {
         <div className="text-right text-sm">
           <p className="text-slate-300">{email}</p>
           <p className="text-slate-400">
-            Credits: <b className="text-sky-300">{credits ?? "…"}</b> ·{" "}
-            <button onClick={signOut} className="hover:text-slate-200 underline">Sign out</button>
+            Credits: <b className="text-sky-300">{credits ?? "…"}</b>
+            {!DEV_NO_AUTH && (
+              <>
+                {" · "}
+                <button onClick={signOut} className="hover:text-slate-200 underline">Sign out</button>
+              </>
+            )}
           </p>
         </div>
       </header>
