@@ -97,7 +97,19 @@ If you want real auth again:
    - Remove any custom Railway variable named `NIXPACKS_PATH`.
    - Keep only `NIXPACKS_NODE_VERSION=20` for Node selection.
    - Redeploy the frontend service.
+   - If it still fails, switch frontend Builder to Dockerfile and set Dockerfile path to `frontend/Dockerfile`.
 
 - If runtime says `Application failed to respond`:
    - Confirm frontend start command uses Railway `PORT` (this repo sets `npm run start -- -H 0.0.0.0 -p $PORT`).
    - Confirm backend `CORS_ORIGINS` exactly matches frontend domain.
+
+### Dockerfile fallback (frontend)
+
+This repo now includes `frontend/Dockerfile` and `frontend/.dockerignore`.
+
+Use this when Nixpacks keeps failing with internal variable errors:
+
+1. Frontend service -> Settings -> Build -> Builder = Dockerfile.
+2. Dockerfile path = `frontend/Dockerfile`.
+3. Keep frontend variables unchanged (`NEXT_PUBLIC_*` etc.).
+4. Redeploy frontend service.
