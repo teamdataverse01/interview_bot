@@ -17,9 +17,10 @@ from app.auth import User, resolve_user
 from app.config import settings
 from app.db import ping
 from app.evaluation import build_report, evaluate_answer
+from app.llm import LLMError
 from app.interviewer import next_turn
 from app.personas import get_persona, personas_payload
-from app.schemas import STAGE_META, SessionConfig, Stage
+from app.schemas import InterviewerTurn, STAGE_META, SessionConfig, Stage
 from app.state_manager import InterviewSession, rehydrate_session
 from app.taxonomy import config_payload
 
@@ -67,6 +68,36 @@ class AnswerBody(BaseModel):
 class CreditBody(BaseModel):
     user_id: str
     delta: int
+
+
+def _fallback_turn(engine: InterviewSession) -> dict:
+    stage = engine.state.stage
+    meta = STAGE_META[stage]
+    if stage == Stage.REVERSE_AND_CLOSE:
+        if engine.stage_is_exhausted():
+            return {"stage": int(stage), "stage_label": engine.stage_label, "lens": engine.state.lens, "question": "Thank you. That is all from me today.", "action": "close", "finished": True}
+        return {"stage": int(stage), "stage_label": engine.stage_label, "lens": engine.state.lens, "question": meta["seed"], "action": "probe", "finished": False}
+
+    if engine.can_advance():
+        engine.advance_stage()
+        next_meta = STAGE_META[engine.state.stage]
+        return {
+            "stage": int(engine.state.stage),
+            "stage_label": engine.stage_label,
+            "lens": engine.state.lens,
+            "question": next_meta["seed"],
+            "action": "advance",
+            "finished": False,
+        }
+
+    return {
+        "stage": int(stage),
+        "stage_label": engine.stage_label,
+        "lens": engine.state.lens,
+        "question": meta["seed"],
+        "action": "probe",
+        "finished": False,
+    }
 
 
 # --- meta ------------------------------------------------------------------------
@@ -131,14 +162,32 @@ def answer(session_id: str, body: AnswerBody, user: User = Depends(current_user)
     cand_msg_id = repo.add_message(session_id, "candidate", int(engine.state.stage), engine.state.lens, body.answer)
 
     # Evaluate it (always stored; surfaced inline only in Coached mode).
-    ev = evaluate_answer(persona, config, last_question, body.answer)
-    repo.add_evaluation(cand_msg_id, session_id, ev)
+    try:
+        ev = evaluate_answer(persona, config, last_question, body.answer)
+    except LLMError:
+        ev = None
+    if ev is not None:
+        repo.add_evaluation(cand_msg_id, session_id, ev)
 
     # Generate the next interviewer turn.
-    turn = next_turn(engine)
-    engine.record_interviewer(turn)
-    repo.add_message(session_id, "interviewer", int(engine.state.stage), turn.lens, turn.question)
-    repo.update_stage(session_id, int(engine.state.stage))
+    try:
+        turn = next_turn(engine)
+        engine.record_interviewer(turn)
+    except LLMError:
+        fallback = _fallback_turn(engine)
+        turn = InterviewerTurn(
+            question=fallback["question"],
+            action=fallback["action"],
+            lens=fallback["lens"],
+            competency="fallback",
+            rationale="LLM unavailable; using deterministic fallback turn.",
+        )
+        if fallback["action"] == "advance" and engine.state.stage < Stage.REVERSE_AND_CLOSE:
+            repo.update_stage(session_id, int(engine.state.stage))
+        repo.add_message(session_id, "interviewer", int(engine.state.stage), fallback["lens"], fallback["question"])
+    else:
+        repo.add_message(session_id, "interviewer", int(engine.state.stage), turn.lens, turn.question)
+        repo.update_stage(session_id, int(engine.state.stage))
 
     finished = engine.state.finished or turn.action == "close"
     report = None
@@ -155,7 +204,7 @@ def answer(session_id: str, body: AnswerBody, user: User = Depends(current_user)
         "action": turn.action,
         "finished": finished,
     }
-    if config.mode == "Coached":
+    if config.mode == "Coached" and ev is not None:
         resp["evaluation"] = asdict(ev)
     if report:
         resp["report"] = report
