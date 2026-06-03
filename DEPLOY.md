@@ -88,3 +88,16 @@ If you want real auth again:
 
 - New push to GitHub -> Railway auto-rebuilds services.
 - Any change to `NEXT_PUBLIC_*` requires frontend rebuild (Railway does this automatically).
+
+---
+
+## Troubleshooting (Railway)
+
+- If build fails with `UndefinedVar: Usage of undefined variable '$NIXPACKS_PATH'`:
+   - Remove any custom Railway variable named `NIXPACKS_PATH`.
+   - Keep only `NIXPACKS_NODE_VERSION=20` for Node selection.
+   - Redeploy the frontend service.
+
+- If runtime says `Application failed to respond`:
+   - Confirm frontend start command uses Railway `PORT` (this repo sets `npm run start -- -H 0.0.0.0 -p $PORT`).
+   - Confirm backend `CORS_ORIGINS` exactly matches frontend domain.
