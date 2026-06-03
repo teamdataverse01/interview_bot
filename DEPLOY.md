@@ -100,7 +100,7 @@ If you want real auth again:
    - If it still fails, switch frontend Builder to Dockerfile and set Dockerfile path to `frontend/Dockerfile`.
 
 - If runtime says `Application failed to respond`:
-   - Confirm frontend start command is `npm run start -- -H 0.0.0.0 -p 3000`.
+   - Confirm frontend start command is `sh -c 'npm run start -- -H 0.0.0.0 -p ${PORT:-3000}'`.
    - Confirm backend `CORS_ORIGINS` exactly matches frontend domain.
 
 ### Dockerfile fallback (frontend)
@@ -111,5 +111,5 @@ Use this when Nixpacks keeps failing with internal variable errors:
 
 1. Frontend service -> Settings -> Build -> Builder = Dockerfile.
 2. Dockerfile path = `frontend/Dockerfile`.
-3. Keep frontend variables unchanged (`NEXT_PUBLIC_*` etc.).
+3. Keep frontend variables unchanged (`NEXT_PUBLIC_*` etc.), and do not hardcode a conflicting `PORT` value.
 4. Redeploy frontend service.
