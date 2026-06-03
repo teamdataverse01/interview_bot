@@ -100,7 +100,7 @@ If you want real auth again:
    - If it still fails, switch frontend Builder to Dockerfile and set Dockerfile path to `frontend/Dockerfile`.
 
 - If runtime says `Application failed to respond`:
-   - Confirm frontend start command uses Railway `PORT` (this repo sets `npm run start -- -H 0.0.0.0 -p $PORT`).
+   - Confirm frontend start command is `npm run start -- -H 0.0.0.0 -p 3000`.
    - Confirm backend `CORS_ORIGINS` exactly matches frontend domain.
 
 ### Dockerfile fallback (frontend)
