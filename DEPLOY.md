@@ -1,88 +1,90 @@
-# Deploying to Railway (two services, one project)
+# Deploying to Railway (No Sign-In Mode)
 
-The repo is a monorepo: **`backend/`** (FastAPI) and **`frontend/`** (Next.js). On Railway you
-create **two services in one project**, each pointing at its own folder. Secrets live as Railway
-service variables — never committed (`.env` is git-ignored).
+This repo is a monorepo with two services:
 
-Order matters: **deploy the backend first**, grab its public URL, then build the frontend with that
-URL baked in (Next.js `NEXT_PUBLIC_*` vars are build-time).
+- `backend/` (FastAPI)
+- `frontend/` (Next.js)
 
----
+On Railway, create two services in one project, each with its own root directory.
 
-## 0. Push the repo to GitHub (one time)
-
-```bash
-git init
-git add .
-git commit -m "Dataverse AI Interview Coach — M1-M5"
-gh repo create dataverse-interview-bot --private --source=. --push   # or create on github.com and push
-```
-
-`.env`, `frontend/.env.local`, `boss_doc.txt`, and `temp.wav` are git-ignored — they will NOT be
-pushed. You'll re-enter the secrets as Railway variables below.
+Deploy order matters: deploy backend first, then frontend with `NEXT_PUBLIC_API_URL` set to backend URL.
 
 ---
 
 ## 1. Backend service (FastAPI)
 
-1. Railway → **New Project → Deploy from GitHub repo** → pick the repo.
-2. On the created service → **Settings → Root Directory** = `backend`.
-3. **Settings → Networking → Generate Domain** (note the URL, e.g. `https://api-xxxx.up.railway.app`).
-4. **Variables** → add:
+1. Railway -> New Project -> Deploy from GitHub repo -> pick this repo.
+2. Open backend service -> Settings -> Root Directory = `backend`.
+3. Settings -> Networking -> Generate Domain (save it as `<backend-domain>`).
+4. Variables -> add:
 
    ```
-   APP_ENV=production
+   APP_ENV=development
    LLM_PROVIDER=mistral
    MISTRAL_API_KEY=...
    GROQ_API_KEY=...
    GEMINI_API_KEY=...
    OPENROUTER_API_KEY=...
-   SUPABASE_URL=https://ugdefuwhfhdpvppxltqc.supabase.co
+   SUPABASE_URL=https://<your-project>.supabase.co
    SUPABASE_ANON_KEY=sb_publishable_...
    SUPABASE_SERVICE_KEY=sb_secret_...
-   DATABASE_URL=postgresql://postgres.ugdefuwhfhdpvppxltqc:<password>@aws-1-eu-west-2.pooler.supabase.com:6543/postgres
+   DATABASE_URL=postgresql://postgres.<ref>:<password>@<host>:6543/postgres
    CORS_ORIGINS=https://<frontend-domain>.up.railway.app
    ```
-   (Set `CORS_ORIGINS` after step 2 of the frontend, once you know its domain. Until then leave it `*`.)
 
-   Railway auto-detects Python from `requirements.txt`; `backend/railway.toml` runs
-   `uvicorn app.main:app --host 0.0.0.0 --port $PORT` and health-checks `/health`.
-5. Verify: open `https://<backend-domain>.up.railway.app/health` → `{"status":"ok","db":true,...}`.
+   Notes:
 
-> The DB schema is already applied (you ran `python -m db.migrate`). To re-run against a fresh DB,
-> run that command locally once with `DATABASE_URL` set.
+   - `APP_ENV` must be non-production for no-sign-in mode (`Bearer dev`) to work.
+   - If frontend domain is not known yet, temporarily set `CORS_ORIGINS=*`, then update later.
+
+5. Verify backend health:
+   - `https://<backend-domain>.up.railway.app/health` should return `{"status":"ok", ...}`.
 
 ---
 
 ## 2. Frontend service (Next.js)
 
-1. Same Railway project → **New → GitHub repo → same repo** (creates a second service).
-2. **Settings → Root Directory** = `frontend`.
-3. **Settings → Networking → Generate Domain** (note it, e.g. `https://app-xxxx.up.railway.app`).
-4. **Variables** → add (these are baked at build, so set them BEFORE the first build):
+1. In the same Railway project -> New -> GitHub repo -> select the same repo (creates second service).
+2. Frontend service -> Settings -> Root Directory = `frontend`.
+3. Settings -> Networking -> Generate Domain (save as `<frontend-domain>`).
+4. Variables -> add BEFORE first build:
 
    ```
-   NEXT_PUBLIC_SUPABASE_URL=https://ugdefuwhfhdpvppxltqc.supabase.co
-   NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=sb_publishable_...
    NEXT_PUBLIC_API_URL=https://<backend-domain>.up.railway.app
+   NEXT_PUBLIC_DEV_NO_AUTH=true
+   NEXT_PUBLIC_SUPABASE_URL=https://<your-project>.supabase.co
+   NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=sb_publishable_...
+   NIXPACKS_NODE_VERSION=20
    ```
-5. Go back to the **backend** service and set `CORS_ORIGINS` to this frontend domain, then redeploy
-   the backend.
-6. Open the frontend domain → sign up → start an interview.
+
+   Notes:
+
+   - `NEXT_PUBLIC_DEV_NO_AUTH=true` skips login UI and routes users directly into the app.
+   - Supabase public vars can stay configured even when sign-in is bypassed.
+   - `NIXPACKS_NODE_VERSION=20` forces Railway/Nixpacks to build with Node 20+, which Next.js requires.
+
+5. Go back to backend and set:
+
+   ```
+   CORS_ORIGINS=https://<frontend-domain>.up.railway.app
+   ```
+
+6. Redeploy backend.
+7. Open frontend URL -> app should open without sign-in -> start interview from dashboard.
 
 ---
 
-## 3. Supabase auth setting (important)
+## 3. Optional: Re-enable Sign-In Later
 
-In Supabase → **Authentication → Sign In / Providers → Email**: turn **off "Confirm email"** for a
-frictionless signup (otherwise users must click an email link before they can log in). Supabase also
-rejects fake domains (`example.com`); use real-looking emails.
+If you want real auth again:
 
-Add your Railway frontend domain under **Authentication → URL Configuration → Site URL / Redirect URLs**.
+1. Frontend: set `NEXT_PUBLIC_DEV_NO_AUTH=false` and redeploy.
+2. Backend: set `APP_ENV=production` and redeploy.
+3. Configure Supabase Auth URL settings and providers.
 
 ---
 
-## Redeploys
+## Redeploy Behavior
 
-Push to GitHub → Railway auto-rebuilds both services. If you change a `NEXT_PUBLIC_*` value, the
-frontend must rebuild (Railway does this automatically on a variable change or new commit).
+- New push to GitHub -> Railway auto-rebuilds services.
+- Any change to `NEXT_PUBLIC_*` requires frontend rebuild (Railway does this automatically).
