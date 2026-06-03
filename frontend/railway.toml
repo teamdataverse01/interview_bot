@@ -7,7 +7,7 @@ builder = "nixpacks"
 
 [deploy]
 startCommand = "npm run start -- -H 0.0.0.0 -p 3000"
-healthcheckPath = "/"
+healthcheckPath = "/health"
 healthcheckTimeout = 100
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 3
