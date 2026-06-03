@@ -1,11 +1,9 @@
 import { supabase } from "./supabase";
 import { DEV_NO_AUTH } from "./devauth";
 
-const API = (process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000").replace(/\/+$/, "");
-
 function buildUrl(path: string): string {
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
-  return `${API}${normalizedPath}`;
+  return `/api${normalizedPath}`;
 }
 
 async function authHeaders(): Promise<Record<string, string>> {
