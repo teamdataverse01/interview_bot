@@ -1,0 +1,314 @@
+Speaker 1: Hello, good afternoon. Good morning, how are you? I'm doing well. Thank you, how are you?
+Speaker 1: I'm doing all right. Anyway, how do I pronounce your name? I don't want to but you're at Timmy. Timmy.
+Speaker 1: Yes, okay. I'm Sheethal. Nice to meet you, you know. So I, yeah, I just kind of, I think, do you just meet with Andrew? I did.
+Speaker 1: Okay, cool. Hopefully that went well. This role like works super close to security as you probably.
+Speaker 1: Okay. I already know. So yeah, so he's like one of the key stakeholders for you.
+Speaker 2: Cool. Well, I'm Sheethal. I've seen your commercial council. I'm located in the Bay Area. I've been at Strava for almost three years now.
+Speaker 2: And I work really closely with this role, you know, sort of from the perspective of like the commercial perspective.
+Speaker 2: So like I often times will go to this person for, you know, advice on and their expertise on like privacy components and commercial agreements, partnerships, API,
+Speaker 2: and stuff like that, just to kind of get, you know, as it as my like sort of partner in this and then also like as we're working through things like DPAs with key partners or vendors or things like that.
+Speaker 2: This role is kind of responsible for that piece of the commercial agreement. So yeah, so that's kind of how I work with this role.
+Speaker 1: Um, are you located in the Bay Area or I am? Oh, cool. Are you like, are you in the East Bay, San Francisco? I'm in Mountain View.
+Speaker 1: Okay. Okay. Okay. Okay. I'm in the East Bay. So I was like a little bit like, you know, I'm biased.
+Speaker 1: I lived in Mountain View like several jobs ago, uh, worked in, uh, Palo Alto at Pilsbury and then, um, a lived in Mountain View just because I've never, I'd never lived in that part of the Bay before.
+Speaker 1: Yeah.
+Speaker 1: Sorry. Oh, it was a, I was looking to ask if you liked it. Just, yeah.
+Speaker 2: Well, like, empathy, um, but also like the thing that happened was I moved into this apartment complex.
+Speaker 2: Um, not knowing that the apartment complex next door was getting renovated and built.
+Speaker 2: So there was constant construction all year and I was like, yeah, I'm ready to leave.
+Speaker 2: Yeah. And it's been done and and I also moved there right before COVID.
+Speaker 2: So I got this, you know, small, one bedroom apartment with my partner thinking, oh, yeah, this will be fine because we've both got to work.
+Speaker 1: And then we were sharing this apartment in COVID and I was like, all right.
+Speaker 1: I've had, I've had, so I don't really feel like I experienced it.
+Speaker 1: Very beautiful because it was an unusual time. Yeah. How long have you been in Mountain View?
+Speaker 1: Um, it's coming up to a year and a couple days. I just moved to Mountain View actually.
+Speaker 1: I still live in San Jose, but prior to that, I still live in Ashikago.
+Speaker 2: Gotcha. Yeah.
+Speaker 2: Wow. Shikago, that's, I know.
+Speaker 2: I'm not really in Shikago. Did you grow up there?
+Speaker 2: No. So I went to grad school, like group in Nigeria and from ages.
+Speaker 2: Okay. Yes. Cool. Very cool. So you moved to a whole new country.
+Speaker 1: Yep. Yeah. San years ago. Okay. Cool.
+Speaker 1: So I have a few preset questions that I'm going to run through.
+Speaker 1: And then once we get through those, you can kind of, we can just chat and you can ask me any questions that you have.
+Speaker 1: I'm sure you have a lot of curiosity around the team and the role.
+Speaker 1: So, uh, let's just dive in.
+Speaker 2: Um, so the first question is, um, can you tell me about a time when you felt really strongly about a regulatory or compliance risk?
+Speaker 2: So much so that you felt you had no choice but to escalate it.
+Speaker 2: And I do realize there's, um, confidentiality issues. So if you need to admit names or general,
+Speaker 2: make it as general as possible, an example would be really helpful.
+Speaker 2: I appreciate that. When you say escalate, I want to make sure I understand it's that like escalates a leadership.
+Speaker 1: Um, what do we all like, so I want to make sure I understand.
+Speaker 1: Just something that came to you that you weren't, you couldn't make a call on because, um, you know, you were,
+Speaker 1: maybe you were advising them and like, this was like, there was a red flag for you, right?
+Speaker 1: Yeah, um, I can talk about, um, one that happened maybe a couple years ago where we, um,
+Speaker 1: an issue was reported about, um, sensitive data, the potential of sensitive data leak.
+Speaker 2: And so what had happened was people who were accessing that particular database were accessing it when they no longer needed to access it.
+Speaker 2: So that included people that had changed roles and people that had even left the company at the time.
+Speaker 2: Uh, still having still having active access.
+Speaker 2: It may not have been accessing based off of the log, but it was exposed to them.
+Speaker 2: And that situation was brought to my team at the time.
+Speaker 1: I was leading our compliance program.
+Speaker 1: And the first thing that I did was to evaluate like what the, you know, impact of the situation was an impact in the sense of like,
+Speaker 1: how many users are we talking about here?
+Speaker 1: And, um, what, what is the level of sensitivity of the data?
+Speaker 1: So having done that, um, I then went ahead to talk to the team about, you know,
+Speaker 2: some of the related risks that could happen. Like, you know, I mentioned at the beginning,
+Speaker 2: it wasn't that the data was hard to anything yet. It was just exposed.
+Speaker 2: And so we run a risk of that data being, you know, accessible to people who definitely didn't have, you know, need for that access.
+Speaker 2: And so once I started to have that conversation with like the teams, the engineers around that,
+Speaker 2: there were, you know, like, conversations around, oh, well, it's not prioritized right now.
+Speaker 1: We don't want to do that, but from a risk and regulatory standpoint, I knew the impact of that.
+Speaker 1: And so I had to escalate that to director level and escalating from the sense of allowing for prioritization.
+Speaker 1: So the purpose of the escalation was to ensure that we prioritized the activity more than anything else.
+Speaker 1: It was because again, the teams that I was doing, we didn't have a clear understanding of the impact of the situation.
+Speaker 1: And so I had to escalate that to make sure that we were, you know, providing resources, you know, like,
+Speaker 2: applicable, you know, implementation, you know, road maps to make sure that we're taking care of the situation.
+Speaker 2: And so that's an example of a situation that I had to escalate.
+Speaker 2: Because again, it would have been a quick fix where I would have just, like, applied our policy with these teams and say,
+Speaker 2: hey, like, this is what we're supposed to do this conduct like, yeah, or the, but it wasn't flying,
+Speaker 2: because teams were prioritizing that so I had to escalate to leadership.
+Speaker 1: Gotcha.
+Speaker 1: You know, that is, that is a tough decision to be put in.
+Speaker 1: Sorry, I'm just taking notes.
+Speaker 1: I hope you.
+Speaker 1: Yeah.
+Speaker 2: I'm looking at the screen on my cameras over here.
+Speaker 2: Okay.
+Speaker 2: So that sounds, that sounds like, yeah, pretty complex issue where it wasn't like, by the law,
+Speaker 2: but then you had to, like, make sure that it got done.
+Speaker 2: So I'm curious.
+Speaker 1: In this example, and maybe any other examples that come to mind,
+Speaker 1: can you describe your mental model for escalation?
+Speaker 1: How do you, you know, how do you think about cross-functional stakeholders fitting in?
+Speaker 1: And, you know, like, what you think about in terms of escalating?
+Speaker 1: I know you mentioned that teams weren't prioritizing, so maybe you can touch on that.
+Speaker 2: Yeah.
+Speaker 2: If I'm, and let me know if I'm answering your question.
+Speaker 2: If I'm not too free to just, like, jump in.
+Speaker 2: When I think about my mental model for escalation, I always like to treat things for
+Speaker 2: steel as a leader.
+Speaker 1: I necessarily don't want to escalate things until they have two, especially because, like, for
+Speaker 1: me, the way that I've built my compliance program, I've built them in a way that they can
+Speaker 1: solve for problems easily.
+Speaker 1: Right.
+Speaker 1: And I've worked most of the companies that I've worked at, actually,
+Speaker 2: bottoms up companies, where usually direction is expected from bottom up.
+Speaker 2: And so you typically go to your leaders and say, this is what we've decided, and then they can't
+Speaker 2: tell you a yes or no, but, like, it's typically don't look to leadership for direction.
+Speaker 2: For the companies I've worked at.
+Speaker 2: And so with that in mind, my usual mental model is, how can I solve this problem before escalating?
+Speaker 1: And what I mean by that is, at their resources, it within my purview that would allow me to
+Speaker 1: solve the problem at a cross-functional stakeholders that are built continuous partnership.
+Speaker 1: We talk and give you an example.
+Speaker 1: When I was working in a privacy work, we were dealing with lots and lots of, like, regulatory escalations,
+Speaker 1: because we were in an audience, like an immediate audience.
+Speaker 2: And what that meant was that we were getting requests almost every single day from the assessors
+Speaker 2: to provide certain things or to showcase certain things.
+Speaker 2: And so, as a result of that, there were obviously cases where, for example, you would expect that I would work with my leadership
+Speaker 2: to get something done, but I also needed I had legal counsel that could provide me the right direction
+Speaker 2: in terms of what can I be given out.
+Speaker 1: And so, it's really like fostering what resources I have within my purview, not just like documentations,
+Speaker 1: or even the people cross-functional stakeholders.
+Speaker 1: So, at the time, we had a very strong leadership partner, it's legal, I'm sorry, not leadership.
+Speaker 1: Legal partnership for that specific project.
+Speaker 1: And so, legal was always on ground to tell us, like, hey, this is what you should be providing to the assessors
+Speaker 2: from a legal standpoint.
+Speaker 2: This is what, so I worked very closely with them to ensure that we were in escalating things
+Speaker 2: and that only very high risk things that we collaborated on and that had agreed with legal,
+Speaker 2: we escalated upwards.
+Speaker 2: So, that's typically my, let me know if that answers your question.
+Speaker 1: Yeah, that does.
+Speaker 1: Are there any other, from your perspective, are there any other cross-functional stakeholders that, you know,
+Speaker 1: you work with besides legal that you think are critical to, again, as part of this model and, like, your work?
+Speaker 1: Oh, very much so, engineering is a very critical engineering and security, a very, very critical,
+Speaker 1: especially because most of the organizations are that worked in a product-based.
+Speaker 2: And the usually the situations involve data, use the data many times, and these teams are the ones that house the infrastructure.
+Speaker 2: And if we're going to implement any, you know, like, requirements, we have to, I've had to work with these teams to implement those requirements.
+Speaker 2: So, I specifically mentioned legal because usually when it's a regulatory issue, legal helps to define the scope of implementation.
+Speaker 2: However, when it comes to the implementation piece of it, I work with the security team.
+Speaker 2: Number one, one of the things I usually work with the security team is to ensure that we even think about the feasibility of the implementation of what we're asking to implement.
+Speaker 1: There have been many times where, for example, in my previous rule, I've brought something from the legal team to the security team, and they're like, our systems don't work like that.
+Speaker 1: We can't do encryption, for example, in this system, the wearing view to the encryption.
+Speaker 1: So, working with them to see what are some of the compromises, not compromises in general, but what are some of the trade-offs is a better word that we can make to ensure that we're implementing something,
+Speaker 1: and we're still meeting regulatory requirements, and also work very closely with engineering and product teams, that's what product managers.
+Speaker 1: Working with them very closely to help them understand what are the regulatory impacts on their products.
+Speaker 2: And yeah, so those are in the obviously like there's usually project managers, program managers that are usually, you know, like on-ground to support, and then one key team that we also work with is change management.
+Speaker 2: So in terms of that work, we work with a very structured change management team to help us evaluate some of the changes that we might be making us a result of some of the discussions.
+Speaker 2: Go for it.
+Speaker 1: Cool, that's amazing.
+Speaker 1: Okay, next question.
+Speaker 2: Can you describe, like, and again, like, you can be as general as you want.
+Speaker 2: Can you describe a time you're willing to take an uncomfortable regulatory or compliance risk?
+Speaker 2: Yeah, where it was like, you know, you were clearly you would take a risk, but like, you didn't feel great about it, but like, you know, you had to do it.
+Speaker 2: So typically, if I may add like a lot of the decision about making compliance risk usually doesn't lie, it's usually like very collaborative at the end of the day, so I can give an example.
+Speaker 2: There was a project that I was working on, and this was also relative to the assessors and part of what they had requested for was that we showed them evidence of how certain systems were deleted in data.
+Speaker 1: Now, the scope of that regulatory obligation itself was the US, however, the way our systems were structured, there was structured to, you know, take on data from like different locations.
+Speaker 1: These systems were built before the FTC or the GDPR, so they weren't any segregation around like, oh Europe data succeed or like, every all the data was there.
+Speaker 1: And so part of that was as we, you know, attended audit for implementation testing, they wanted us to be able to show within our systems, but the challenge with that was that we're going to be exposing data that was outside the regulatory scope to the assessors.
+Speaker 1: In my mind, that was a regulatory risk because it opened up to, it potentially would open us up to regulatory scrutiny.
+Speaker 1: However, we, I worked with the engineering team, for example, to think about what is the volume of the data that's outside of scope versus the volume of data that's inside of scope for the processes that were shared.
+Speaker 2: And then, number two, are there any quick data segregation practices that we can put in place, you know, that's to get this, you know, audits done.
+Speaker 2: So, for example, what I mean by that is, can we show certain tables, can we segregate international or foreign data from certain tables to make sure that only the tables, excuse me.
+Speaker 2: And I shouldn't regulatory data of US, we used that for the purpose of that exercise. Now, it was a very stringent exercise, engineers had to work like, you know, overnight to get some of these done.
+Speaker 2: But we had to take that risk, you know, that to be able to show, you know, that to be able to show the responsibility to the auditors at the time. Now, I want to make sure that this was not just my decision.
+Speaker 2: I remember very clearly, we had to escalate to legal, we had to work with legal to think about what would be the legal impact of showing those data.
+Speaker 1: And then if the assessors wanted to deep that further and say, because they had the chance to peak like samples, for example, like within your environment, so they could say like, you want to look at table one table two.
+Speaker 1: And then you had to be a gamble of like making sure that the tables that were presented weren't tables that were outside of the scope of that regulatory data.
+Speaker 1: So I would say that was one example that we had to remember.
+Speaker 1: Great.
+Speaker 1: Cool.
+Speaker 2: So if I'm summarizing it correctly, you had like an audit that was going on, you found this vulnerability and you were concerned that if the audit saw,
+Speaker 2: the vulnerability and the extent to the vulnerability, it could become a regulatory issue.
+Speaker 2: It wasn't necessarily regulatory, it wasn't necessarily vulnerability, it was really just so our systems were built in a way that it segregated data from different regions.
+Speaker 2: And so but that regulatory scope by itself was scope for the US only.
+Speaker 2: And so as engineers we had to find a way to be able to show within that system.
+Speaker 1: Because again, if we showed data of European, for example within that system, it violated their privacy rights as well.
+Speaker 1: So we only had to be showing data that was specific to the FTC scope, which is US based data.
+Speaker 1: And so the trade-off that we carried out there was to be able to quickly think about how can we segregate data for the purpose of that audit.
+Speaker 1: So thinking about, can we plug in, you know, US based data into a table that we then use for presentation of the audit.
+Speaker 1: That's it.
+Speaker 2: So just don't expose all the data.
+Speaker 2: Exactly.
+Speaker 2: Correct.
+Speaker 2: Got that.
+Speaker 2: Okay.
+Speaker 1: Okay. And I'm going my last question here.
+Speaker 1: How would you approach, and we've kind of talked through this in like other examples, but what I turned to thinking about Strava and our platform and our product.
+Speaker 1: I don't know how much, you know about the Strava product, but we are, you know, we're a fitness platform.
+Speaker 1: Ignore anything that I'm telling you that you're in now.
+Speaker 1: You know, web and app based and a lot of it is, you know, we are servicing the user, we're servicing a consumer.
+Speaker 2: We're collecting all this data, but we're trying to synthesize it in a way that one is compliant, but also like works for the user.
+Speaker 2: Right. We want people to subscribe and keep coming back and so we have to kind of balance those.
+Speaker 2: So, you know, thinking about the product, thinking about Strava users, how would you approach balancing what's legally required versus what's best for the Strava user?
+Speaker 2: Yeah.
+Speaker 2: And when we say what's legally required, are we talking about like based off of like some of the legal rights or privacy rights, things like that, and how we balance it.
+Speaker 1: What we provide, yeah.
+Speaker 1: Right.
+Speaker 1: When I think about so I would say like one, you know, principle of privacy by design is like privacy by design does not impede privacy by design does not impede user experience.
+Speaker 1: Right. Privacy by design is supposed to or privacy by design principles is supposed to help make user experience even better by protecting, you know, their data.
+Speaker 1: I think when I think about legal requirements versus user user needs the first thing I want to think about is number one, what are the things that kind of allow us to get the best experience on the product.
+Speaker 2: And what are the potential risks that could be associated with those experiences.
+Speaker 2: And so it's really, and this, another name for this, you can think about it as a DPI, for example.
+Speaker 2: I've worked with a lot of product teams a lot and product teams always have very fantastic ideas on how they should improve, you know, the experience of users, but in many cases we don't evaluate the risk.
+Speaker 2: So in order to make sure that we balance legal risk with user experience is thinking about what are all the different user experience, what are the privacy risk and idea ways for us to mitigate those risks.
+Speaker 2: Or the ways for us to transfer the risk in certain cases or the ways for us to just, you know, accept the risk.
+Speaker 1: Right, so let's say today, I'm just going to give this example if that's okay.
+Speaker 1: If I had what's trouble was interactive with this trouble, let's say that's trouble wanted to incorporate the feature into the app, for example, that says that as part of working out the one track hydration levels, for example.
+Speaker 1: And so you can potentially like hold you like when you're like at a certain point, even though you might not be feeling physically, but like, strawberries tracking your hydration level.
+Speaker 1: Now when you think about that, that's a very, you know, important, you know, you know, feature, for example.
+Speaker 1: But when you think about the legal implication of that, there is, there's a lot of like regulatory impact there that I can think about like he part, for example, because you're going to be tracking something that could potentially be healthy at that point.
+Speaker 2: But what I would say is in order to make sure that we're balancing what the legal requirement is versus what the user experience is is making sure that we're evaluating the risk that's associated with that feature.
+Speaker 2: For example, like if that data gets out, like again, I would just wrap this up by saying whatever user experience that we're providing to users.
+Speaker 2: Always a privacy control or a legal control that can allow us to reduce the legal impact to a large extent.
+Speaker 2: So it's taking a decision to say, do we want to implement that control in order to reduce the risk?
+Speaker 2: Or do we want to accept the risk by, you know, not implementing that control or, you know, transferring that risk to a different, like a third-party, for example.
+Speaker 1: Like I was reading recently that Strava has decided to make sure that they're not sharing, you know, data with 12 parties for use of A and all of that.
+Speaker 1: But again, haven't said that I think that would be my critical approach to just conduct the risk assessment on that.
+Speaker 1: Cool.
+Speaker 1: I think that's totally the right way.
+Speaker 1: Thank you.
+Speaker 2: Um, okay. That was all of my questions.
+Speaker 2: Yeah.
+Speaker 2: Well, we've got a, you know, a handful of minutes here.
+Speaker 2: So are there any questions I can answer for you?
+Speaker 2: Yeah.
+Speaker 1: I want to understand, like, what the role of legal is, versus the role of the privacy team is in your organization.
+Speaker 1: How do you all like interact together, what I do overlapped, what does that look like in practice?
+Speaker 1: Yeah.
+Speaker 1: So that's a good question. So how since I've been here, I started at the beginning of 2022.
+Speaker 1: It's evolved over time a little bit.
+Speaker 2: So privacy used to be separate.
+Speaker 2: We didn't, though, this role that we have now, um, didn't start till sometime after I had started to
+Speaker 2: We just had a DPO, which was separate to legal, but, like, worked, you know, in partnership, of course.
+Speaker 2: Okay.
+Speaker 2: But it was, like, just to completely separate, set up separate team.
+Speaker 1: Um, and then we, our DPO left, and this had been filled.
+Speaker 1: So this role basically came under the legal team.
+Speaker 1: So right now, and we're still rejuring this.
+Speaker 1: So over the last couple of years, we're the legal team, which was, you know, legal council, commercial product council.
+Speaker 1: Obviously.
+Speaker 2: And then privacy, this role was, um, as part of legal, and then we had the security component.
+Speaker 2: So you met with Andrew and Ash is also another person on security.
+Speaker 2: All of these three functions sat under legal.
+Speaker 2: So they all sat under the GC.
+Speaker 2: Um, what's happening now?
+Speaker 1: This role will still sit in legal.
+Speaker 1: So you'll be working pretty closely, still with the rest of us.
+Speaker 1: Um, but security is now going to be separate into, um, they're going to be reporting into the CTO.
+Speaker 1: We have a new chief technology officer.
+Speaker 1: They fit more into the engineering kind of world.
+Speaker 2: Um, but they'll still collaborate with this role and the legal role.
+Speaker 2: So with this role, um, I know I mentioned a little bit like how I work with this role.
+Speaker 2: Um, it's a very day-to-day, like, hitting up this person like, hey, I have this contract.
+Speaker 2: I think these are some privacy issues.
+Speaker 2: Can't take a look.
+Speaker 1: But also this role is approving, um, anything that has data, um, any kind of data share, um, in a commercial agreement.
+Speaker 1: So you're part of our CMS.
+Speaker 1: Um, you've got to approve that.
+Speaker 1: So that's from that perspective.
+Speaker 1: I work really closely with this person.
+Speaker 2: We have, like, kind of an open dialogue.
+Speaker 2: And then, um, this role also works with product council, which, you know,
+Speaker 2: it's exactly where you, you were talking about figuring out where privacy by design needs to be the implementation way.
+Speaker 2: But for us, we have been working our, we're working our way backwards, right?
+Speaker 2: Because, um, a lot of these things, like GDPR,
+Speaker 1: sort of, like, strawberries from a 2012 is the start.
+Speaker 1: So a lot of the product dated that.
+Speaker 1: So a lot of the, uh, work that was done in the last couple of years was,
+Speaker 1: bringing it into compliance with where we need to be.
+Speaker 1: And that's still part of where we are.
+Speaker 2: But also, um, kind of thinking through, uh, privacy is now more involved in the product discussions.
+Speaker 2: Kind of at the, at the ground level, um, um, you know, planning and whatnot.
+Speaker 2: So you have, like, a kind of an insight and you can make recommendations, right?
+Speaker 2: And so then you would work with product council and that respect.
+Speaker 2: Yeah.
+Speaker 1: And, um, this role used to be, we had a deep, uh, deputy G.C.
+Speaker 1: That was kind of, like, the manager for this role, that person is gone.
+Speaker 1: So I think this role now where we're going to report to our general council, Daniel.
+Speaker 1: So you'll be working directly with him on on the significant amount of processes and, um, compliance issues.
+Speaker 1: And then we've also got someone else to be working with is my counterpart in Ireland.
+Speaker 2: She, it, she's a data privacy and commercial attorney.
+Speaker 2: So you'll be working with her on regulatory issues, um, as well, or any DP issues,
+Speaker 2: you kind of referred to this role, um, for any advice.
+Speaker 2: So that's kind of how you be working with that.
+Speaker 2: And I think that should be roughly everybody on the team.
+Speaker 1: So you're really much a part of the team.
+Speaker 1: Got it, got it.
+Speaker 1: Thank you.
+Speaker 1: That's really helpful.
+Speaker 1: What would you, how would you describe the innovative culture here?
+Speaker 2: How, like, what does that look like?
+Speaker 2: Yeah.
+Speaker 2: We, we are not as, so we're start up, but we're not like a new start up, right?
+Speaker 2: We're like a late stage start up.
+Speaker 2: So there is always, there used to be more and maybe a little less now, thankfully, um, but like,
+Speaker 1: flying the airplane before it's built a little bit.
+Speaker 1: Um, so innovation is very much something that our team is looking to and, and with the new CEO,
+Speaker 1: this year, they are starting to push the envelope more.
+Speaker 1: So that is, um, that is a challenge for this, this role or just for legal and general, right?
+Speaker 1: Um, trying to keep up with these new ideas.
+Speaker 2: But I wouldn't say, like, the evolution is such that, or the innovation is such that, like, um,
+Speaker 2: you know, we're not kept in the loop or it's not easy to follow.
+Speaker 2: I mean, we've, we've now recently launched our AI capabilities.
+Speaker 2: Privacy was very much a part of our product council was a part of that.
+Speaker 2: Um, so we don't, we don't change that much, but when we do generally launch features by,
+Speaker 1: I feel like they, they aim for middle of the year because that's when we have our, like, banner events, um,
+Speaker 1: for the public. So, you know, the first year is pretty heavy on the innovations.
+Speaker 1: Yeah, that's helpful. Thank you.
+Speaker 1: Yeah, that's all the questions that I had.
+Speaker 1: Okay, great. Um, well, if you have any other questions that come up, um,
+Speaker 2: feel free to reach out to your recruiter and, and they'll connect us, um, you know, you can email me and then, uh,
+Speaker 2: uh, yeah, like, uh, I think, you know, as your thing, you know,
+Speaker 2: do things and all you've got things getting coming up. So, just feel free to, to ping us, um,
+Speaker 2: and I'd be happy to answer anything. Yeah, absolutely.
+Speaker 2: Thank you so much.
+Speaker 1: I'm happy to meet you.
+Speaker 1: Nice to meet you.
+Speaker 1: Nice to meet you to have a good rest of your week and have a good rest of your week and have a good rest of your week.
+Speaker 1: And have a good rest of your week and have a good rest of your week.
+Speaker 1: Thank you, thank you.
+Speaker 2: See you. Bye bye.
+Speaker 2: Bye bye.
+Speaker 1: Oh, my gosh.
+Speaker 1: Oh, my gosh.

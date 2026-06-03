@@ -1,0 +1,345 @@
+Speaker 1: for the introduction. So, I started my career in network engineering, started as a tech support
+Speaker 1: engineer and was helping an internationalist provider company implement security practices in our
+Speaker 1: network and let teams over there as well. And then from there transition fully into data security
+Speaker 1: and data privacy compliance at the late where I help to lead transformational implementation of programs,
+Speaker 1: including data privacy programs, security programs and I also did lead teams there as well.
+Speaker 2: In the meta I also started the data privacy program that implemented for the FCC mandate.
+Speaker 2: I also did some work around data privacy for user products and also employee data.
+Speaker 2: So, I have a book of that experience and led heavy projects out there. Currently I'm at the
+Speaker 2: data resolutions as in monitoring part now where I lead it seems over 50 people and we implement AI
+Speaker 2: compliance, workflows for organizations for specifically towards data protection and data privacy.
+Speaker 2: Great. Well that all sounds great. So, let me maybe transition a little bit and we'll just
+Speaker 2: kind of ask you some questions. Yeah. So, you know, one of the key things with Netflix
+Speaker 2: and the way that we operate here is we have, you know, what we just referred to as like the Netflix culture,
+Speaker 2: which is kind of this makeup of many different types of values and the way that we show up at work
+Speaker 2: in the skills we have and whatnot. And part of that is about people over process and also context
+Speaker 1: not control. And so what that translates into is the way that we build context, the way that we learn
+Speaker 1: about like what people are working on, the way that we plan on collaborative efforts is very fluid.
+Speaker 1: There's not like a standard process out the company that everybody follows and all of that.
+Speaker 1: Very much around, you know, being able to navigate kind of the differences team to team or or
+Speaker 1: to or depending on what you're working on. So, in that, there's also a lot of freedom on what people decide
+Speaker 2: to work on, right? So, they may find things, they may not find things, right? So, if you were to join,
+Speaker 2: or, you know, maybe in your past, how do you make sure that your team is working on what you would
+Speaker 2: consider the right things? Yeah, so, um, I think one of the things that I've learned to do,
+Speaker 2: especially in very innovative environments, is to set scope, goals and objectives ahead of time,
+Speaker 2: and make sure that that's very clear, not just to, um, my team, but also to stakeholders,
+Speaker 1: especially because a lot of work that's going to be done and a lot of things that
+Speaker 1: trigger different types of work and innovative environments, not just within the team,
+Speaker 1: but across many stakeholder groups, whether also within or especially for the privacy organization to
+Speaker 1: support. So, part of that is making sure that as a team, we're aligned on the goals and objectives
+Speaker 1: of the organization for our specific department, what the expected metrics, success metrics look like,
+Speaker 2: what the expected outcomes look like for our organization, and making sure there is a communication,
+Speaker 2: clear communication of that, and that we can translate that into clear deliverables,
+Speaker 2: clear task, and clear outcomes. And that's primarily how I make sure that the team is working on
+Speaker 2: things that are important, and also making sure that there is alignment with our stakeholders, as far as
+Speaker 2: what we're looking so achieve with specific period of time. And so, how do you, how do you
+Speaker 1: stay aligned with like the direction of the company, you know, how do you, um, especially in like a
+Speaker 1: very fast-paced environment? Absolutely. So, I've had the opportunity to work in very fast-paced
+Speaker 1: environment, especially with companies like Meta, where things change consistently, and another thing
+Speaker 1: that causes change also is the rapidly regulatory landscape, rapidly changing regulatory landscape.
+Speaker 1: What's most important is that we're hinged on goals and objectives that have already been set.
+Speaker 2: Now, where there are changes or where there are, um, you know, triggers that allow us to people in a
+Speaker 2: different direction. We want to measure, I would usually carry out a risk assessment of what the impact
+Speaker 2: of that change would look like, and also how we rule out the change. So, I've had the opportunity to
+Speaker 2: think about really not change from a prioritization standpoint, where we're evaluating, if we implement
+Speaker 2: the full change, what does how does that impact our organization versus if we implemented changes in phases,
+Speaker 1: for example. And so, in order to make sure that we're staying on track, number one is making sure
+Speaker 1: that we also proactive the, um, identify what changes could occur. And that's a very important part of
+Speaker 1: working with stakeholders, like, so I can give you an example. In our organization, there was a time
+Speaker 1: where employee data wasn't necessarily the biggest focus area for regulators, as far as data privacy was concerned.
+Speaker 1: However, when we started working on legal team, because we had offices in, you know, um, we had presence
+Speaker 2: in the UK. We began to hear, um, some sort of signals that those regulators were soon start focusing
+Speaker 2: on employee data. And so, we started to ramp up how to think about our employee data privacy requirements.
+Speaker 2: And true to that, couple years down the line, employee data was something that the EU started to focus
+Speaker 2: on, and even in New York, for example, the AI laws specific towards employee data. So, again,
+Speaker 2: it's really just been proactive about the changes. Number two, making sure that we're building
+Speaker 1: scalable programs that kind of accommodate changes even if need be. Making sure that we're communicating
+Speaker 1: those changes immediately. And then doing risk assessment, so I identified the, um, impact of those
+Speaker 1: changes and making sure that it doesn't vary from our goals and objectives. I'll be each strategies
+Speaker 1: might change over time. Okay. And then I mean, you mentioned a few, you didn't there, but like,
+Speaker 1: how do you define and measure the success of your team for something like that? And when you say,
+Speaker 2: measure the success of our team, is it really deep to change or just really deep to program implementation?
+Speaker 1: Um, I think maybe a program implementation that also has to change over time.
+Speaker 1: Yeah. So, one of the ways that we measure that, um, in terms of success metrics is how much impact
+Speaker 1: from a negative standpoint changes close to our team, and how quickly we are able to implement changes.
+Speaker 1: And so part of that is thinking about how our team is adapting to it changing environment. And so part
+Speaker 2: of the success metrics would look like timelines, for example, when we've had, you know, um, certain
+Speaker 2: types of changes in time past, how quickly were we able to implement, how nimble was the team, and how
+Speaker 2: we improving over time within that, you know, time based metric. So that's one of that. And second one is how
+Speaker 2: to change these impacts our overall workflows. And what that looks like is when there are
+Speaker 2: changes, how does it not just impact our team, but how does it impact our stakeholders? So changing
+Speaker 1: impacts is one thing. And then the last thing is feedback. Feedback from the people who are generally
+Speaker 1: impacted by changes. Again, you know, I see that I like to the way that I, um, you know, communicate to
+Speaker 1: my team about changes is changes not about the, it just means growth. And so the ability to communicate
+Speaker 1: change and implement change in a way that people start to feel comfortable about the changes,
+Speaker 1: especially without stakeholder groups, is one way we measure some of those metrics. So we get feedback
+Speaker 2: from our partners, how did that change impact you, how were you able to, you know, pivot with our
+Speaker 2: team in partnership to implement some of those changes. So just to recap the three changes, number one
+Speaker 2: timelines require timelines that it takes to, you know, pivot on changes, number two impacts of changes on our
+Speaker 2: entire workflow and number three feedback from our stakeholders. And you know, it's a bonus one
+Speaker 2: would just be as an organization, how is our change impacting or personally effectiveness of the organization
+Speaker 1: and the business goals of the organization as a whole? Okay, yeah, it sounds good. So I'm going to change
+Speaker 1: gears just a little bit. Sorry, I'm having my family is having some things in their personal life.
+Speaker 1: Oh, so I apologize that my phone is like dinging and stuff. I'm just trying to navigate,
+Speaker 1: you know, we're stopping personal stuff. I'm so sorry about that. I hope things go well. Okay,
+Speaker 1: it's all good. So let's see. So one of the, you know, you mentioned a lot about kind of
+Speaker 2: aligning goals and thinking about, you know, scope goals and objectives ahead of time. How do you think
+Speaker 2: about, like, how do you approach developing a strategy for your team, right? So and can you maybe
+Speaker 2: provide an example of where you had like a successful strategy you implemented in the past,
+Speaker 2: related to your team's performance? Okay. And so just to make sure I can provide you the answer that
+Speaker 2: you're looking for. So when you say strategy for my team, it's that strategy for how the team
+Speaker 1: implemented project or strategy for team performance and team growth. I want to make sure I
+Speaker 1: answer it. I want to say the latter. Okay. The latter. Yeah. So typically my biggest thing is
+Speaker 1: communication. Clear communication and transparent communication. So the first thing I do when I get on
+Speaker 1: the team is I do one-on-one. All the time, especially for direct reports. That's just something that I do.
+Speaker 1: And the one-on-one is not just to show that it's not just for the, you know, for the metrics.
+Speaker 2: It's really to understand what people's goals are, what their expectations are, what their long-term
+Speaker 2: short-term goals look like. Now, once I understand that, I begin to think about how I can support
+Speaker 2: those long-term goals, either by making sure that these folks are engaging in projects that allow them
+Speaker 2: to meet or to achieve their long-term goals and success requirements. And then basically,
+Speaker 2: based off of that, I begin to give certain success metrics that would allow them to reach that goal.
+Speaker 1: So we have a metrics that allows us to build certain milestones that are associated with your goals
+Speaker 1: and strategies. So we don't leave your goals in the air. We implement milestones. Sometimes
+Speaker 1: I've implemented three, you know, when I was consulting, for example, consulting was a bit different from
+Speaker 1: in-house. There were very, like, short-term projects. So in those cases, sometimes goals are set for,
+Speaker 1: like, milestones are set for, like, one month. In other cases, six months, three months, milestone.
+Speaker 2: And then we measure and monitor. Once we set those milestones. So measure, how did you do against the last
+Speaker 2: milestone? And then we continue to monitor and then give feedback. One of the things that I encourage,
+Speaker 2: feedback is not just one way for me. It's both sides. So I give feedback in terms of how they're meeting
+Speaker 2: their milestones. But I also get feedback or I ask specific transparent feedback on my supporting
+Speaker 2: you the right way or your expectations being met from me as a leader. And so to summarize that,
+Speaker 1: my strategy is clear communication, understanding expectations from both sides, understanding
+Speaker 1: theirs, understanding mine in terms of how they kind of work together with me. So I treat their goals.
+Speaker 1: And then, you know, creating milestones, measuring the successes of those milestones, monitoring,
+Speaker 1: and then giving feedback. And yeah, so that's how we close that loop of team performance strategy.
+Speaker 1: OK. Could you describe a situation where you had to make adjustments to, like, the team's
+Speaker 2: strategy to better align with business goals? So in other words, let's say that your team strategy was
+Speaker 2: around ensuring that all employee data was, you know, monitored and measured and at the right
+Speaker 2: protections in place. And then the business decided to say, yeah, we don't care about that anymore.
+Speaker 2: That's just an example. I'm not saying that that's the example you should use. But like,
+Speaker 2: can you give me an example where your team kind of had a strategy that they were heading towards?
+Speaker 1: And then the business went in a different direction. And, you know, had to kind of pivot
+Speaker 1: and maybe just walk me through that a little bit. Sure. I recall one, it was emerged. The trigger was a
+Speaker 1: combination of not just the business but external regulators. So one example that comes to mind was when I was
+Speaker 1: leading the team to implement the FTC mandate at meta. Initially, our initial scope was data on
+Speaker 1: prem. So data within Facebook infrastructure or as it's called at the time was Facebook matters
+Speaker 2: infrastructure. However, as we started to talk to the regulators, they demanded that we increase the scope
+Speaker 2: and evaluate data in the cloud. And so we were concentrated on looking at products in-house and after a
+Speaker 2: while, we had to start going out to our cloud environments or products that were launched in cloud.
+Speaker 2: So evaluate how data was being used there and evaluate the data privacy controls. So we had to change strategy.
+Speaker 2: The first thing that I needed to do number one was to think, how do we prioritize all of the different tasks that we had at hand?
+Speaker 1: Obviously, prior to that is really thinking about now the scope has increased. What additional tasks do we need to complete?
+Speaker 1: And then how do we reprioritize as a team? And then what are the different strengths on my team that could take
+Speaker 1: rows associated with the prioritized tasks and these different changes? And then we also thought about
+Speaker 1: resourcing the team. Or if you'd like additional additional resources to the team, you know, that's what
+Speaker 1: allows me that goal and that vision. I can dive deeper in summary what we just needed to do was to
+Speaker 2: think about how our deliverables were going to change, who on the team had strength to pivot in a different
+Speaker 2: direction or to cater to deliverables and task associated with that change. And then number three,
+Speaker 2: we had to think about how we're going to get additional resources to fill in the gap. And number four,
+Speaker 2: we were going to also think about what our deployment strategy would look like. Because again, one of the
+Speaker 2: biggest things for that project was we needed people who had expertise in the cloud environment. And at the time,
+Speaker 1: my team was resource for people who were mostly project managers, product managers. And so I needed to request
+Speaker 1: for an additional resource for somebody who had expertise in the cloud to help us facilitate that. But ultimately,
+Speaker 1: a prioritization risk-based prioritization metrics is what we typically use and then making sure that
+Speaker 1: the rules are assigned according to skill strengths and then ensuring that we're also communicating.
+Speaker 1: Again, the biggest thing for that project was strategy changed, but we also had to make sure that our approach
+Speaker 2: for deploying that strategy was being communicated and in alignment with what the regulators and the
+Speaker 2: organization needed. Okay, and you talked a little bit in there about risk and I know you mentioned
+Speaker 2: risk assessments earlier as well. So just talks me a little bit about like, you know, what role you think
+Speaker 2: risk plays in strategy development for you? Yes. When you come to the strategy development,
+Speaker 2: what risk allows you to do is really allows you to be very practical about impact of what you're implementing.
+Speaker 1: And impact not just from what can go wrong with perspective, but what can go well with perspective.
+Speaker 1: And so what that really looks like in practical terms is for that specific project, for example,
+Speaker 1: one of the things we had to evaluate where our sensitive data in the cloud and how do we want to
+Speaker 1: make sure that we're tackling cloud environments with the highest sensitive data versus those
+Speaker 1: that weren't as sensitive as they would be. But pragmatically speaking, what risk allows you to understand
+Speaker 2: is it allows you to identify the impact it also allows you to identify the level of effort required.
+Speaker 2: It allows you to also identify the urgency of that project in terms of if we do this now, what kind of
+Speaker 2: cost does versus if we did it later. So a risk perspective allows us to prioritize tasks.
+Speaker 2: It allows us to understand the urgency of a task. It allows us to understand the level of effort required
+Speaker 2: for that task. And it also allows us to understand not just internal impact of that work or that,
+Speaker 1: you know, strategy that we're putting out for the impact externally for us, especially because many
+Speaker 1: of the organizations that have worked with are very customer focused. And so whenever we're prioritizing
+Speaker 1: or doing implementing strategy, it's not enough that we're just thinking about it's impact to
+Speaker 1: also the organization, but we have to think about the impact of the customers as well. So again,
+Speaker 1: you know, risk based allows you to prioritize tasks, deliverables, the timeliness, the urgency, the
+Speaker 2: level of effort and also the impact to our external and external environment.
+Speaker 1: Got it. Okay. Let's see, some of the switch gears a little bit. You know, as I mentioned,
+Speaker 2: you know, the culture here can be, you know, very fluid that also sometimes means that we have
+Speaker 2: like vageness in the direction that we're going, right? It's just like product manager that's like,
+Speaker 2: I have this idea, let's go do it, and you know, we don't have a lot of details around all of that.
+Speaker 1: So can you tell me about a time where you had a situation with very vague requirements or like a vague
+Speaker 1: understanding of the problem?
+Speaker 2: Oh, are you over there? I think I lost you for a few seconds there.
+Speaker 1: Can you hear me? You need me to repeat? Yes, please. Thank you.
+Speaker 2: So can you tell me about a time you had to go into a situation with very vague requirements
+Speaker 1: or like a vague understanding of the problem at hand, but you were still able to like get alignment
+Speaker 1: and get the job done, so to speak? Yeah. So I'd like to say to my team that one of the,
+Speaker 1: I don't want to call it downside, but one of the inheritance of what you inherit as part of
+Speaker 1: if fast, you know, innovative environment is ambiguity, because when you set up to do new things,
+Speaker 1: it's usually not clear from the beginning. It's very, you know, there's a lot of ambiguity around it.
+Speaker 2: One example that I recall was when we had an issue around data exposure for our sensitive data in the
+Speaker 2: employee space. Now, we didn't necessarily have a breach, but there was an incident where we had a
+Speaker 2: number of folks who were having access to data that they shouldn't have had access to. Now, we were called
+Speaker 2: as the data privacy team to come implement something to take care of that, basically from a short-term
+Speaker 2: long-term perspective. Now, it wasn't clear what the exact impact of that problem was, how sensitive the data
+Speaker 1: was, what they were requiring us to do with that from a policies standpoint or a technological standpoint.
+Speaker 1: And so the first thing was really understanding what was the trigger for that incident being reported.
+Speaker 1: They must have been an impact that somebody identified somewhere. And so, and then what problem we were trying to
+Speaker 1: solve. So usually what I like to do is take people back to what problem we're trying to solve. Instead of
+Speaker 1: been thinking about what we want to like what our strategy looks like. And so the problem that
+Speaker 2: organization was just looking to solve at the time was just implementing processes in place to ensure that
+Speaker 2: one of the rights access was no longer in that particular space or particular ecosystem. And so part of
+Speaker 2: understanding what the trigger was was number one identifying the stakeholders who were part of that process.
+Speaker 2: And understanding what the specific problem was that they wanted to solve and understanding the
+Speaker 2: specific needs. So again, as we began to talk to the people, the first thing we realized was that there
+Speaker 1: was no policy specifically for access, access controls in that specific space. There were no guidelines,
+Speaker 1: no standardized document that allowed people to think about how do we even access data. And so again,
+Speaker 1: when we're implementing those types of issues, the first layer of control is usually the policies,
+Speaker 1: the standards and the documentation. And then from there understanding what is the regulatory
+Speaker 1: impact associated with this issue? Because the regulatory impact also allows us to understand how we
+Speaker 2: direct our delivery rules and what types of strategy and even urgency that we're required. So what we saw
+Speaker 2: was that we had an impending audit coming where the scope of the audit was potentially going to include
+Speaker 2: that data itself. Now, this was not something we learned of the bad. We had to learn it as we started to
+Speaker 2: speak to the different stakeholders. And so that allowed us to begin to think about what strategy we wanted
+Speaker 2: to put in place in order to meet the regulatory requirement, especially with an impending audit. And then
+Speaker 1: finally, it was really to understand the impact of that exposure from an operational standpoint in terms of the
+Speaker 1: internal operations of that team and even for meta as a whole. And so once we were able to gather all
+Speaker 1: of that, it allowed us to think about all of the different activities that we would solve. And quite frankly,
+Speaker 1: it meant a lot of communication with the stakeholders, making sure they were aligned with our deliverables.
+Speaker 1: So immediately we understood the problems. We understood the triggers. It was mostly from a regulatory
+Speaker 2: standpoint trigger that they were wanting us to implement that. Then we started to identify
+Speaker 2: what different types of controls we would need some needs. I mean, excuse me, we would need to implement.
+Speaker 2: Now, when I think controls to implement, we're thinking of controls to implement to help reduce risk.
+Speaker 2: So the risk of data exposure and also to meet the specific regulatory requirements that we're looking for.
+Speaker 2: And so once we were able to uncover that around what we wanted to do with risk reduction
+Speaker 1: and meeting the regulatory requirements, it allowed us to be able to distill that into different
+Speaker 1: deliverables, tasks and very clear milestones and guidelines that we're now able to socialize with our
+Speaker 1: stakeholders and get alignment on and where it would be more forward with that.
+Speaker 2: All right, so last pivot in my categorization of questions. So what do you value in a leader?
+Speaker 1: A lot of things for me, I value clear communication, which encompasses and one of the things that
+Speaker 2: I've been reading the Netflix culture. And honestly, one of the things I really liked about it was the
+Speaker 2: feedback, you know, component of it. I love leaders that communicate transparently and can provide rapid
+Speaker 2: feedback, both positive and negative. So I would say like that transparent communication of like clear
+Speaker 2: direction, clear guidelines, clear feedback, not ambiguous feedback, actionable feedback is one thing
+Speaker 2: that I would say I'd truly value in leadership. And I like leadership that provides context, which is
+Speaker 1: also part of the communication piece, right? It's not so much about control. I don't like to be micro
+Speaker 1: managed. I don't like to micro manage people. I love to give people context. I think context said the
+Speaker 1: sets the tone for a lot of trust. It sets the tone for transparency. It reduces ambiguity and
+Speaker 1: environment and it just allows for more effective communication. So again, there's so many things
+Speaker 1: that I value, but I think communication, transparent communication, least with feedback, would be my biggest thing,
+Speaker 2: you know, of course also least with like context over control, would be my biggest things when it comes to leadership.
+Speaker 2: Okay, do you have an example of like a person you were or, you know, someone, you know,
+Speaker 2: beside you that you felt was, you know, exemplified a lot of the things. Can you just maybe share
+Speaker 2: a little bit more about your relationship with that person, you know, maybe you mean an example of something
+Speaker 2: that they did that you valued? Yeah, I'll never forget one of my leaders at Deloitte,
+Speaker 1: a partner at Deloitte who ended up becoming my mentor. One of the things that I learned from them was
+Speaker 1: their ability to communicate effectively and in a timely manner. So there's one thing to communicate
+Speaker 1: effectively. There's also the timeliness of communication and then there's also the style of communication
+Speaker 1: that breeds trust, you know, and transparency. And so for her, I liked her leadership and I was able to grow
+Speaker 1: under her leadership because first of all, she was very quick to give me feedback, both positive and negative.
+Speaker 2: When something was great, she highlighted it, when something was into great and she was very brittle about it.
+Speaker 2: She was in, so it's funny when I was reading the Netflix culture and they were like, oh, we're football team,
+Speaker 2: you know, we're not like the family kind of thing. I grew up in a family where feedback was to know, like,
+Speaker 2: if you don't do right, nobody's giving you brownie points for like, oh, E4F, it's like, no, you didn't do well,
+Speaker 2: get back to your drawing board. So those types of environments shaped me and, you know, being on their
+Speaker 1: leader like that was very useful for me, you know, to grow and to also improve myself as a leader and learn
+Speaker 1: from their style. But I also saw one of the other good things that I saw was how they also interacted with
+Speaker 1: stakeholders in a way that, you know, allowed them to bridge trust and influence. Prior to that time,
+Speaker 1: the leadership that I was used to was, you know, leadership by compulsion, you know, asking people to do
+Speaker 1: things from a position or standpoint. But I saw this person being able to influence using trust,
+Speaker 2: clear communication and influence people, not just the internal to her team, but external to her team
+Speaker 2: for first training, effective collaboration and just like effective, you know, implementation of projects.
+Speaker 2: I think amongst many things, those are like the two things that I appreciated about her and one of
+Speaker 2: the things that I love is she was very nimble as well, which is something that I learned.
+Speaker 2: Being very adaptable to change, expecting change as a leader and then making fast decisions, allowing,
+Speaker 1: you know, herself, she was never afraid of failure. She would make statements like, feel fast so you
+Speaker 1: can win fast. So it's better that you fail, don't, don't stall on decision making because you're
+Speaker 1: afraid of failure because failure is part of the process that allows you to get those wins. And so she
+Speaker 1: taught me to take decisions very fast. Fail fast, recover fast from those decisions, I mean decisions,
+Speaker 1: and then take the next right option at the back of your mind. And so those three things, communication,
+Speaker 2: feedback, being nimble, adaptive to change, and also being very fast when you come to
+Speaker 2: decision making. All right, things that I would say, I would say, I would say, I would say, I would say, I would
+Speaker 2: get admired about her. Excellent. Well, that all sounds good. And those are all the questions that I have.
+Speaker 2: So we do have a few minutes left if you, are there any questions that I can answer for you?
+Speaker 2: Yeah, absolutely. Thank you. So I see that you had a lot of experience also with a lot of
+Speaker 1: big tech companies like Google, which is amazing, congrats. I want to ask you, what part of the
+Speaker 1: culture at Netflix do you need to do? You have to adjust with the most especially because you had
+Speaker 1: worked in, yeah, lots of tech environments. Yeah, yeah, you know, it's funny. So yeah, I was at Google for 12
+Speaker 1: years. So obviously, you know, that was like my longest tenure at the time. I guess it's still my longest
+Speaker 1: tenure because I've only been here seven. So, um, and then I went to Pinterest, which was like more
+Speaker 2: unicorns start at the type environment, um, you know. And when I came to Netflix, I,
+Speaker 2: candidly, I didn't really know much about Netflix when I applied for the job that I had at the time.
+Speaker 2: I just saw like some keywords, and I was like, this job sounds great for me. I'm going to apply
+Speaker 2: Emma Go. And when I started meeting with my like eventual manager and some of the people in the
+Speaker 2: interview panel, they started talking a lot about this like people over process, and you know, like we don't
+Speaker 1: do things like quarterly planning or any of these sort of structured processes. I think also performance
+Speaker 1: management, you know, we don't have a formal performance management process here. That was, you know,
+Speaker 1: it was, it wasn't scary not to have those things, but I like could not imagine operating at a large company
+Speaker 1: that didn't have those things. I was like, how does anybody get anything done? Like how does anybody know
+Speaker 1: anybody's doing? Um, and so now when I came here seven years ago, it was even less structured than it is
+Speaker 2: today, we do have some process, good process, right? So team do do quarterly plans, and we do generally
+Speaker 2: have kind of an annual planning time frame where the company is talking about goals and organizations
+Speaker 2: are talking about goals. At the time when I joined, we didn't even really have that. So there was a lot of
+Speaker 2: like adaptation to just, how am I going to understand what's important to other people, right,
+Speaker 2: because I couldn't pull up a like a okay art tool and just look at their goals for the quarter,
+Speaker 1: that was like, that didn't exist, and that doesn't really exist today either. There's more today
+Speaker 1: that I could, you know, just search and read, but, um, so that connection of building like relationships
+Speaker 1: with people and really understanding what like organizations care about was different than what I had to
+Speaker 1: do at Google. Um, at Google, you sort of naturally had these teams that you worked with because you all
+Speaker 1: like rolled up to the same people or you had the same top level goals. Um, or you just like had things that
+Speaker 2: you had to work off of each other, you know, like security has to work with certain products and things like that.
+Speaker 2: Um, but they're just became kind of like this, um, it was just sort of like you were partnered and that was the
+Speaker 2: way it went. And it Netflix is not like that, you know, it's very much about, um, advocating for your teams,
+Speaker 2: you know, educating your stakeholders, learning and being curious about what they care about,
+Speaker 2: adapting your own approaches to be like either more rigid or less rigid, you know, lean into
+Speaker 1: risk or lean out of risk depending on where they are. Um, things like the development of our, um,
+Speaker 1: asphalt, our streaming video on demand, um, product, that's very mature, right? That's our bread and butter. That's
+Speaker 1: the thing that's been around for 20 plus years. Um, things like games, um, you know, is really new, you know,
+Speaker 1: we're like, you know, we're like, you know, we're way at the beginning of that journey. They're moving really quickly,
+Speaker 1: they're iterating their changing strategies every six months, you know, it's like, you know, they're still trying to find it.
+Speaker 2: And we want to be good partners there. We don't want to be the partner. There's like, oh, I'm slow down. You're the thing. And so there's
+Speaker 2: a lot of adaptation. You know, a lot of it's built on relationships, contact sharing, understanding, you know, all of those things.
+Speaker 2: But I think that was probably the biggest one. The second one I will say is the performance management aspect, you know,
+Speaker 2: we talk about having this open culture of feedback. I've always considered myself like a very straightforward person, but I didn't
+Speaker 2: again, didn't really understand what it meant to just consistently be giving feedback. I love it personally.
+Speaker 1: I love that we don't like wait for six months. And then just like slam it all in a performance review that you got to go through.
+Speaker 1: It is part of the way that we talk to each other, that I talked to my team, that they talked to me, all of those things.
+Speaker 1: And so it's a welcomed difference. But it certainly was a difference. You know, it was a difference that I was like,
+Speaker 1: don't know how it's going to go, but it's been really welcomed. Amazing. Amazing. Thanks for answering that,
+Speaker 1: like that. I'm very one of the biggest things that you were mentioned is really just like the processes,
+Speaker 2: you know, that, you know, the process differences and that's, I like environments like that that,
+Speaker 2: you know, elevates people over process, allows people to, you know, innovate, you know, instead of putting
+Speaker 2: you're a Christian all of that. One last question that I had for you, I heard you mentioned that
+Speaker 2: your team and the privacy team are probably the ones that work, you know, obviously you don't do everything together,
+Speaker 2: but there might be overlapped areas. There are only like overlap areas where you all like share deliverables, share,
+Speaker 1: like certain milestones, maybe like risk assessment and things like that. And what does that look like for your team?
+Speaker 1: Yeah, I mean, so there are definitely like synergy areas where we try and share as much context as
+Speaker 1: possible. So for instance, if I use ads as an example, we have like an ads, she's fall working group,
+Speaker 1: like we have someone from privacy in there. We have folks from various security teams. I'm the executive
+Speaker 1: sponsor, so I, you know, I'm in there sort of keeping an eye on what's going on and, you know,
+Speaker 2: like talking more about the business stuff and all that. And so when we, so we do create some, you know,
+Speaker 2: half one goals or half two goals has a group. And that gives us a bit of a touch point to say, okay,
+Speaker 2: like this is what privacy is focused on. They're focused on, you know, and ads, there's obviously like data
+Speaker 2: collection components and protections. There's also ads partners that are, you know,
+Speaker 2: coming on board and dealing with different data elements and whatnot. So those are places where it's a
+Speaker 1: good opportunity for us to say, okay, well, like that's related to this area that we care about as well.
+Speaker 1: So should we like be in there together? Should we like, should we just share context in this meeting?
+Speaker 1: Like, how does that work? And it's not a one-size-fits-all, right? I don't think there's a, there's a scenario.
+Speaker 1: We always say, like, oh, well, if it's sort of related, we should always be together. Sometimes it's like,
+Speaker 1: it's sort of related, but there's very clear privacy, depth, necessary for conversation that it doesn't
+Speaker 2: make sense to have conversations in conjunction. So I think the goals are really about
+Speaker 2: awareness across the groups, right? And then where we can find areas that have really strong
+Speaker 2: sick energy, then we can partner together and maybe even lean on each other, right? Where we can say,
+Speaker 2: okay, hey, for this effort, there's a lot of privacy stuff. There's a thing that's very closely related
+Speaker 2: from security, but it's not super heavy, but you keep an eye on like, what's going on in there?
+Speaker 1: Yeah. And then, low back that context, right? And share it with us. And then we can decide,
+Speaker 1: like, do we need to engage more or what not? Or vice versa, right? And I think that's part of being like,
+Speaker 1: you know, part of the same organization, you know, good collaborative relationships and such.
+Speaker 1: Look at that. Look at that. And I agree with that, like, you know, it's obviously,
+Speaker 1: you don't want to, like, be working together all the time, but you want to identify potential
+Speaker 2: areas where they could be shared responsibilities and make sure that you're aligned on that. That's
+Speaker 2: that's really good. Thank you. That's, that's all the questions that I had. I appreciate you answering them.
+Speaker 2: All right. Excellent. Well, thank you for your time. Yeah. I'll provide all my feedback back to the
+Speaker 2: people that need to get it. And then I'm sure someone will reach out on next steps. Sounds good. Thank you very
+Speaker 2: much. Okay. Take care. Bye.

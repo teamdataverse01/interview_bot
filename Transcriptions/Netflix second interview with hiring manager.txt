@@ -1,0 +1,409 @@
+Speaker 1: So you're the second person I'm meeting with?
+Speaker 1: Okay, how did that go?
+Speaker 1: Yeah, our conversation was a very good conversation.
+Speaker 1: He was very good to learn about how he's evolved with the culture,
+Speaker 1: and it speaks in some of the activities that he's seen
+Speaker 2: and how those overlap with the interpretation team.
+Speaker 2: Yeah, so that was really helpful.
+Speaker 2: Okay, and then you had talked to Scott as part of the technical interview, right?
+Speaker 2: Correct.
+Speaker 2: There's a couple weeks ago I believe, but yes, correct.
+Speaker 1: Yes, I do speak with him.
+Speaker 1: That's like the technical screen and then, you know,
+Speaker 1: then you, I think that Chelsea or Will probably told you,
+Speaker 1: like, now this is the actual, I guess.
+Speaker 1: Yeah, yeah, that makes sense.
+Speaker 2: Right, right.
+Speaker 2: Yeah, that makes sense.
+Speaker 2: And then Scott is one of the people that would be reporting to this role.
+Speaker 2: So I like to have the, you know,
+Speaker 2: at some point the people who are reporting to the role
+Speaker 1: involved in the interview process.
+Speaker 1: I feel like that's important.
+Speaker 1: Yeah, so yeah.
+Speaker 1: So I know we talked a lot about the management, you know, kind of your background before,
+Speaker 1: but today I think you probably heard that like each of the interviews
+Speaker 2: is kind of focused on the different areas.
+Speaker 2: So this one will be more about management of leadership.
+Speaker 2: Or as previously, I think it was kind of jumping all over the way.
+Speaker 2: This is part of this screen.
+Speaker 2: So I'll ask some questions and then if you know,
+Speaker 1: we can talk about your questions at the end,
+Speaker 1: but I will actually give you a chance right now, like if you have any,
+Speaker 1: you know, questions right off the bat, like quickly,
+Speaker 1: we can, like, I can address them and then start getting into my questions.
+Speaker 1: Nothing of the bat.
+Speaker 2: I'll save my questions once you're done.
+Speaker 2: I did have a couple questions to ask people that those are,
+Speaker 2: I think they would be kind of good to come after after our interview session.
+Speaker 2: Yes.
+Speaker 2: Okay, great.
+Speaker 1: So one of the things I wanted to talk about is kind of direction for a team
+Speaker 1: and guidance in terms of leading the team.
+Speaker 1: So how do you deal with basically creating a culture shift
+Speaker 1: on a team or trying to guide them in a different direction
+Speaker 1: or change the way that they've been operating,
+Speaker 2: if, you know, perhaps you're seeing any issues with the effectiveness of the team?
+Speaker 2: Yeah, absolutely.
+Speaker 2: So, do you want me to answer that question in terms of changing the culture
+Speaker 2: from, like, from a programmatic standpoint or pushing out, like,
+Speaker 2: and just take any direction?
+Speaker 1: Any direction?
+Speaker 1: I guess if you have examples of things that you have had to change in the past,
+Speaker 1: that would be great.
+Speaker 1: Fantastic.
+Speaker 1: Okay.
+Speaker 2: So when it comes to changing the direction of a team or just changing in general
+Speaker 2: how the team does work, I think it's really making sure that there is transparency
+Speaker 2: about the trigger for that change.
+Speaker 2: And so when I get to the team, it's not just about introducing new change.
+Speaker 2: I think it's important.
+Speaker 1: I know that it's important to set the context for that change.
+Speaker 1: And also bring them along with the change process
+Speaker 1: and make sure that they're integrated to all of the different phases of that change.
+Speaker 1: And also making sure that I preempt ahead of time the impact of the change
+Speaker 1: but in alignment with how they're also thinking about the impact of the change.
+Speaker 2: So I can give you an example that, you know, have happened.
+Speaker 2: So I was leading a team that was performing risk management
+Speaker 2: from a program at standpoint.
+Speaker 2: So what they were doing was evaluating risk from an operational financial state approach,
+Speaker 2: a very program process oriented.
+Speaker 1: Our system was performing risk management from a product based standpoint.
+Speaker 1: So they were evaluating products specifically.
+Speaker 1: Now they were operating in two different systems.
+Speaker 1: However, there was a need for us to integrate both systems
+Speaker 1: because what we realized was that some of the controls that were solving for the process risk
+Speaker 2: could also solve for the product risk.
+Speaker 2: And so there was duplication of efforts.
+Speaker 2: So we had to integrate both systems to make sure that we were in duplicating the controls
+Speaker 2: but we also had to report the controls uniformly in case of audit.
+Speaker 2: And so when we had initially introduced the systems,
+Speaker 1: teams were very concerned because the system that they were using
+Speaker 1: they were very familiar with and the integration process had to take a lot of learning
+Speaker 1: because it was a system that meta had built in house at the time.
+Speaker 1: And quite frankly, the internal technology wasn't the best
+Speaker 1: from a user experience standpoint.
+Speaker 2: And so part of that was really having a session with the team to talk about why we needed
+Speaker 2: people to that specific approach and talking about what benefits it would allow us obtained.
+Speaker 2: So needed to get their software in if you like.
+Speaker 2: Not that it was necessary to push the process because we had a line that we needed to put together
+Speaker 2: software to make sure that it felt comfortable with the process of the change.
+Speaker 1: And then once we did that, we outlined what the approach of the change we looked like and we did the change in phases.
+Speaker 1: So part of that practically speaking was, hey, what are the controls that you use on a regular basis?
+Speaker 1: Maybe we don't need to integrate that with the current system yet so that your work doesn't slow down.
+Speaker 1: And so we allowed them to maintain regular controls that they were using on a more regular basis on the current system.
+Speaker 1: And then for the controls that they were in always operating as often as these other ones,
+Speaker 2: we used that to test and pilot the process.
+Speaker 2: So again, going back to my process is really number one, communicating the change, making sure they understand the trigger,
+Speaker 2: making sure they understand the impact, making sure they understand the phases of that change.
+Speaker 2: And then making sure that I get buying on work.
+Speaker 2: So part of what the impact of that was slowed down work because of efficiency in terms of, you know, now looking at controls from another system.
+Speaker 1: And then making sure that I got feedback.
+Speaker 1: So I think for because for that specific change, there was an opportunity to pilot and test how to change was also going and getting feedback.
+Speaker 1: So getting feedback and making sure that those feedback were incorporated back to the team that was implementing those tools and
+Speaker 1: systems.
+Speaker 1: It wasn't a smooth, there were days where the system just like faculty just like shut down.
+Speaker 2: Because somebody was operating, you know, different parts of the system differently and all of that.
+Speaker 2: But I think the lessons learned from that was that there was an opportunity to feel fast.
+Speaker 2: So there were parts of the system that wasn't working.
+Speaker 2: We were able to test that pilot and then revert to whatever would work for the team.
+Speaker 2: And then just making sure that we took a faced approach so that the change was not approved.
+Speaker 1: They had their ability to just like evolve into the change.
+Speaker 1: I like the illustration that somebody likes to give is the illustration of like when you put, you know, an animal in water that's boiling immediately jumps out.
+Speaker 1: But if you put in the water that's boiling, taking some time to boil, just adjust to the temperature and doesn't realize that the water is already boiling.
+Speaker 1: So yeah, that's how I would describe that.
+Speaker 1: That's more in the negative context.
+Speaker 2: Yeah, yeah, forgive me for that example.
+Speaker 2: That's just, yeah.
+Speaker 2: Yeah, that's a good example.
+Speaker 2: Okay.
+Speaker 2: How have you dealt with kind of within the team?
+Speaker 1: So let's just say like, you know, what you were describing there, like someone was just really pushing back.
+Speaker 1: Even if you were trying to explain the objectives and they understood because they had been used to operating in a particular way.
+Speaker 1: A lot of times people's reaction to change can be more emotional than the actual, you know, like if they, if everyone was thinking logically, it would be easier because then if we could just get to an agreement on what's the outcome here.
+Speaker 1: And then logic will win out.
+Speaker 1: But a lot of times this is a motion.
+Speaker 2: So how did you, you know, either in that case or in another case, like deal with the situation where, you know, well-intentioned people were essentially just like in disagreement about the approach.
+Speaker 2: Yeah, absolutely.
+Speaker 2: So for that specific project we did have pushbacks for sure.
+Speaker 2: I think the biggest, you know, trigger for the pushback was just operational.
+Speaker 2: And that team was already swamped with the amount of reviews that they had to, you know, provide within a specific short period of time.
+Speaker 1: And now introducing a new process, you know, presented a risk of, you know, reduced efficiency.
+Speaker 1: And so part of that was just making sure that number one, I understood the concern.
+Speaker 1: And where there were emotions, I helped people to navigate talking through their emotions from an impact perspective.
+Speaker 1: So it's one thing.
+Speaker 1: So I remember particularly there was a specific team member who was just like, hey, me, this is not going to work.
+Speaker 2: Like we're not implementing something new, maybe in the next four years.
+Speaker 2: This is exactly what he said to me.
+Speaker 2: So I had to have, you know, a session we came and asked, like, what are your specific concerns?
+Speaker 2: And it was the workload.
+Speaker 2: You know, he wasn't able to iterate that immediately in the meeting.
+Speaker 1: He just was saying no, but when I started out with him, he was thinking efficiency.
+Speaker 1: And then at that time, there were a lot of like, you know, there were a lot of like uncertainty layers on all of that happening in better at the time.
+Speaker 1: So people also tied the quality of their work to just the uncertainty at that time.
+Speaker 1: And he was creating a lot of answers.
+Speaker 1: And so part of that was just making sure that I was very understanding.
+Speaker 2: And you know, I showed understanding an empathy on what that concern looked like.
+Speaker 2: And I iterated clearly how that could even reduce the risk that he was concerned about further.
+Speaker 2: So it was basically just saying, hey, right now you're trying to implement your own controls from scratch when you're doing these reviews.
+Speaker 2: But if you were to integrate your process, it's going to be plug and play for you at least for the risk where we have overlapped controls.
+Speaker 2: And so we really just did like a practical mapping and I told him, I said, let's book some time.
+Speaker 1: You know, with all the other team members, let's look practical mapping of the controls that you would be able to implement.
+Speaker 1: I mean, leverage versus the ones you had to implement from scratch.
+Speaker 1: And think about how much time that saves you versus going through this process and implementing things from scratch.
+Speaker 1: And I think that was helpful.
+Speaker 1: Of the bat, we didn't identify like always specific amount of controls that really looked like, oh, tell me your process is much, much better.
+Speaker 2: It was over time.
+Speaker 2: As they began to implement like a wider variety of products, they started to see that there was a wider variety of controls that they could leverage.
+Speaker 2: And so that allowed to build trust on the process over time.
+Speaker 2: And we were able to implement that integration.
+Speaker 2: Okay, yeah, that's good.
+Speaker 1: I think the example is particularly interesting, particularly interesting to me because risk has been a big discussion with the data production team.
+Speaker 1: And there is, it's been one of the questions in terms of kind of the prioritization of what it should be working on,
+Speaker 1: which people are very excited about developing like in-depth risk models.
+Speaker 1: And it might be, might not be necessary to have a denture.
+Speaker 1: Yeah, I agree.
+Speaker 1: Yeah, actually that kind of leads to another question I have in terms of,
+Speaker 1: I know we had talked about kind of balancing risk versus like, you know, the business velocity and things like that.
+Speaker 1: But how do you deal with like the prioritization of the work on it team?
+Speaker 1: And what you should get them focused on because especially when I think you have bright people, there is often a desire to work on things that are more technically interesting or challenging.
+Speaker 1: How do you kind of get the prioritization set based on, you know, the fact that you're going to be getting input from the team as to what they think is important.
+Speaker 2: You're seeing, you know, what's going on in the business.
+Speaker 2: How do you balance all that?
+Speaker 2: Yeah, absolutely.
+Speaker 2: So the first thing is, for my team, at the beginning of every quarter, we said very clear goals and objectives.
+Speaker 2: In terms of three things, our regulatory requirements, our customer commitments and the business goals.
+Speaker 1: Or if you want, if you like, you could say, operational effectiveness.
+Speaker 1: And there's a lot of work that goes into that in terms of alignment with stakeholders, alignment with leadership and even alignment with the team.
+Speaker 1: And so anything that's changing has to go through risk assessment process to evaluate what the impact of that change looks like and what the trigger of the change.
+Speaker 1: That change looks like and what the trigger of the change means throughout current approach that we're taking.
+Speaker 1: And so I've seen those types of cases where I would hear people on the team say, oh, I was talking to this stakeholder team and they said they would really need us to implement a retention policy tomorrow.
+Speaker 2: And it's like, why do they need that? What's the trigger for that? What is the risk that would result if we weren't doing that now?
+Speaker 2: Many of these things sound important at the time, but I always like to ground it back to what our set goals and objectives are.
+Speaker 2: And making sure that we're not debating, but practically speaking, I've also seen cases where we may need to deviate a bit from what we have set as our goals and objectives.
+Speaker 2: But our risk assessment allows us to be able to do that prioritization.
+Speaker 2: So an example is where we've already set clear goals and objectives, and then we get a signal that we might be audited in a specific area.
+Speaker 1: So that might be an area that we may want to bump up to, you know, prioritise for the purpose of being defensive on meeting our regulatory crimes.
+Speaker 1: But ultimately, I make sure our folks are grounded on the set goals and objectives that we've built for the team.
+Speaker 1: Have you done a lot of, okay, our planning in terms of, you know, your team and larger larger groups?
+Speaker 1: Absolutely. And did you want me to do it deep dive on that?
+Speaker 1: No, I'm more curious how to give them that, you know, the data protection or privacy is often kind of, there's a combination of being inputs into other teams where you're saying, like, okay, we would want you to do retention.
+Speaker 2: But then there's also requests from other teams where they might be saying, we really need guidance for this new data warehouse we're building in terms of how we should actually architect it.
+Speaker 2: How do you balance, how do you make sure that, like, you're getting the information out?
+Speaker 2: And it might be more, you know, maybe you didn't have control because this was just how the company worked, but how did you kind of align those different objectives from groups to make sure that privacy and data protection?
+Speaker 2: Was it addressing the business needs but also, like, you know, the risk and getting the communications out?
+Speaker 2: Because it's, it can get quite complicated in terms of making all that all the stakeholders are informed.
+Speaker 1: Yes, absolutely. So part of what we also do when I was at meta is typically our business goals and objectives go out to our key stakeholder group leaders.
+Speaker 1: We don't, we don't sign up on that. So whenever we're making as a matter of fact, I've been a lot of, like, meetings, we have these stakeholder leaders come into the room to ensure that wherever they might need to incorporate something as part of our roadmap that we're incorporating that to make sure that we're taking care of them now.
+Speaker 1: And to answer the question around, like, some, like, you know, fire fighting, you know, needs that might come. I've had, so I can give you an example.
+Speaker 1: There was a time where we were already implementing controls for our environment, but then there was an incident that had a court where there was exposure of sensitive data in the people organization.
+Speaker 1: And we had, like, thousands of users who had access to data that they shouldn't have never had access to.
+Speaker 2: And so they reached our team that we need to develop a policy immediately to be able to cover for that.
+Speaker 2: Now, what I usually do in, you know, in cases like that is just evaluating what is the urgency, how much resources we need, and how can we create a roadmap exercise for these in a way that allows us to provide short-term fixes versus long-term fixes.
+Speaker 2: And so it's really understanding and in that particular case, we had an impending regulatory audit for access control. So it bumped it up to prioritization list. However, we couldn't implement overall access policy because it was a very short time.
+Speaker 2: So we had to take bite-sized, you know, processes and procedures that we created for the teams to be able to adopt in the short-term where we worked on the long-term documentation.
+Speaker 2: Okay, yeah. That's good. We've been going through it. Okay, our planning. So this wasn't actually on my list of questions.
+Speaker 1: Yeah, and just adds to that up. Also seen where we're going through okay planning and our team may not have initially budgeted for what the stakeholders are asking for.
+Speaker 1: And so in certain cases, it's really just making sure that we have like a trade-off approach where we're seeing,
+Speaker 1: hey, we may not be able to accommodate it in this quarter, but the next quarter will be able to accommodate it for you all to make sure that you're feeling comfortable without approach.
+Speaker 1: Yeah, yeah. How have you dealt or have you had situations where there's basically kind of a low morale on the team or lack of
+Speaker 1: patients, I lack of motivation, but low morale. So I'll be, you know, very transparent. This this organization that I am leading
+Speaker 2: was moved into the larger group of security privacy and assurance like six, seven months ago. So it was before I started. So there was a massive org change where this group was put into another group.
+Speaker 2: So there's been some integration challenges there. And then in terms of that this group, my group as a whole,
+Speaker 2: PDPE feeling like they were kind of swallowed up by a larger organization. To me, the reality is that privacy and security are so intertwined.
+Speaker 2: Yeah, makes sense to me. So there's that aspect and then they haven't had a leader for a while. So I came in just a couple months ago, but, you know, for a number of months, they didn't have a director and then the group itself.
+Speaker 2: And then there's, you know, two other managers that this role would be, you know, appear to, but on top of that, the data protection group has not had a leader. So, you know, they used to report to the director and the director was gone.
+Speaker 1: They, you know, got reordered. So there's just been very little like management. So there has been employed there.
+Speaker 1: And obviously as I've come in, I've been spending a lot of time with them, but, you know, the person who will be taking on this role, I hope and think that the morale has been improving, but there is really a lot of kind of.
+Speaker 1: What is it?
+Speaker 1: Almost like the team seems a little unmoored. So if you had to deal with situations where it's, you know, either through inheritance or because of org changes or having to basically kind of write a ship in terms of the motivation and morale.
+Speaker 1: I will say people are still working hard, but you can see like, you know, it's taking some time for them to kind of get back into it.
+Speaker 2: That makes sense. Yeah, yes. I've actually had a couple of those.
+Speaker 2: One of the ones that I can share is at the time at Meta, they had been lots of reorg because of recent, that was actually as a result of Leo's.
+Speaker 2: And so the Leo's came with a lot of reorgs where they were reorganizing teams.
+Speaker 2: And I remember that my peer manager had given me that information ahead of time, like when you're coming to this team to lead the team, it's Lumarale.
+Speaker 2: And I figured that out immediately, I joined the team, you could tell on the meetings.
+Speaker 1: And to your point, like people were still doing work, but the Lumarale was low.
+Speaker 1: First of all, it's really just like, for me, when I get on the team, I have one and one three people.
+Speaker 1: I don't make assumptions about what the cause of Lumarale could look like.
+Speaker 1: Because what I've realized, even though there might be a uniform situation happening, people that are responding to it in different ways, depending on what layers on top of the challenge at the time.
+Speaker 1: I have one of ones with my team, to really understand, first of all, to reinforce their impact on that role.
+Speaker 2: And tying it back to the organizational impact, to help them really see where, as a puzzle, they fit in the whole picture.
+Speaker 2: Because I think that's one of the biggest needs of people to understand, am I still valuable on this role.
+Speaker 2: And so there's an opportunity to reinforce that impact.
+Speaker 2: And I do that basically by making sure that I understand what impact means for them, specifically.
+Speaker 2: I understand what best work means for them.
+Speaker 1: And really aligning to see if they're still in a place where they're still doing their best work.
+Speaker 1: So they agree that they feel like they're making impact.
+Speaker 1: And then numbers really anchor in the work in terms of how they're impacting the smaller team as well.
+Speaker 1: But I think it's one thing to say, oh, like you're impacting the whole organization, it's like, yeah, understand that, but like how about this team.
+Speaker 1: And so I think it's very important for people to know. And then, so after that, what I do on top of that is making sure that, especially I understand what you were talking about when you said people who have not had money chosen time pass, especially for some of the stronger personality.
+Speaker 2: Once it's reinforcing that your autonomy still stays with you.
+Speaker 2: I'm not coming here to still your autonomy away from you. In fact, I would be giving you more of that and allow you to get more exposure for what you need.
+Speaker 2: And also reinforcing my commitment to the degree.
+Speaker 2: I don't promise what I can't do, but to the degree that I've seen what I can do, reinforcing my commitment to helping them reach their career goals.
+Speaker 2: And really just like, a line, what can I do to help you? And being a servant leader is really what it is.
+Speaker 1: And making sure that over time. So what I've seen is what reinforces the morale is when people know that, you know what I'm still impactful for the organization.
+Speaker 1: But for the team, I still maintain my autonomy number two and can I trust this person to be my manager, not just in terms of the work, but in terms of how they see me.
+Speaker 1: So those are the different things. And these are the things that I had to do. I had to have one-on-ones with people on the team.
+Speaker 1: Rain force, you know, the impact on the road, making sure it's still aligned with their career.
+Speaker 1: And I had to actually shift people. I had to reach off for because of the reorganization.
+Speaker 2: Some work had been prioritized already, or there were people that had to take work that they weren't really happy doing.
+Speaker 2: So where the opportunities for us to bring other folks, because I also had to rehire on the team as well.
+Speaker 2: So when I was rehiring, I was thinking about areas people had to support me about that wasn't necessarily their biggest strengths.
+Speaker 2: And I had in mind to reshuffle the team so that the people that I was bringing would fill in those gaps and making sure that I enforce the autonomy portion of it to make sure they still have autonomy by their work.
+Speaker 2: Yeah, that's great. I like that answer.
+Speaker 1: In terms of the types of people that you've managed, where have they been in their career?
+Speaker 1: Is it early career mid-career, late career, like, what's kind of the makeup of the groups that you've led?
+Speaker 1: It's been different levels of career.
+Speaker 1: When I first started leading as an engineering manager, I was leading people who were more like graduates from college.
+Speaker 1: So that's how I started. I think that one was, it wasn't easier at the time because people were more ambitious.
+Speaker 2: And so you could drive than people saw the world as they wanted to take over the world. So you could, you know, try.
+Speaker 2: So as I moved across my career, I started to realize like I had to level set expectations.
+Speaker 2: There were people who were at a point in their career where they felt like they were capped and they were comfortable where they were.
+Speaker 2: So they weren't looking for additional action. So it was just making sure that they were stable.
+Speaker 2: So I've had people who are in the process of just, you know, trying to start a family.
+Speaker 1: I've also had people who are in the process of, like, actually even like, I forget what the word is, but like they were in the process of like, all their kids were no longer, you know, in the house, they ended up,
+Speaker 1: Yeah, that's emptiness, that's exactly. So I've had those types as well.
+Speaker 1: So what I've figured out throughout my process of managing people is really making sure that I'm aligning my expectations.
+Speaker 1: Yeah, my growth expectations of them, with their own expectations of themselves and making sure that to the degree that they're doing good work.
+Speaker 1: So it's not, it doesn't, the excellence or the quality of what doesn't have to be used because somebody's at a level of the career.
+Speaker 2: But it's like making sure that I'm not driving people to the degree of growth that they aren't necessarily like trying to achieve.
+Speaker 2: Maybe they are good doing the best work, but they're not trying to move to the next level.
+Speaker 2: So there's different types of dynamics in terms of that.
+Speaker 2: But also, I've also had the opportunity to do with people who've managed people in time, and now are now having to be managed.
+Speaker 2: And so it's a different dynamic for that as well. But I learned to listen. That's the most important thing for me. I listen.
+Speaker 1: And I actually ask people, how can I lead, what is your, how do we communicate from a leadership standpoint? How do you like to be led?
+Speaker 1: Do you want more autonomy? Do you want, how just, you know, making sure that I'm aligned with them on my knee?
+Speaker 1: Because my leadership style, while I'm causing transformation and transparency, I've had to just navigate the differences or the nuances across different folks that have managed.
+Speaker 1: Okay. It's great.
+Speaker 1: Yeah, and you answered the question I was going to ask in terms of, you know, when I was saying like, who, who, who, what kind of people have been managed?
+Speaker 2: It was, you know, the follow-up question was going to be, and how do you adjust kind of coaching and management style?
+Speaker 2: That's good.
+Speaker 2: Have you had situations where, in terms of the management style, like, that you've struggled to figure out like what works for people?
+Speaker 2: I mean, I quite frankly have.
+Speaker 2: Oh yes, I've had, I've had that. I think, meet, meet career, one of the things that made me struggle in terms of, you know, what people wanted was also, sometimes, and this is not, you know, I think that people say they want certain things, but they might really want something else.
+Speaker 1: So it's really getting people to really tell you what they really want.
+Speaker 1: And so part of that part of navigating that is really just testing what type, because again, when it comes to leadership, I said to people, I lead people for their growth, but I also lead people for the growth of the business.
+Speaker 1: So there's two aspects of that. So when I'm leading people, obviously for me, top of mind is growth of the business, and also it's important that as the business is growing, you know, as the objectives are being met, that the folks on the team are also growing.
+Speaker 1: So I've seen situations where people feel like they are growing, but they might not feel like they can measure the impact of their growth, really tip to the business.
+Speaker 1: I've also seen where people feel like, you know what, I think I'm doing great on the job, and I'm getting all this positive feedback, but career wise and not growing.
+Speaker 2: And so it's sitting down with them to have that balanced effect of what can we be doing right now to make sure that you're experiencing growth on both angles.
+Speaker 2: On the side where from a career standpoint, you're growing. So let me just give you an example.
+Speaker 2: One of the team members on my team, complain at some point, they said that for them, they were looking to accelerate to people management rules.
+Speaker 2: And that was their own career goal for that particular space and time. However, on the role that they were performing, they were doing great.
+Speaker 2: They called us love them, they were doing excellent work, quality work, but from a career standpoint, they didn't feel like they were growing.
+Speaker 1: And so these were things that if they had mentioned to me specifically, like, you know, sometimes you ask people, people say, oh, I just want to do great.
+Speaker 1: They're not able to iterate like what does great mean for you. And so we had to sit down and begin to give them opportunity. So whenever, so practically speaking, whenever we had contingent workers on the team, I make sure that those contingent workers were reporting to them.
+Speaker 1: So that they could start taking on that role of leadership, leading the contingent workers. And then when an opportunity for, you know, the growth at the time when there was an opportunity for them to be put forward as managers, you know, I put them forward.
+Speaker 1: Although they had to move, you know, eventually they had to move to another team at the end of the day, but I was just very proud to see their growth.
+Speaker 1: And to have them accelerate to that point where they were not just able to money, see their business, but on that team, on the system team, they were also able to manage folks as well.
+Speaker 2: So yeah, that's what I would say, if I could just summarize that the challenge has been to just navigate how people are growing from their own personal career standpoint,
+Speaker 2: and how their career is growing really deep to the business. So it's a very interesting path to navigate, but I think over time I've been able to get a group on that, just by clear communication with the teams.
+Speaker 2: Yeah, I think it's been interesting for me being at, I was at a large company Disney for like 16 years where they were very, very upfront at times in terms of the career coaching, where they would say something to the effect of, you know,
+Speaker 2: do not assume, just because you're doing a good job, you're going to get promoted. There has to be a need for that role.
+Speaker 2: If everyone's not promoted for doing a good job, which they should do as part of the, you know, the very top of the organization, there's just not enough room.
+Speaker 1: From there, I went into tech companies like Epic and here and I feel like because I think tech talent is, you know, often more in demand.
+Speaker 1: There is just kind of, in terms of assumption of continuous growth, but in some roles, it is going to, like, unless I want to change the scope of the role, like, you know, at some point you do pop out.
+Speaker 1: Right, that's absolutely fine.
+Speaker 1: There's things that are challenging, right? Like I like what you're saying, because there's other opportunities for growth even if it's not, you know, title level.
+Speaker 1: So it really is where, you know, getting towards the end is a lot or third of this, so leaving time for your questions, you said you had a few.
+Speaker 2: I did, I did, I did, thank you. I'm curious. I know that we spoke the last time, but I'm also curious, especially with the net fixed culture of autonomy.
+Speaker 2: I had, I had a couple questions on that. How, how has your leadership style changed or evolved over time, especially with this role that you've taken on?
+Speaker 2: That is a great question, because it's one of the things that I have been adjusting to. So, so any new role that I have, so I've been months three.
+Speaker 2: Any new role that I would have, I, you know, do what you are talking about, listen, get to know people understand what they're working on.
+Speaker 2: I would say that now I have a general understanding, I have a detailed understanding on some projects, but not every project that is within the organization.
+Speaker 1: And the thing that I have been adjusting, and I'm really trying to collaborate on, is what is the right level of autonomy, because I've also been talking to our partners and our partner teams, teams that we work with closely and getting feedback from them in terms of what's been going well, what's not been going well.
+Speaker 1: And some of the things that I've been hearing, corroborate some of the feelings I've had, as I've seen the work of the team.
+Speaker 1: And they have a concept here which has been somewhat reassuring to me that, you know, people have autonomy and, you know, there will be a leader, let's say on a project, which is called the informed captain.
+Speaker 1: But there's also informed leader, so as an informed leader, it doesn't mean that you cannot, you know, kind of guide in the direction.
+Speaker 1: So I'm actually trying to approach, so one of the things that I think I've been evaluating is because there's, there's some areas that I didn't think we were going in the right direction or there were things that I thought we needed to revamp.
+Speaker 2: And so I wanted, you know, being, being new, I didn't want to say that immediately.
+Speaker 2: And I think that would have been the case of whatever type of company I was at, even if it was, you know, a traditional bureaucratic company like Disney.
+Speaker 2: I would have also, like, you know, taken my time to say, like, oh, what, what are we doing here, or we shouldn't be doing this.
+Speaker 2: But, you know, I also, it was, it was, I took the time to kind of understand what was going on.
+Speaker 2: And then question, like, okay, so like, why did we go this way in terms of our policies and guidance? And I got the background.
+Speaker 1: And then, thankfully, this was one area that as I started asking more questions, finally it started coming out that people were like, yeah, we don't really agree with this, but this is the way that it was dark.
+Speaker 1: I mean, I think I would have gotten there.
+Speaker 1: But it was funny because as I was trying to learn about it, I just kept thinking, like, wow, if people really back this, I'm just going to have to overcome it.
+Speaker 1: But I would say that in terms of adjusting my leadership style so far, I haven't had to because my honestly don't do.
+Speaker 1: Because I'm learning. I always want to get them around.
+Speaker 2: I think that I am going to have to adjust is that I have managed a lot of mate. I have managed large teams when they're matrixed.
+Speaker 2: You know, where I am managing, I've had a number of direct reports and then we have we're partnering with engineering teams to build something and then I kind of have a matrix relationship with them.
+Speaker 2: But that is different than actually managing them directly.
+Speaker 2: And I have many more people in my department than I've had in the past.
+Speaker 2: And so I think one of the things that I'm going to have to change in terms of my leadership style is just not being as aware of all the details.
+Speaker 1: I don't, I can manage or at all, but I've always had a very good understanding of every like down to a pretty detailed level of what everyone on my team was doing because it was just a smaller team.
+Speaker 1: It's just much easier to know when you only have six to ten people on the team what they're doing.
+Speaker 1: Because, you know, I would have a few direct reports. They'd be telling me I'd have more regular check-ins with, you know, the skip levels and kind of here what's going on.
+Speaker 1: And everyone, you know, this was pre-COVID. Everyone's collocated.
+Speaker 1: He just kind of things when you walk out of your office and, you know, will join casual conversations.
+Speaker 2: So here we are distributed.
+Speaker 2: We are a larger team. There's just a lot of products that have a lot of tools that have been built, you know, over time.
+Speaker 2: And I'm still learning about all that technology.
+Speaker 2: And obviously I'm going to know what the team does, but I think that, you know, this is where it will be blind on the management team to much more in terms of making sure that we're all kind of traveling in the same direction.
+Speaker 2: That makes sense. That makes a total sense.
+Speaker 1: Yeah, it's always good to learn that the way you're thinking about something is how everyone's been thinking about it regardless of what the current state is.
+Speaker 1: And so everyone's like, yeah, we've been thinking of it's just that this is how we've been doing things, but yeah, we're other lines, so that's great to hear.
+Speaker 1: I know you have touched a bit on, like, what the folk, the person who's going to be on this role is going to be doing specific to, you know, like morale, especially with the changes and all of that.
+Speaker 1: Are there any other like specific skills or like specific qualities that you would say that somebody who would take on this role should sort of arm themselves with to be successful?
+Speaker 1: Yeah, so there's that management piece and the, you know, fostering like psychological safety is like, you know,
+Speaker 2: terminology, but the other piece is basically problematic scalable guidance. So the team is very smart, but, you know, some of the approaches have been very academic.
+Speaker 2: So they have again more of a, here's an idealist way of trying to, you know,
+Speaker 2: do classifications, state of classification and it can be this, this is actually one of the, one of the things that was referring to when I saw how we did it, I was like, oh, okay, this is, you know,
+Speaker 2: there's frameworks out there, and there's like three to five classification levels.
+Speaker 2: I mean, this many classification, or that initial, so prep not,
+Speaker 1: scalable guidance, really getting the business to better, sorry, getting the team to think about the business and I have been doing that's one of the things I liked about what you've said in, in a couple of, in both of our conversations.
+Speaker 1: Um, getting them to see the value in terms of the business outcome and even though we might be addressing risk,
+Speaker 1: trying to open up to see that how in addressing risk, it might help the business, so maybe we wouldn't be using the risk terminology.
+Speaker 1: So retention, you mentioned earlier, maybe retention also helps, well, that looks right now, it doesn't care so much about cost, but at some point they will.
+Speaker 1: So I think the same retention is helping with storage costs, more retention, helping with data quality because you're getting rid of, you know, old,
+Speaker 2: stale data or retention is helping with performance.
+Speaker 2: There could be now there may not be and it may just come down to like, okay, we have to delete the state of, you have to delete data because, you know,
+Speaker 2: but, um, or even the brand, you know, protection. So I feel like a lot of times that the team has just been thinking about it from a risk perspective, which is fine.
+Speaker 2: That's their job, but it hasn't resonated with the business and, you know, we have to make sure that we're partnering with the business.
+Speaker 2: So, um, the management of like, you know, kind of, the morale, this pragmatic scalable guidance, thinking about the business, and then partnering with all our stakeholder teams that the team has tended to.
+Speaker 1: And again, this was previous the way that they were supposed to operate, so I'm not faulting them, but they have been operating a little bit in a silo and so,
+Speaker 1: and so, we're figuring out, how do we, you know, we were talking about these multiple processes that were, you know, for the risk analysis, like product versus, what was an operational.
+Speaker 1: Yes.
+Speaker 1: So, there are places in secure in the larger spot organization where security is doing something very similar to what we're doing.
+Speaker 1: So, I would like better, you know, kind of collaboration and integration with the other teams, so that we can reduce, you know,
+Speaker 2: do some processes, do some of the interactions we have with the business unit, and then also with the business units, because, you know, in terms of that, okay, our planning, we're talking about.
+Speaker 2: I think that there has been a tendency of this team to just kind of dump their requirements, again, not faulting them, because I think that's just the way it was operating, but things have changed now,
+Speaker 2: dumping the requirements to a different team, saying here, you guys have to do this, and then that team will say, yeah, we don't have the bandwidth, never mind.
+Speaker 2: And I would like to get to a place of better relationships with the business where we're kind of discussing what makes sense.
+Speaker 2: And as our list is never going to be addressed, but, you know, get to a place where we're thinking, like, okay, understood, but like here are the things that we would really want and, you know, understanding where they're coming from, so that at least, even if things are not being done, we under, you know, we know, like, people don't take it personally.
+Speaker 1: Yeah, for sure, for sure, that makes sense. Well, that's really helpful. And that kind of tied to something I'd heard in my last interview where, you know, there was a team that was performing security reviews for STLC for, like, software development lifecycle, and part of what I really wanted to understand was, because I know there'll be overlaps between security reviews and privacy reviews and really just thinking about where those interactions are.
+Speaker 1: That's helpful to hear your perspective on what leader on that team should be thinking about.
+Speaker 1: Yeah, and, you know, there's another team within PDPE where they're called the titles are not very explicit.
+Speaker 1: It's not like there's another called privacy engineering, they have a number of privacy engineers, and a lot of them do reviews, but I've been asking, I think that there's still a collaboration needed even internally within my group, you know, how should we templatize this process.
+Speaker 1: We need to integrate with, you know, minorities team or whoever's team to, like, you know, kind of reduce the overlap.
+Speaker 2: So, I think some of these things will have to be, you know, because there hasn't been a manager here, there hasn't been kind of those conversations of, like, where do some of these things belong.
+Speaker 2: I view the data protection team as providing the policy, the guidance, you know, working with the two other teams to kind of get to either tooling with the privacy infrastructure engineering team or, you know, templatize processes approaches with the privacy engineering team.
+Speaker 2: So, you know, that security privacy review is an example of that.
+Speaker 2: That makes sense. That totally makes sense.
+Speaker 2: Yeah. Any questions or?
+Speaker 1: No, there's all the questions that I had. Thank you for answering them.
+Speaker 1: Okay. Do you have more interviews today?
+Speaker 1: Or, I have one more.
+Speaker 1: Okay.
+Speaker 1: Yes.
+Speaker 2: Oh, okay. Is that, that's what you want?
+Speaker 2: Yes, we do. Correct.
+Speaker 2: That's that she is appear to this role.
+Speaker 2: Okay.
+Speaker 2: So, if on, if on reports to me.
+Speaker 1: Okay.
+Speaker 1: Here you got the breakdown on the interviews.
+Speaker 1: Yes.
+Speaker 1: So.
+Speaker 1: Well, thank you very much, Ted. This has been great.
+Speaker 2: Thank you so much.
+Speaker 2: I appreciate your time.
+Speaker 2: Thank you, Senator.
+Speaker 2: All right. Take care. I hope you're Friday.
+Speaker 2: You too. Thank you.
+Speaker 1: Hi. Right.
+Speaker 2: I wish you a great day.
+Speaker 1: Ah.
+Speaker 2: Okay.

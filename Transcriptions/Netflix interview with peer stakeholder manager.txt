@@ -1,0 +1,406 @@
+Speaker 1: Hi everyone, I may not have heard you, I think you may have missed you on that one.
+Speaker 1: Hi. Hi. Are you Italian? Yes, that is correct, Timmy. Nice to meet you. Nice to meet you, Bob.
+Speaker 1: I mean the privacy infrastructure engineering team here at that place.
+Speaker 1: We are software engineering team, part of the privacy of the action optimization.
+Speaker 1: And we work closely with the infrastructure.
+Speaker 2: So the data production team sets the items and our field inputs.
+Speaker 2: I see. Great. That's helpful.
+Speaker 2: So I see you at Maddo.
+Speaker 2: Once I've met right now, I'm at the database solutions leading a team for AI compliance walkthroughs.
+Speaker 2: So, um, how are you doing? Well, thank you for asking. How about yourself?
+Speaker 1: No, I'm fine.
+Speaker 1: All right, um, so I need to work out. Sounds good to me.
+Speaker 1: Let's see. How do you work on a team with other leaders?
+Speaker 1: And when you say how do I work on a team with other leaders, can you give me a bit of context?
+Speaker 1: So that just to make sure I can frame the answer you can for.
+Speaker 2: Okay. Yeah. So, um, I'm not going to have this concept called first team.
+Speaker 2: So the first team is basically all like all manager is all your peer managers.
+Speaker 2: So within the pharmacy, all of you have to make that as the director.
+Speaker 2: Okay. I think there will be like, uh, there's me and Tracy for the managers for pharmacy infrastructure engineering.
+Speaker 2: I should hope on the engineering.
+Speaker 1: And then the data production manager will be part of this first team.
+Speaker 1: And when you think about it, it's then the first team.
+Speaker 1: It could also include other managers for partner teams.
+Speaker 1: Right. And stakeholder teams.
+Speaker 1: Yeah. So when you think about yourself in this kind of organization, like I'm sure that is very similar.
+Speaker 2: Organized to all your current company.
+Speaker 2: How how can you think, um, can you describe how you work with other leaders?
+Speaker 2: Right.
+Speaker 2: Okay. Yeah. Absolutely.
+Speaker 2: So I think in terms of how I work with other leaders is really building a relationship that allows us to understand our goals.
+Speaker 1: From an organizational perspective,
+Speaker 1: goals and objectives and where we have overlaps or where we have relationships that would allow us to synergize in order to meet those required goals.
+Speaker 1: So practically what that means is having open and transparent communication early.
+Speaker 1: So when my team is planning for the quarter or developing okayers,
+Speaker 1: making sure that these teams are brought in early to be a part of our planning process.
+Speaker 2: So that if there any needs to require from our team,
+Speaker 2: we're providing that and vice versa and we get alignment on what needs to be done.
+Speaker 2: And then part of that also allows us to establish where there might be overlaps and where we may be able to reduce the duplications.
+Speaker 2: And then there is another important aspect of establishing our workflows.
+Speaker 2: So in teams like this, there are times where they need to be hand-offs from one team to the other.
+Speaker 1: And it's important to understand what that workflow would look like.
+Speaker 1: So for example, when I have walked up meta as part of a larger organization,
+Speaker 1: we have the risk management team, the controls team and the privacy engineering team.
+Speaker 1: So like you were mentioning, your team is the one that does implementation
+Speaker 1: and the data protection team sets the tomb.
+Speaker 2: So it's really understanding where does that hand, hand off, you know, coming, where does that hand shift coming?
+Speaker 2: And then what I've done for teams in time passes building a very standardized workflow
+Speaker 2: that everyone has transparency for. Everyone knows when to handle to the next team.
+Speaker 2: We understand what the entire dependencies are and we understand what our expected outcomes are as well.
+Speaker 2: And then also making sure that as we report as part of our achievement for the team,
+Speaker 1: we're also making sure that we can incorporate shared wins across the different teams.
+Speaker 1: And also incorporate where we're able to collaborate and synergize in order to achieve certain required objectives.
+Speaker 1: So in summary, it's collaborating from the planning perspective, collaborating on the workflow, collaborating on the outcomes,
+Speaker 1: and then collaborating on the reporting mechanism for all the different teams that are working together.
+Speaker 2: So what do you think in the first team like this, what kind of strength that you bring to the table?
+Speaker 1: So my biggest strength is I'm able to translate non-technical concepts to technical tips, use me to a non-technical team.
+Speaker 1: My strength is in bringing stakeholders together and making sure that communication is dissected to the degree that they can't all adopt whatever it is that we're trying to inform.
+Speaker 1: So because I have a background in engineering, I wasn't the engineering space for a very long time.
+Speaker 1: So I understand systems and the infrastructure.
+Speaker 1: So for example, when I'm speaking to the privacy engineering team, I understand typically the typical SDLC software development life cycle,
+Speaker 2: when it comes to incorporating whatever requirements, software design requirements into that process.
+Speaker 2: And so when I think about integrating that to privacy by design, making sure that privacy requirements are incorporated,
+Speaker 2: I understand where at the point of the software development life cycle, the principle like data minimization, for example, it's to come in.
+Speaker 2: So I can give you a very good example. So when I'm trying to incorporate data minimization into a product, it starts from the user interface.
+Speaker 2: Where your making sure that the user interface only has, you know, spaces to collect the specific type of information that we're collecting.
+Speaker 1: And so from a regulatory non-technical perspective, data minimization is a concept from a regulatory term that I can explain to lawyers that making sure that we're not collecting more data that we need.
+Speaker 1: But when I'm translating that to the team that's implementing that, I have to talk to them about in the context of design or UI or even for the data privacy engineering team talking to them about that in the context of the, you know,
+Speaker 1: you know, get checks for the types of data that we're collecting and making sure that we have things like when you think about API calls, we have things like limits that we're putting in place to make sure that we're not collecting,
+Speaker 1: or finally more data than we regularly need. So that communication, making sure that there's synergy because sometimes the engineering team is saying something and it's struggling to the legal team.
+Speaker 1: And so the being able to sit at in the middle of all these people and doing that translation to make sure that each of the teams are collaborating together and they're hearing each other and there's a good translation is what I bring to the table.
+Speaker 2: Do you have a feeling for a situation that we go, wanting to be, how engineering and pulling certain things?
+Speaker 2: All the time. All the time. And I can give some examples if you want me to share that.
+Speaker 2: Yeah, absolutely. So one of the things that I've seen throughout my career is that legal is coming straight from the regulatory side, but they usually don't understand the design or the infrastructure.
+Speaker 2: One example was when we were at the middle and the regulatory requirement required us to do encryption at some point.
+Speaker 2: Now the way that the data infrastructure at the middle works is that it cannot do encryption. They have very robust access controls in place that they have set up.
+Speaker 1: But the legal team was tied towards encryption and the engineering team was like encryption does not work in our environment.
+Speaker 1: And so that was a place where we had to come together. So I was on the team at that time.
+Speaker 1: And the idea of encryption is to protect data to the degree that data is not exposed and allows us to meet our requirements.
+Speaker 1: And there's a concept in compliance through my time in consulting where we say it's a defensibility, not necessarily compliance.
+Speaker 1: So the ability to show the risk that you are reducing as a result of the controls that you're putting in place.
+Speaker 2: So the risk that encryption really is reducing is exposure of the risk of exposure of data.
+Speaker 2: But the access controls that meta engineers had also put in place was also reducing and mitigating that risk.
+Speaker 2: So to be able to translate that discussion from your risk standpoint where legal was able to see that this process is reducing risk.
+Speaker 2: And the engineering team also understood that this process is reducing risk.
+Speaker 2: I allowed us to be able to get that collaborative effort in implementing the controls.
+Speaker 1: That's a really good example. Thank you.
+Speaker 1: You're welcome.
+Speaker 1: So when was your first team when you were on?
+Speaker 1: And why was why I was worried?
+Speaker 1: I've had a lot of best teams. I think I think about best teams relatively.
+Speaker 2: My best teams are the teams that challenge me the most are the teams that allow for innovation.
+Speaker 2: I would say like one of the teams that challenged me the most was when I was actually lead the team that commissioned the FTC privacy program at meta.
+Speaker 2: So I was at the Lloyd at the time and the Lloyd was brought in to commission the FTC mandated program.
+Speaker 2: That was as a result of the Cambridge Analytica.
+Speaker 2: And so that project was very, very fascinating for me because I had to relearn the data infrastructure meta.
+Speaker 1: It was very different.
+Speaker 1: So I had come from environments where the infrastructure was not as complex as what I saw at meta.
+Speaker 1: So that was one thing that made it good.
+Speaker 1: The second thing that made it good was just the amount of collaboration that we had to do.
+Speaker 1: So one of my experiences that I really loved was really getting into privacy engineering.
+Speaker 2: And if you are familiar with meta, a lot of the privacy implementations that they do.
+Speaker 2: They call it what this. They say it's privacy in code.
+Speaker 2: So they codify data privacy into the implementation across systems and across products.
+Speaker 2: And so it was interesting to be able to sit with privacy engineers and talk to them in the language of compliance and see how they translated that.
+Speaker 2: So one example was consent mechanism for example.
+Speaker 1: Making sure that we had consent mechanism not just honored on the front end, but also on the back end.
+Speaker 1: So part of that was really understanding how to were implementing meta tasks as consent requirements and all of this.
+Speaker 1: It was what made it very interesting was number one. It was a very large scale project.
+Speaker 1: There was an opportunity to collaborate with a lot of cross-functional teams including legal data, analytics, privacy engineering.
+Speaker 1: And it was very innovative driven because the meta was looking to implement something that was different from the market.
+Speaker 2: Making sure that they could also meet privacy in order to enforce instead of trying to manually enforce privacy across their systems.
+Speaker 2: So and then the people also that I worked with.
+Speaker 2: And just the leaders that I was able to interact with was what made that project extremely interesting for me.
+Speaker 1: How do you work to influence the priority of these projects?
+Speaker 1: Because sometimes when you work with a partner team, you're priority might not be there, right?
+Speaker 2: So how do you make sure that the privacy does not block the ability that does not slow you down?
+Speaker 2: Right. So when I think about the priorities of partners, part of what allows me to reduce some of those risks ahead of time is making sure that my partner is involved in my planning process.
+Speaker 2: And so bringing them in, I want to call it collaboration by design just boring from privacy by design is not thinking about privacy after the fact, but thinking about it, even before you start your entire process.
+Speaker 2: So part of that is making sure that my partners are in fact part of our prioritization approach.
+Speaker 2: And so what I've scientifically is that while you're absolutely right that there might be places where we have conflicting priorities.
+Speaker 1: I've also seen areas where we have similar priorities that we can potentially partner on.
+Speaker 1: Now where we have competing priorities, I've taken a risk management approach and brought all the people into the room.
+Speaker 1: To identify if our partners are trying to make us prioritize something, what does the impact of mitigating that situation look like?
+Speaker 1: What does the impact of not doing it look like and what does the impact of doing it look like for a team?
+Speaker 1: Now the impact of doing it on our team, for example, is like what does resource and look like, resource and look like for us?
+Speaker 2: What we did add in terms of the workload of the team?
+Speaker 2: And then from the impact of doing it is like what risk are we reducing, is it urgent for us?
+Speaker 2: How does it also help to meet going back to our overall goals and objectives of the team?
+Speaker 2: So those are the things that we typically consider and what I realize is that once we get into the room and we're able to practically identify the risk that we're able to solve collaboratively, we can then prioritize what those approaches look like.
+Speaker 2: Because now we have that risk assessment data to help us make an informed decision.
+Speaker 1: If you ever be in a situation that something that you thought that you had presented at a very strong case to prioritize your work or the partner team, and they actually don't have the resource or ability to work on it.
+Speaker 1: Well, like, you know, two quarters or a year.
+Speaker 1: And what do you do at the moment is a situation like that?
+Speaker 1: I've had many of those, especially relative to so I can give you an example.
+Speaker 1: When we were at meta, one of the things that meta is big on is using tools to get work done.
+Speaker 2: And so they tried to make sure that we were closely aligned.
+Speaker 2: So for every compliance team that we're part of, we were closely aligned with the tooling team that helped us build our compliance workflows into tools.
+Speaker 2: So think about what, I don't know if you're familiar with some of those like one trust tools out there, meta builds their own internally.
+Speaker 2: And so part of the challenges that we encountered was we as a team had aligned on the things that we wanted to achieve in the context of having a tool to get that done.
+Speaker 2: And then when we went to give so a very good example, we were working on it at the time and there were lots of change requests.
+Speaker 1: And so what would have made it easier and to change requests involved a lot of our provosts and a lot of like you know, because it was going to the regular tool.
+Speaker 1: So they needed to be a lot of like, provosts and all of that.
+Speaker 1: However, if we had to use the tool, the tool would have increased our efficiency by more than 50%.
+Speaker 1: And I recall that we went to the tooling team and they said there was no priority because they did not have anybody on their team to focus on that.
+Speaker 1: So what we did was we negotiated on a faced approach.
+Speaker 2: And so part of that was in order to implement a change management system, there were many requirements that we're having.
+Speaker 2: And so I think the requirements initially overwhelmed them.
+Speaker 2: And so we had to reduce the requirements to most hubs and good to have.
+Speaker 2: And then we collaborated with them to say if we want to implement this whole thing, it sounds like you might take us a year.
+Speaker 2: If we slash our requirement by 50%, is there any chance that you might be able to fit that into your workflow.
+Speaker 1: And so when we were able to do that, we were able to think about what are the requirements that are easy fixes for their team that would still work as an intern plant for us.
+Speaker 1: So that was something that we were able to incorporate and then we took a faced approach where we fixed some, and we were able to get the tooling team to help us do something in the long time in the short term.
+Speaker 1: And then we continuously followed up on that with them.
+Speaker 1: And actually this was very interesting because I recall what I specifically saw to them was I told them that because they were also tracking for metric success.
+Speaker 1: They were supposed to track how their team was elevating compliance.
+Speaker 2: And so what I told them as a negotiation factor was when you implement this for us, you're able to track this as your own metrics as part of how you're reporting.
+Speaker 2: So it's going to be a shared one. So in fact, you're not doing work for our team.
+Speaker 2: We are collaborating on this.
+Speaker 2: So then when you're doing your final report to the VP and all of that, they understand how your team is also helping to elevate compliance.
+Speaker 2: So those two aspects was what you're going to be home for us to be able to get their buying to implement that tooling for us.
+Speaker 1: That's great. That's a really great example. Thank you.
+Speaker 1: So for your team, how do you hold your team accountable to their work?
+Speaker 1: Yes. So in terms of accountability, it's making sure that there's clarity of rules and responsibilities.
+Speaker 1: It's very important for me and that there is continuous transparency when things change, especially in the first, you know, in a very innovative environment.
+Speaker 1: And then helping them understand the impact of their work and how that impacts not just the team, but how it impacts the organization.
+Speaker 2: So part of the accountability process is that there is a lot of opportunity to do it in a manual method, which I incorporate both, where I'm setting up like cadence for feedback and cadence for updates and cadence for check-ins.
+Speaker 2: But also there is the automated fashion of where people get the sense of accountability from the impact level they discern from the work that they're doing.
+Speaker 2: And so in cases where I would have had to force somebody to meet a specific deadline or to do something, they already understand the impact of their work.
+Speaker 2: So it allows them to take early accountability when they're doing those things.
+Speaker 2: But on top of that, I also make sure that there is clear communication whenever there are changes, there's transparent communication, we're getting feedback.
+Speaker 1: And I've also had cases where I had to go deep down with the team to drive accountability in certain cases, depending on the urgency of the work.
+Speaker 1: So my accountability enforcement approach varies per time.
+Speaker 1: But ultimately it's grounded on making sure the team understands their clear rules and responsibilities, making sure that they understand the impact and the value that's been driven by the rule.
+Speaker 1: And then making sure that there is the cadence for continuous communication of feedback, especially when something went to change from there and something went to change from leadership.
+Speaker 1: Making sure that that communication line is okay.
+Speaker 2: That's great.
+Speaker 2: So can you give an example when somebody actually needs the deadline?
+Speaker 2: And how do you handle the impact that maybe that the missing deadline could have impact on your partner teams and your stakeholders, right?
+Speaker 2: And how do you manage that?
+Speaker 2: Right.
+Speaker 1: I recall the time this was, it did actually was a very huge impact. It didn't just even impact our stakeholders.
+Speaker 1: It was something that potentially would have impacted the organization because we're doing not audit.
+Speaker 1: And so the audit work was meant to evaluate data in the cloud and to be able to provide to the audit towards the types of controls that we were putting in place.
+Speaker 1: Now, what had happened was that this person was collaborating with some engineers to understand the controls that we're putting in place because this person is an audit on my team.
+Speaker 1: But they also needed to gather all the pieces of data that you know had come from the team.
+Speaker 2: Now, the good news of what I was able to do in that situation was that I noticed that we're going to run out of time in that particular, because I was getting information from them to and through.
+Speaker 2: And quite frankly, we didn't meet the deadline in terms of the specific promise that we had made.
+Speaker 2: So we had promised that a certain percentage of the products and systems would report on that within a specified timeframe for the purpose of the audit.
+Speaker 2: However, as we were moving, because we didn't necessarily have very good, you know, engagement or report at the time, we were at the lot we were at the light team, so we external were consulting at the time.
+Speaker 2: So we were external to the project.
+Speaker 1: What I quickly pivoted on was communicating to our leadership to say, hey, we had provided that we would be giving you XYZ percentage information on data assets and the controls.
+Speaker 1: However, what we can do is we can provide you with this amount of information.
+Speaker 1: And what we did with that was that we weren't just saying we were going to give you a percentage, but we prioritized the base on the risk perspective in terms of what the assets would want.
+Speaker 1: So what I quickly realized was that the assets were thinking about sensitive data or data infrastructural systems that had the most sensitive data.
+Speaker 1: So once I knew that we were running back on time and would not have been able to achieve that goal, I made sure that we did a reprioritization effort to focus on the sensitive data classes that would need to be in front of the assets within that timeframe.
+Speaker 2: And so we're able to quickly pivot on that.
+Speaker 2: We weren't able to provide what we had promised, but at least we took a prioritization approach that showed the assets that we were taking care of our most sensitive data.
+Speaker 2: And then on top of that, we provided a roadmap that would allow us to go back and let them know what timelines will be able to provide the remaining resource information that was needed for the audit.
+Speaker 2: I'm long. That's great. Thank you.
+Speaker 2: Thank you.
+Speaker 1: Can you tell me, maybe give me an example of a time when someone came to you with a problem.
+Speaker 2: That, I'm sorry, let me refer.
+Speaker 2: Let's say someone on your team came to you because they have problem with someone else. How do you deal with that?
+Speaker 2: And is that someone else on the team or outside of the team? Because I want to be able to contextualize my answer for you.
+Speaker 2: Yeah, so it could be someone that not on your team come to you and they have an issue with someone on your team.
+Speaker 1: Got it. That makes sense.
+Speaker 1: Oh, if you don't have an example like that, but you can give me a different example.
+Speaker 1: Thank you. I've actually had that.
+Speaker 1: I've had that situation before where we were also working on an audit.
+Speaker 1: And so the person had come and let me know that our team wasn't communicating well.
+Speaker 2: There are more of communication was in alignment with the team and it didn't allow them to be up.
+Speaker 2: So let me just provide you like what the actual context was.
+Speaker 2: So our team, this was again was another audit that we were performing.
+Speaker 2: And part of the audit was we needed the engineering team to provide us some sort of demo.
+Speaker 2: Because the assessors were needing to see some sort of demo in terms of some of the controls that we had put in place.
+Speaker 1: And this involved some of those engineering teams to run quotes that sometimes lasted for hours.
+Speaker 1: And it took time to run. And so their complaint was that our team wasn't good at communicating timelines for which they needed that because
+Speaker 1: As sites from giving us information about you know the audit that we're asking for.
+Speaker 1: They also had their own operational requirements that they needed to meet.
+Speaker 1: And so they felt like our communication was slowing down their efficiency and was acting as an impedance to their own work as well.
+Speaker 2: And so I had to call the member on my team who you know I had they had talked about.
+Speaker 2: And the way that I addressed the type of situation is number one I talked objectively about the feedback that was provided.
+Speaker 2: And I also talk about the impact of what you know in the feedback that has been provided.
+Speaker 2: And then I get back you know their own side of how they're thinking about it.
+Speaker 2: And so it's really like hey.
+Speaker 1: I've been hearing that communication hasn't not been very effective with the other team and slowing down their work have they expressed that to you.
+Speaker 1: So that I can understand how they might also have navigated the situation before me coming in.
+Speaker 1: And in certain cases they might say, oh I've already gotten that feedback and I'm working towards it.
+Speaker 1: And then they talked to me about what their request actually looks like as far as like what they're trying to do to address the situation.
+Speaker 1: And in many cases maybe they're not already considering it.
+Speaker 2: But for this particular case that I did have the example for this person had already gotten that feedback directly from the team.
+Speaker 2: But it didn't feel like they were acting upon it.
+Speaker 2: They felt like they were doing something but the team didn't feel like they were doing it also it had to come to me.
+Speaker 2: And so I sat down with them to understand what do you think you can do to make this work better or to make communication better.
+Speaker 2: And so it was making sure that we both collaborated on our course of approach.
+Speaker 1: And so it was picking out what is making your communication slow just identifying specific areas that they had called out slow communication.
+Speaker 1: You know in proper timelines that you know are provided towards to be able to provide what we're needing.
+Speaker 1: And I really just sat down with them how come we communicate better.
+Speaker 1: What does your communication look like today?
+Speaker 1: What does good communication look like?
+Speaker 2: And then what do we need to do in terms of timeline?
+Speaker 2: How soon do we need to keep them proactive?
+Speaker 2: To be able to make sure they're running the code that provides us what we needed.
+Speaker 2: In some cases also there were queries that they needed to run and get to provide us what we needed as well.
+Speaker 2: And so we're able to work that through together and then went back and then I had specific goals that they needed to actually within a certain period of time.
+Speaker 1: And so I said in the next two weeks we want to be able to check back with the team and see what has changed.
+Speaker 1: And we must know that timelines are now working better for them.
+Speaker 1: Communication hasn't proved.
+Speaker 1: And so by the next two weeks I spoke to the person who had brought up the complaint.
+Speaker 1: And they told me that they had been a slight improvement.
+Speaker 2: Now in this case unfortunately I had to switch the person.
+Speaker 2: Because while the improvement was there it was slow.
+Speaker 2: It was in as fast as we wanted to because we wanted to high.
+Speaker 2: So I've been in projects where it's not a high priority.
+Speaker 2: And I take time to coach these individuals.
+Speaker 1: But this one was a very high priority project.
+Speaker 1: So I had to switch them.
+Speaker 1: To bring in someone else who was more further ahead and communicating.
+Speaker 1: And better just a structured right time.
+Speaker 1: And then we were able to get that moving.
+Speaker 2: That's good.
+Speaker 2: That's a good example.
+Speaker 2: So what happened to the person that he switched out.
+Speaker 2: So he was going on a different project.
+Speaker 2: No.
+Speaker 1: Well there were so the project that I was leading at the time was submit segmented into different subjects that we were providing.
+Speaker 1: So what I noticed was that they were better.
+Speaker 1: I just like the back end stuff gathering documentation.
+Speaker 1: Doing all of like the operational stuff behind the scene.
+Speaker 1: But they weren't necessarily good at just like interacting and communicating.
+Speaker 2: So I had them you know prioritized that for a while.
+Speaker 2: And then I also peered them.
+Speaker 2: Actually, I recall peering them with the full content team to make sure that they learned.
+Speaker 2: You know, and all of that now.
+Speaker 2: And the practical deal here was that this was a consulting example.
+Speaker 1: And the consulting people moved projects very often.
+Speaker 1: So I had it short time to mentor them.
+Speaker 1: However, they had to move on to another project.
+Speaker 1: But I had received good feedback from some of the projects that they were on.
+Speaker 1: They learned that they had improved on their communication style.
+Speaker 2: And the good news is that the person who had peered them up to mentor.
+Speaker 2: They still maintained the good relationship with that individual.
+Speaker 2: So mentoring them and making sure that they were getting better in their communication.
+Speaker 2: It's great.
+Speaker 2: I think communication is always a tricky one.
+Speaker 1: Especially with engineers.
+Speaker 1: Correct.
+Speaker 1: Yes.
+Speaker 1: Yeah.
+Speaker 1: Sometimes they don't forget like they'll be good for a while.
+Speaker 2: And then they forget.
+Speaker 2: That's absolutely true.
+Speaker 2: Yes.
+Speaker 2: You're right.
+Speaker 1: Can you also tell me about a time when someone on your team.
+Speaker 2: Can you?
+Speaker 2: Because they write to a problem and they don't know how to solve it.
+Speaker 2: Yes.
+Speaker 2: A couple times.
+Speaker 2: So when people come to me and talk to me about problems that they're not able to solve,
+Speaker 1: I usually just dissect the different pieces of the problem.
+Speaker 1: Because sometimes when you come to problems solving different components,
+Speaker 1: then there's the operational piece of it.
+Speaker 1: And like we're talking about, there's just a piece of collaborating with people on the team.
+Speaker 1: So I had one specifically where I knew that this person was actually very talented.
+Speaker 2: But they were facing a lot of pushback from the engineering team.
+Speaker 2: And they quite frankly didn't know how to handle it.
+Speaker 2: And so we had to sit down together and talk about really just like pinpointing where the child.
+Speaker 2: Because many times people just say, oh, this project is hard.
+Speaker 2: And it's really like, can we dissect it to see what parts of the project are hard for you.
+Speaker 1: So that we can identify the strengths and weaknesses.
+Speaker 1: And so when I dissected it with this individual, I realized that they were speaking a different language from the engineering team.
+Speaker 1: And they weren't able to coordinate.
+Speaker 1: So they weren't getting like quick successions on what they were looking to turn over.
+Speaker 1: And so it was sitting down with them and helping them identify what were the communication gaps.
+Speaker 2: As they spoke to the engineering team and like what were the communication bridges.
+Speaker 2: And so in that case actually, I did have them go read up some materials to understand how the team operates.
+Speaker 2: To understand just some high-level infrastructure, you know, whatever of the team.
+Speaker 2: And I also encourage them to have one of ones with the team members to kind of get better.
+Speaker 2: And even I think that we all learn every day.
+Speaker 1: So part of what I made sure he understood was, hey, it's not a bad situation.
+Speaker 1: You're going to have to learn anyway. So the early at the better.
+Speaker 1: And so making sure number one, I instituted, you know, an approach for us.
+Speaker 1: Sorry, a communication line for us to meet regularly to see how they were doing.
+Speaker 1: Based off of our last, you know, conversation.
+Speaker 2: Giving them materials to go read as well to make sure that they were getting.
+Speaker 2: And then making sure that they had some sort of like cadence with the engineering team.
+Speaker 2: I also appeared then with somebody who was technically sound on my team.
+Speaker 2: For that particular person, they actually were able to solve that.
+Speaker 2: And they actually got like a recognition for, you know, doing extremely well on that project.
+Speaker 1: Because they were able to pivot on the approach of communication, get somebody on the team to help them.
+Speaker 1: And then we had consistent feedbacks on how they were doing.
+Speaker 1: And I think that was one of the, my proud manager moment, where I saw somebody go from, I can't do this thing.
+Speaker 1: So I'm actually now exciting and this thing.
+Speaker 1: So I think that was one good example of somebody that actually did, you know, improve themselves on the job.
+Speaker 2: Yeah, I was growing.
+Speaker 2: So I'm excited to see. Yes. For sure.
+Speaker 2: All of them.
+Speaker 2: These are all my questions. Do you have questions coming?
+Speaker 2: I do have questions for you.
+Speaker 1: I wanted to ask you, so the Netflix culture is very, it's very interesting.
+Speaker 1: It's very different from most, you know, I want to ask you which part of the culture took you the most time to, you know, sort of adopt or adapt to.
+Speaker 1: I see navigated Netflix thing as a whole.
+Speaker 1: That's a good question.
+Speaker 1: I think so there's a lot of freedom on Netflix for you to do your work.
+Speaker 2: There's very little process and guidance coming from management to like dictate exactly how you should do your work.
+Speaker 2: And there is a lot of transparency.
+Speaker 2: So in Netflix, for example, almost all the calendars, I hope, but anywhere to see.
+Speaker 2: And that initially was kind of scary for me because I've ever worked in calendars, always private.
+Speaker 2: And then theory can see your managers calendar, you can see all your direct arts calendar.
+Speaker 1: And it's important to be very open and very honest.
+Speaker 1: Feedback culture is like, when you think about feedback, it's sometimes it sounds like a great idea.
+Speaker 1: But to actually hear feedback, sometimes it'd be difficult.
+Speaker 1: And to like actively go seek out feedback, that could also be very scary.
+Speaker 1: So that is, yeah, I think it took a little adjustment for me.
+Speaker 2: But once you start to understand like all people give you feedback because they want to help you.
+Speaker 2: It's constructive and it's not personal.
+Speaker 2: And if we all have this mindset, then it becomes a very, almost very easy environment to work with.
+Speaker 2: Because you could be open to all your team members and all your managers, your peers, and they will be open to you.
+Speaker 2: So yeah, I think it makes it, you know, where I'm easier to work.
+Speaker 1: That makes sense. That's super helpful.
+Speaker 1: I like that you call that, that you know, transparency.
+Speaker 1: I just didn't even know that that existed.
+Speaker 1: Where people can see each other's calendars and things like that.
+Speaker 1: Thank you for calling that out.
+Speaker 2: My second question for you is, you mentioned that you're part of the privacy engineering team and you implement what it is that, you know,
+Speaker 2: the data-protect or other compliance teams are providing.
+Speaker 2: What would you say is the biggest like blocker or like biggest challenge that your team experiences as the implementation team,
+Speaker 2: when you're constantly interacting with all these teams that give you some sort of direction when you're implementation?
+Speaker 2: I think, especially when it comes to life, data-protection, there are some of the problems I'm very difficult to solve,
+Speaker 1: and it's not very, not always very straightforward.
+Speaker 1: So for example, classification, when you, when you classify a data set, you can classify this data set,
+Speaker 1: you can contain data from a consumer, or maybe has ads related data.
+Speaker 1: And it could also potentially the consumer can be an employee.
+Speaker 1: So you have some kind of HR data.
+Speaker 2: So when it comes to like, imposing policies on this data set, what do you do?
+Speaker 2: Do you treat this data set as consumer or do you treat this data set as ads?
+Speaker 2: So because all of these very big and sometimes somewhat inch pieces, it makes our job a little difficult,
+Speaker 2: because we have to figure out how to implement around it all like, how do we,
+Speaker 2: because if we don't get guidance from the data protection team, that we can move forward, right?
+Speaker 1: And then management will call and say, like, why are we not protecting these data?
+Speaker 1: And because we don't know if we should be making a decision to say like, whether we should treat it as a consumer, they don't say that.
+Speaker 1: So that's one example.
+Speaker 1: And different example, it could be that, and it could be like, how much risk does that data protection team,
+Speaker 1: all that's not clicks, is willing to take and we don't protect on certain data sets.
+Speaker 2: Or if there is conflict resolutions, how much risk are we willing to take?
+Speaker 2: Because it's very difficult to say that you're going to protect 100% of the data.
+Speaker 2: So I want to percentage the risk is tolerable.
+Speaker 2: And I think that's a hard question for the data protection team to answer and for us to implement this solution.
+Speaker 2: Sometimes it's hard for us to say, because from an engineering point of view, we want to make sure that everything falls through the car.
+Speaker 1: That will protect everything, but we can't.
+Speaker 1: So that's sometimes it can be very frustrating.
+Speaker 1: So that's super helpful.
+Speaker 1: And I can't resonate with that so much, because at meta one of the biggest challenges that we're facing was assigning data sensitivity levels.
+Speaker 1: And it's so hard, so it's because to your point, we had situations where data can be employed data at the same time it's also customer data.
+Speaker 2: And so you're trying to figure out, like, how do you protect it like in its different states and forms?
+Speaker 2: So that was definitely very big hurdle to cross as we implemented regulatory requirements.
+Speaker 2: But I resonate with the complexities of data and the use cases associated with.
+Speaker 2: So thank you for sharing that. That's all the questions that I had. Thank you for answering them.
+Speaker 2: All right.
+Speaker 1: Um, it is nothing else. I'll give you more minutes.
+Speaker 1: Awesome. Thank you so much, everyone. I hope you have a good Friday.
+Speaker 1: Thank you, too. Thank you.
+Speaker 1: It was great to have you with you.
+Speaker 1: See, thank you so much. Bye bye.
+Speaker 2: Thank you, Jesus.

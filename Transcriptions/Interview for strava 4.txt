@@ -1,0 +1,562 @@
+Speaker 1: Um, right now, I'm having an amazing time, like I'm doing the things that I love to do.
+Speaker 1: However, I think that what's lacking right now is the opportunity to explore new adventures.
+Speaker 1: Um, I have been a metaphor for five years and I've gone through like most of the compliance
+Speaker 1: programs, starting from Central Privacy to Redcurrent E and right now.
+Speaker 1: And I wouldn't necessarily classify as lacking, but I would say an opportunity for me to
+Speaker 2: scale my experience.
+Speaker 2: I think for a very long time, I've been working in spaces where I thoroughly understand your environment
+Speaker 2: and it hasn't been extremely challenging to prove actively provide solutions.
+Speaker 2: And so right now, I'm looking forward opportunities to scale my skills.
+Speaker 2: Um, within a different environment, um, maybe not necessarily a different industry, but, um,
+Speaker 1: a different product or, you know, a different culture.
+Speaker 2: When you speak about scale, you're talking about sort of just the, the magnitude of a
+Speaker 2: project you're working on or like sort of the program that you're, you're managing or you
+Speaker 2: speaking more around, uh, like people, management.
+Speaker 2: Yeah, I think it's all of what you said in addition to that.
+Speaker 1: I would say that skill means to me, um, from a personal perspective about like diversifying my experience.
+Speaker 1: Okay. So yeah. And I can go for that. But let me know if that, if, if that works.
+Speaker 1: No, it does. I guess, with a particular skill or interest, you have that you want to explore,
+Speaker 1: that you haven't had the opportunity to do so that matter, or, I think, um,
+Speaker 1: go ahead. Is it going to be just staying in the privacy sphere and seeing what else you can kind of get your hands on?
+Speaker 2: I would say that I've experienced, I've had a very good experience, but the thing about experience
+Speaker 2: you never know until you get to a new place and you realize. So I'll give an example.
+Speaker 2: When I drank matter, I had done privacy for a couple years. I thought I knew everything about privacy.
+Speaker 2: I was so short that I was going to just get in and, you know, start to fix things.
+Speaker 2: And I quickly realized that matter was different. As much as, you know, I understood, I had
+Speaker 1: done data privacy for banks that had done it for companies and tech entertainment. And getting to
+Speaker 1: meta, I realized number one, the infrastructure was so different. The way that the data was
+Speaker 1: structured, the culture, everything was very different. And the last five years, years, have expanded
+Speaker 1: my data privacy experience in ways that I never thought. So as much as I would say that, I could currently
+Speaker 1: say that I have a very good grasp of privacy, but I also knew at the back of my mind that there is,
+Speaker 2: um, you know, there are more, um, you know, wider skill experiences that I can lay my hands on,
+Speaker 2: that would allow me to continue to grow as I need to be well and as a professional.
+Speaker 2: Definitely. And I think you'll find the infrastructure here on the culture as well as going to be
+Speaker 2: vastly different to, to meta and any other. Fying for that matter. Um, okay. So as you can see some of the
+Speaker 2: questions are on the behavioral, could you? Could you walk me through a time where you disagreed with
+Speaker 1: your, with a co-worker or a manager? But in this situation, the disagreement you guys were having,
+Speaker 1: you were actually wrong in this discussion. I think this is the couple that I tend to throw
+Speaker 1: that everyone hates. But, uh, yeah, I would like to, I mean, and if you can't think of a situation where
+Speaker 1: you had a disagreement and you were wrong, um, I'm happy to just listen to a situation where you had
+Speaker 1: disagreement in what you did to, kind of, uh, manage that conflict. Yeah, I can definitely give an example.
+Speaker 2: I can preface that by seeing that what I've seen in the world of compliance is that
+Speaker 2: there isn't necessarily wrong or right. It's very subjective. So what I've seen most times is there
+Speaker 2: could be required in the decisions or recommendations that I've made that didn't work at that time.
+Speaker 2: So I'll give an example. Um, I was on a project where we were supposed to implement a privacy program
+Speaker 2: for a particular organization. And, um, the work that we were supposed to do for that organization was
+Speaker 1: to evaluate the regulatory requirements that applied to them. Um, one of what they had given us at the
+Speaker 1: beginning was saying that they didn't want to do like an overhaul of like privacy compliance. They wanted
+Speaker 1: to focus on, um, um, you know, work that was specific to them. And so at the time, I was still very much new
+Speaker 1: in privacy. It was my first year of, you know, like, working on a data privacy role. And I remember,
+Speaker 1: um, you know, we were also supposed to implement privacy by design as part of, you know, helping them build
+Speaker 2: the privacy program. And one of my recommendation was specifically, um, regarding a product that we were
+Speaker 2: supposed to include as part of building out the privacy program. And I believe I had recommended that we have
+Speaker 2: a Ropa, specifically, and sorry, Ropa means under record of processing activity according to GDPR.
+Speaker 2: And so I had recommended at the time because I was new into it. I recommended that we build a Ropa
+Speaker 2: specific for products. Um, the, the, um, the idea was to build Ropa's idea from a programmatic perspective
+Speaker 1: from process perspective. The reason why I had asked that we build Ropa from a product perspective,
+Speaker 1: was I thought we would have a clearer view on the data. However, what had happened was that there were
+Speaker 1: processes happening outside of the product itself, things that had to do with marketing advertising of
+Speaker 1: that product that we wouldn't have cut over sites of if we had focused on the product. And so I
+Speaker 1: remember going back and forth and saying that I believe because my engineering bring again and came into
+Speaker 2: being. But also what I did at the time was I remember my colleague who was also, you know, um,
+Speaker 2: more senior pressing. What I did was I listened. I listened to why they were pushing back on my, um,
+Speaker 2: approach, even though I thought that I had the right approach. And then what we agreed upon was, hey,
+Speaker 2: let's take, um, you know, let's start the process from requirement gathering perspective. And
+Speaker 2: let me hear why you think we should do it more so from a programmatic perspective, running process perspective.
+Speaker 1: And so when they had provided me and told me about some of the outline or underlying processes that
+Speaker 1: we're happening outside of the product itself, um, I was able to, you know, I, I was able to understand
+Speaker 1: where they were coming from. And we were then able to take the approach of going from a programmatic
+Speaker 1: perspective instead of like working on a group platform, it products itself from a product specific,
+Speaker 1: um, standpoint. Was there anything from your argument on grouping by product that's
+Speaker 2: was affected into the final decision or was it about the, the, the program process perspective was,
+Speaker 2: was just at rights that it approached because it was inclusive of everything.
+Speaker 2: And ask the question one more time, I want to make sure I got the first part.
+Speaker 2: I was just wondering, like, it sounded like there were two approaches to sort of building out this
+Speaker 2: process, uh, the record of processing activities. Correct. Uh, one was two events of a product
+Speaker 1: and identifying for each product, what data is being used and has it being handled, uh, for what
+Speaker 1: processes. And the other one was more of a generic programmatic process perspective, all for all these business
+Speaker 1: processes, here is the data lifecycle, um, being recorded, uh, which is a producting not stick. And I was just
+Speaker 1: wondering if there's, presumably each solution had a pros and cons list. Was there anything on your
+Speaker 1: side of the solution that was actually a pro that, the programmatic and process solution didn't have
+Speaker 2: and was there any coming together of sort of building upon your, your, is it your colleague or your leaders
+Speaker 2: point of view? Was there a way to then influence that decision to say okay, well, we could do the programmatic
+Speaker 2: process rope or build, but we should also tailor it so that it includes my perspective as well.
+Speaker 2: Or is it just simple as like pick one of the other and be the one with that sort of thing?
+Speaker 2: No, thank you for that question. retrospective, you know, when I think about it, my recommendation
+Speaker 1: of the product was because when I thought about the products, the data on the line data within that
+Speaker 1: product was connected to our systems that could help us in the long term automate the process of
+Speaker 1: So what I mean by that was when you when the engineers are creating this product, what they do is that
+Speaker 1: the product is integrated into some of our data repositories that provided information on the type of data
+Speaker 1: that's been used within that product. And so from a scaling standpoint, we could have integrated some
+Speaker 2: of our GRC, you know, like technology into that database to be able to collect that data very quickly
+Speaker 2: and not have to do the paperwork work of gathering data for each of those processes.
+Speaker 2: So I would say that while at the time, you know, even though now that I think about retrospective the
+Speaker 2: time, what I thought that it was good, it was a faster process since we didn't have on the line technology
+Speaker 2: then that could fit into that could help integrate all of these different systems. Or retrospectively,
+Speaker 1: now when I think about it, if we did have technology at the time and we thought about the program
+Speaker 1: from a scaling perspective, I think that thinking about doing a ropa from a product standpoint,
+Speaker 1: but also bearing in mind that there are on the line processes that we made its consider as part of that,
+Speaker 1: you know, that's a mixture that we're documenting the right data. I think that the product routes
+Speaker 1: would still have worked in that sense from from a technology standpoint. Yeah, I think that's also my question.
+Speaker 2: What I was looking for is essentially sort of, you know, usually during this discussion, each person
+Speaker 2: has a point of view, and there's a reason why that person thinks their
+Speaker 2: stance is better than the other person. And what I was trying to get from you was basically sort of,
+Speaker 2: why was the product side good in your eyes? And I think you've answered that question through the
+Speaker 2: scaling and automation perspective. What it doesn't sound like a signature of happened is there wasn't
+Speaker 1: sort of like a sketch skating or building upon both ideas to then create like a superlative,
+Speaker 1: which is totally fine. But yeah, what I'm saying, it sounds like that may have been the
+Speaker 1: right thing to do. Yeah. The context I can provide there was that was my days in consulting
+Speaker 1: and consulting projects are usually like very time-based and it's like very fast, like you have to get things
+Speaker 1: out of the way. And so there isn't much time to like go back and forth on things, you have to deliver
+Speaker 2: to the client because the company has to get money. So that's another thing. Yeah. Yeah.
+Speaker 1: Like a whole search case with them. So do you want me to go through a time where you had
+Speaker 1: different, so this is going to be quite relevant for consulting? Um, basically what would you
+Speaker 1: time walk you through a situation where you had difficulty making sense of a problem you were given?
+Speaker 1: So someone gave you a very vague issue to go and solve what was confusing about the project at hand
+Speaker 2: and what did you do to get clarification and actually solve it? So talk to me about a time when you were
+Speaker 2: given a task that was incredibly ambiguous and what you did to magic. Yeah, I can think of a couple
+Speaker 2: I think that the one that, um, just think for a minute when you bring the best. Yeah, take a time.
+Speaker 1: So there was a project that one, it wasn't necessary consulting. It was, um, it projects where you know
+Speaker 1: after, after my time in consulting. Um, the issue was that we had data that had potentially been exposed.
+Speaker 2: Now there wasn't any, there wasn't necessarily any breach reported yet, but the data was exposed
+Speaker 2: and what caused the exposure of the data was that when the engineers or, you know, the folks who had
+Speaker 2: gone to audit like the access, you know, lists, they saw that there were people who were on that list who
+Speaker 2: were no longer either on that team or in that department. And the thing about the data was that it had regulatory
+Speaker 2: impact. So we're talking about sensitive data and the data and it became some sort of like legal issue.
+Speaker 1: And so I was brought at the initial stage of the project to identify what needs to be done. And so
+Speaker 1: there were very many, first of all, we couldn't identify, you know, what exactly the impact of the
+Speaker 1: exposure looks like because it wasn't clear if people had, you know, if it had been exposed somewhere
+Speaker 1: by somebody at third place or whatever. Um, but I think primarily what I was asked to do
+Speaker 1: was very vague to be quite honest. I was just asked to come evaluate the issue and solve.
+Speaker 2: And so that was one of the projects where I had to number one, do a deep dive of what exactly is the
+Speaker 2: challenge here. And what I did that evaluate the challenge was speaking to relevant stakeholders and
+Speaker 2: people were involved as part of that particular incident itself. And so part of what that meant was gathering
+Speaker 2: and a lot of that always involves like when you're talking with stakeholders, it's like, this is the
+Speaker 2: problem we had, this is the problem we have now and things like that. So it was being able to identify
+Speaker 1: like, how do I also prioritize the problems that I'm hearing? Because everybody wants to talk about
+Speaker 1: what's going wrong in so many different factions. And so the first thing that I had to do was to
+Speaker 1: identify the stakeholders who are the stakeholders that are having impacted by this process and would
+Speaker 1: be relevant to the solution in this process. Once I identified that, I began to speak to them about what
+Speaker 1: they believed the challenge was that they were experiencing. Because while some people felt like the
+Speaker 2: challenge was the data exposure, some of the people felt like the challenge wasn't the data exposure,
+Speaker 2: what it was, the resultant effect of that, which connected systems might be attached to the
+Speaker 2: particular system that has like the own organized SEO and we could have challenges there. And so
+Speaker 2: it's like the problem is a mountain on top of each other. And so what I had to do, even hearing the
+Speaker 2: solution was to start to stack a rank from a risk standpoint. What do we solve right now? What can be
+Speaker 1: a fast resolution? What's the challenges that you're highlighting that could potentially be
+Speaker 1: an impact in the future? And so from that prioritizing the solution, obviously using the risk-based
+Speaker 1: approach and then decided to identify what are the controls that we have to deal in place that can be used
+Speaker 1: to sort for this. So it's one thing to identify what the challenges are, but it's another thing to identify,
+Speaker 1: do we have quick ways to achieve quick wins in order to make sure that we're solving that situation.
+Speaker 2: Do we have underlying policies, for example, that we can you know provide and you know circulate
+Speaker 2: around teams to be able to get that done? Do we have underlying technology and things like that? And then
+Speaker 2: from there, we weren't able to build a roadmap to solve for the problem. And so what a roadmap looks like was,
+Speaker 2: we're going to solve this problem. This is our end goal, but this are the bike packets or these are
+Speaker 2: the bike pieces on how we're going to get to that end roadmap. So we had the project actually went
+Speaker 1: through almost nine months, but we had a bike size approach where we gave ourselves like a milestone,
+Speaker 1: we took a milestone approach. And we said every two months, we're going to achieve X, Y, Z. We're going to do,
+Speaker 1: you know, we're going to clean up. So if I can give just a very practical example, the first thing was that
+Speaker 1: you know, somebody had recommended it was, wipe everybody off the ACL, make sure nobody has access and then
+Speaker 1: give people access from start. What we realized is if you do that, it was going to break some of the
+Speaker 2: table access and it was going to cost like chaos. And so we have to think about ways on how we can,
+Speaker 2: you know, start to think about the saving of course with thousands of people who had access to this ACL
+Speaker 2: and we couldn't do the audit at once. So we thought about the first, you know, these systems that are the
+Speaker 2: critical ones, how do we make sure that we evaluate the access there? And then we did like a roadmap,
+Speaker 2: shared our timeline, shared what our end goal was going to look like. And that's how we were able to
+Speaker 1: solve for that problem. So how did you, so speaking about the access thing obviously just,
+Speaker 1: so she knows what's in sufficient, she's going to close down stream issues. How did you then manage that?
+Speaker 1: How did you know how to mitigate the access problem in a fast way? What was sort of the solution there?
+Speaker 1: Yeah, so the solution actually hit that one was very interesting. So we were running things in tandem.
+Speaker 1: So what I did was I had obviously legal, the first thing we needed to do was I had to speak
+Speaker 2: what is the legal implication of this right now? Like what do we need to do today? So that if anything
+Speaker 2: happens and some of that was also in a way, the data was associated with potential implementations.
+Speaker 2: And so we had to identify like what come the quickly due to make sure that we're not, you know,
+Speaker 2: on the, you know, on the crux of any like legal risk issue situation. On the time then I had a, I had a team
+Speaker 2: on the engineering site that was beginning to start auditing names and evaluating things to see who
+Speaker 1: doesn't need to be so what they had done at the time was they told me the specific tables that they had.
+Speaker 1: And they had, it wasn't necessarily standardized but they had a mental sense of systems that had more sensitive
+Speaker 1: data and they started to evaluate those ones and began to remove names of people or remove, you know,
+Speaker 1: data, people who no longer needed access to that. Another thing that we did was we also set up what we called
+Speaker 1: like an emergency time-based access where we were sending like, you know, like workplace messages to
+Speaker 2: people to say like, if we don't hear from you about like access in this data, within XYZ number of days
+Speaker 2: XYZ number of weeks we're going to cut the access. And so we did that as well. So all of this was happening
+Speaker 2: and it's handy. No, yeah, does that, is that good? Yeah, that's a good question. And then you mentioned
+Speaker 2: about prioritization as well, I mean obviously this is the moment projects is going to be a lot's. What
+Speaker 2: was your risk-based approach to the sermon like it? It sounds like some layers to it. So one just told you
+Speaker 1: at a high level, fix the issue. And the issue sounds like there was a very loosely termed ACL with a bunch of
+Speaker 1: names that should be having access to things. But then there were downstream tables and permissions
+Speaker 1: that they have inherited that. Correct. Correct. And we're also going to be misogated for like future
+Speaker 1: problems. How does someone kind of a purchase problem and say, okay, this is the p0 thing we need to do right
+Speaker 1: now and these ones are p1 and so we can do them two months time. Yeah, absolutely. So the way that we took a
+Speaker 2: risk-based approach was I, before that time, I had implemented a risk register where we had different
+Speaker 2: categories of risk. And we had, you know, risk regulatory risk for example, we had operational risk and
+Speaker 2: all of that. Now, we also from that risk-rating methodology, we also had categorized different types of
+Speaker 2: risk scenarios. So for example, when I was talking about like, you know, demyanking everybody off. That was
+Speaker 2: going to be an operational risk for example, right? And so we also thought about what are the regulatory
+Speaker 1: risk and from a regulatory standpoint, we talked about what is the legal risk that could, you know,
+Speaker 1: come up as the result of this. And we on that the risk of any regulatory scrutiny at the time,
+Speaker 1: actually, for that specific data, we were going to get reported requirements in a few months to
+Speaker 1: provide how. So what in what actually caused that situation to be off-level, because that it had been
+Speaker 1: for a while, that situation had been happening where people were accessing that data and no one knew,
+Speaker 2: but what really like brought it to the fore was that we started to get a signal that we were going to be
+Speaker 2: audited for that data, specifically. And so because of that, we also had to focus on what specific types of
+Speaker 2: data where we were going to be audited on and what systems contained those data. And so we had to focus
+Speaker 2: on that as well. I think going to dive into it, like, into how we thought about like the many types of
+Speaker 2: risk like repetition of all of that, but let me know if that helps. So if you want me to go deeper.
+Speaker 1: No, I'll just be right over the time. I think you've answered the question as to, like I said,
+Speaker 1: I'm looking forward to that. So I appreciate it. I'm almost tracking my notes now. I don't, okay.
+Speaker 1: Could you, uh, I think about this question, we'll dynamically, previously, but I'm also going to
+Speaker 1: again, uh, one of the things I'm curious about is, would you, you observe the skill in a mental or a
+Speaker 1: leader or a colleague that you've noticed to something you want to help. It enhance or develop this year.
+Speaker 2: I guess the is open out. You want to improve your skills. You've seen that you'll pair your
+Speaker 2: mental or your colleague or someone has, uh, has this skill that you want. What is it?
+Speaker 2: And what are you doing to to learn that skill? Uh, it could be anything from soft skills to technical skills.
+Speaker 1: Yeah, um, can I go way back or do it doesn't have to be in the past year?
+Speaker 1: Doesn't it be the past year? Okay. What I'm really looking for is just sort of how
+Speaker 2: we can do it all. Observe certain things that they're, uh, what's it to improve? They're not actually
+Speaker 2: actioning that that thing to improve it. So yeah, yeah, an example of that would be great. Yeah, for sure.
+Speaker 2: One of the very strong skills that I learned, um, early on in my consulting career was from my senior
+Speaker 2: manager who also served at that coach. And it was the skill of, I don't know if it's, if it sounds like
+Speaker 2: skill, but it was a concept that I learned from her stakeholder collaboration and stakeholder
+Speaker 1: buying. Um, what I, for me, you know, like, you've been new and been in an environment where compliance
+Speaker 1: is a very subjective area that I learned so quick. And therefore, everybody can have recommendations in the
+Speaker 1: room or ideas in the room that they all feel is right and it just might be right. And so as a leader
+Speaker 1: project, it's very, it's, it's a hard or daunting task if I could say not impossible to bring
+Speaker 1: everybody in alignment and helping everybody see that that idea contained a piece of theirs. Right. And so
+Speaker 2: one of the things that she did so exceptionally was number one, she did an excellent job of,
+Speaker 2: I want to call it almost like taking all the ingredients of people's ideas in the room and just like
+Speaker 2: makes matching it at the end of the day. It brought out this like whole colorful idea that
+Speaker 2: everybody could almost see their finger prints on. And so she had a way number one to listen very clearly.
+Speaker 2: And it was very interesting to me that even as a young, you know, at the time I was very young to
+Speaker 1: the preferred, you know, to the industry. Here in people makes certain recommendations like from just
+Speaker 1: my experience, I was like, it's nothing make any sense, but she was able to draw the sense out of what
+Speaker 1: the way saying it was almost like she had the ability to take romance heroes and transform that into gold. If
+Speaker 1: I may say, and I know I'm speaking very, you know, like, you know, in a very, I don't know the word,
+Speaker 1: but that I learned so I learned very quickly. And what that has allowed me to do is that it has allowed
+Speaker 2: me to be very open minded. In a way that no matter how strong I think that my recommendations are,
+Speaker 2: especially as somebody who's done data privacy for a very long time and I like to all risk and I like to
+Speaker 2: pride myself that I'm very good at this thing. I know this space so well. That skill that I learned from
+Speaker 2: her has allowed me to be able to pause and listen to everyone's perspective and see what could I
+Speaker 2: bring out of it because also what I saw that it did the impact of that was that it brought diversity
+Speaker 1: of thoughts and diversity of ideas. It allowed people to feel like they were listened to and you don't
+Speaker 1: also brought like just uniformity of teamwork in, you know, in our space and what I saw. So that's one
+Speaker 1: really fundamental skill that I learned from my mentor while I was in consulting.
+Speaker 1: So when you, when you were observing those thoughts, how do you know this was something that you
+Speaker 1: need to grow in and you weren't already good at this? I knew I needed to grow in it because from
+Speaker 2: you consulting perspective at the time it was all about, you know, making sure the clients were happy.
+Speaker 2: And I didn't have experience where you thought you were incorporating ideas effectively on what was
+Speaker 2: kind of your like crap. I'm not good at this. I need to find the way you're good at it.
+Speaker 2: Oh many of them, many many of them. And that showed itself especially in rooms where you had a very
+Speaker 2: diverse combination of stickers. So now you've got an example. Now when you have engineers and lawyers in
+Speaker 1: the room and you have, so if I could just without putting names on it, you had technical people that
+Speaker 1: are not technical people in the room, it's always very hard to, and well, like I described,
+Speaker 1: or I described myself as somebody who knows how to interpret. I quickly realized that it wasn't just
+Speaker 1: about interpreting things to people and being able to say, oh, like to the engineering team,
+Speaker 1: like we're supposed to implement a rope out, but also hearing from the engineering team, like,
+Speaker 2: what does the practical implementation of a rope out look like? And can you bring in your thought as
+Speaker 2: well in how you think like the end goal of a rope actually look at it? And I'm just using a rope
+Speaker 2: of for example, but I've seen that in in cases where I was at this at the beginning, it was hard for me
+Speaker 2: to bridge the gap between different teams and to be able to bring all their collective ideas into one.
+Speaker 2: Many times I struggled with saying, like, do we implement what this person? There were times where
+Speaker 1: honestly, like it was also very hierarchical in the room, where you would have like certain, you know,
+Speaker 1: folks saying, we want this approach and then somebody hierarchies like, no, we don't want that approach
+Speaker 1: and all of that. But I quickly learned and I also knew as far as my career that I was going to be
+Speaker 1: in leadership positions, at least that's my vision and I knew that that was a specific goal that I needed to
+Speaker 1: take and also just not from a professional perspective of a life in general.
+Speaker 2: Does that answer? Do I need to do it? Dip dive?
+Speaker 2: No, no, I'm just typing as fast as like that. It's something else to the question.
+Speaker 1: Okay, so you knew as an issue, having had some experience and struggling to kind of find everyone on a
+Speaker 1: common goal or common idea that everyone can chuck ideas up, you saw receiving manager who was also a coach
+Speaker 1: of doing this fantastically and you, how did you learn the skill I guess in my question? Did you just
+Speaker 2: was it through watching the senior manager and then also trying to then imitate their actions and
+Speaker 2: meetings or did you have like, I'm sure it was more of an organic thing but I'm trying to figure out
+Speaker 2: how does someone then like figure out they have a gap? See someone that's good at it and then try to
+Speaker 2: make sure that they was like, what was your kind of strategy? Yeah, so I would say like, yes, just to
+Speaker 2: just to go from where you, because I like that you mentioned that you know, figuring out the gap,
+Speaker 1: I figured it out but I also got feedback from other folks that I was working with that, that was an
+Speaker 1: area that I could continue to improve upon. How did I learn? It was definitely very organic but I would say
+Speaker 1: like it was a lot of number one watching and listening to how she ran her program and also allowing
+Speaker 1: myself to feel over time. I think that what was very important to me at the time was that while I
+Speaker 1: you know envisioned myself being able to run meetings the way this person was to run in, I also
+Speaker 2: had to give myself grace and then I had to give myself room to practice as well. So that meant that
+Speaker 2: there were times where I was putting rooms that ordinarily I would opt out of but I would raise my hands
+Speaker 2: to go into those rooms in order to practice what I believe I had learned with sitting with this individual
+Speaker 2: in her meetings and I also asked questions. I had one on one with her because of just issues my coach and I
+Speaker 2: asked her the mindset and the brain behind what she was doing because she had done it so effortlessly
+Speaker 1: that it felt like something that it was hard to be able to pick the element of what made it so fantastic.
+Speaker 1: So I figured out what it was, what her mindset was when she was maneuvering those conversations and
+Speaker 1: you know, and I continue to improve in that as well. What was the mindset if there were me asking?
+Speaker 1: Yeah, I think the mindset was a mindset of so, primarily what I remember her telling me was
+Speaker 1: to me always keep an open mind. There was never a wrong or right answer. You just have to figure out
+Speaker 2: what is in that answer that would be good or that you can't take as a wrong material to build what it is
+Speaker 2: that you're building. And then the second thing was also being able to listen, you know, there was
+Speaker 2: something she said I'll never forget but she said being able to listen to what people are not saying
+Speaker 2: and then they'll almost help them and this is a very hard thing which I've said in different
+Speaker 2: settings and people will rule their eyes and they're like it's almost impossible but almost like and I
+Speaker 1: thought she did that very well. It's almost like she was able to architect people's solution out of what
+Speaker 1: they were not saying by listening to the intention behind what they were building or what they were recommending.
+Speaker 1: So for example, when somebody is recommending something and I've experienced this myself,
+Speaker 1: when an engineer for example is recommending something, he could be recommending something from
+Speaker 1: an efficient system when that makes his life easier. And so for you, from a regulatory standpoint,
+Speaker 2: you might be quick to say oh no, that's not going to be complete or that's not going to be effective enough.
+Speaker 2: And so you have to listen to his efficiency mindset and then take that and then use that to have another
+Speaker 2: conversation on other routes that can allow you to build something efficient while still maintaining
+Speaker 2: regulatory requirements. So it's also what I learned from high is being able to understand the intent of
+Speaker 2: people's recommendation in order to be able to craft what their solution really needs to be.
+Speaker 2: Really missing the lines. Yeah, I think there's a little thing that I'll tell my team which is basically
+Speaker 2: simple solving, like is the person bringing up a symptom to the problem and then I'll actually
+Speaker 2: discussing the problem or are we truly solving the problem with this meeting? All good answers, again.
+Speaker 2: So how are we doing for time? I pretty warm a question and then we can hand it off to you.
+Speaker 2: So can you walk me through a project that did not succeed? If we went back in time, what would you have
+Speaker 1: done differently to increase the chances of success? So walking through the project, what you felt failed
+Speaker 1: and then some retrospectiveness on what we could have done to improve at laser?
+Speaker 2: So I remember one every time I think that's one of my, yeah, it's an eagle brick on my career.
+Speaker 2: But it was a project that had to do with integrating systems for governance programs. So we had
+Speaker 2: a system, so if I can just break it in later times, let me know if I'm going to deep and then I'll
+Speaker 1: just come up higher just a little bit. We had two different systems. So we had a system or a program
+Speaker 1: that was measuring privacy risk for new products or new processes. So you can think about it as a
+Speaker 1: privacy review process, where it was basically products related. And then we had this other compliance
+Speaker 1: program that was well, other compliance program, but it's so function that was specific to
+Speaker 1: evaluating controls from a compliance standpoint. So what that meant was that it wasn't necessarily
+Speaker 2: just targeted towards products, but it was targeted towards our program and our regulatory requirements.
+Speaker 2: But what we wanted to do for that project is that we wanted to integrate these two programs together
+Speaker 2: so that they can speak to each other in a way that would allow us to audit better. And so what I mean
+Speaker 2: by that is we do testing for controls in this program that's the compliance oversight. On the other
+Speaker 2: hand we do something that we call implementation testing for how the mitigations that you're providing
+Speaker 1: to this product after you know identifying risk is working. So we wanted the mitigations on the product
+Speaker 1: side to map to the controls so that when we test the control we understand the surface that the
+Speaker 1: control is being implemented upon because the surface includes products and processes. And so where the
+Speaker 1: the very brilliant idea I think where the project field was when we started to incorporate
+Speaker 1: tooling and technology and it didn't feel like the tooling and technology team were speaking
+Speaker 2: the same language. And so what ended up happening was that we had successfully integrated
+Speaker 2: both programs outside of the tool but when we got into the tool we ended up saying that whenever somebody
+Speaker 2: is evaluating the risk on the product side there would be able to map the risk to a mitigation
+Speaker 2: and that mitigation would map to a control activity. The tool in team however did something different
+Speaker 2: and the mapping ended up disorganizing the project in such a way that the product team
+Speaker 1: could no longer see mitigations but it could only see control activities. And so all of that process
+Speaker 1: in itself didn't allow the product team to be able to go forward with identifying mitigations because
+Speaker 1: now they were only seeing control activities on their end. And the other thing that had happened
+Speaker 1: also was that I don't know if I can explain this in a very lame language. But when you think about
+Speaker 1: when I identify a risk first when I see a product identifier so let's say for example I identify
+Speaker 2: collection risk and then I identify that the mitigation for collective collection risk is data minimization
+Speaker 2: that's the mitigation. Now that mitigation of data minimization come up to a control activity
+Speaker 2: that's the data privacy program policy. Now that privacy on our side as well controls
+Speaker 2: with mapping to risk. The problem is that there were risk that were being treated by mitigations on our end
+Speaker 2: but when we did the mapping of the mitigations to the controls the risk that we're helping mitigate
+Speaker 1: those controls wearing necessary applicable to the mitigations if that makes sense.
+Speaker 1: So that last piece of advice we had risks that were mapped to mitigations but then that was one side
+Speaker 1: of the story that you had mitigations being mapped to controls. Correct and then we had controls being
+Speaker 1: mapped to risk. So it was there a discrepancy between control being mapped to mitigations which
+Speaker 1: then also had risks and those two buckets were different basically. Correct. So if I could do it
+Speaker 2: almost like it's like you we you have a friend called Paul and then you are my friend but then
+Speaker 2: me and Paul didn't get along. So that was the problem and so in the tooling itself like the expectation
+Speaker 2: was that oh if we were able to map the risk to mitigation and automatically if we map that risk
+Speaker 2: to control activity then that should be addressing our mitigation but it was like no and so yeah it was in
+Speaker 2: a very successful one and you may want to be asking how did we solve like I don't know if that's
+Speaker 1: your next question but let me know what my question was basically like this is an interesting insight right?
+Speaker 1: Yes. Now if you want to go if you want to grab a heavy go back in time and restart this project
+Speaker 1: what would you do differently or what have you done to solve it since then yeah. Yeah I think the first
+Speaker 1: thing that I would have thought about was thinking about what would be the right integration point
+Speaker 1: between two programs between the two programs. I think that we what we had done was we didn't necessarily
+Speaker 2: think about the right integration point what I would have done was to ensure that number one
+Speaker 1: we identify what the integration point would be now obviously the integration point would be risk. So when I
+Speaker 1: think about risk risk can solve for a control activity or risk can be solved to a control activity
+Speaker 1: but it can also be solved to a mitigation. What we would have thought about was how does the mitigation
+Speaker 1: that solving for your risk how does it cascade effectively to that same control that solving for the risk
+Speaker 2: and what that means is that controls now have to specify the surface on which they are being implemented
+Speaker 2: on. What I mean by that is now when we were writing controls we were writing controls are very high level
+Speaker 2: so controls could be for like different programs it could be for finance marketing advertising
+Speaker 2: whereas the mitigation is just for finance and so it's ensuring that when I'm writing the control
+Speaker 2: the control is specifying the surface on which it's being implemented so that when the mitigation is
+Speaker 1: now mapping to that control it maps to that control based on the surface now there is a clean mapping
+Speaker 1: and then now I can sufficiently say that if that risk is being mitigated by the control on this
+Speaker 1: surface the mitigation is also helping to mitigate that same risk. If you just take it back again
+Speaker 1: just overarching the overarching goal of this entire initiative was doing what's like what was the
+Speaker 1: problem that was solving or what was the thing it was improving like was this a painkiller or an abstract
+Speaker 2: so painkiller or a vitamine or something like are you solving a problem or are you just improving the
+Speaker 2: we were solving a problem so we had the auditors in house for that particular issue and so what was
+Speaker 2: happening was that we also where I think it was it was new issue we didn't have enough resources that
+Speaker 2: could be conducting implementation testing and also conducting control testing so what happened was when
+Speaker 2: the auditors came our controls the expectation was that they wanted to see how our controls were
+Speaker 1: being implemented across different surfaces but our controls were failing so we were able to say we
+Speaker 1: had this control and it was being implemented across the entire organization but then when the
+Speaker 1: act force like is it been implemented on this surface we weren't able to prove that and so the mitigation
+Speaker 1: team was trying to do their own like implementation testing to show for that we were also trying to do
+Speaker 1: control testing and we were all just speaking different languages and so we felt like if the mitigation
+Speaker 2: was speaking to the control activity we could have one unified control and audit process and even
+Speaker 2: monitoring that would allow us to provide the uniform output on our control and I'm talking internet
+Speaker 2: test right now because we had internal audit before we had you know the external or you guys coming as
+Speaker 2: well yeah so that was one of the legal dynamics it was kind of sensitive yeah I came from message so I
+Speaker 2: maybe I'm maybe I'm a cheezing a bit with knowing how much your it's good okay yeah
+Speaker 1: but yeah there's a discrepancy between the control library which is incredibly compliance driven
+Speaker 1: versus what we actually do on the ground to mitigate risks during SDLC and the auditors need that
+Speaker 1: story to be mapped as one big thing not just like is the PCF and here's how we test the PCF which is
+Speaker 1: different to how we actually managed risk at the company when we build features daddy's exactly right
+Speaker 1: yeah okay cool I think it's been done so what questions do you have for me how can I help
+Speaker 2: yeah I had a question about the compliance culture I know that when and I'm specifically asking
+Speaker 2: in terms of executing compliance programs how easy is it to execute compliance program and what is the
+Speaker 2: acceptance culture like or compliance programs being implemented across different groups and
+Speaker 2: across different functions I can ask the question I know how you're asking what's the compliance culture
+Speaker 2: like the people of people who are against compliance yeah in yeah like maybe in in in in in
+Speaker 1: in in in terms yeah like and maybe not because no one is totally against it it's that's what
+Speaker 1: that seems like sometimes it's underneath one that's extremely excited about compliance yeah yeah
+Speaker 1: but I think like when I'm asking is how easy is it to implement like implement programs like
+Speaker 1: is it like how we accept a compliance that extend that all like so what I'm saying is
+Speaker 1: I've seen certain companies where the acceptance level of compliance is up like seven and so I go
+Speaker 2: through like three hoops to implement a compliance program on another company is that four and
+Speaker 2: go through like eleven hoops before I get approval so that's what I was asking for the companies
+Speaker 2: at a high level of risk tolerance like one of the leadership teams feeling in terms of how much
+Speaker 2: risk absolutely have because if they say like any true any true chief privacy officer should be saying
+Speaker 2: okay a company I want you all to think in this mind sets either it's we're going to be the world
+Speaker 1: class leaders of privacy and we're going to go to do TED Talks I'm going to show Google and Facebook
+Speaker 1: that they're doing it all wrong yeah and we're doing it the best way all we're going to do just
+Speaker 1: above the line and make sure we don't get caught for any problems we don't get fined and it's just what
+Speaker 1: is the legally required thing to do or even was we just risk it I mean hopefully we don't get caught
+Speaker 1: for being frauds um where do you then stand in that spectrum as a leader and then how do you expect
+Speaker 2: you're in place to think I think with by dance we are we we we're not as mature as meta in some ways
+Speaker 2: and what I mean by that is we're probably culturally in the same mindset as meta was pre FTC consent order
+Speaker 2: five billion fine because we haven't been hit drastically with a massive fine but we know and the leaders
+Speaker 2: know and they have people joining from these companies who have had the experience of an FTC
+Speaker 2: consent decree and they're getting all this info and feedback of saying we need to be proactive and
+Speaker 1: to start thinking about these compliance programs and building these exams and as a indication of
+Speaker 1: like they're belief in all this this is why we're rapidly hiring and we're trying to scale these businesses
+Speaker 1: so while we don't have the like the mandated impetus to get stuff sorted which most companies
+Speaker 1: would probably wait until they get slapped yeah and they do it we already seeing signs of
+Speaker 1: productiveness where where our leadership team show and others are that P0 this upcoming year is
+Speaker 2: auditability they're like we don't we don't have any audits right now but I want to make sure that if we
+Speaker 2: ever do get them we are not in a poor state so they are really banging a drum on ensuring compliance is
+Speaker 2: actually stood up in his mature effectively um so it's hard for me to answer the question is to like
+Speaker 2: what's it like because if I'm being totally frank it's being built as we speak um and that's not
+Speaker 2: to say we don't have compliance teams we've got a lot of compliance teams created within the company and
+Speaker 1: they've managed like within their sphere very tactical compliance work like DMA DSA is all come up
+Speaker 1: up in the last year there are like decentralized teams in Europe that are working on those regulations
+Speaker 2: what that provides an opportunity for is building up an overarching strategy like we as a company
+Speaker 2: need to decide how we want to manage compliance do we want to have a central compliance organization
+Speaker 2: and then we build out that as an army and they get designated roles and domains to be experts in to
+Speaker 1: speak to at account for when we get audited or we want to federate and have like a parent and child mentality
+Speaker 1: where compliance teams are embedded in each of these domains and functions frankly as a leader that's
+Speaker 1: one currently trying to figure out uh I am hiring within my team for compliance and governance
+Speaker 1: I'm looking across the globe with Europe, Europe teams who have been you know through statutory text
+Speaker 1: actually all the capital sea compliance teams that DSA and DMA but we're all coming together and
+Speaker 2: figuring out what this one lines how do we look together as second line defense functions um and yeah
+Speaker 2: frankly the the the the through kind of feedback I get from my leadership like sea sweet like
+Speaker 2: you being tends to be they want to do the right thing and they want to figure out how to do the right
+Speaker 2: thing so I don't get much pushback if I'm being honest there what I can't speak to is when we actually
+Speaker 2: didn't go out and build something like I haven't yet been able to explore pushing a product team to
+Speaker 1: go and build something that is maybe way outside of their OKRs right now for and that's I think where you're
+Speaker 1: just you're asking like is this painful yeah I don't know I'm going to be honest with you
+Speaker 1: I will give me a year and I can come back to you and I can say how pleasant how pleasant my life has been
+Speaker 1: I will be directly in a forefront of the like fire in terms of how painful it's going to be because my
+Speaker 1: my team is directly responding I'm the best I'm the one is the previously assurance leader so I just
+Speaker 2: basically cover all kind of like trust and governance type things so I work very very close I
+Speaker 2: typically in industry you have a GRC leaders where risk is part of that in environments
+Speaker 2: somehow we've separated risk from the GMC aspect so I'm working closely with the risk team to
+Speaker 2: to kind of be my partner but I'm sure at some point I'll be a consolidation OK that makes sense yeah I
+Speaker 2: think that's kind of how like I've seen it in different companies like you kind of start of like
+Speaker 1: with the risk and compliance team being together and then you separate them and sometimes you bring them
+Speaker 1: back together yeah yeah I feel like every industry is basically just breaking things off of
+Speaker 1: and consolidating them yeah yeah yeah okay you actually did answer one of my questions that I was
+Speaker 1: going to ask well you also answered it from a people standpoint I probably want to ask it more from
+Speaker 1: process standpoint like what would what are some of from a programmatic standpoint what would you say
+Speaker 2: some of the challenges that you're facing that you would require and not that you don't have your solution
+Speaker 2: yet but you think what are some things that you would think about and you would require for somebody to
+Speaker 2: come somebody that you would hire to come solve like what would what would that look like what would that
+Speaker 2: challenge you look like and what would solution that look like for you um I was kind of like what
+Speaker 2: of the what is risk management teams I kind of talk issues they're trying to so far and you're
+Speaker 1: trying to get an understanding of like what would be the first years worth of work more are you trying
+Speaker 1: to understand culturally as a company what issues the people experience agnostic of risk management
+Speaker 1: entirely yeah so you said you're on privacy assurance is what I heard right yeah I leave the
+Speaker 1: privacy assurance so it's like privacy assurance with my teams the certification controls all
+Speaker 1: it compliance and commitments like all those people are under the then you've got risk management which
+Speaker 2: is a cousin to my world but I don't directly manage them um maybe one day I will I don't know but
+Speaker 2: so so I don't have direct visibility into all the risk things I just have the partnerships that have
+Speaker 2: been created across these teams understanding that my can speak to two things I can speak to culturally
+Speaker 2: what's been challenging and I can speak to how to medium level what are the risk issues that need to be
+Speaker 2: sold in the next six to two months that makes sense I would love for you to speak to the um the
+Speaker 1: high level culturally but I also want to talk to you I want you I want you to speak on the challenge
+Speaker 1: of your partnership right now between compliance and risk what does that look like right now and what
+Speaker 1: would it's solution look like for you I think the challenge is just infancy essentially so we we've been
+Speaker 1: building these programs out for about 18 months now and one thing I've observed that is the mindset of
+Speaker 1: coming in with a fresh there are things that have been established but the companies now starting
+Speaker 2: to hire experienced ICs and leaders coming from you know 10 plus years worth of privacy program
+Speaker 2: establishment at different industries and they're basically accelerating the maturity of these programs
+Speaker 2: that were being led internally by like homegrown by dances you've been in the company like six years
+Speaker 2: didn't give in this this is start up at the end of the day giving different different things to kind of
+Speaker 2: established so uh when now we've had very much like short sighted there's a problem there's a need
+Speaker 1: we apply solution it's compliance or privacy program that you stand up at the time because there's a
+Speaker 1: need for it so now with time you skip forward to years now what I'm noticing is that we've got all
+Speaker 1: these kind of functions in place but none of them are actually centralized within a risk framework like
+Speaker 1: every team is thought about risk in a certain way every team is managing risk but there's no unified
+Speaker 1: approach yet and I think every company faces this challenge how do you actually stand and I
+Speaker 2: is the way people think and calculate risk when you've got so many different perspectives of how people
+Speaker 2: actually consider risk so it's very it's very it's very bloody hard but that is one of the challenges
+Speaker 2: and the approach to that I I am yet to work at a company that has figured out a solution that is perfect for
+Speaker 2: that problem I think I have no yet seen this but I think the general solution would be to find a
+Speaker 2: common denomination of how people think about risk you standardize that and then you create derivatives
+Speaker 1: for each sector that they can then personalize and understand how they think about it so they should
+Speaker 1: come and queue maybe 60% of what we weigh in is the same across every division but then for many 40%
+Speaker 1: they have the autonomy to flex and manage within their micro bubbles and things so we're not impeding them
+Speaker 1: from working effectively that's a lot of buzzwords how you actually do that takes a lot of time you
+Speaker 1: need to evangelize the idea with everyone get by for all leadership actually make sure we've got
+Speaker 2: tooling in place and understand every teams they in their life like what tool does this team use what
+Speaker 2: tool does this team use okay how do we then inject risk into all of these tools that are
+Speaker 2: a unified understanding and I think so that's one challenge one challenge is a siloving and not
+Speaker 2: centralizing everything the second challenge is the in order to standardize and bring everyone on the
+Speaker 2: same platform or enterprise or what am I saying if you want to bring everyone on the same
+Speaker 1: framework you need everyone to almost be the same with the maturity minimum maturity to then bring
+Speaker 1: one board like you can't you can't divide the design of your like iPhone and app that's going to
+Speaker 1: help people with their calendar management and then you go and try and deploy it to a village that's
+Speaker 1: never heard of an iPhone like it's just not going to work like you need to make sure that all the
+Speaker 1: cities around you that you're building this app for at minimum know what a smart phone is and they
+Speaker 2: have smart phones yeah so like the other challenge I'm facing is we know which teams you want to
+Speaker 2: collaborate with we know what we need to do to collaborate with them but maybe four out of ten of them
+Speaker 2: are still one paper and there's the one on sheets and they're not even on the system yet for us to
+Speaker 2: then have systems speak to each other so one of the challenges that are a bit more longer term is how
+Speaker 2: do you then influence maturing other teams and programs so that you can then work together and
+Speaker 1: that is something that again is isn't going to be a dull overnight so you've kind of got this
+Speaker 1: very interesting again it's a start up with like undimitted funds whereby you've got a lot of teams that
+Speaker 1: have the experience and knowledge of what to do but they're trying to build these things and because it's
+Speaker 1: so much to do in the privacy program space I guess the third problem I'd explain would be so
+Speaker 1: styling maturity and then the last one is hiring people with wealth of experience who know the
+Speaker 2: end goal they know this is what it looks like half ten years and then they come to somewhere as
+Speaker 2: been doing it for two years and then they have you know 700 ideas hmm we can't do 700 ideas and six
+Speaker 2: months we've we've we've we've road mapping quarters we've had three months every time we're trying to figure
+Speaker 2: out what to implement and have more storage of these things it does not help and I've and I've been
+Speaker 2: at fault of this as well I come even from a very mature program I explain his division in end goal
+Speaker 1: but actually they're going to be hearing that what they need to hear is how we get to a cool stage first
+Speaker 1: don't talk them about running they didn't even know what's sprinting it's and I think speaking to
+Speaker 1: us like people tends to want to hear about the vision in the end game and it work backwards from that
+Speaker 1: but what I found is it actually ends up causing a time and team of like four people building on a risk
+Speaker 1: management framework then end up each individual person is working on three different projects
+Speaker 2: going to try to scale it out like outwardly build but actually I think it would have been a lot
+Speaker 2: smart if we just focused on one specific thing that was foundational and get that one thing right
+Speaker 2: yeah and then start staggering later um like I think terms of the visibility gets misused where people
+Speaker 2: think that because we have ten people we can give one person each different thing of the overarching program
+Speaker 2: when I actually think give ten people one thing to them stabilise and then you can continue building that
+Speaker 1: because it would actually realize impact a lot faster if you do it in a more staggered approach
+Speaker 1: than trying to divide and conquer in a parallel because sometimes there's dependency as well like we
+Speaker 1: can't suddenly build this thing if we haven't built these other things mature yet so why are we now
+Speaker 1: doing that at the same time something else yeah so I guess my other people that have categorised this other
+Speaker 1: issue of identify but people have in most of good ideas but they need to be smarter at
+Speaker 2: uh in the right way um and I get everyone on this feedback like if anyone doing this company there's
+Speaker 2: so many things to go and solve for which is why it's exciting working here but you need to stay focus like
+Speaker 2: yeah I didn't like there's there's fifty fires around you which one do you put out first the last thing
+Speaker 2: you should be doing is trying to put out all of them at the same time you'll use up your water and the fire would
+Speaker 2: just get bigger like focus on like one area at a time make sure the fire doesn't revisit that area
+Speaker 1: and then move onto the dags like it's uh and I think there's just as a company shift we need to
+Speaker 1: start doing that a bit more um anyway I've started writing now so that makes sense that we do all the
+Speaker 1: things to me and I say all this in transparency because I'm not to sort of deter candidates but if anything
+Speaker 1: it should be exciting like I found my personally the the work I was doing a matter and then even to
+Speaker 1: create priorities I get to sort of a cruising altitude where I understand a lot of the things I'm
+Speaker 2: found in and then you're stuck whereby the road to promotion is 10 year base and I have to
+Speaker 2: wait a few years to send the seeds or there's just not enough scope to queue and expand into that role
+Speaker 2: because someone's already taking that scope and I'm not going to artificially create that scope
+Speaker 2: here we've got a different problem we've got a crapper to scope and we try to write our as many
+Speaker 2: things we can to solve it so for me this is a great opportunity to sort of grow but it comes in a
+Speaker 1: cost which is putting in the work and building a world class program totally totally understood
+Speaker 1: that was super helpful thank you so much for breaking it down to me like that let me see if I've been
+Speaker 1: not amazing before I ask you if you've got any other questions I don't do any other questions
+Speaker 1: I know at one time so I don't want to take your time I think that you know you've answered most of
+Speaker 1: my questions so this is this is helpful sounds good and I think there's I believe it's not
+Speaker 2: the reason to go out to this with I think an ex-efficient collaborator or something so yes good luck with
+Speaker 2: us thank you very nice meeting thank you so much

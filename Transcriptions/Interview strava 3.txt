@@ -1,0 +1,224 @@
+Speaker 1: Hello.
+Speaker 1: Hello.
+Speaker 1: Good morning.
+Speaker 1: Good morning.
+Speaker 1: Good morning.
+Speaker 2: How are you doing?
+Speaker 2: I'm doing well. Thank you.
+Speaker 2: How are you?
+Speaker 2: I'm doing well as well.
+Speaker 2: Where are you located?
+Speaker 1: I mean, Mountain View.
+Speaker 1: Oh, wow.
+Speaker 1: I'm in Robert City.
+Speaker 1: A little more of this.
+Speaker 1: Oh, lovely.
+Speaker 2: That's awesome.
+Speaker 2: Well, it's fun.
+Speaker 2: Nice to meet you.
+Speaker 2: Tell me is that how I've seen her name?
+Speaker 2: Yes.
+Speaker 1: I'm Ashley.
+Speaker 1: I've been a straw for over 11 years now on the community management team.
+Speaker 1: And I've worked pretty closely with this position in the past as well.
+Speaker 1: It's just legal.
+Speaker 1: Everybody kind of reports into legal as well.
+Speaker 2: I attended work on the, like, more sensitive escalations and crises.
+Speaker 2: We're always living here about it in community management.
+Speaker 2: That's our term for basically like customer support.
+Speaker 2: Okay.
+Speaker 2: So I only have three questions.
+Speaker 1: And I want to leave you time at the end.
+Speaker 1: Because I need you want to, like, circle back to anything.
+Speaker 1: Or do you have any questions?
+Speaker 1: So does that sound good?
+Speaker 1: Sounds good. Thank you.
+Speaker 2: Great.
+Speaker 2: Okay.
+Speaker 2: So for many of our employees,
+Speaker 2: Travis, the first time that they're dealing with a compliance type function.
+Speaker 2: What is your approach to making regulatory requirements and legal process
+Speaker 1: feel less intimidating and more accessible?
+Speaker 1: When I think about regulatory requirements,
+Speaker 1: I think that it has a lot of intersection with operational effectiveness.
+Speaker 1: And so what I mean by that is for everyone that's involved in some sort of operation.
+Speaker 1: At the end of the day, what compliance really does the sites from helping you to meet your requirements is that it helps to improve your operations.
+Speaker 2: And so what I do when I am talking to teams that I necessarily familiar with compliance,
+Speaker 2: or haven't adopted the concept of compliance,
+Speaker 2: is helping them understand the intersection between compliance and effectiveness of their operations.
+Speaker 2: And so when I'm talking to a team, for example, that hasn't necessarily been,
+Speaker 2: and I'll give you an example, if that's okay,
+Speaker 1: if I'm helping it team understand from the EU law, for example,
+Speaker 1: around like real-power requirements.
+Speaker 1: People may not understand like what do we mean by record of processing activities,
+Speaker 1: but when I help them understand like if you have an inventory of your data and how that data is being used,
+Speaker 1: it also allows you to think about ways that you may want to evaluate where our vulnerabilities are in our system
+Speaker 2: because that data inventory would show you the map of your data and to end and we show you the infrastructure.
+Speaker 2: And so explaining it like that in that way is I'm speaking the language because I'm talking in this example
+Speaker 2: when I'm trying to explain compliance, maybe it's one engineering scene, for example.
+Speaker 2: And so helping them understand like your data is stored in your systems, your infrastructure,
+Speaker 2: and as of right now, you may not know or have a full understanding of where and where your data is going into
+Speaker 1: and what are the vulnerabilities and threats that are associated with your data.
+Speaker 1: But when you evaluate, when you implement a real-power, for example, a record of processing activity,
+Speaker 1: it provides transparency around where your data is per time and what are the associated threats and vulnerabilities for that data.
+Speaker 1: And so that's how I'm happy to dip that just like an example of how I've explained.
+Speaker 1: And so at the end of the day when they think about it, you help them see that it's not just meeting a compliance requirement,
+Speaker 2: but it makes their work more effective when they have somewhere to reference if they're trying to evaluate risk and threats in their environment.
+Speaker 2: Okay, so that definitely sounds like, you know, one of them is really to kind of connect them to how it makes them more successful in their job.
+Speaker 2: Would you say there are any other, I guess, like, principles that you lean upon when working with other teams to just help bring them along?
+Speaker 2: Yeah, I'm very good at, like, also storytelling, helping people understand, like, concepts, true just like, breaking it down.
+Speaker 2: And storytelling doesn't just mean, like, it forked to, but like, storytelling around, you know, what is the goal of what we're trying to achieve?
+Speaker 1: It's really taking them from, like, endgame back to the beginning.
+Speaker 1: And so telling a story about what goal are we trying to achieve when it comes to compliance? We're trying to make sure that number one, especially if it's because I've done this for companies that store user data or that interface with user data a lot.
+Speaker 1: The goal at the end of the day of compliance is to improve trust with customers, at least from a user data perspective.
+Speaker 1: So taking that story from, how would you like your customers to interact with the product that you're building today? Do you want them to interact with trust or do you want them to interact with fear?
+Speaker 1: And so when they're able to answer that question of how they want their customers to interact with their products, then we start to plot that story of these are the different areas within your product that would allow you to continuously build trust.
+Speaker 2: And so part of that is making sure you're transparent about how you're using their data and in order to be transparent, we have to do things like privacy assessments on your products, understand how data has been used the overall data life cycle of data.
+Speaker 2: And so once I'm able to plot that story, especially like in a company where when we think about companies that are customer centric and people are really, really, you know, like passionate about their customers, I think it's really driving that story through the path or the route that they're passionate about and helping them see how they can continue to serve the purposes that they're looking to serve by being more compliant.
+Speaker 2: Yeah, I love that, I love changing the perspective to think about how you would want your customer to interact with trust and not fear, I was really good call out.
+Speaker 2: Next question, so what specific actions do you take to encourage psychological safety in the context of challenging compliance issues?
+Speaker 2: And this is like framed in the lens of like saying, do you have employees feeling comfortable to bring something up?
+Speaker 1: Yeah, I think number one, making it a very collaborative environment where you ensure that people know their voices can be heard.
+Speaker 1: I think when I say their voices can be heard, it's making sure that everyone has a chance to be able to voice how they're thinking about certain matters and that there is transparency on how the impact or on the outcome of voicing what they think about certain situations.
+Speaker 1: So number one, the way that I start with that is clear communication in an environment like making sure that communication is clear communication is transparent and communication is tiny.
+Speaker 1: I think those are the three fundamental parts of communication that I've seen especially when I lead teams and what I mean by clarity is making sure that I'm not leaving anything out out of sentiment.
+Speaker 1: Clarifying things and allowing people to provide feedback and you know to say whether this is clear or this is not clear, so that's part of that.
+Speaker 2: And then making sure that communication is tiny right and when I say communication being timely is that people shouldn't be hearing about certain you know like compliance situations after the fact people should be able to get that information at the beginning in order to provide or in order to implement controls that would allow them to fix that.
+Speaker 2: And so when we talk about psychological safety, it's really around also ensuring transparency around the environment that everyone can you know.
+Speaker 2: I think two aspects of transparency that I'll call out is also as a leader and make sure that I'm leading by example and being transparent and also expecting you know my teams also to be transparent in me and I think the third one also is inclusivity of thoughts.
+Speaker 2: I've seen that in many cases there is it's very easy for people.
+Speaker 2: Other people's less dominant thoughts to drown in an environment where there are many many dominant trust around like whether it's compliance or whatever area but it's bringing inclusivity of thoughts.
+Speaker 1: Making sure that everybody's thoughts count regardless even even the moment it doesn't make the most sense but helping them just like you know.
+Speaker 1: Hash out areas or the thoughts that might allow them to feel like they're also included in an environment or in a conversation.
+Speaker 1: I hope that answers your question and.
+Speaker 1: I really appreciate that was really is really helpful to just like have that structure to not in that way.
+Speaker 1: So I've heard clear transparent inclusive and timely.
+Speaker 2: Awesome. Thank you.
+Speaker 2: And I really love the inclusivity aspect I think that's it's true there's a lot of like ladder voices that often just kind of.
+Speaker 2: You know leave leave somebody you may just still be like working something out in their brain.
+Speaker 2: Like it may just you know move the conversation past the time where that person is felt like they can't bring it up anymore.
+Speaker 2: Yeah.
+Speaker 1: Okay, so then my final question is what framework would you use for collaborating with stakeholders like my team community management or trust us.
+Speaker 1: You product or operations etc.
+Speaker 1: And when you see framework I use specifically referring to like regulatory framework or just like in-house framework that.
+Speaker 1: We build.
+Speaker 1: Are you referring to like any industry standard framework or just like internal frameworks like you.
+Speaker 2: I think it's the way you like to work with other teams like what are some of it again like move back to principles or you don't want to call it framework or processes like what is your philosophy on that.
+Speaker 2: What can we call that on what can we cross functional partners correct.
+Speaker 2: Yeah, I'm working with yeah collaborating with stakeholders like like my team presence and engineering product.
+Speaker 2: Yeah, I'll give my maybe on popular you know like type of how I've done this and it's worked for me.
+Speaker 2: I love to build relationships and build in relationships for me number one is communication.
+Speaker 1: And so understanding like everyone how they like to communicate and how they like to be communicated with.
+Speaker 1: I think those are two different things so some people communicate in a way and they like to be communicated in a different way and so for me it's really building relationships with the people.
+Speaker 1: understanding how they like to be communicated and also over time understanding the intention of their communication and the reason why intention of communication is important is because it allows me to look beyond.
+Speaker 1: Pushbacks in certain situations and understand where they are really coming from to really get into their pain points and so that's one number two is building trust.
+Speaker 1: So I'll just give this practically same like when I've been new in environments or I've seen environments where people are new it's like oh what is the delineation between your job and my job.
+Speaker 2: What are you spinning that's new are you trying to come over home and process but it's helping to build trust across team members or functional groups that.
+Speaker 2: If you didn't see what's the same goal I'm not trying to come to go about the work that you're doing I'm just helping to improve.
+Speaker 2: Or in any way that I can and also just like give you credit for the work that you've done in time.
+Speaker 2: And I think that leads me to the third point is helping people understand their impacts in a project so I think a lot of times for me whenever we have like cross functional projects like that.
+Speaker 2: You have expressed like what am I supposed to be doing here like what is my role and so more than just helping stakeholders understand their roles and responsibilities.
+Speaker 1: I help them understand their impact.
+Speaker 1: I think that when I've communicated their impact on a project it's driven more trust and it's driven more transparent communication so I'll give an example.
+Speaker 1: Instead of saying that your role as part of this project is to make sure that we're implementing privacy by design across our products.
+Speaker 1: I would say that your impact on this project is making sure that we build better products that will provide us the better reputation.
+Speaker 1: So I think that those differences have allowed me to partner more effectively with stakeholders.
+Speaker 2: And if I can just add one more thing in cases where I experience pushback with my stakeholders is really understanding who are the key players across projects.
+Speaker 2: And then getting private buying from them making sure that number one I speak to these people one and one where I can I know sometimes time doesn't permit but that's why I started with relationship.
+Speaker 2: And I've seen that when I have a standing relationship with people regardless to see the direction I come from people don't see me as an opponent because we already allied from a relationship standpoint.
+Speaker 2: The see me as an ally that's maybe just having an opposing view and then we can always work together to solve whatever challenges that we're facing.
+Speaker 2: So that's my framework in general and happy to deep dive if you want more.
+Speaker 1: No, I love that. That was excellent. So I heard building relationships is like where you start building trust.
+Speaker 1: To your working towards thankful. I'll think people understand that impact instead of just kind of saying like what the regulation for being with the regulation says.
+Speaker 1: And then finally just understanding like who the key people are and getting by and.
+Speaker 1: You know in a more private like personalized setting.
+Speaker 1: Yes.
+Speaker 2: Thank you. That's how it's super good for you.
+Speaker 2: Excellent. Thank you. And then I guess like since we're kind of on this topic and thinking of one of the things that I know has been.
+Speaker 2: Like more of like I guess you call it a friction point for my team and it's around.
+Speaker 2: DBAs and just the length of the process for us like.
+Speaker 2: I'll just be transparent like we have been waiting out wild to move a project forward because we have the process is so long.
+Speaker 1: What is your approach to streamlining things like that?
+Speaker 1: Yeah, I have actually experienced that concern with teams that I've worked with.
+Speaker 1: And so I would just give you an example of what I did personally.
+Speaker 1: When I when we started to work on that team, we were performing things like DPA for every single product and it was just like causing a lag in time.
+Speaker 1: What we ended up doing was we ended up dividing or stratifying the process into what we called fast track and actual DPA.
+Speaker 2: So what fast track process really entailed was at their products that are coming to our table where we've seen the same types of risk.
+Speaker 2: And we've also seen that there are existing controls that help to mitigate those types of risk.
+Speaker 2: So those typically go through the fast track route and then we provide mitigations.
+Speaker 2: In certain cases we call it mitigations and other cases we call it safe grounds of controls that would allow to mitigate those risk that we're identifying within this fast track areas.
+Speaker 2: So kind of that was really understanding how do we want to do a risk risk prioritization within our environment where we're not spending the same amount of time for every single product where some things can move faster than the other because there are things that are associated with things that have already been seen.
+Speaker 1: And so what that process until it was when you bring a product that says you're dealing with transparency risk or like data deletion risk and we already seen those risk and time pass and there are existing controls.
+Speaker 1: What we just do is we let you know what your inherent risk point you to where you can you know reference in order to implement the controls that would help mitigate your risk and help you understand how your risk will reduce once you've been able to mitigate those controls and those go through the typical fast route.
+Speaker 1: Another thing another example that I've done as well in time passes really like we used and automated approach where we have like this we created this automated and associated.
+Speaker 1: That allows us to quickly put like data points around the project so instead of having teams to fill out all this like long information we ask for like specific data points that would then drive scores.
+Speaker 1: To determine if we're going to take it through like an actual DPI or maybe it stops at the point of a pre DPI and so what that looks like is just high level questions around the data life cycle within that product especially when it's related to data so what type of data you collecting.
+Speaker 2: How is the data been collected from a third party and stuff like that and then you take it all the way to the solution and it allows it's pizza to score from a high medium low perspective and then the mediums and lows are usually just like funneled into the path of like hey this is these are your medications and then the ones that are high are the ones that we then end up doing like an actual DPI for another thing is one thing I've also seen that super helpful it's not just about even your process is communicating.
+Speaker 2: very, very timely to people and saying hey we will do XYZ communicating your process and say we'll take your process through these there is a chance that your project might not take five months.
+Speaker 2: If we get it through the route of medium and low it will take one week but if we get it through the medium of you know through the route of high it will take five months so communicating clearly what that allows teams to do have seen in time pass it allows them to go back and see if they are treat of stick and make on their products ahead of time.
+Speaker 2: In the meantime and it also allows them to decide how they want to roll out their products.
+Speaker 2: So they can say for example if I'm going to roll out 100% of this product and it's going to take me five months to do a DPI.
+Speaker 1: I will roll it out in phases and so they will take a decision among their product teams to say if it's easier to roll out the first phase of this product through a one week demo.
+Speaker 1: A true one week risk assessment process then let's do that and so it also allows them to go back and factor our process and our timelines into how they are thinking about their rule out and allowing them to also read on how they want to think about really not in different phases as well.
+Speaker 1: So those are the things that have seen to work.
+Speaker 1: That's excellent.
+Speaker 1: Yeah, I think telling people why I'm like helping them understand where you're at and what the implications are is always really a useful thing is you're just getting that power to change their product.
+Speaker 2: They're not at their approach.
+Speaker 2: That's one.
+Speaker 2: Thank you so much.
+Speaker 2: I wanted to give you the last 10 minutes so we can either feel like talking about anything we already covered.
+Speaker 2: We can go back or you can ask me anything.
+Speaker 1: Yeah, I know I appreciate that.
+Speaker 1: Thank you.
+Speaker 1: I wanted to ask about the privacy culture at Strava.
+Speaker 1: How would you describe the culture?
+Speaker 1: Would you say that it's very much sure where people are very accepting of privacy compliance or would you say that it's in that maturity.
+Speaker 2: That maturity group process.
+Speaker 2: Yeah, well, he came to the right person.
+Speaker 2: Because I, for we had a trust in safety team.
+Speaker 2: Before GPR or anything like I was leading a working group.
+Speaker 2: Like a privacy improvement group.
+Speaker 1: Because like I think the full honesty we did start off very.
+Speaker 1: It's like pretty open and as a woman at that point in time.
+Speaker 1: I was like, I think this product just has like a real like white male perspective on it.
+Speaker 1: I'm like the privacy controls and how we think people want to participate and I'm here seeing all of these tickets from users that are demonstrating that like there's a there's a desire for something else.
+Speaker 1: So I would say that we come along way since that's days and you know everybody is well aware of the necessity and like we've seen enough of Strava and the news where people know the implications of like doing something that imposes a risk.
+Speaker 2: But I would say like it's a little complex because so it's definitely not the top of mind for every team.
+Speaker 2: I think it depends I think some product managers are like really really strong at thinking this way and collaborative and coming up with approaches to it.
+Speaker 2: And I think some are, you know, getting on board there also was a pretty big shift with RCE the new CEO coming in my partner who's.
+Speaker 2: Basically like said it said many, many times trust and safety is our business like we can not violate like social norm.
+Speaker 2: Like if somebody's like norm is violated on the platform or they they'll lose trust he's like that's everything to us like so there's there's quite there's a lot of support from him.
+Speaker 1: I think the challenge is around it's probably won't be surprising it's around like having a tradeoffs of engagement.
+Speaker 1: You know wanting somebody to use the feature in the way it was intended versus giving people control over how they show up I think they're still like the struggle was founded on the idea that people like working together make people better and more active and motivated.
+Speaker 1: So inherently there's a belief that like you know there's some good in sharing with a community.
+Speaker 1: I think that community is differs depending on who you are some people like to be public and get all the glory on Strava from the public with humans and then some people just want to participate with smaller communities and I think that's really being understood in the language to now that like small communities is kind of where it's at.
+Speaker 1: But it's distributed nobody through single team like really as a great for its I view of privacy across the product I'd say there's some people who've been around for a while like myself who kind of have a good idea of the whole landscape.
+Speaker 2: But generally speaking every team every product team is kind of responsible for the privacy of their own.
+Speaker 2: Which I think makes it a little tricky to follow along with.
+Speaker 2: But there's there's an appetite we're growing there and you know this is a definitely a different time that it was so I think people are ready I think they just.
+Speaker 2: You know they just the I think more structure around it.
+Speaker 2: That makes sense that's helpful.
+Speaker 1: Yeah that sounds familiar to having worked in like multiple other companies in my time consulting.
+Speaker 1: One more question that I had was on the culture and specifically to type of like leadership engagement.
+Speaker 1: So I've seen I've worked in companies where there's top you know bottom approach where typically direction comes from top and then the bottom you know the folks you know.
+Speaker 1: That are reporting upwards you know implement and I've also seen cases where it's bottom stop.
+Speaker 1: Where you establish direction and then you communicate that to leadership and then they decide whether how would you describe.
+Speaker 2: Travis culture is it the one or the other.
+Speaker 2: I think it depends on the part of the.
+Speaker 2: The part of the business that you're thinking about I think there's some teams that are pretty and like horizontal teams usually that are able to make a lot of their own decisions and.
+Speaker 2: We've added up the chain like fighting for example like we are given a lot of autonomy and.
+Speaker 2: But we'll bring certain like decisions up to leadership like for example like we're thinking about doing some outsource support because we just need to scale it that's why we're completely in house.
+Speaker 1: That was a decision that we were like discussing with with executives but on the other hand there's product and.
+Speaker 1: I've seen it go both ways I think at the end of the day I've seen product a lot of the times get have to shift.
+Speaker 1: After you know the executive team.
+Speaker 1: Like evaluate something or like maybe there's discussions with the board and then there's a decision to pivot.
+Speaker 1: But I think generally there's a really pretty there's a smaller group of leaders that kind of define the the high level roadmap and the strategy.
+Speaker 2: And then that is circulated down and then the teams get together you know plan out what that looks like a more detail and that kind of close back upwards.
+Speaker 2: So there's a little bit of like setting the product just because like the product focus and roadbapping goals at the top level and then each team is interpreting that and then you know sending it back up for evaluation.
+Speaker 2: Absolutely absolutely does that's helpful okay yeah that's all those are all the questions that I had.
+Speaker 2: Okay well I really appreciate chatting if you was it was a pleasure and yeah good luck if you have more interviews.
+Speaker 2: Thank you.
+Speaker 1: I don't really looking five minutes if you got to jump at the other one you can get some water or something appreciate you.
+Speaker 1: Thank you so much Ashley it was nice meeting you.
+Speaker 1: Thank you is a pleasure.
+Speaker 2: Thank you Jesus.

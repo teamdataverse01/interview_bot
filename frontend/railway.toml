@@ -1,0 +1,13 @@
+# Railway service config for the Next.js frontend.
+# Nixpacks auto-detects Node, runs `npm ci` + `npm run build`. `next start` binds to $PORT.
+# NOTE: NEXT_PUBLIC_* vars are baked at BUILD time — set them on the Railway service before deploy.
+
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "npm run start"
+healthcheckPath = "/"
+healthcheckTimeout = 100
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3

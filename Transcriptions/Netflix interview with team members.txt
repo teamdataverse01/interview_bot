@@ -1,0 +1,451 @@
+Speaker 1: I'm telling you, I'm telling you, I'm telling you, I'm telling you.
+Speaker 2: Yes, yes and yes.
+Speaker 2: We all come now.
+Speaker 2: All come now.
+Speaker 2: All come now.
+Speaker 1: All come now.
+Speaker 1: All come now.
+Speaker 2: You
+Speaker 1: You
+Speaker 2: You
+Speaker 2: You
+Speaker 1: You
+Speaker 2: You
+Speaker 2: Nice to meet you
+Speaker 2: Nice to meet you
+Speaker 1: How are you?
+Speaker 1: Doing good
+Speaker 1: Doing good
+Speaker 1: Is it?
+Speaker 1: How do I say your name?
+Speaker 2: Make sure I like that
+Speaker 2: Yeah, it's Timmy
+Speaker 2: Timmy, nice to meet you
+Speaker 2: Nice to meet you
+Speaker 2: Nice to meet you
+Speaker 1: I'm just looking through your resume
+Speaker 1: And
+Speaker 1: You and I have a similar background
+Speaker 1: I think that's pretty cool
+Speaker 1: I was also at Deloitte for a while
+Speaker 2: And I went to men of
+Speaker 2: For a period of time and
+Speaker 2: Nav and Netflix so
+Speaker 2: That's awesome
+Speaker 2: Yeah, that's pretty cool
+Speaker 1: All right, so let me start with some intros
+Speaker 1: I'll introduce myself so you know you're talking to you
+Speaker 1: And then I'd love to your
+Speaker 1: Intro from you and kind of how you got to where you are
+Speaker 1: And where what why you're interested in this role
+Speaker 2: And then we'll go into some questions from there
+Speaker 2: Mostly I'm so I'm I'm on our data protection engineering team
+Speaker 2: Debbie gotten and overview of like our function from Sunita
+Speaker 2: And we had a chance talk to her yet
+Speaker 2: I did get a chance to talk to her
+Speaker 1: But I'd love to hear from you
+Speaker 1: Prospective as well
+Speaker 1: Sure, great
+Speaker 1: Yeah, we so we are the privacy data protection engineering team
+Speaker 1: Which largely has three pillars one is privacy engineering
+Speaker 2: That is a group of privacy engineers that are responsible for
+Speaker 2: Understanding the risks and the business and getting
+Speaker 2: Getting aligned with what the business is trying to do
+Speaker 2: And and make sure that they're doing things right privacy-wise
+Speaker 2: And then there's the data protection team which is the implementation team of privacy engineering
+Speaker 1: The people that build the controls build the capabilities
+Speaker 1: Make sure that we have the telemetry and the metrics and everything to know how things are working
+Speaker 1: And partner with data platforms and other groups to build controls
+Speaker 1: And then the third pillar is our privacy infrastructure engineering team
+Speaker 1: Which is I would say actually engineers software engineers
+Speaker 2: There are the ones that are building the shared services building
+Speaker 2: Legal privacy tools as well as operational privacy tools
+Speaker 2: And that's the growing team so that's that's that's our larger organization
+Speaker 2: And the data protection engineering piece that I'm and is mostly
+Speaker 2: And is mostly two people right now Kara and myself
+Speaker 1: And this would be the manager role for that team
+Speaker 1: To help us set direction and build out this team even further
+Speaker 1: And move our objectives forward
+Speaker 1: So I've been at Netflix for seven years
+Speaker 1: I'm just a couple weeks ago at seven years
+Speaker 2: And before that I say I was at meta doing a lot of
+Speaker 2: Investigations, detection engineering, abuse investigations
+Speaker 2: I was one of the leads on the team at the time that used to do
+Speaker 2: Like are people violating our user data access policies
+Speaker 2: And if so what's going on there and like we were part of the security team back then
+Speaker 1: I know meta has changed dramatically since I was there privacy
+Speaker 1: We were just starting to talk about privacy when I left in a 2018
+Speaker 1: So I'd love to hear I'd love to hear how things are going there
+Speaker 1: But that's that's me that's my background
+Speaker 1: Won't you tell me a little more about yourself
+Speaker 2: Yeah sure thanks for that you know overview
+Speaker 2: I have it makes in my experience kind of similar to yours
+Speaker 2: So I started my career as a security engineer
+Speaker 2: Where I was implementing security networks for organizations
+Speaker 2: And also implementing security infrastructures
+Speaker 1: To help protect data assets and the infrastructure that supported those assets
+Speaker 1: And then also went on to lead teams to help build and scale
+Speaker 1: Out our security programs at the time
+Speaker 1: And then moved on to consulting where I started to focus a look more in data privacy compliance
+Speaker 1: And so kind of layered on top of that technical expertise, known technical expertise
+Speaker 2: To kind of breach the gap between engineering teams and compliance teams
+Speaker 2: To ensure you know seamless implementation and also let teams at the Lloyd
+Speaker 2: And then from there like you right now mentioned joint meta in 2019
+Speaker 2: From the Lloyd as a consultant
+Speaker 2: Where I let the team that instituted the FTC
+Speaker 1: Organized data privacy program or the FTC induced the data privacy program
+Speaker 1: So I let the team from the Lloyd at the time where we were implementing risk assessments
+Speaker 1: And controls to drive data privacy implementations from a programmatic standpoint and from a product standpoint
+Speaker 1: And then moved over to meta full time where I was leading risk assessments
+Speaker 1: That were driving some of these audits assessments that were going another time
+Speaker 2: And then went on to develop policies and lead teams that were driving data classification policies
+Speaker 2: For the purpose of the regulatory requirements that we had
+Speaker 2: And also from an operational standpoint and then went on to the people team where I stood up
+Speaker 2: The data privacy programs specifically for people data
+Speaker 2: And now at the data versus solutions I manage a team of 50 plus members
+Speaker 1: Comprising of data privacy engineers product managers data scientists
+Speaker 1: Where we implement AI-driven compliance solutions for our clients across sport
+Speaker 1: Right now I'm very excited about looking to innovate more
+Speaker 1: In an environment that drives and strives for excellence
+Speaker 1: Like networks and also just leveraging teams and just you know the smart people around me to scale
+Speaker 2: You know compliance programs and ultimately help companies organizations see data privacy as a business advantage
+Speaker 2: And not an impedimentive innovations
+Speaker 2: So yeah that's my overview
+Speaker 2: That is excellent that's that's that's that's that's a lot of the type of work that we need to do
+Speaker 2: We do not have the level of scale and rigor around data privacy and compliance and reporting and visibility
+Speaker 1: That that that has and we may never have we may never need to be at the same level
+Speaker 1: But we still have a lot we built a lot of foundational capabilities
+Speaker 1: And now we're trying to scale that but we are also recognizing that Netflix is changing as a business
+Speaker 1: Netflix is no longer just a streaming site with device data and user activity and playback type information
+Speaker 1: Yet the company still in a lot of ways operates like that is the main focus for a lot of our controls and capabilities
+Speaker 2: But as we brought on our games studios and building out building out data collection there as our ads business grows
+Speaker 2: As we start to introduce physical environments places where people can actually experience Netflix and real life
+Speaker 2: Like a lot of these things that the businesses doing are bringing a lot of attention to
+Speaker 2: The privacy needs the concerns that that we have as a business
+Speaker 2: So that's that's where we are now. I will say that our team focuses a lot on data classification
+Speaker 1: Like we're still in a lot of ways trying to get that part right
+Speaker 1: So that we can have more and more effective policies and implementation of automated controls
+Speaker 1: So why don't you tell me a little bit about your role in the automated data classification
+Speaker 1: Specifically any any specific projects or like just start with tell me about your role around automated data classification
+Speaker 1: And your previous or in your current role
+Speaker 2: Yeah absolutely so in terms of data classification when I lead projects and teams that are driving for data classification
+Speaker 2: Number one is establishing the goals and the outcomes many times when we're developing data classification standards
+Speaker 2: Because we have so many different stakeholders
+Speaker 2: It's important to understand what the goals and the outcome are for the data classification
+Speaker 2: And I like to anchor that really around it's very simple
+Speaker 1: Anchor that around regulatory outcomes and operational outcomes, which is just our internal requirements
+Speaker 1: Like what our customers need what their labels are business and what their labels profit
+Speaker 1: So in terms of my role is number one making sure the goals are clear
+Speaker 1: Very clear at the beginning establishing those goals and ensuring alignment with all the different stakeholders
+Speaker 1: Obviously identifying who the key stakeholders are going to be a part of who the key stakeholders are going to be as part of developing that data classification
+Speaker 2: Standard so part of that is involving legal you know very early on making sure that the regulatory aspect is taking care of from a legal standpoint
+Speaker 2: Number two ensuring that we incorporate the engineering teams that are holding that are you know the custodians of the assets that store these data
+Speaker 2: Because again one thing that I've seen as I've led data classification projects is there is always a gap of understanding from the policy in terms
+Speaker 2: From a gap of understanding in terms of how the policy is created
+Speaker 2: But also how the system infrastructure is settled
+Speaker 1: So there have been times where you know legal would say something like oh we need to classify data by region, but the data warehouse doesn't do that
+Speaker 1: And so it's important to reach that gap and then making sure that the rules and responsibilities of all these different stakeholders are very very outlined
+Speaker 1: In terms of the implementation and the expectations going forward
+Speaker 1: And then number four is really just ensuring that there is enough training and awareness of the policy
+Speaker 1: To ensure that there is adoption of that policy and there is advocacy in the groups that we need to be using that policy
+Speaker 2: Especially because a lot of policies just go that end and no one's using it, it's just like lying follow
+Speaker 2: And then really one point that I should have mentioned before training awareness is establishing our data classification methodology
+Speaker 2: Making sure that that's clear obviously the goal and the outcome is what drives for that
+Speaker 2: So it won't drive in a data classification specifically for regulatory outcomes
+Speaker 2: You want to think GDPR, CCP and all these things to drive what strategies that we use
+Speaker 1: So yeah and then taking into consideration risk assessment is also a big deal when we're thinking about classifying data
+Speaker 1: Making sure that we're classifying data based on risk and from a data privacy standpoint the word there is just how much harm can different data types
+Speaker 1: You know post to users based on the level of sensitivity
+Speaker 1: Yeah
+Speaker 2: And then you're just taking some notes here
+Speaker 1: Yeah, those are those some of those things we've we have been working on some of those things we're currently working on
+Speaker 1: I and you talk about how
+Speaker 1: Did you have a role in defining like how meta classifies data and how they choose what metadata to use what what taxonomy and framework to use or is that something that we was adopted when you joined
+Speaker 1: Just curious if you had a role in that I did so we had a requirement from the FTC
+Speaker 1: To implement a data classification standard across all about different assets from obviously from a privacy standpoint
+Speaker 2: And part of that was really defining sensitivity of data based on number one the potential harm that the exposure of data can cause
+Speaker 2: And so we had initially developed five levels of sensitivity and we came back with a feedback from the assessors that you know having five levels of data sensitivity
+Speaker 2: Doesn't allow us to concentrate on our most important data assets and so they wanted us to streamline the sensitivity levels
+Speaker 2: So what that meant was really classifying data into high medium and low sensitivity
+Speaker 2: Now high medium high sensitivity just made data that if it was to be exposed constituted high risk
+Speaker 1: Number two data that obviously constituted harm based of use now
+Speaker 1: So there's two different things data that if you were to be exposed constituted harm what the use of the data
+Speaker 1: So it was also important that we weren't just thinking about data by itself
+Speaker 1: But thinking about the relative use cases across board for each of those data types to understand the risk level or the level of sensitivity
+Speaker 1: So there were times where average and we also took into consideration things like how GDPR would think about data sensitivity and all that regulatory obligation
+Speaker 2: So from a GDPR perspective for example email addresses and not necessarily classified sensitivity
+Speaker 2: However when we started to evaluate the use cases like meta of email addresses
+Speaker 2: We saw that the use cases potentially could pose harm to use as especially when content wasn't collected
+Speaker 2: And so that bumped some of those on seemingly types of data that may not be sensitive at surface level to high sensitivity level
+Speaker 2: So the three major requirements we're really thinking about the regulatory obligations that we're already there
+Speaker 1: Because GDPR sets the tone for data privacy in general and CCPAs because we are in California
+Speaker 1: And then secondly making sure we understood the use of the data to be able to layer on top of that levels of sensitivity
+Speaker 1: And then we conducted risk assessment to evaluate what types of risk would the exposure of these different types of data pose to our customers
+Speaker 1: Yeah
+Speaker 1: So that's I love that
+Speaker 2: I wanted to dig into a little bit about how do you how do you go about understanding the use cases and the threats to data that that
+Speaker 2: Like in your example GDPR doesn't define email addresses as sensitive
+Speaker 2: But your the business was able to identify use cases or threats associated with email addresses that raised that risk level
+Speaker 2: How did you go about defining those threats and making sure that they weren't just theoretical hypothetical but they were real potential issues
+Speaker 2: Yes, so one of the ways that allowed us to identify was to also evaluate the identify ability as part of the use cases
+Speaker 1: So what we realized was that when it comes to use the use of data involves linking certain data elements to additional data elements
+Speaker 1: That could then provide certain profiling that in turn could cause harm to the user
+Speaker 1: So it wasn't just about, you know, obviously the use of the data itself was one thing but what additional data points are linked to the email address in our systems
+Speaker 1: That when profiled together could potentially cause harm to the users
+Speaker 1: And so there were certain cases where data elements like email addresses were linked to other types of sensitive information
+Speaker 2: In fact, that would then lead us to think about for the specific use case email address has to be bumped up to you know sensitive data
+Speaker 2: And also in cases where email addresses were also linked to employee information at some point
+Speaker 2: Where email addresses were also linked to religious information in certain areas
+Speaker 2: Also where email addresses were also linked to health or biometric information we had to think about that
+Speaker 2: And so those were the considerations that allowed us to bump things like email addresses, for example, where we thought about them
+Speaker 1: And specifically for meta one of the biggest use cases was where email addresses were linked to location data
+Speaker 1: So that was one of the biggest use cases where ordinary location data was in necessary sensitivity
+Speaker 1: Email by itself was in sensitive when you linked both together and you started to make some sort of like profiling information
+Speaker 1: Then you had sensitive data coming out of that so we had to bump some of those as well
+Speaker 1: That's where we are right now trying to, you know, trying to evolve our data classification textonomy to something that
+Speaker 2: It's better with a new business is a little more flexible
+Speaker 2: When I think about data classification one component is the type of data right it's an email it's an IP address it's a password whatever it is
+Speaker 2: The other component is context so an email address by itself my Netflix email address is not that sensitive insight
+Speaker 2: The company pretty much everyone should have access to that but a customer's email address is different and
+Speaker 2: Having that context is really important. Have you, have you done any work in that space to develop and understand the context of the data that's being used
+Speaker 1: Could you I heard you mentioned early on you were talking about using AI models and potentially using like language models for for this
+Speaker 1: So I'd love to hear kind of how you guys are thinking about innovating or how you're actively innovating in that space to it
+Speaker 1: Yeah, so one of the biggest things is really understanding so for every organization when I've, you know, looked to build data classification standards for them
+Speaker 1: It's really understanding what do you have a record of processing inventory that I can take a look at and what I encourage folks to do
+Speaker 1: If especially obviously there are times where we have to do some of these like an agile method
+Speaker 2: But typically the first thing is really to identify what your different processing activities are and make sure that those are very clearly outlined
+Speaker 2: Because then it allows you to understand what the risk of each of these processing activities could pose on the different types of data
+Speaker 2: Obviously there are changes always constantly happening in the environment which also means that you must be updating your inventory to, you know, your inventory based on the new use cases of data
+Speaker 2: And so part of that is ensuring that you do not just have the use cases of data but what we've done also is map the processing activities to the data types
+Speaker 2: So that's an exercise that we've done and so when we map the processing activity to data types it allows us to also see what systems are storing this data, what systems are processing this data
+Speaker 1: Obviously if we're going to be using automated means AI means for example to process some of that information
+Speaker 1: Then that automatically requires high level of sensitivity use cases there or it poses a high level of risk
+Speaker 1: We're going to be using automated systems AI systems
+Speaker 1: Now in terms of how we use AI to implement some of those part of what we've also done, especially where we have legacy products
+Speaker 1: It's to use AI to also assess what are the most common use cases of these type of data in certain environments
+Speaker 2: And so it's allowed us to pull certain types of data that can also allow us to proactively evaluate risk based of the data processing activities
+Speaker 2: So that's mostly what we've used so it's really tracking the pattern of how data has been used in certain environments
+Speaker 2: And most times it's really just about making sure we're caught up with the processing inventory and making sure that we're mapping data to those to evaluate what types of sensitivity levels
+Speaker 2: It might be impacted there
+Speaker 2: Yeah, I like tying it to the processing activities out
+Speaker 1: To be frank, I think that's something we really under-invested in is really understanding how data is being collected
+Speaker 1: I think we've taken a very data platform data at rest approach
+Speaker 1: Looking at the data that's landed, what is it, where is it, what controls do we have around it, what is the retention
+Speaker 1: And I'd like us to be moving much more in this direction toward a risk-based, like we're focused on driving down the exposure of this type of data
+Speaker 1: Because of the risks that it poses and the ways that it's being used
+Speaker 2: So yeah, I think that's that's that's a much more mature approach that I'd like us to be to be working toward
+Speaker 2: Yeah, did you have some of the bad there?
+Speaker 2: Yeah, so I know you talked about also adding meta tags to data
+Speaker 2: Another thing that we've also done from a technical perspective in order to implement things like purpose limitation
+Speaker 2: As what I've implemented for organizations using AI tools is tagging customer consent preferences to data
+Speaker 1: And using that to classify data, we've been so again, it really boils down to what the goal of the data classification methodology is
+Speaker 1: And if we're talking about mainly meeting certain requirements, I've seen cases where we've had to take meta tags based off of consent preferences
+Speaker 1: And then use that to classify data within the system to ensure that the way that the data is processed within that environment
+Speaker 1: Is in line with the consent requirements or consent mechanisms
+Speaker 1: We've also had processes where we've had data based off of the regulatory outcomes that data is specifically meant to be subject to
+Speaker 2: So for example, I've seen cases where now the reality, the practical theory of what I've seen when I've left teams is that many warehouses, data warehouses
+Speaker 2: or databases are not built to segment data based off of locations and based off of, you know, like, where, you know, what's
+Speaker 2: You know, individual has the data, but sometimes what we use meta tags to do is to be able to tag different types of data in certain cases
+Speaker 2: Based off of the location of that data, in fact, I've been in environments where we've had to tag two drains data or what you would call
+Speaker 2: me GDPR perspective vulnerable individual data and so you just put those types of data tags there and what that does is that it also allows you to do like a temporary segmentation of data
+Speaker 1: So for example, if you're going to be doing audits, for example, when you easily tag your data, you can do a sample set
+Speaker 1: Based off of the tag that you've placed on data, so when you're doing an audit, for example, where the audit is only scope towards the United States
+Speaker 1: And your system contains all of these data, when you've tagged your data accordingly to show that this type of data is the European data set, for example, it's easy to do a query
+Speaker 1: And then do a sample site set of those so that you can easily do that because I've seen cases where there will be scope creep
+Speaker 1: When folks are doing audits and sometimes the European data gets into the mix, I know of that
+Speaker 2: So it's important to also think about your meta tags in a way that allows you meet regulatory requirements, but even so almost for operational outcomes
+Speaker 2: Where you have things like, have these customers consented to marketing, have these customers consented to the use of their data for profiling or AI automation
+Speaker 2: And so those tags have helped to implement things like purpose limitation across board and you also have tags from a security perspective like DLP tools that just really allows you to flag different types of sensitive data from, you know, a regulatory standpoint
+Speaker 2: And you know, you're familiar with the security environment like financial data and all the things making sure that those are properly tagged so that you can segment data and implement those data classification measures appropriately
+Speaker 2: Yes, thank you, I'm just taking some of those here
+Speaker 1: Yeah, so part of, you know, there's a privacy specific way of looking at this, which is mostly around individual personal information
+Speaker 1: The harms that that could cause associating classification with those harms and purposes to make sure that we're minimizing the risk to individuals
+Speaker 1: But there's also this other type of sensitive data at the organization that is not necessarily personal and not necessarily regulated
+Speaker 1: But it's exposure could cause real harm to the business
+Speaker 1: How do you incorporate things like that into an overall data classification framework?
+Speaker 2: And so that improves and and large scale automation can help with each both sides of that question
+Speaker 2: Right, practically speaking, I've seen different approaches
+Speaker 2: So one of the approaches that we've taken when I lead some of these data classification projects is to keep them separate
+Speaker 2: Where we have separate data classification, you know, model specifically for operational use cases
+Speaker 2: Especially where there are lots of conflicting requirements in certain cases
+Speaker 1: But then also, I've seen cases where we incorporate votes together
+Speaker 1: And so part of what we do in order to incorporate votes together is to see where they are shared sensitivity levels
+Speaker 1: So what do I mean by that? So there are certain types of data that from a regulatory standpoint are obviously sensitive and from an internal standpoint, they are obviously sensitive
+Speaker 1: So customer information in an environment like our customer-looking details, you know, customer information, email address
+Speaker 1: These those from a security standpoint, you want to keep that because you don't want the, you know, data to be exposed from the privacy standpoint that's also important
+Speaker 2: And they could also be cases where from an internal standpoint, something couldn't necessarily be sensitive
+Speaker 2: So I'll give you an example, behavioral data for example
+Speaker 2: Now in the world of from an operational perspective, you need behavioral data to drive certain marketing outcomes
+Speaker 2: And so those types of data for example, you may not want to encrypt
+Speaker 2: Now from a data privacy perspective, do behavioral data is considered from CPI's sensitive information
+Speaker 1: And typically when you classify something as sensitive information, you then want to protect that data
+Speaker 1: So the goal is thinking about number one, how do we want to store the data in a way that we may have shared controls for that specific data
+Speaker 1: So if we think about behavioral data, for example, are there ways that we can anonymize or pseudonymize or whatever type of D, what you call this
+Speaker 1: Disassociation of that data that we could perform in order to reduce its level of sensitivity
+Speaker 1: So that the engineering teams or the teams that are driving these innovation have enough flexibility
+Speaker 2: To use that data to drive for the outcomes they are looking for
+Speaker 2: And then from a data privacy standpoint, we've anonymized or pseudonymized the data
+Speaker 2: So it's reduced as level of sensitivity to the degree where from a GDPR standpoint, for example, we are allowed to use those types of data
+Speaker 2: Without imposing any significant risk in the environment
+Speaker 2: Yeah, that's where we've had some alignment on these things as historically our classification was
+Speaker 1: If it was PI, you had this way of classifying the data
+Speaker 1: If it was not PI, then we had this more generic, like is it, you know, confidential internal restricted kind of standard classification levels
+Speaker 1: But I don't, the company and people don't think of PI non PI, they just think about data
+Speaker 1: And like, is it risky, is it not, is it sensitive, is it not, is it not, is it not, do I need to encrypt it?
+Speaker 1: Do I not, do I need to control access or not? Can I keep it forever or not?
+Speaker 2: Like, those are all of those kind of capability or kind of controls
+Speaker 2: And we're trying to come up with a new framework that will align better across all the different types of data
+Speaker 2: And I think the shared sensitivity levels makes a lot of sense to me, so that, no matter if it's, identifyable and sensitive
+Speaker 2: Or if it's just really important business documents, both could have the same level of control requirements around them
+Speaker 2: And keeping it simple that way
+Speaker 1: Okay, so we're at 30 minutes, we have 15 minutes left, I do want to make sure to give you time at the end to ask me some questions
+Speaker 1: So I wanted to jump into one more question and then we'll see how long that takes and then we'll go into questions from you
+Speaker 1: So Netflix is moving away from like paid membership only and moving toward more ad-based revenue and other ways of monetizing users and monetizing our platform
+Speaker 1: So especially at, as is the biggest, the biggest business initiative that we have right now
+Speaker 1: Improving our ability to target and advertise to users
+Speaker 2: So I'm curious from your perspective, what are some of the emergent risks that you think would come with that type of decision
+Speaker 2: So as the business moves that way, what are some of the risks that you think we may be seeing for the first time or things that we should be focusing on at this stage
+Speaker 2: Yeah, they're a couple that come to mind the first one from my experience working with organizations that are, you know, involved in a lot of target advertising is sharing, for the past see data sharing
+Speaker 2: And the ability to monitor that is as a lot of work, especially when you're thinking about not just monitoring the sharing but also monitoring the workflows of these data outside of your environment
+Speaker 2: Which means that you also have to track what types of measures the third parties are putting in place to protect the data in accordance with how Netflix thinks about data protection mechanisms
+Speaker 1: The second one would be about driving for consent. Now, this is a big one because a lot of times consent preferences also change per time
+Speaker 1: And part of what I've seen with organizations is that you have a consent policy, you have a privacy policy that demonstrates that you are going to be collecting consent
+Speaker 1: But then the implementation of the consent at the back end is another, you know, challenged to solve by itself
+Speaker 1: And so obviously I know that I use Netflix and I've been experiencing the act, so I see, you know, the consent requirements that Netflix provides for the question is, is Netflix effectiveness in that
+Speaker 1: And then when there are changes in my consent preferences, for example, how fast can that be implemented
+Speaker 2: And the implementation workflow also back to the third party information, does it reflect?
+Speaker 2: Is it communicated? Does it cascade to the third party environment as part of my consent mechanism requirements?
+Speaker 2: So those are the two major risks that I would see, I can do a deeper dive for that post there to see
+Speaker 2: Yeah, I think those are spot on and it's the third party data sharing that's gotten me very busy lately trying to figure out how do we, how do we understand new types of data that we're collecting?
+Speaker 2: Like I can look at the privacy policy and it'll tell me we're collecting this type of data, but if we're acquiring data from third parties to help us better
+Speaker 1: Better match and identify our users because Netflix doesn't have a ton of detail about people like we, we only ask for email and we have some device identifiers and we'll even need your physical address a lot of any more except for billing, could we not ship DVDs
+Speaker 1: But yeah, that's, that's the trend is that we're going to be collecting more and more third party information and trying to create clean segmented ways of sharing and joining that data through clean rooms
+Speaker 1: And like how much, how many assumptions and how much trust can we put in these third parties that we are going to be delivering data to and how much do we need to control that through contractual requirement versus security requirements, etc
+Speaker 1: Is that something you've worked on at meta or anywhere else?
+Speaker 1: Specifically, it sounds like you definitely have some experience that I'd like to know more about if you've worked in like ads and third party data sharing controls
+Speaker 2: Yeah, so part of the work that I've done with ads and data sharing is really like when you think about third party sharing
+Speaker 2: We had something that meta where we call the in and out mechanism, so like you are currently describing so there is the process where we're receiving data from third parties
+Speaker 2: And also where we're also sharing data with third parties and so controls needs to be put in place on both sides
+Speaker 2: But part of it is making sure that number one, we establish our contractual requirements incorporating privacy from the start
+Speaker 2: I've seen many times where a lot of organizations have established contractual requirements and privacy is brought in after the fact
+Speaker 1: And so thinking about privacy by design during that contract, you know, the contract signing process
+Speaker 1: And then also making sure that the right stakeholders are in the room to inform what types of processes and practices will want to put in place to make sure that the data that we're transferring or the data that we're collecting is put in place
+Speaker 1: It's a big part of data advertising by the way as I've worked for some of the done a lot of working that space when I was in the real console is data retention
+Speaker 1: So one of the biggest things about like third party sharing is when you collect all these pieces of data and you're using them for ads
+Speaker 1: And then in the process some customers have left, you know, I no longer use in the services, some customers have also requested from a data subject right perspective for the data to be deleted
+Speaker 2: Now you have to perpetuate those deletion requirements across board which also means that you have to talk to your third parties to delete those types of data and usually that's a hassle to cross many times is what I've seen from my experience
+Speaker 2: But part of what that just means is making sure that everyone is onboard around the contractual requirements from privacy perspective
+Speaker 2: Number two, making sure your SLAs are clear from a data subject right perspective, especially with your third parties
+Speaker 2: And so what that means is that especially when you have deletion request or you have request to modify data or even request for the data itself
+Speaker 2: You have to be able to provide that within a certain amount of time which also means that your third parties that you are sharing that data
+Speaker 1: We must be able to supply that data to the customers at the SLAs, you know, within the SLAs that you've agreed upon
+Speaker 1: So it's there there are a lot of things the biggest one I've seen is really just like retention
+Speaker 1: Also ensuring consent is, you know, and making sure that the consent information contains all of the use cases very clear and transparent
+Speaker 1: To a degree where the customer is informed enough to provide more recall informed consent
+Speaker 1: You know, I've seen a lot of times again, it boils down to your record of processing activity, how you're using that data
+Speaker 2: Where there could be some information on the left outside of the privacy policy and then the customer data finds that their data is being used in a certain way that was necessarily disclosed
+Speaker 2: So it's constantly making sure that there is transparency around how their data is processed
+Speaker 2: And then you have a change management to drive your privacy policy, especially because when it comes to third party data and the ads environment
+Speaker 2: One of the things I've seen is that changes are core, a lot, there are lots of changes
+Speaker 2: So that's the biggest thing now, the final thing that I would mention that was a really big thing for us is implementing policies
+Speaker 1: That would drive, you know, how we use data for ads, how we also transfer it data, but also how we collect data
+Speaker 1: So data minimization principle was one of the biggest things
+Speaker 1: So when individuals who we were sharing data for the purpose of advertising were asking for certain types of data
+Speaker 1: It was important to make sure every piece of element that they were asking for was matched with a specific data processing activity that we had agreed upon
+Speaker 1: And making sure that none of that was collected
+Speaker 2: And from a technical standpoint we actually even implemented things like reviews for API calls
+Speaker 2: To make sure that our third party is wearing collecting more information than, you know, we had agreed upon
+Speaker 2: And also in certain cases we also provided data in sample sizes in beta pieces so that we weren't providing like a huge amount of data at once
+Speaker 2: But also ensuring we also had something that we were talking about clean rooms
+Speaker 2: Also, for example, bringing in folks together to make sure that people had like shared, you know, security, you know requirements
+Speaker 1: Where when your collecting all this data and people are doing profiling
+Speaker 1: There are centralized locations where we can be sure of the security implementations that are put in place to make sure that while you're profiling the data
+Speaker 1: You're using it for ads, all of those have been taken into consideration and the customer data is protected in all of that
+Speaker 1: So yeah
+Speaker 1: That's the type of, that's the space that we're in now is the business is defining over the next like five years
+Speaker 2: This is our plan but we're trying to build for the ads business and our team is looking at that and we're at the early design phase
+Speaker 2: And it's our opportunity to build privacy in
+Speaker 2: So we're trying to figure out and prioritize what are the right investments there, what are the things that need to be done first
+Speaker 2: So in some ways we're at that like taxonomy stage like what is the, what is the shared taxonomy that we're going to use for all of this data that we're going to be collecting
+Speaker 2: And then how do we automate the collection and use of that
+Speaker 1: Or a long term goal of actually implementing policies
+Speaker 1: And right now there's some discussion about what types of policies belong in the data protection room
+Speaker 1: Right, what are things that our, our team is accountable for ensuring our happening and what are the controls that are more
+Speaker 1: Product business type controls that we just want to make sure the, you know, one advertiser doesn't see another advertiser's data or
+Speaker 1: Or some of those types of capabilities
+Speaker 2: Okay, so I, if you have five minutes left let's let's let's jump into some questions from me what, what questions do you have for me about
+Speaker 2: Netflix, the role, or anything, or myself?
+Speaker 2: Yeah, what would you say is one of the biggest needs of the team that you're on right now?
+Speaker 2: I know you've mentioned the cocoa, but maybe there are like some primary ones that you would think about
+Speaker 2: So one is a, I would say the biggest thing we need right now is a
+Speaker 1: A well aligned vision for where we want to go as a function as an infrastructure as a, as a privacy, as a data protection program
+Speaker 1: Something that we can align the rest of the business on and as, so we've recently had a big reward, we're not part of the security organization
+Speaker 1: And the words data governance are getting thrown around and there's not really a data governance team
+Speaker 1: So different different groups do different parts of that and I think it's important for us to align with each one of those other areas that and the work that they're doing
+Speaker 1: To create a clear vision for, for the, for the team and then, bring that into an actual real real real roadmap that we can start executing against
+Speaker 2: Because I think we're a little bit reactive, we're a little bit, we have a lot of dependencies on other teams that sometimes those things slip and then now we're not able to make progress
+Speaker 2: So having that shared vision that all of us are working toward will really enable the teams that are building a lot of this infrastructure to do it the right way
+Speaker 2: That's a, that's a big piece of it, but more practically we, we want to bring in a manager or a leader who can help us realize that create this vision and realize this vision and then help us resource the team accordingly
+Speaker 2: We are, like I said, we're only two people I, and that is because we, we've, we've lost some people and we just haven't backfilled and so I, I think it's important for us to have that vision to say
+Speaker 2: Here's what we're going, here's what our plan is and here's the types of people that we need to bring on and here's how we're going to leverage the existing people
+Speaker 1: And, and turn that into, turn that into a very clear plan that the rest of the company can get behind
+Speaker 1: I, I personally am working on the classification and discovery strategy so how do we
+Speaker 1: Discover what's out there figure out what data we're concerned about and then how do we leverage that information to apply policies and then what is that framework and that taxonomy so
+Speaker 1: The implementation of that is a long run right it's one thing to say here's here's the direction we want to go here's the framework we have but really getting the business aligned around all of us working toward that share goal
+Speaker 1: That's been a little bit of the challenge I think like a lot of organizations you probably seem siloed work going on
+Speaker 2: When you lose leaders for a period of time I think you start to lose alignment between different areas of the business so kind of bringing back some of that alignment is important
+Speaker 2: So those are some of those are some of the biggest needs I think our team has and all of that to say our biggest need right now is probably prioritization
+Speaker 2: Like we have a very small team and we need to build out this team so there's a lot of work that goes into just building out a team
+Speaker 2: But what what areas should our very small team be focused on right now and and to enable us to be successful because right now I feel
+Speaker 2: To be frank I feel like I'm moving in a million directions a little bit instead of like any specific direction very far
+Speaker 1: And that's you know part of just the nature of having being under resource but yeah, so I'd say those are some of the larger needs of the team
+Speaker 1: That's what it makes sense I can actually resonate with that a lot in terms of vision and clarity of direction, especially in an environment like Netflix where things move very fast you're scaling your consistently innovating
+Speaker 1: And so there needs to be that clarity consistently communicated across board so that's that's super helpful. I know we're on time here, but yeah
+Speaker 1: That was very clear overview of you know how to think about the team as a whole
+Speaker 1: Yeah, thank you. I have a couple minutes of the other questions that you want to ask
+Speaker 2: Oh, yeah, I had just one more question. I know that you had talked about your team that's the data protection team being the implementation team across board
+Speaker 2: Now implementation means different things in my head from a technical standpoint from a programatic standpoint and I imagine there are teams that implement things from an infrastructure standpoint what
+Speaker 2: Peace of the implementation to you drive in terms of so specifically relative to controls like are you the ones implementing some of these controls are you the one design in them, you know, testing them what does that look like from an implementation step on for you
+Speaker 2: Good question
+Speaker 2: So we own so the
+Speaker 1: App to go back in time a little bit like when we started we had no engineering and so we relied on like what can we get the data platform team to do we can give them a series of requirements and next quarter hopefully they'll be able to add classification metadata to the data catalog or add
+Speaker 1: You know, e-word based detection or those these kind of like one-off things and over time we realize we don't want these platform teams having to build all these capabilities, especially when they're shared infrastructure
+Speaker 1: So let's put together a privacy infrastructure engineering team that can help build some of that shared infrastructure. We have we have a history of freedom and responsibility here at Netflix, which you may have seen in some of the culture decks and memos
+Speaker 1: Which means that a lot of people have chosen to do things on their own use different data platforms not necessarily use the ones that are paid roads
+Speaker 1: And so our job has become what are the highest leverage solutions that we can build that the organization can use to improve our ability to protect data
+Speaker 2: So that means we started with things like detection and classification understanding just being able to look at data
+Speaker 2: Where it is run it through detection library identify the types of things that are there identify the context and so a lot of our investment has been in that space as well as the policy engine that drives a lot of the controls around that
+Speaker 2: The policy engine was originally built by the data platform team to do some very specific but siloed functions and now we've taken that over and we're making a more generic policy engine that can be used by multiple different data platforms and multiple different types of controls
+Speaker 2: And and I would say that so we own the implementation of high leverage shared capabilities that the business needs for data protection
+Speaker 2: That's and so we also own like how do we architect those things how do we design those things how do we prioritize the capabilities and the scope of of these tools
+Speaker 1: We also then own all of the assurance infrastructure like the data that we need to know how things are going if we're over retaining data where is that where do we get that visibility if if if if if if data is exposed greater than it should be based on our access policies how do we know that how do we instrument and build those types of alerts and reports
+Speaker 1: So we own that we have that we are the the accountable team from that perspective that's our job to make sure that things are working right and
+Speaker 1: So it not always that's that's the type of things that our team is responsible for implementing over time I think it will become more
+Speaker 1: More of the same like more but improving those capabilities so that they can take on more scope that they're more usable
+Speaker 1: But they're more more integrated and as as we look at as we as we look at how the team is merging with the rest of security looking for opportunities to
+Speaker 2: Deplicate things or where you know things are systems are redundant or there's something that a new capability that can be leveraged by another team like
+Speaker 2: We're classifying data and finding sensitive information maybe we should be incorporating that insurance response team for you know for things that are over exposed that they can respond to
+Speaker 2: Our work for security team getting visibility into more employee data and where that's being stored
+Speaker 2: So shared capabilities shared privacy and data protection capabilities as well as
+Speaker 1: The architecture and the design of those things and lastly we are also responsible the privacy infrastructure team is also responsible for the data deletion
+Speaker 2: Work the data when a user asks for and sorry not the evolution but data subject access requests
+Speaker 2: So we've also managed and built a pipeline that pulls all the data organizes it into a file that can be shared with with users when they ask for their data
+Speaker 2: That was something that was when I got here that was manual it literally took almost a day per report for a person to produce it
+Speaker 2: And so it took a couple years to really truly automate all of that and now we have we have that capability owned by our team as well
+Speaker 2: Fantastic that's awesome. That's really great. Yeah, no, that was helpful
+Speaker 1: And you know, it's it's very interesting to see how all of the different pieces are moving right now, especially from
+Speaker 1: It controls perspective and how you all have like moved from manual methods to like automations and all of that
+Speaker 1: Yeah, very very exciting to hear. Thank you so much for breaking that down.
+Speaker 1: You're welcome. Yeah, that I would say like rapidly maturing where it matters
+Speaker 1: That's I'd that's the I like that phrase I said that before, but I like the way that sounds
+Speaker 2: I think that that's our probably more most important is to rapidly mature where it matters and like adds for example as a place where it really matters right now and
+Speaker 2: So we're actively trying to mature in that space. Yeah
+Speaker 2: Well, thank you to me. This was great. I
+Speaker 2: That was all the questions I had for you if you don't have any other questions for me
+Speaker 2: We can end it here and someone will follow up with you
+Speaker 1: Awesome. Thank you so much. Got nice to meet you. Thank you. It's great to meet you too.
+Speaker 2: Oh, good. Oh, thank you Jesus.
+Speaker 1: I understood this. I called it behind you.
+Speaker 1: It's like we want to be the manager.
+Speaker 1: Show me what we got.
+Speaker 1: Thank you, Jesus.

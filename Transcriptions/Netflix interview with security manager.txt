@@ -1,0 +1,369 @@
+Speaker 1: question on the topic, which I'll explain, and then I will leave at least five minutes at the end
+Speaker 1: if not empty more minutes than that for your questions of me. Like I said earlier, I'm
+Speaker 1: yeah, no taking turn on, I'll also be taking some of my own notes to submit to augment that.
+Speaker 1: And so if anything that I'm asking you is unclear, you'd like me to refresh, like please,
+Speaker 1: you know feel free to do that rather than trying to answer a question that I'm not being clear about
+Speaker 2: what I'm looking for, that's totally fine. And I will, you know, regardless of where
+Speaker 2: I have more than I could ask than we were going to have time for. So I'll keep it on the clock
+Speaker 2: and I'll kind of make a call about where to stop and it has nothing to do with how your answer
+Speaker 2: and just trying to make sure I give enough time for your questions of me. Any like kind of questions or concerns
+Speaker 2: on kind of general logistics? No, that's absolutely clear. Okay, great. So I will tell you a
+Speaker 1: little bit about what this interview is and then I'll introduce myself. So the my role on this interview
+Speaker 1: panel is kind of as a peer leader. So I managed and then an engineering team that is adjacent to this one.
+Speaker 1: And Smith that has asked me to kind of talk about how you think about prioritization and how you
+Speaker 1: think about risk management when it comes to figuring out what's important for the team to work on
+Speaker 1: your approach to trade-offs, your approach to kind of making decisions where you can't do everything in
+Speaker 2: once. It's like kind of the questions are very much around that and how you're kind of doing knowledge
+Speaker 2: plays into those decisions and prioritizing and and kind of protecting the team's time appropriately
+Speaker 2: while also delivering what you need to deliver for the business. So that's kind of the general
+Speaker 2: just of the topic that we'll get into. Quickly about me, my name again is Minote. I've been at
+Speaker 2: Netflix for a little over two and a half years. I managed a team in the I managed the infrastructure
+Speaker 1: security kind of combination of teams and then I also directly managed one team there in that kind of has
+Speaker 1: infrastructure security, kind of consultation responsibilities, kind of an expert team that does
+Speaker 1: kind of a secure SDLC consultation with outside teams. So it's a team that is kind of an enable
+Speaker 1: team. I guess you can call it. My background is combination of security and privacy and both leading
+Speaker 1: engineering teams, but also having been like a technical program manager or a product management for
+Speaker 2: a little while. But it's always been in the general domain of security and privacy.
+Speaker 1: Like I said, I do work remotely from the San Diego area, happy to talk about how to
+Speaker 1: that manifests in leadership and just a raw culture at Netflix to quickly people are interested to hear
+Speaker 1: about that. And at least if there's anything else on the intro, I think that's probably good. I'd like
+Speaker 1: to ask you, give you an opportunity to introduce yourself and tell me what's interesting to you about
+Speaker 2: this role like what brings you here today and to this role into Netflix. Of course, thank you.
+Speaker 2: So I think we have very, we have a bit of similar, you know, background. So my background is an
+Speaker 2: engineering as well. I started my career as a network engineer. I also started my career early managing
+Speaker 2: engineering teams. So I was working for an intern and service provider company and then moved on to
+Speaker 2: compliance where I've been focused on the past seven to eight years on security and data privacy.
+Speaker 1: So a lot of my work has been centered around helping companies build their data privacy programs from scratch
+Speaker 1: and also leading teams to implement data privacy programs, risk management programs. And right now,
+Speaker 1: at the data versus solutions, I manage a team of 50 plus people where we implement AI automated
+Speaker 1: compliance at scale for organizations. So yeah, I've been one of the things that makes me really excited about
+Speaker 1: you know, this role is number one for Netflix. I like the innovative side of Netflix. I've always
+Speaker 2: loved to hear the story about how Netflix evolved from just like the, you know, the very popular CD stories
+Speaker 2: to where the current ER today and where they continue to evolve to in terms of their product and
+Speaker 2: how they are treating their customers. And so that's something that's very exciting to me. I want to
+Speaker 2: work in an environment that's very innovative. And then secondly, as the environment is innovating,
+Speaker 2: I'm a very cognizant of how compliance also has to meet up the pace of innovation in terms of all
+Speaker 1: of the regulatory changes that come with the different innovative activities going on. And so I'm excited about
+Speaker 1: implementing compliance in a way that it's not a root block to innovation. But it's actually
+Speaker 1: an enabler of innovation in environments like Netflix. So yeah, those are right.
+Speaker 1: I got it cool. Thank you. I appreciate that. Yeah, the background has some similarities to my own as
+Speaker 1: well. And I'm glad that you're excited about the opportunity here and have given it some thought
+Speaker 2: it's definitely an interesting place to do security and privacy. That's for sure. So I want to
+Speaker 2: ask you some some questions about your experiences in the space. So I want you to, and some of these
+Speaker 2: questions will be more like theoretical, like how do you do a certain thing? And some of them will be more like
+Speaker 2: describe a time when. Let's try to get some examples. So I'll try to be clear about that. So
+Speaker 2: I want to start by asking about for you to describe a time to think about a time when
+Speaker 2: your team was faced with multiple high priority initiatives in the privacy data protection space.
+Speaker 2: And you know you have limited resources people in time to work with. How did you decide what to prioritize
+Speaker 2: and what kind of tradeoffs did you make when coming up with that prioritization? Yeah, absolutely.
+Speaker 2: I can think of one time where we were building our controls framework at Meta. I was
+Speaker 2: leading the team to build our controls framework and the controls framework typically comprises of
+Speaker 1: implementing different types of priority-ticed controls. As a result of our regulatory requirements and
+Speaker 1: as a result of just operational requirement. And so typically what I've been, what I did in that
+Speaker 1: particular scenario was to implement a risk assessment that allowed those to evaluate
+Speaker 1: what types of risks we were up against if we implemented something versus if we did not.
+Speaker 1: And evaluating the likelihood and the impact of those. And so it allowed us to be able to prioritize
+Speaker 2: out of the controls which once we wanted to implement across board. And also I like to call something
+Speaker 2: and you probably can relate to this. But I say something with my I discussed something in my team
+Speaker 2: that sometimes prioritization is not just about putting something on the backboard and it's also about
+Speaker 2: load balancing. So how can we do things concurrently where we may want to implement things in
+Speaker 2: a faced approach instead of having one thing go down. So in that particular scenario we had two priority
+Speaker 1: risks that had to do with number one access controls which obviously had a regulatory impact and also
+Speaker 1: had an operational impact. And we also had to implement some of our record of processing activities
+Speaker 1: within certain environments. So the approach was just to evaluate what was the which part of which
+Speaker 1: of these two implementations need to be done from just like an urgency perspective. And so we had an
+Speaker 1: imminent audit coming. So we had to implement the access control because the audit was going to
+Speaker 2: be focused on access controls. And so we prioritized that during that time while also making sure
+Speaker 2: that we implemented a faced approach for a you know record of processing activity inventory.
+Speaker 2: Got it. Got it. Thank you. And then like the kind of a you know similar theme to that is that you know
+Speaker 2: oftentimes when you're thinking about tradeoffs and balancing that workload you'll also have to
+Speaker 2: deal with urgent work or reactive work that is timely needs to be addressed in a timely way like maybe
+Speaker 1: it's something compliance related or there's incident response. How do you think about or balance
+Speaker 1: the need for those types of activities which seem to require you to drop everything with proactive
+Speaker 1: or strategic investments in privacy and data production? Right. So that same example was actually a good
+Speaker 1: illustration for this because while we were looking to implement processes for access controls we
+Speaker 1: had an incident that was reported at the time that a couple of our sensitive data within the
+Speaker 2: people organization was likely exposed. Now we didn't have any specific bridge recorded. It was just an
+Speaker 2: incident to show that there were several people who had access to certain database that had sensitive
+Speaker 2: information and we had to immediately implement action and steps to make sure that that you know the
+Speaker 2: access you know that was provided was somehow you know resolved. And so in that particular case what we
+Speaker 2: didn't need it to do was to think about short-term fixes before thinking about the long-term fix. So for that
+Speaker 1: specific you know issue I remember that what we had to do in the long-term was to implement policy
+Speaker 1: and other processes but in the short-term we really just implemented an automated function to evaluate
+Speaker 1: everyone who's having access to that data and validate in the business needs and also just like a young
+Speaker 1: can everyone who didn't have a specific business need for that data and then making sure only people
+Speaker 1: had a specific business for that data were able to get access and then in the meantime also we implemented
+Speaker 2: ways for to get check access requirements to that specific data while we were working on the back
+Speaker 2: into make sure that we're getting those long-term fixes like the policies and procedure of the procedure
+Speaker 2: or work to fix the access control situation. Right and then in those kind of cases like when you're
+Speaker 2: making those trade-off decisions because you know that the urgent stuff can distract or cause delay
+Speaker 2: for the proactive work like how are you communicating around that or setting reasonable expectations
+Speaker 1: when you're making those trade-offs between one another. Yeah so what we did was we had initially
+Speaker 1: defined our roadmap and that was very clear so we communicated the roadmap to the leadership to make
+Speaker 1: other lines. The good news or part of what allowed us to be able to achieve some of these things and then
+Speaker 1: more defined manner was some of the short fixes had overlaps with the long fixes and so at the end
+Speaker 1: of the day what we were looking to get you know to achieve was to be able to make sure that we had the
+Speaker 2: minimum amount of folks having access to that data with valid business reasons. Now on a long-term
+Speaker 2: ship we wanted to make sure that those valid business reasons were clearly defined and the short-term
+Speaker 2: we couldn't clearly define some of those it was really just very temporary definition of just like a
+Speaker 2: very short-scope small-scope of what we call business needs. So basically if I could talk about what
+Speaker 2: the trade-off was it was really just like having it temporary list of what we defined as business needs
+Speaker 1: or valid business needs that weren't exactly as robust as we would have wanted them to be but at the end
+Speaker 1: of the day those primary or short-term fixes of what we had in refer to as valid business needs
+Speaker 1: firm foundation of what we ended up using as our permanent or if you wanted to call it
+Speaker 1: more structured business needs that we ended up using at the end of the day as part of the long-term
+Speaker 1: policy. So when you're thinking about setting you know maybe quarterly or annual priorities
+Speaker 2: you're doing planning for your team kind of more in that proactive work slate. How do you
+Speaker 2: how do you communicate what those plans are? How do you adjust those plans or priorities as business needs
+Speaker 2: you're changing? Like what's your what is your your kind of workflow for for doing that?
+Speaker 2: Right and are you referring to like when we're structuring like what are goals and objectives or
+Speaker 2: what's structuring for your specific program or project? What do you make for the team's goals?
+Speaker 1: Okay. Like the goals and objectives. Yeah. So typically for the team's goals and objectives I usually
+Speaker 1: like to anchor them on two pillars. So number one because you know it's compliance it's the regulatory
+Speaker 1: pillar and number two it's the operational pillar. Now the operational pillar is what really you know
+Speaker 1: and compresses what our commitment to the customers are, know what the business needs are
+Speaker 1: and also what allows for oppression or effectiveness in terms of you know activities that overlap with
+Speaker 2: compliance and then from a regulatory standpoint is really thinking about what types of audits are we likely
+Speaker 2: to have and what types of regulatory implementation do we need to put in place to make sure we're
+Speaker 2: defensible and then also aligning that with the needs of leadership because some of those have to
+Speaker 2: also be like and then one of the things that's very important that I've seen is making sure we're
+Speaker 2: learning that's our stakeholder needs because I've seen situations whereby stakeholders are requiring
+Speaker 1: things from us to make sure that they're able to you know operate on their end as well. Now once we get that
+Speaker 1: done the way that we prioritize that is based off of the risk again I go back to risk all the time we always
+Speaker 1: use the risk assessment and so the risk allows us to understand our areas of exposure and our areas
+Speaker 1: of high impact that we need to you know prioritize and work on first and then we do that but what I should
+Speaker 1: say is that one good thing about risk that I like is that it also accommodates for change because the
+Speaker 2: good thing about risk is that risk does not just look at impact it looks at the likelihood and so part of
+Speaker 2: what we do when we're doing risk assessment is not just assessing what current state looks like but it's
+Speaker 2: also preempting what could change as we go through these programs so for example whenever we're doing
+Speaker 2: implementation based off of regulatory impact we do have lawyers that we integrate with and socialize
+Speaker 2: with that let us know like hey I can give you an example so there was a time where I was working at the
+Speaker 1: people team at meta and at the time people data wasn't necessarily high risk from a GDPR standpoint but
+Speaker 1: prior to that time we weren't talking to our lawyers from Europe and they started to give us signals
+Speaker 1: that the European authority were beginning to put some you know microscope microscopic effect on people data and
+Speaker 1: so we had to start focusing on building our privacy program around that and they were actually the right
+Speaker 1: because a year later we did get some sort sort of signal that they were going to have we're going to have
+Speaker 2: audits on people data and then all the regulatory you know like requirements that came after that
+Speaker 2: like the AI law in New York for example that was specifically targeted towards people data so those types
+Speaker 2: of signals allows us to be able to proactively put things in place so that when changes like that coming
+Speaker 2: we don't we're not necessarily like impacted greatly by those you know changes so the whole idea of
+Speaker 2: risk assessment is to implement you know programs for me very robust landscape where we're thinking
+Speaker 1: about current state we're thinking about future state and we're also thinking about how to people
+Speaker 1: when other changes got it got it thank you and then I'm going towards you know sort of the
+Speaker 1: like active trade-offs that you're making like sometimes we have to let something burn so to speak
+Speaker 1: where you know there's something we have to make an intentional decision to you know accept risk or let
+Speaker 1: something kind of let something go because it's the right thing to do for the business can you describe
+Speaker 2: a situation where you let privacy or data protection and or security risk kind of like burn and
+Speaker 2: not address it because it was the right call and how did you come to that determination like what did you
+Speaker 2: consider to let that risk burn and then how did you communicate about that to stakeholders?
+Speaker 2: Yeah absolutely so I would say like when it comes to just using your words again which I like like
+Speaker 2: letting risk burn I think about that as a time-based approach of risk acceptance so I can give an
+Speaker 1: example but the way that I've implemented risk acceptance and time pass is that there is no way to
+Speaker 1: really just say we accept the risk forever because things change and so you have to go re-value it and
+Speaker 1: see if this is risk that you want to continue accepting on a long-term basis so one example of that is
+Speaker 1: I remember when I was at Deloitte and we were conducting the FTC audit for Meta the initial scope was
+Speaker 1: data on prem we were supposed to audit data specifically for data that was on the Meta infrastructure however
+Speaker 2: as the audit began to happen the scope was expanded beyond the Meta infrastructure and they were now
+Speaker 2: asking for us to go audit data in the cloud environment now when we got into when we started to
+Speaker 2: evaluate cloud I mean data in the cloud environment we realized that there was high data sensitivity
+Speaker 2: for data stored in the cloud now but we didn't have enough controls in place at the time that we
+Speaker 2: would allow us to present ourselves in a defensive manner to the auditors and so we had to take a very
+Speaker 2: high you know obviously we started taking the prioritization approach and part of what we did in
+Speaker 2: those times was to think about how do we restructural our data sensitivity module that would allow us to
+Speaker 2: accommodate sensitive data in a way that we were able to run sensitive data differently and provide ways
+Speaker 2: to the assessors on how we're protecting that data now on the other hand we didn't have enough time
+Speaker 2: and resources to be able to implement data protection requirements based off of the time limit that we're
+Speaker 1: having to complete that audit and so that was risk that we were willing to accept however
+Speaker 1: what we did was we did a time frame and so internally what we decided was that if the
+Speaker 1: when the assessors were beginning to look into our environment we decided to use a sample based approach
+Speaker 1: and show the areas of our environment where we had secure controls and then if we were probed
+Speaker 1: on the data that we didn't necessarily have controls over we would present them with a roadmap
+Speaker 2: on what we were deciding to do I'll be we hadn't you know implemented anything at that time so that was
+Speaker 2: risk that we're willing to accept in the meanwhile while we were focusing on just preparing all of the
+Speaker 2: you know auditing formation for data that was already covered data that was already protected
+Speaker 2: but I think that was a big risk for us because I remember that the cloud environment was a very high target
+Speaker 2: area for the auditors and we were willing to just go with whatever we have without implementing additional
+Speaker 1: resources for making sure that we had a roadmap approach to present to them to show
+Speaker 1: defensibility again because compliance is not always about full compliance is always this all you could
+Speaker 1: be about defensibility how are we doing something to make sure that we're defensible for the future.
+Speaker 1: Thank you and it's actually kind of related to a follow-up question which is
+Speaker 1: you mentioned compliance like how do you ensure that you are team maintain a kind of a pragmatic approach
+Speaker 2: to risk rather than an approach that's up around purely theoretical risks or only compliance driven risks
+Speaker 2: like how do you make sure the team is is kind of pragmatic and irreproach. Yeah so when you see
+Speaker 2: pragmatic you're saying that our team is not just thinking about risk from a regulatory standpoint
+Speaker 2: but they're thinking about other categories of risks that would impact. Yeah well it's both
+Speaker 1: it's like yeah that they're not just purely looking at compliance or they're not purely looking at like
+Speaker 2: theoretical risk meaning like you know like anything is possible but you know like you can't obviously
+Speaker 2: reduce all risk so how do you make sure that they you know pragmatic meaning it's sort of like a you know
+Speaker 2: it's like a approachable or it's achievable or that it's you know sized correctly. Oh yeah that makes sense
+Speaker 2: so really so yeah absolutely so part of what we do with that is data and legacy information so whenever we
+Speaker 2: have whenever we're implementing and I I actually get that because part of risk assessment is what
+Speaker 1: would be produced that's part of that is some false negatives where we and I've seen that where
+Speaker 1: you go to teams and you're doing all this risk evaluation and they tell you this risk it sounds great
+Speaker 1: on paper but it's not likely to happen here. Now but I've seen also with experience that sometimes people say
+Speaker 1: that but risk is risk no matter how you put it but part of what allows us to take a pragmatic approach to
+Speaker 1: risk is evaluating past it if we identify a risk does this risk map to any risk that has a
+Speaker 2: core in time passed or does this risk you know map with any risk that has showed up in the organization at
+Speaker 2: any level so that allows us to be able to put some credence to the finding that we've had another one
+Speaker 2: is when we think about the risk perspective to the industry or the market or even the context during
+Speaker 2: that period how does that risk align with the context with the market and the industry and even just
+Speaker 2: environmental factors that are happening and then we also make sure that we collaborate with stakeholders all
+Speaker 1: of our different stakeholders so whenever we identify a risk that have overlaps for example with the
+Speaker 1: security team engineering team legal teams the data analytics people we bring them all together to provide
+Speaker 1: some practicality not just even the risk but how we're measuring the risk in terms of the impact
+Speaker 1: and the likelihood so that's how I would say we take a pragmatic approach I hope that answers a question
+Speaker 1: and I'm happy to dive if you want more. Yeah yeah thank you thank you it's it's addressing what I was asking
+Speaker 2: so thank you and then like you kind of touched on this a little bit when you're when you're communicating
+Speaker 2: about risk to different kinds of stakeholders technical stakeholders not technical stakeholders
+Speaker 2: what's your approach to to quantify risk and communicating about that risk to those different kinds
+Speaker 2: of stakeholder groups yeah absolutely so the way that I think about risk especially because I have been in
+Speaker 2: both environments I've walked heavy in you know the engineering environment and I've walked in the
+Speaker 1: non-technical environment the best way that I've seen is to define risk based off of the language
+Speaker 1: that folks are speaking in the environment the way that it's so in practical terms when I'm talking to
+Speaker 1: technical teams I'm raising as a system level risk I'm helping them understand how the risk
+Speaker 1: aligns with the systems or the infrastructure whether directly or indirectly and when I'm talking to
+Speaker 1: non-technical teams I'm talking to them about process based risks or program based risk how does the
+Speaker 2: risk impact your overall process your programs or whatever implementations you have you please and so when
+Speaker 2: I'm talking about an access control risk for example I'm talking to the technical team in terms of
+Speaker 2: your infrastructure and all of the different you know technology that needs to be in place and then when
+Speaker 2: I'm talking to like a legal team and all of that I'm talking to them from a process standpoint
+Speaker 2: and helping them understand how access risks can basically just you know
+Speaker 1: displaced process in general so it's really speaking the language of the team but also helping the team
+Speaker 1: understand risk in the lens of how they also think about risk in the environment and that's really
+Speaker 1: having conversations with them about what types of risks exist in your own environment and it's
+Speaker 1: possible for us to map because typically when you're doing all these risks assessment you typically
+Speaker 1: want to have a risk register and so what I've done practically with my team is making sure that we're
+Speaker 2: mapping the risk to some of the risks that these folks have identified in their environment so that when we're
+Speaker 2: going to them what comments specifically the risks that they've identified are ready to what we're trying to
+Speaker 2: track against got it got it thank you thank you and then like
+Speaker 1: actually I don't need to that's that's all of the question thank you I think you covered it I want to
+Speaker 1: switch gears to talk about like one other topic in the last few minutes here which is kind of like the
+Speaker 2: activity of like running the team itself can you share with me in time where you've introduced some new
+Speaker 2: operating rhythms into a team so like you know maybe it's around stand-ups or retrospectives or
+Speaker 2: how you do planning where you introduce something new to the team in this way and you know you're trying
+Speaker 2: to improve the way that the team worked and I'm curious about like what you tried what worked about it
+Speaker 2: what didn't work about it and kind of the general reception from the team got it I know you gave the
+Speaker 1: example of stand-ups but is it okay for me to give some sort of like technical example
+Speaker 1: really to the work itself or do you want to think it's really just as long as so the point of
+Speaker 1: the question is about like the actual like operating the team like you're trying something that has to do with
+Speaker 1: like the teams the teams operations like how they deliver work yeah so I think one example and let me
+Speaker 1: know if this example drives what you came from happy to give another example but this example is very
+Speaker 2: important to me because it reset it's not it's not too long good time I was leading the risk management team
+Speaker 2: and so at the time like meta we had two risk management teams there was a risk management team that's
+Speaker 2: performing risk management for from a process and program standpoint so we value it in risk from a program
+Speaker 2: standpoint and then there was another team that was evaluating and risk from a product standpoint
+Speaker 2: so think about privacy reviews and so we had separate systems that we were using to track against these
+Speaker 1: risk the only problem was that there were risks that were solving for programmatic there were controls
+Speaker 1: that were solving for programmatic risk that had same time could solve for the product risk and so we had
+Speaker 1: duplication of effort and these were two different systems and so we had to introduce a process for us to
+Speaker 1: integrate both systems together and I remember when we first launched that system I remember it was
+Speaker 1: lucky was during Christmas the whole the entirety of the risk management system for the product side just
+Speaker 2: crashed like they weren't able to do anything or Christians were down and people were getting frustrated
+Speaker 2: and all of that but obviously we're able to fix it but I think what was very important in terms of just like
+Speaker 2: launching that integration exercise was to take a face to approach and so part of what the
+Speaker 2: team needed to do what part of what had happened was it wasn't a fatal crash but part of it was that the
+Speaker 2: teams didn't have understanding on how to use this new integration process and so what we had done
+Speaker 1: and what had had recommended for the team at the time was for risk or controls that we used very
+Speaker 1: let's not integrate that yet let's not put into the system let that stay on the system that you are
+Speaker 1: familiar with so that allows your process to run quickly now for the risk that we know that we don't
+Speaker 1: always or the controls that we don't always use regularly let's use that to pilot the integration process
+Speaker 1: so that that gives you time to learn gives you time for office hours and then gives you time to kind of
+Speaker 2: integrate your process yourself into the process and so I think that was super helpful because at the end of the
+Speaker 2: day because we're focusing on just the specific controls that we're in necessarily being used
+Speaker 2: it didn't impact time lines for their reviews and all of that and at the same time it allowed them to
+Speaker 2: learn this work because the integration was a very important exercise that allowed us to be more
+Speaker 2: efficient in how we're implementing controls thank you sorry I have to mute myself I had a cop there
+Speaker 1: okay thank you so much and then one more question for you on the kind of this topic is
+Speaker 1: about like decision making at the team level so how do you how do you foster
+Speaker 1: kind of a culture of healthy decision making where you know people might have strong disagreements about
+Speaker 1: what to do strong opinions about what to do and like everybody can be a part of like every decision
+Speaker 1: so how do you foster sort of a healthy healthy environment or healthy culture around that
+Speaker 2: on your team in this space yeah first of all I encourage disagreements I heard once from one of my
+Speaker 2: mentors that when we are all in the room oh I'm so sorry I think something can't hear me okay
+Speaker 2: so I heard once from my mentor that if we if everyone of us in the room are all agreeing
+Speaker 2: on the same idea the same methodology then there's only one person needed to be in the room
+Speaker 2: so I'm taking that and so I welcome that so the first thing is to really encourage that and make it
+Speaker 1: something that's normal there's no so people kind of have the opportunity to see this agreement as something
+Speaker 1: that's normal but if I could inject part of what the Netflix culture which I really like and it's
+Speaker 1: overlaps with a lot of things that I've done in time passes the concept of this agreement then
+Speaker 1: committing you can still disagree and then you can't commit and so what I do pragmatically
+Speaker 1: when I have those types of situations on my team is that for every problem that we're trying to solve
+Speaker 2: I know that there is a primary decision make up for that area either because that's the area of
+Speaker 2: concentration or that's the area that they've been focused on for a long time or specifically that's
+Speaker 2: an area that they might bring the most experiencing over time and we've seen that you know progress
+Speaker 2: over time so that's part of how I evaluate the decision making but secondly also I also make sure that when
+Speaker 2: we're providing when we're making decisions we anchor that on the business objectives and the business
+Speaker 1: goals so but in summary on my team we don't have one decision maker there's nothing like one
+Speaker 1: person is the decision maker for every single thing there are people who take you know are the primary decision
+Speaker 1: makers and the secondary decision makers depending on the project depending on the area of concentration
+Speaker 1: so that's how it's typically make sure but also making sure that everyone is heard it's a culture of
+Speaker 1: openness it's a culture of diversity of thoughts being allowed on the team and just making sure that
+Speaker 2: and I also give them to test because I've had situations whereby we made decisions and it was it
+Speaker 2: didn't turn out like we wanted it to be and so the idea of decision making is that we don't
+Speaker 2: stall on decision making we make decisions fast so that we can feel fast and then people to you know
+Speaker 2: whatever secondary you know decision that we had put on the bench because we wanted to go for the primary
+Speaker 2: one so that's how typically hopefully that answers the question I'm happy to provide the deep
+Speaker 1: benefit it's needed yeah I know that's that's good thank you so much I want to pause this there
+Speaker 1: because we have like seven or eight minutes left so that's a good that's a good sort of stopping point
+Speaker 1: thank you for letting me ask you so many questions followed questions and and for your
+Speaker 1: responses to them what can I enter for you about Netflix or the role I'll do my best for that
+Speaker 1: and if I don't have the good answer for you I'll make sure it gets answered so so what is on your mind
+Speaker 2: yeah absolutely thank you I have two questions for you I know that you had mentioned that part of the
+Speaker 2: team that you were leading was the team that was involved with secure STLC reviews I
+Speaker 2: think I may have heard something like that alright how does that process overlap with privacy reviews or like
+Speaker 2: DPI is in risk assessment yeah it's a good question so it's not quite like a formal review process that
+Speaker 2: my team undertake so it's not like there's like something that's kind of ready to go to production
+Speaker 1: and then we're doing something that's like a formal review that decides like whether it can
+Speaker 1: can pass like a gating function of something that's kind of ready to go it's more like a the team provides
+Speaker 2: kind of an end to end consultation from design to implementation of a system of or of an ecosystem so
+Speaker 2: it's like at the basically at the design phase where we're kind of part of the target team
+Speaker 2: helping them do kind of secure design that being said with the there's many domains that might be
+Speaker 1: interested in that kind of a conversation or consultation including privacy and so
+Speaker 1: we expect because there's probably I don't know there's probably four or five teams in security that
+Speaker 1: had some level of responsibility in this regard so we kind of we ask that like wherever the
+Speaker 1: ingress point for these relationships start that those teams are aware of and are listening for
+Speaker 1: domains that might be relevant and flag them I would say from like an operational perspective we're
+Speaker 2: not like great at this yet but oftentimes the domains teams kind of they can kind of smell with
+Speaker 2: what other domains are adjacent or they can flag things for adjacent teams say hey do you
+Speaker 2: you know do you feel like you need to be deeply embedded on this or are you okay with kind of like
+Speaker 2: you know reading the reading the output on the on the backside and just letting us know if you have any
+Speaker 2: concerns because like every team can't be involved in every consultation so we try to identify like
+Speaker 1: what the major areas of risk are and like who should have who should sort of take like the lead position on
+Speaker 1: the consultation around the design of the system and you know we try to like over communicate
+Speaker 1: between the teams about like what we care about from a risk domain perspective and be inclusive on it so
+Speaker 1: but it's it's certainly like it's not like a let not very problematic and it's not very procedural right
+Speaker 1: now and I think some of it is by design some of it should be made tighter in terms of like the customer
+Speaker 2: experience like the customer is going to get advice across a number of domains and it would be better if they
+Speaker 2: just kind of like we're able to say what does the security and privacy organization think about my project
+Speaker 2: and then we can give them something that's like a little bit better wrapped in a bow for them but but
+Speaker 2: you know where we're a little bit away from that and also my team's responsibility is to be
+Speaker 2: sort of deeply engaged where it is a high resource intensive kind of high bandwidth
+Speaker 1: but high value like consultation like you're locked at the hip with those target teams and and to the
+Speaker 1: two and extent privacy does that as well they're just usually operating in domains that are slightly
+Speaker 1: adjacent to generally the infrastructure itself. Got it that makes sense I think that's typically how like
+Speaker 1: most teams start operating in a very like prioritized manner where you're really just providing those
+Speaker 1: like signals where it's needed or where you're identifying high risk and then from time to time you
+Speaker 2: can then build this truck short approach around just what you've seen over time as part of you know
+Speaker 2: the risk that you're identifying from security standpoint. So that makes sense and for you you've used you
+Speaker 2: mentioned that you've been at Netflix for two years it's a two and a half years. What part of the
+Speaker 2: culture did it take you the most time to adopt or to adapt to? Good question I would say there's
+Speaker 2: I think the biggest one would probably be the amount of freedom for judgments in every single role at
+Speaker 1: every level of the organization I think it there's oftentimes the answer is to a question is
+Speaker 1: I trust your judgment here like here's what I think but I trust your judgment and so you have to get
+Speaker 1: comfortable with a lot of a responsibility and accountability being passed down to you and then I
+Speaker 1: have to practice that with people on my team and it's not like I don't intrinsically trust people
+Speaker 1: but the expectation is that you know we we hire people who are really responsible and really thoughtful
+Speaker 2: and we give them a lot of latitude to operate it makes doing a really good security job somewhat hard
+Speaker 2: but that's the that's the cultural that's like the value that we think that it like we think the
+Speaker 2: autonomy provides like overwhelming value and so I would say it's probably like the biggest adjustment
+Speaker 2: especially as like a people leader you have to also make people feel safe to use their own judgment
+Speaker 2: because if you tell people you know user judgment I trust you that may be scary to them and so you have to
+Speaker 1: you have to help them contextualize what it means to use their own judgment and why that's safe
+Speaker 1: that makes sense and I can see how that could be scary at first because use your judgment come to the
+Speaker 1: accountability as well for the outcomes of whatever it is so yeah that totally makes sense yeah that that was
+Speaker 1: really helpful thank you for answering my questions yeah yeah for sure if there's anything else
+Speaker 1: I can answer for you feel free to send them through the recruiting team I will get my notes in it's
+Speaker 2: Friday it's before holiday week so I don't know what the schedule is through from the recruiting team
+Speaker 2: it's getting back to folks but they're usually pretty fast regardless so if you if you if you want to check
+Speaker 2: back in I'm sure they'll get you a timeline sounds good all right thank you so much you thank you
+Speaker 2: thank you for the time take care bye

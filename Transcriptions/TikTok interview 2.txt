@@ -1,0 +1,674 @@
+Speaker 1: to give them some of the control changes you needed.
+Speaker 1: Yeah, that's a thank you for that question.
+Speaker 1: So, I think one of the biggest challenges,
+Speaker 1: I think in consult, it has its pros and cons.
+Speaker 1: The thing that I liked about consulting was the ability
+Speaker 2: to be able to do multiple things
+Speaker 2: within a short amount of time.
+Speaker 2: The difference, what I noticed is we consulting,
+Speaker 2: when you do consulting, you go on a project
+Speaker 2: and you implement that for say three months
+Speaker 1: and you don't necessarily only until the end of its whole life cycle,
+Speaker 1: the life cycle of the project.
+Speaker 1: So, if something is extremely good,
+Speaker 1: you get the credit for it, but that's where it ends.
+Speaker 1: If something goes bad, you don't stay there
+Speaker 2: to see the, you know, the repercussion
+Speaker 2: of something that you build that was terrible,
+Speaker 2: but in in-house, you stay with it all the way.
+Speaker 2: When you build something, there's more level of accountability
+Speaker 2: that's required.
+Speaker 1: What that means in essence is that you get more credit
+Speaker 1: for the work that you've done,
+Speaker 1: especially if it's a long term,
+Speaker 1: and you build something really solid.
+Speaker 1: If it's something that you're struggling with,
+Speaker 2: then you get a chance to continue to grow on it.
+Speaker 2: While, you know, facing all the challenges
+Speaker 2: of watching something that you build to grow.
+Speaker 2: So it's almost like if I could put it in lay my terms
+Speaker 2: in consulting, you birth a child,
+Speaker 1: and then you have somebody else adopt a child,
+Speaker 1: then put it in, you know, the real life in the world
+Speaker 1: of, you know, the industry.
+Speaker 1: It's almost like you see the child to the end
+Speaker 1: to the end college and make sure that, you know,
+Speaker 2: the graduating, all of those things.
+Speaker 2: So I think that's one of the biggest differences
+Speaker 2: that I saw coming from consulting into, you know,
+Speaker 2: industry, but again, it has its pros and cons,
+Speaker 2: the ability to get credit long term,
+Speaker 1: and the ability to watch something grow long term,
+Speaker 1: and also face the challenges that come with it.
+Speaker 1: So yeah.
+Speaker 1: Yeah, I, for what is really like a 100% agree with that.
+Speaker 1: I think that was a major change for me coming to TikTok
+Speaker 2: was like being able to take a process from start to finish
+Speaker 2: rather than like I found, especially with consulting,
+Speaker 2: you come in and you're like,
+Speaker 2: everything's on fire.
+Speaker 2: Please don't make your everything on fire.
+Speaker 1: Okay, okay, we'll fix it.
+Speaker 1: But then yeah, you're right exactly right,
+Speaker 1: not seeing kind of that end result and knowing
+Speaker 1: where the limitations of those processes are.
+Speaker 1: That makes less sense to me.
+Speaker 2: By the way, if I am slow to respond or you hear noisy typing,
+Speaker 2: that's because I'm an incredibly noisy type or I'm taking notes
+Speaker 2: obviously.
+Speaker 2: So apologies, if you get like a very weird dead stare
+Speaker 2: for me, that is the sole reason.
+Speaker 1: So I would love to talk about,
+Speaker 1: there are a few, a few kind of items that are kind of in my career
+Speaker 1: to discuss because this is,
+Speaker 1: because I'm a cross-functional stakeholder, like you wouldn't be on my team.
+Speaker 1: But you would definitely be interacting with my team,
+Speaker 2: especially me as kind of that POC from the legal perspective.
+Speaker 2: And I'm curious kind of what at meta and maybe even before that,
+Speaker 2: your relationship with kind of a lot of cross-functional teams are like,
+Speaker 2: how have you found,
+Speaker 2: you have obviously you have an information tech management
+Speaker 1: and computer engineer background,
+Speaker 1: but kind of dealing with a lot of other teams,
+Speaker 1: like product teams, business teams.
+Speaker 1: We work with communications, government relations, legal,
+Speaker 1: like, how has that been?
+Speaker 2: What have you done in that aspect?
+Speaker 2: And when you say what have I done,
+Speaker 2: is that how I have in short stakeholder collaboration
+Speaker 2: for different projects, is that the question?
+Speaker 2: Yeah, exactly.
+Speaker 1: I think that's a good, very kind of question.
+Speaker 1: Okay, yeah, no, that's that's helpful.
+Speaker 1: Yeah, so when it comes to stakeholder collaboration,
+Speaker 1: what I've seen is like everyone on a team is always,
+Speaker 1: when you scale back and look at what everybody's thinking about,
+Speaker 2: we're all looking towards the same goal,
+Speaker 2: very often, however, we all have different strategies or methods
+Speaker 2: by which we believe we'll get to that goal.
+Speaker 2: So when I've interacted with multiple stakeholders,
+Speaker 2: number one, even before interacting,
+Speaker 1: it's also evaluating who are the stakeholders you need on the project,
+Speaker 1: very important.
+Speaker 1: And understanding who are the key stakeholders,
+Speaker 1: not just key stakeholders, but key decision makers.
+Speaker 1: Because in the room of stakeholders,
+Speaker 2: everybody has a voice, but it's important to understand who your key decision makers are,
+Speaker 2: because those are the people who are eventually going to potentially sponsor
+Speaker 2: whatever it is that you're building and giving the highest advocacy that you're looking for.
+Speaker 2: And so when I've dealt with stakeholders,
+Speaker 2: there's number one identifying who my stakeholders are,
+Speaker 1: and very importantly identifying what they're rules and responsibilities
+Speaker 1: look like and making that clear upfront.
+Speaker 1: What that has done for me is that it's enabled me to be able to communicate
+Speaker 1: better and also get buying from people when they know upfront.
+Speaker 1: Now, in terms of when the project now starts and you've been able to provide clear rules
+Speaker 2: and stop me at any time if you've gotten what you need.
+Speaker 2: Yeah, once I get the rules and responsibilities clear,
+Speaker 2: the next step is understanding what problem do we want to solve and how do we want to solve that?
+Speaker 2: And I think the reason why it's important to understand what problem we want to solve is
+Speaker 2: whenever especially for very, very large-scale project,
+Speaker 1: for example, I can give you an example when I was, you know,
+Speaker 1: consulting for meta from a perspective where I asked to consult the problem of FTC.
+Speaker 1: And it was a large-scale project FTC had just hit meta with the five billion
+Speaker 1: find that everybody knows about at the time and it was like, come so for it.
+Speaker 1: And more than just solving for the five billion find,
+Speaker 2: it's important to understand what problem the company itself wants to solve for.
+Speaker 2: And that's basically based on risk and compliance assessment.
+Speaker 2: And that's where you start to understand what are the different components of the problems
+Speaker 2: that we want to solve.
+Speaker 2: And what I mean by that is when I think about an FTC problem,
+Speaker 1: it's not just the regulatory problem, but it's a risk problem.
+Speaker 1: It could be a system problem.
+Speaker 1: It could be that the way that we're storing data for example in our systems,
+Speaker 1: we're not storing it properly and that's what led us to the violation of that learning fact.
+Speaker 1: So understanding what problems and then understanding who are the people that are going to be able to solve that problem.
+Speaker 2: And then once we bring everybody into the room,
+Speaker 2: identifying and understanding what are the pinpoint of people as we solve the problem.
+Speaker 2: One thing I've also seen is that when you're trying to solve a problem,
+Speaker 2: more than the problem that you're trying to solve,
+Speaker 2: people bring all these pinpoint points that they want you to solve as part of the problem.
+Speaker 1: And so it's important to also scale back,
+Speaker 1: take in what everybody brings together and then scoop in.
+Speaker 1: And then finally, what is very important is buying.
+Speaker 1: At the point when you now decide, we've decided on a solution,
+Speaker 1: how do you get everybody's buying?
+Speaker 2: One thing I like to say is when I get into your room,
+Speaker 2: I've been, you know, opportunity to work in so many different environments that are getting the skill of collaborating ideas.
+Speaker 2: Now, while in many rooms there might be ideas that might not jump out as the best idea.
+Speaker 2: Everybody knows that compliance is very subjective.
+Speaker 2: However, the intent of the idea is usually what I like to look for.
+Speaker 1: So I'll give you an example.
+Speaker 1: There's sometimes an engineer or somebody in compliance might say,
+Speaker 1: oh, we need to develop this big framework to be able to solve for XYZ.
+Speaker 1: Now, that big framework might take us more time than we were intended.
+Speaker 1: But what they're getting at is something that's going to solve for our regulatory requirement.
+Speaker 2: And so it's getting back and saying, how can we make this more efficient instead of, you know,
+Speaker 2: solving a big framework?
+Speaker 2: And so that's part of bringing everybody's ideas together in a way that the final solution has every single person's fingerprint on it.
+Speaker 2: And what that essentially does is that it builds trust amongst all the stakeholders.
+Speaker 2: And then it also allows me to drive influence, you know, that's a skill that process if we need to,
+Speaker 1: because again, you know, that compliance projects are not one time.
+Speaker 1: You always have to scale them because of the changing regulatory landscape.
+Speaker 1: And so that's how I've navigated stakeholder relationships when I'm building on projects.
+Speaker 1: Yeah, absolutely.
+Speaker 1: I want to touch based on one thing you said and kind of bring this into another kind of conversation,
+Speaker 2: which is you mentioned, and I think correctly, by the way,
+Speaker 2: like just to be clear, compliance is subjective and intent of bringing intent into it.
+Speaker 2: From a legal background, obviously, we're going to argue everything subjective in some way and we're going to make that case.
+Speaker 2: However, I think one of the key functions of kind of privacy program management and from a risk perspective, especially, is kind of finding those sections of ambiguity.
+Speaker 2: So the question then becomes like, how do you make informed decisions surrounding risk where the kind of overarching questions of compliance are a hundred percent obvious.
+Speaker 1: Like, whether or not that's because it's the law is unsettled or ultimately the position of the company is unsettled.
+Speaker 1: So how do you make those informed decisions when there is that ambiguity, when there is that kind of subjectiveness?
+Speaker 1: And I'm curious, so not only kind of how theoretically do this, but like, do you give me an example of when you've worked on something similar?
+Speaker 1: Absolutely. So maybe I can't rephrase that I say compliance solution in can be subjective.
+Speaker 1: Maybe not compliance itself.
+Speaker 2: Because it's all.
+Speaker 2: I think you have feelings.
+Speaker 2: I think you have feelings.
+Speaker 2: I think you have feelings.
+Speaker 2: I think you can take the point.
+Speaker 1: Yeah, there are some laws that I like that.
+Speaker 1: I can give you a very good example. I think GDPR is a good one.
+Speaker 1: So when GDPR came out, GDPR said, so I came from a security background,
+Speaker 1: where you know you have the PCI DSS.
+Speaker 1: It tells you exactly what you're supposed to be doing on system.
+Speaker 2: You would say encrypt data.
+Speaker 2: There's some of them that would specify even the type of key or the encryption types that you should be using.
+Speaker 2: Now GDPR comes up with a law.
+Speaker 2: They have all these different requirements.
+Speaker 2: Ropa and then for security, they just say security data.
+Speaker 1: And they say if you encrypt your data and you have a data breach, nothing is going to happen.
+Speaker 1: Now, when you now start going to organizations,
+Speaker 1: I remember going to an organization where it was impossible for them to encrypt their data,
+Speaker 1: just how they were storing it in systems.
+Speaker 1: And so we have to scale back to say, okay,
+Speaker 2: like GDPR is asking us to secure data,
+Speaker 2: but GDPR doesn't specifically mention what exactly it is that we should be doing specifically to secure data.
+Speaker 2: Computer, you know, the PCI didn't understand it and all of that.
+Speaker 2: And so what we eventually do in those cases is number one,
+Speaker 2: understanding what security means for the systems in-house.
+Speaker 1: And what that means is number one,
+Speaker 1: understanding the systems that need to be secure.
+Speaker 1: And what that means is that the systems that are storing data that can expose us to regulatory violation.
+Speaker 1: And when we understand those systems,
+Speaker 1: what is the list or the minimum level of security that can be applied to this data that will prevent us from,
+Speaker 2: the easiest thing is an incident, for example, what can we apply?
+Speaker 2: So we start thinking about doing it to put things like access controls in place.
+Speaker 2: Do we need to make sure that the software is updated?
+Speaker 2: So when I think about areas where you cannot just provide a blanket,
+Speaker 2: why data protection practice on systems,
+Speaker 1: you have to scale back and think about what are the systems that we want to,
+Speaker 1: you know, we want to protect.
+Speaker 1: What is the type of data?
+Speaker 1: How is that data being stored in the system?
+Speaker 1: And what serves as data protection for that system from a security perspective?
+Speaker 2: And now what that enables you to do eventually?
+Speaker 2: Because having worked in compliance for a long time,
+Speaker 2: what I know that most companies do,
+Speaker 2: and I've seen that this is a very efficient way.
+Speaker 2: We talk about defensibility, not necessarily compliance.
+Speaker 1: I know people use compliance a lot very loosely.
+Speaker 1: What defensibility means is that you're able to show the regulators,
+Speaker 1: how you've met the requirement of the law,
+Speaker 1: when it's not necessarily that you're doing something exactly as what the law says.
+Speaker 1: The system is very in some of the systems where built way back before the law.
+Speaker 2: When I think about GDPR, GDPR came in 2018.
+Speaker 2: A lot of the systems that we're working with,
+Speaker 2: they were already in place where we built before 2018,
+Speaker 2: had built their system regardless GDPR laws.
+Speaker 2: So I think it's important to understand as an organization,
+Speaker 1: what does that mean for us?
+Speaker 1: And what I also say to people is,
+Speaker 1: at least, when I think privacy, I think the user,
+Speaker 1: what can cause harm to our user versus what will protect our user,
+Speaker 1: when you think from that perspective,
+Speaker 2: it allows you to take a more structured approach
+Speaker 2: to protect the data in the example that I just gave.
+Speaker 2: Yeah, I think that makes sense.
+Speaker 2: That's kind of from my experience.
+Speaker 2: Also, I have worked on PCI.
+Speaker 1: He's immensely, I work very closely with or previously did with
+Speaker 1: each of the major credit card companies.
+Speaker 1: So coming from there into seeing different, not less prescriptive.
+Speaker 1: But obviously, not self-regatory schemes,
+Speaker 1: that those obscurities in kind of issues with the legal compliance,
+Speaker 2: surrounding whether or not something is prescriptively required
+Speaker 2: or done internally on that sort of surrounding system basis,
+Speaker 2: can be challenging.
+Speaker 2: I think you kind of very clearly spelled out.
+Speaker 2: How you can bring those best practices from seeing
+Speaker 1: other components of surrounding the maintaining security
+Speaker 1: where it's otherwise obscure, or otherwise privacy,
+Speaker 1: or any GDPR compliance efforts or FTC efforts.
+Speaker 1: That all kind of resonates very closely with what we do
+Speaker 1: and what I've do specifically.
+Speaker 2: I get from my perspective then, and kind of one thing I'm curious about,
+Speaker 2: is taking a lot of these items that we've talked about.
+Speaker 2: I think security is a good angle to come in with,
+Speaker 2: because obviously I'm a privacy attorney.
+Speaker 2: This is a privacy role.
+Speaker 1: You are an expert in privacy.
+Speaker 1: But taking on these problems often relies on engaging.
+Speaker 1: So kind of different from collaboration, thinking about
+Speaker 1: and steadleg.
+Speaker 1: These problems have very, they're multifaceted.
+Speaker 2: Like every issue we deal with is not just a privacy issue.
+Speaker 2: When we're trying to delineate, because this is a product issue
+Speaker 2: or a security issue or a privacy issue,
+Speaker 2: but at the time it's like some combination of the three
+Speaker 2: and then you can add and other things.
+Speaker 1: Obviously there's going to be a communications issue.
+Speaker 1: There's going to be a government relation issue if something is actually a problematic.
+Speaker 1: When you take on these multifaceted incidents,
+Speaker 1: which to be frank, we do every day.
+Speaker 1: How do you prioritize?
+Speaker 2: Where do you start?
+Speaker 2: I want to differentiate in delineate here.
+Speaker 2: So we've talked already about kind of your initial approach with collaboration
+Speaker 2: of coming into the room identifying sort of
+Speaker 2: those key stakeholders and getting that influence by and.
+Speaker 1: But I guess here it's like internally organizationally.
+Speaker 1: How do you deal with the problem that has so many different sort of attack factors?
+Speaker 1: Yeah.
+Speaker 1: So at this level, when I think about,
+Speaker 1: we can think about this from an issue standpoint
+Speaker 2: or we can think about it from an incident standpoint.
+Speaker 2: When I think about this from an incident standpoint,
+Speaker 2: and as cheesy as this might sound,
+Speaker 2: the first thing is data is people data or personal data involved.
+Speaker 2: And what type of personal data we're talking about here.
+Speaker 1: And because again, as somebody who's worked for many organizations
+Speaker 1: where different types of personal data also have different regulatory impact.
+Speaker 1: So for example, if we're talking health data now you're thinking
+Speaker 1: in HIPAA and if we're talking data for example,
+Speaker 1: that has to do with like confonience,
+Speaker 2: you have to think CCP for example.
+Speaker 2: So the first thing is thinking about what's the data and the second thing is thinking about
+Speaker 2: what type of data we're talking about and what's the jurisdiction of the data.
+Speaker 2: Now when we think about the jurisdiction of the data,
+Speaker 2: it allows us to understand the regulatory impact of that incident, for example.
+Speaker 1: Or if it's an incident violent issue,
+Speaker 1: it allows us to think about the regulatory impact of that issue.
+Speaker 1: The thought thing that I usually do is also we do have risk-based evaluation processes,
+Speaker 1: where we've already had like for example we have a risk register
+Speaker 1: that would assign different types of risk to different types of controls.
+Speaker 2: And why that's important is because a risk would tell us the control
+Speaker 2: that's either doing well or it's feeling.
+Speaker 2: And so the first thing that you typically want to do on an issue
+Speaker 2: and incident is to perform a risk assessment on that issue.
+Speaker 2: To be able to understand what are the possible risk scenarios that can
+Speaker 1: emanate from this issue or what,
+Speaker 1: and if you typically something that has already occurred,
+Speaker 1: but you also have risk that at the aftermath of an issue that has occurred.
+Speaker 1: And then from that we also do have what we call like a risk-renin metric
+Speaker 1: that allows us to rate each of these issues from high-medium loop.
+Speaker 2: And usually some of this risk-renin metric looks like what is the volume of the data that's involved.
+Speaker 2: What is the type of the data?
+Speaker 2: When I talk about type of data while all data is personal,
+Speaker 2: there's some data that's more sensitive than the other one,
+Speaker 2: which means that they can cause more harm in certain cases.
+Speaker 1: And then you also think about what is the scope of the data that was.
+Speaker 1: So you can say that we had five data elements, for example,
+Speaker 1: if we had plenty to be that those data elements were spread or replicated across multiple systems,
+Speaker 1: then you have a challenge.
+Speaker 1: The third thing is looking at external parties.
+Speaker 2: Are we talking about an incident that involves an external,
+Speaker 2: like a third-party environment where in cases where we were stormed
+Speaker 2: that across our third-party environment, those also tend to heighten the risk.
+Speaker 2: Now each of these things that I'm calling the so many more of them,
+Speaker 2: but what they help to do is that they help to rank.
+Speaker 1: So what we've done, just practically speaking is you can either use a qualitative or a quantitative measure,
+Speaker 1: where you say that this specific types of data would be scored one to five or five to ten,
+Speaker 1: and then you can take each of those metrics, plug in the numbers,
+Speaker 1: and they put out the score for you.
+Speaker 1: And then those score would then allow you to prioritize.
+Speaker 2: However, I would say this that I've seen practical scenarios where the score,
+Speaker 2: sometimes, is not enough to just drive high-medium risk.
+Speaker 2: It could be additionally of decision-making processes,
+Speaker 2: where something could score a five just based off of our risk metric.
+Speaker 2: But that peculiar situation is applicable to like current trends at that time,
+Speaker 1: and so you need to bump the risk score to higher level to be able to get it prioritized
+Speaker 1: for the purpose of resolution.
+Speaker 1: So our pause there, I know does a lot, but let me know if you want me to.
+Speaker 1: No, no, no.
+Speaker 1: So that squares exactly with kind of our approach here and what we're looking to mature.
+Speaker 2: I think one thing I'm curious about, and I have a few questions kind of on this.
+Speaker 2: I think we'll probably spend a decent amount of time here.
+Speaker 2: It is for one.
+Speaker 2: I'm curious if you think that if you have this risk matrix,
+Speaker 2: and you're using this due to terminations, and let's say a current trend is,
+Speaker 1: as you, the example you just need, right?
+Speaker 1: A current trend, something is a five, but like,
+Speaker 1: everyone is talking, let's say it's like, desars.
+Speaker 1: This is a problem with our data subject access requests,
+Speaker 1: and while this issue affects very limited volume, and maybe the fines are low,
+Speaker 2: we really need to bump this up because I think we have other, there's a reason.
+Speaker 2: I'm curious if you think that's an execution flaw of the matrix,
+Speaker 2: and that the matrix should be revised to handle those exceptions,
+Speaker 2: or if it's satisfactory, that there is an ad hoc process to shift,
+Speaker 2: like a retroactive shift on the risk score.
+Speaker 1: That's a very good question.
+Speaker 1: So in practice, you typically want to iterate your matrix, right?
+Speaker 1: And you want to iterate based on what you're seeing as current trend.
+Speaker 1: Now, some things might be one time activities that can inform you to bump things up.
+Speaker 1: Now, what we typically do is that we have what we call a multiply factor in your matrix,
+Speaker 2: that can then involve all these different events that are mentioned.
+Speaker 2: It's the multiplier factor, then serves as an umbrella,
+Speaker 2: that takes into consideration all these different things,
+Speaker 2: like the external hot needs, the recent events.
+Speaker 2: So those different factors in themselves,
+Speaker 1: add up as that multiplier that can then be used on an ongoing basis for your risk metrics.
+Speaker 1: Now, however, the way that I build my risk metrics is that a risk metrics is not a one-time thing.
+Speaker 1: You don't build it and be like you're done.
+Speaker 1: We have to go back and re-evaluate the metrics to make sure that we're incorporating new changes
+Speaker 1: in the regulatory tool landscape, new changes in risk that we're identifying.
+Speaker 2: And even sometimes our processes when we begin new processes, new product features,
+Speaker 2: those introduced risk into our environment and we need to make sure that we're evaluating the risk
+Speaker 2: and plugging it into our framework.
+Speaker 2: So make sure that our framework is adequately capturing those different metrics,
+Speaker 2: the metrics, picking out the right, the right result.
+Speaker 1: But ultimately, what I would add to that is that we typically have a risk-exhafane team.
+Speaker 1: In many cases, when you know, when the program matures,
+Speaker 1: I know not everyone has to look through that in some smaller companies,
+Speaker 1: but typically what you want to have is a risk-exhafane team that uses the risk metrics as one of the major decision makers,
+Speaker 1: not the final decision makers.
+Speaker 2: So you have the legal team that's providing on top of that some factors that you may want to consider as part of that process.
+Speaker 1: Got it. That makes sense. I think from, sorry.
+Speaker 1: I lost my training of thought there for a second.
+Speaker 1: But I agree, I think kind of the thinking from this team's perspective,
+Speaker 1: and the reason this is a project is maybe more important,
+Speaker 2: is the idea for the risk register and risk financial documentation here is that there's a lot of projects.
+Speaker 2: And they go through sort of an ad hoc determination of risk by legal,
+Speaker 2: but by other stakeholders as well.
+Speaker 2: But largely, it's been by legal. We'll go in and just be like,
+Speaker 2: yeah, we think this is a high risk based on kind of the existing regulations.
+Speaker 1: We can point to provisions and we can point to find,
+Speaker 1: but largely we just point to the regulations and go,
+Speaker 1: like look, this is an area of focus, this is an area of litigation.
+Speaker 1: We're not really comfortable with this existing.
+Speaker 1: The question is, you know, we work on a lot with engineering.
+Speaker 2: Like that is sort of our red and butter for remediation of any potential instance,
+Speaker 2: whether it's an incident or just a feature that we need to kind of readjust.
+Speaker 2: So I think the question becomes how, when you were thinking about it from a prioritization perspective,
+Speaker 2: how we keep each risk.
+Speaker 2: Part of that is going to involve legal and working with legal directly to come up with that.
+Speaker 1: I guess my question here is, like, how have you worked with specifically legal teams?
+Speaker 1: And I'm going to add, before I want to make sure that I'm not like sending you into a trap here.
+Speaker 1: So I want to give you a little bit of a calendar on why I'm asking.
+Speaker 1: TikTok for better or for worse globally, I think, is a company that is very cautious about its compliance efforts.
+Speaker 1: Whether or not that's because, like, I think there is,
+Speaker 2: outside level of scrutiny on TikTok's behavior based on, by dance or, or whatever other reason,
+Speaker 2: there's internal, the internal effect of that is that we're very eager to, you know,
+Speaker 2: dot our eyes and cross our teeth, but also that we're very conscious of how legal interacts with teams.
+Speaker 2: And to be more specific, we are eager to have legal insight across a lot of different issues,
+Speaker 2: where other companies that I've consulted with are worked for, typically don't involve legal.
+Speaker 1: So the risk documentation is a very good example of this.
+Speaker 1: Where legal is going to stay involved, because I think if we start saying what we have all these incidents,
+Speaker 1: and if legal isn't across it, we're very concerned with the concept of, like, creating this large catalog of risks
+Speaker 1: that a regulator could just kind of be like, look, these are all genuinely problematic.
+Speaker 1: When I think for what is worth legal has already made determinations about, like, you know,
+Speaker 2: we've risk-accepted A, we don't believe B is actually violation of law.
+Speaker 2: The concern is, like, if a risk register is so robust that at least everything going on,
+Speaker 2: that could potentially be used against an organization.
+Speaker 2: And I think when you're an organization that potentially has a target on your back,
+Speaker 2: like TikTok sometimes does, or at least feels like it does, that's a concern.
+Speaker 1: So I guess the question here is like, how have you interacted with legal,
+Speaker 1: where they ostensibly are kind of a blocker to you, but ultimately kind of our operating with competing interests?
+Speaker 1: Hmm.
+Speaker 1: I want to make sure I understand the question based off of the context.
+Speaker 1: Are we saying that, how do we ensure that legal, it's, like, our processes are legal by design?
+Speaker 2: Like, we're involving legal as part of that, or not over involving legal?
+Speaker 2: I'm not sure I understand.
+Speaker 2: So it's, it's a little bit of that. It's, it's how are you involving legal?
+Speaker 2: But like, how do you kind of deal with these contravaling interests, where potentially,
+Speaker 2: and for what is worth, I, I, I, I have a lot of colleagues in legal that met us,
+Speaker 1: so I'm not, I don't think I'm speaking at a turn here, but I know a lot of their objectives are similar to mine,
+Speaker 1: which is like, protect the company and make sure, but also make sure that these projects are equal to be completed, right?
+Speaker 1: We don't want to expose access data, we don't want to expose access regulatory tax surface,
+Speaker 1: but we do want to make sure that risk profiles understood and the remediation actions are taken.
+Speaker 1: How do we balance, how do you work with legal and balancing those two bridges?
+Speaker 2: Yeah, so I think when it comes to building, you know, those risk documents,
+Speaker 2: it's also essential that I'm involving legal from the start.
+Speaker 2: To understand what their mindset is, to what's risk.
+Speaker 2: I can give you an example that I, you know, face,
+Speaker 2: when we were building the risk rating framework, and we were identifying risk,
+Speaker 1: and we were, for example, in certain cases, we were cataloging some of the risk as high,
+Speaker 1: and we were cataloging what our solution would be as high.
+Speaker 1: One of the feedback that legal gave us was that if we are cataloging certain things as high,
+Speaker 1: and the regulators came into our environment and saw that we weren't fixing those things,
+Speaker 1: or we took a different approach on how we treat the risk, then we could get into trouble
+Speaker 2: because our system is saying that something is high.
+Speaker 2: When eventually, maybe it's not, maybe we didn't high, but that's an organization we're saying
+Speaker 2: we don't want to take, you know, and we don't want to treat the risk in essence.
+Speaker 2: We don't want to have, I think what we've done in terms of those types of scenarios is really understanding
+Speaker 2: number one, what is our process for solving for risk, very important?
+Speaker 1: And do we have those risks which, you know, in compliance terms controls?
+Speaker 1: So when we identify things as high risk, it's important that we're also looking at our control environment
+Speaker 1: to understand that we have controls in place to mitigate those risks.
+Speaker 1: Now, where we don't have controls to mitigate those risks,
+Speaker 1: because that's where we then get, you know, potentially, you know, hit by regulators,
+Speaker 2: is do we have a roadmap, or do we have a plan or alternative solutions that can be put in place to solve for those?
+Speaker 2: Now, I've had scenarios to where in certain cases, I know that legal had said that we had over indexed on certain factors
+Speaker 2: to qualify as high risk or undying indexed on certain factors.
+Speaker 2: And so it's really, really into the mind of legal to understand, like, because again, legal really is the one that helps us set the scope
+Speaker 2: and the standard, because there are the ones that help us demonstrate that defense ability.
+Speaker 1: So it's really sitting down with legal to understand, like, where have we over indexed on something,
+Speaker 1: and where have we under indexed and how can we create that balance?
+Speaker 1: But more importantly, making sure that whatever we've identified as high or as a very high,
+Speaker 1: we do have ways to solve for them, or we have strategies to solve for them.
+Speaker 1: Another thing that I know we've done in practice is we have a risk acceptance process that we carry out.
+Speaker 2: So what the risk acceptance process is that it has a very structured approach to be able to accept risks that we're not willing to mitigate in the time being.
+Speaker 2: And then we have a roadmap to say in the next six months, in the next three months, we would revisit that risk to understand where it's at,
+Speaker 2: really deep to our goals and our objective, and making sure that we're continuing looking for ways to mitigate or treat the risk as needed.
+Speaker 2: Yeah, I think I'm forwarded with that, that obviously, from the legal perspective, like, agreed and, you know,
+Speaker 2: our goal is to kind of assist from the perspective of understanding, hopefully, the, like,
+Speaker 1: It's a group project to kind of gain understanding of the risk appetite over the company, but yeah, from a risk profile perspective, on at least,
+Speaker 1: from a compliance and regulatory angle. Now, there's obviously the different kinds of risks, right?
+Speaker 1: And this is not a no surprise to you. I know if you've worked on the risk register project.
+Speaker 1: Met a, you're kind of conscious of kind of the financial risk and, and, and PR risk or communications risk, how we want to define it,
+Speaker 1: and kind of balancing those. So this is sort of looping back.
+Speaker 2: I should say, really quickly, I, I, I love control. So I also did FTC work like that.
+Speaker 2: So I, I am a control freak in that way, and maybe other, but it doesn't matter.
+Speaker 2: My point is that controls, like, as an overarching concept are, are, like, fundamental to me in terms of my understanding for regulatory compliance, right?
+Speaker 2: If we have a regulation, and we can build out a set of controls that, that pairs to it, and you can find gaps against it and map,
+Speaker 2: and the immediate complaints of the group, that's fine. I think the question that, like, I wanted to delve a little bit more into is documentation and kind of accountability
+Speaker 1: or accessibility, right? Something, how can we create and use the risk register or use risk foundational documentation?
+Speaker 1: And in your mind, in your history and experience, like, how would you propose kind of handling auditive ability? Maybe as the right word,
+Speaker 1: You know, whether that's working with different teams or like, kind of what your approach generally is.
+Speaker 1: And I don't need any examples from meta.
+Speaker 1: I kind of have a more interesting, your personal philosophy about using controls to create auditability.
+Speaker 2: And okay, so auditability in terms of like what I'd say internal audit or external audit?
+Speaker 2: Yeah, really either way, right?
+Speaker 2: Like the concept of like, if I were to leave TikTok tomorrow,
+Speaker 2: um, someone should be able to confirm when you kind of everything you described in your previous answer,
+Speaker 2: which is like, what's the roadmap?
+Speaker 1: Why was this written?
+Speaker 1: Who did that?
+Speaker 1: Like, why are we doing anything that we were doing it?
+Speaker 1: And including especially like, why did we determine that something that this is per your last example, right?
+Speaker 1: Where if like a regular payment is that this is a high risk that you haven't done it?
+Speaker 2: Why?
+Speaker 2: Why was it high risk?
+Speaker 2: Why hasn't anything been done inside of it?
+Speaker 2: Like, how do you control for that in a control environment?
+Speaker 1: Yeah, so if we're talking about how do we make sure controls are auditable?
+Speaker 2: It's what I'm hearing.
+Speaker 2: I could provide that.
+Speaker 2: I think you have a second part of the question that's saying that how do we control to make sure that the risk
+Speaker 2: are properly being mitigated by the controls and we have processes together on that.
+Speaker 2: So I'll take the A part first.
+Speaker 1: So in terms of control auditability, number one is understanding to your point, you're right?
+Speaker 1: What controls really are is helping to meet the requirements of the law.
+Speaker 1: On the other hand, I would like to say that controls are double-edged.
+Speaker 1: They're double-edged, so while there are helping to meet the requirements of the law,
+Speaker 1: they're also helping you to mitigate your risk.
+Speaker 2: And so what you want to think about when you're writing controls is that number one,
+Speaker 2: you want to think about what are the controls first, what are the regulatory obligations that we have as an organization that we're subject to?
+Speaker 2: And distilling those into what we call control objectives.
+Speaker 2: You know, that's to understand what exactly we should be doing that would allow us for few of those requirements.
+Speaker 2: Again, like we had mentioned earlier, some of those obligations are not very clearly stated.
+Speaker 1: And so that's where we work with legal to make sure that we're distilling those into control objectives.
+Speaker 1: And then from there, we have what we call the control activity, which is what is being done to do the control objective.
+Speaker 1: Now what really allows for auditability is evidenceing.
+Speaker 1: And so it's really not just having engineers or product managers or the system to tell us there's a policy somewhere.
+Speaker 1: It's what is the evidence of this?
+Speaker 2: And so evidence can be collected in different forms.
+Speaker 2: So another way that, you know, if I could just scale back a little bit is also providing what you call the GR systems.
+Speaker 2: It's a GR system, excuse me, that allows you to identify what your different obligations are.
+Speaker 2: And within that GR system, you can map your control objective to the regulatory obligation and then you can map your control activity to the control objective.
+Speaker 2: And then add your evidence as part of those control activity.
+Speaker 1: And then to that control activity, you map your risk register to the control activity to give you that overall story, overall picture.
+Speaker 1: So that way, if I was an organization, we wanted audit for GDPR.
+Speaker 1: I can go into my GRC tool, for example.
+Speaker 1: And you know, do a certain audit GDPR, you know, laws and regulation.
+Speaker 1: It brings it up.
+Speaker 2: And then another thing that's also helpful is that you also want to do test regulatory testing for your controls.
+Speaker 2: Because it's not just enough to have controls.
+Speaker 2: You also want to test the design and the effectiveness of your control.
+Speaker 2: And so design is different from effectiveness.
+Speaker 2: Probably know that because design is really what you have on paper, but the effectiveness of the control is really where that evidence comes in.
+Speaker 1: And then you have some scoring.
+Speaker 1: So what enables you to have that auditability is a clear picture of your obligations and how the control activities are helping to fulfill the obligation.
+Speaker 1: But also the evidence saying that's associated with that process.
+Speaker 1: And then the risk that's helping to mitigate that.
+Speaker 1: So that's the A part.
+Speaker 2: Any additional question on that?
+Speaker 2: Is that okay?
+Speaker 2: That's exactly right.
+Speaker 2: Yeah, totally agree there.
+Speaker 2: So yeah, if you want to move on.
+Speaker 1: Yeah, absolutely.
+Speaker 1: So the second piece of the work you were asking is how do we ensure that we're creating a controlled environment where all of these different risks that have been identified.
+Speaker 1: We have your process for risk acceptance and all of that.
+Speaker 1: So what really allows you to be able to solve for all those is usually having what we call issues management.
+Speaker 1: So issues management is what allows you to identify all the different issues.
+Speaker 2: For example, that are, you know, an issues we've categorized them into different areas.
+Speaker 2: Usually issues are resolved of a field control or a control that's not what can effectively.
+Speaker 2: And the way that you kind of identify a field control is when you typically have a risk that doesn't have that's not being well mitigated or it's just not being mitigated at all.
+Speaker 2: Or you can also identify a field control where you have this new regulatory obligation that you're not able to meet with existing controlling environment.
+Speaker 2: And so what allows you to be able to do that is that whenever you tag anything as an issue, whether it's a regulatory violation issue,
+Speaker 1: you typically do risk assessment on that.
+Speaker 1: And that risk assessment process is usually within your issues management process where you're able to identify what it's an incident.
+Speaker 1: Maybe regulatory non-valiation, the DSR, you know, request that wasn't properly fulfilled.
+Speaker 1: Take that into your issues management.
+Speaker 1: Do a proper triage, do a risk assessment on it.
+Speaker 2: And then being able to assign it to the right owners.
+Speaker 2: And usually what I do when I'm building, when what I recommend, when I'm building solutions that are soothing,
+Speaker 2: is also embedding accountability into the tooling.
+Speaker 2: So what that looks like is in the tooling, when you put a control, you assign a control owner who knows that this is my control in the tool.
+Speaker 2: So that when there's anything that's wrong with that control, you can tag that individual.
+Speaker 1: And then so it comes for circle.
+Speaker 1: If there is an issue, you have a risk owner, the risk owner is, you know,
+Speaker 1: is a, you know, is a, is made aware of the issue.
+Speaker 1: And then we tag that to the control owner, the control owner is made aware of the issue.
+Speaker 1: And then that way everyone can resolve.
+Speaker 2: And then once the issues resolve, you also have like an issue manager who's there who's looking at all the different steps to make sure that they're properly done.
+Speaker 2: And then in cases where you also have to do risk acceptance,
+Speaker 2: making sure that you're driving that usually we drive that truly legal team,
+Speaker 2: and compliously that she makes sure that you're driving that process appropriately.
+Speaker 2: And I recommend that those should all be in it so that you can track processes and track, you know, change management as well.
+Speaker 1: Yeah, I mean, that, that, that, that to me is, is, is a very astute,
+Speaker 1: a description of kind of the process that we're, we're working on and.
+Speaker 1: And then for turn to parents and, and I want to just kind of pause here and say like,
+Speaker 1: I'm, we're going to say it's 345 roughly.
+Speaker 1: So I'm going to save the remainder for a question for you, but just to kind of address like kind of where we're sitting and what you're walking into.
+Speaker 2: You know, we're still, we're still maturing this process. So we've developed kind of platforms for these controls.
+Speaker 2: We're kind of working and reworking to meet kind of the various regulatory obligations that we're facing with this,
+Speaker 2: as well as kind of going above and beyond that.
+Speaker 2: So we are a privacy stature is that we seek to not just do the minimum required by law, but we have goals to create like privacy program.
+Speaker 2: That's over arching that contains you as dear and committees, etc.
+Speaker 1: And all of this kind of loops directly into this control framework.
+Speaker 1: And from that control framework and the reason I bring this up is kind of the conversations I've been having with Acta and her team about like how,
+Speaker 1: you know, we can operate with risks being paired against these controls and using the exactly what you've described as a process to sort of drive the business to,
+Speaker 1: to resolve certain issues that are either non-compliant or risks of lower compliance or ultimately risk of not meeting the privacy standards that we're sending for ourselves,
+Speaker 1: which may not be a regulatory compliance issue at all,
+Speaker 2: but it may be that we're addressing risks from that we're identifying and creating internally.
+Speaker 2: Like we don't have this process working and don't know if it is requiring it is essential that we continue to do this.
+Speaker 2: So that don't make sense to me and then I think that kind of squares with exactly the activities we're performing here.
+Speaker 2: I will say that the difference in maturity, you know, we're a younger organization than meta from several perspectives.
+Speaker 2: And I think this program is growing dramatically and drastically, I should say.
+Speaker 1: And rapidly, but I think there is a lot of work here in terms of kind of building out this rest documentation.
+Speaker 1: And specifically surrounding the, as you've described, kind of identifying the owners of these risks and make sure that this map come to one without creating sort of an outsider regulatory risk component.
+Speaker 1: So I think that's all here and I think that's going to be like the challenge of this job to be totally honest with you is dealing with kind of like how we map these risks against controls and really working with various teams across the business, including legal,
+Speaker 1: but maybe even more so in the product teams and even auditing teams to identify where these risks are being noticed and kind of identified.
+Speaker 1: And bring that all together and kind of consolidating it into one component of the overarching schema.
+Speaker 2: I want to make sure that I am keeping to my word and giving you plenty of time if you have questions, if you don't, that's totally fine as well.
+Speaker 2: Yeah. Thank you for that. I do have questions for sure. Thank you for breaking that down and that's super helpful.
+Speaker 2: I'm curious to hear, I used to consult for IBM, my initial years in comparison.
+Speaker 2: Yes, I used to, the New York office, I helped to build some of the risk assessment work GDPR at the time.
+Speaker 2: Well, that's awesome. Yeah. Yeah. I'm curious to hear what you, how would you describe the difference in culture between IBM and now and what is one of the biggest culture challenges that you're currently navigating.
+Speaker 1: Yes. It's a lot. So for transparency, I think I think we, and for what is worth my team is different, right? We're a legal team that kind of.
+Speaker 1: We have, we have slightly different functions, but compared to IBM consulting, I think IBM consulting is very like my, my experience there, and I'm not sure if it's 100% aligned with what you were doing, but certainly like this GDPR era.
+Speaker 1: It's a very slow pace at IBM, a lot of it has to go through kind of levels of levels of levels of management, and there's a large emphasis on kind of relying on standardization across the board.
+Speaker 1: I think here we're a lot more agile and part of that is that we have a startup mentality still, like very much so there's a fear of big company disease of like becoming too slow and too rigid.
+Speaker 1: Which has pros and cons, right? Like I think the grow is that culturally we're able to get a lot done. We're able to create really amazing products internally and externally, but like we're able to build out tools like rapidly.
+Speaker 2: I think the con is that unlike IBM, there's a lot more pressure to operate quickly, but still to do it at the same level of excellence.
+Speaker 2: And I think that can be fun at times. It can also be tiring at times to be absolutely transparent.
+Speaker 2: I think ultimately, you know, the work here is what you make it a bit. IBM, I found to be utterly lacking challenge at times.
+Speaker 2: Like I really was like you have four weeks to write a policy that you can do in a week, and of course I'll do this one I wouldn't like.
+Speaker 2: I think here the challenges are a lot more real and a lot more meaningful, but also a lot more rewarding.
+Speaker 1: You are more, you have more agency over what you're doing, and the results of your work are more immediately apparent versus my time at IBM consulting.
+Speaker 1: Sometimes as you said, very early on about consulting versus in house, you're literally seeing one part of the project going like we did it and then moving on and like every time on me to client after that or even internally at IBM, it was like, yeah, we don't use that anymore.
+Speaker 1: So I think here it's like you have the power to really, really make a change and like I'm personally thrilled with the work that act as team is doing.
+Speaker 1: I think they're like phenomenal and I think they're doing a lot for the company.
+Speaker 1: And so it's like it is a smaller number of people doing a larger amount of stuff. I still think they keep their work like balance just to be like totally transparent.
+Speaker 2: I think that's like still very much so a thing.
+Speaker 2: But still like having a really powerful impact on what the business is doing and what the business priorities are.
+Speaker 2: And as I said, kind of keeping that that privacy posture that we really fight for on a day-to-day basis.
+Speaker 2: That's helpful. Thank you.
+Speaker 2: Second question is, how would you define success for somebody who's coming to this role and specifically as it relates to interacting with your team?
+Speaker 1: In other words, what I'm trying to ask is what is the biggest pain point of your team right now that would look like success for solution for anybody who's joining the team?
+Speaker 1: Let me reverse that by saying, I am the biggest pain point for your team.
+Speaker 1: So I think a lot of it is just keeping open communication.
+Speaker 1: I think communication is like a fundamental requirement between different tiers of the organization.
+Speaker 1: A lot of, and for what is worth a lot of your background, like kind of working in consulting and working at meta with different cross-functional stakeholders, that's really important for this position.
+Speaker 2: Like I think the aspects of what you've talked about in terms of kind of building that influence and getting the buy-in from different groups and finding those stakeholders is crucial.
+Speaker 2: I'm one of those stakeholders for the purpose of this project, right?
+Speaker 2: Ultimately, risk is a question not just of legal, but a bunch of different teams that have a bunch of kind of competing interests, but overarchingly as you pointed out, sort of the same goal, which is to further our compliance as a business.
+Speaker 2: What that means is that the pain point for my interaction with your team is that my voice is not always going to be number one, which is legal never wants to hear that.
+Speaker 2: But naturally that has to be the case, right? We are not the only stakeholder, we're certainly not even the most important stakeholder. That's the business.
+Speaker 1: So keeping open-minded communication, explaining the decision-making, and making sure that you're like responsible in sort of the racy way of like responsible accountable consulted or informed,
+Speaker 1: but making sure it's the responsibility within that risk team that informs why you're doing certain actions, and then you can provide that like consulted angle of it, right?
+Speaker 1: We did this because this is our determination, but legal has said this, and while we've taken that into account, it's actually at the end of the day, legal is not always right.
+Speaker 1: We do our best to all form things out to write people and what we believe is that people who have the most knowledge on a matter, but ultimately it is a group, it's a team project, and the risk sort of has that central position in the hub to kind of keep things going.
+Speaker 1: So that's the important and how you can succeed at least from my metrics.
+Speaker 2: No, that makes sense, that's helpful. I have one last question, so I know for example TikTok, to the most of my knowledge,
+Speaker 2: it hasn't yet been hit by a major fine like, you know, the likes of meta-like, the five nuances, and I know in history, like many of the companies that have worked with compliance usually takes a quicker pace.
+Speaker 2: You know, at that time of the fine, like I wanted to get a sense of what is the compliance pace right now at TikTok, especially with you having experienced other companies where you booked an FTC and all of that.
+Speaker 2: And the reason why I'm asking also is like, what does compliance bureaucracy look like? How easy is it to get things moving?
+Speaker 2: You know, especially when you're standing up things that aren't necessarily much to an impending regulatory obligation? What does that look like?
+Speaker 1: Yeah, that's a great question. So I think I'll say two things. One is there is always a pending regulatory investigation.
+Speaker 1: And that's sort of the truth that any of our check companies, that every government is looking for one reason or another in identifying any risks.
+Speaker 1: Which is good, right? We want ultimately to be held responsible if there are gaps and to close those gaps.
+Speaker 1: We are under an FTC order for musically, which is now TikTok, which spells out certain comma related requirements.
+Speaker 1: So we have those as a baseline. We were sued again in August by the Department of Justice, which did not impose any specific regulatory requirements, but kind of provides insight into like we have this, and then that's public, by the way, both of these obviously are.
+Speaker 2: Which means we have certain regulatory obligations that like we know a under raw, but we have an understanding of like where the major concerns are surrounding our product platform and where we can do, whether it's to better internally or communicate better what we're actually doing.
+Speaker 2: So, for example, we have like under 13 experienced like, yeah, TikTok is mode and like how the privacy controls are on that work.
+Speaker 2: And making very, very clear to both the regulators and the public of like, hey, we've really genuinely have all these protections in place.
+Speaker 2: It's just not immediately apparent and we need to do better on kind of advising on those.
+Speaker 2: That creates sort of privacy posture number one, privacy posture number two is again, as I said, like we have proactive goals that exceed regulatory obligations.
+Speaker 1: The atmosphere in the company is that we want to be more than compliant.
+Speaker 1: If baseline compliance is the question, we believe we're, you know, for better, for words, like, you know, we're we're accomplishing those tasks.
+Speaker 1: But we want to do more, we want to create things that exceed those requirements and really have a very tight program that runs on controls and operates with risks identifying prioritization targets that exceed regulatory requirements.
+Speaker 1: Again, as this is another point where legal says like, you know, while I want to have an unsized voice, I do have to take a back seat because we'll drive these initiatives as best we can, but if there's no legal requirement for something, we just want to do it.
+Speaker 1: Frankly, we shouldn't even be in the room having the conversation.
+Speaker 2: So that's sort of the atmosphere. I will say from having audited a bunch of companies for the FTC.
+Speaker 2: There are a few different approaches that we've seen, which is like, look, the CEO is like, all in a hundred percent, we have to do everything right.
+Speaker 2: And then I've seen the one with like, we're going to do the bail minimum.
+Speaker 2: And ultimately, as I said, like, with from an auditability and assessment perspective, those may result in the same thing right.
+Speaker 2: If you're doing the basement, the assessment report's going to, like, any assessor is going to say, again, they're meeting their control requirements.
+Speaker 1: But ultimately, the atmosphere at the first company mentioned the one with the sea of down kind of being like, we need to build this program out.
+Speaker 1: Is going to be a lot more successful in containing and maintaining rather that privacy structure in long term.
+Speaker 1: We are significantly closer to that first company, like the efforts are coming directly from the top here and there's an atmosphere.
+Speaker 1: I mean, there's a reason this team has budget right, and they keep expanding expanding expanding is like, we want to just keep doing better by that.
+Speaker 1: Okay, that's actually very good to hear. And yeah, I'll note to you a point. I also think that that first approach also drives competitive advantage over time.
+Speaker 2: So, yeah.
+Speaker 2: 100 percent. I mean, that's, yeah, at the end of the day, like, that is kind of our sales pitch to the business, right? If there's ever something they don't want to do from a compliance perspective, like, look, it sounds really good if you do this.
+Speaker 2: Yeah, that makes sense. Okay. Yeah, those are all my questions. Thank you so much for answering all of them.
+Speaker 2: Wonderful. To me it was such a pleasure meeting you. I really appreciate you taking the time to do this today.
+Speaker 2: Thank you. Thank you for your time as well.
+Speaker 1: Take care.
+Speaker 1: Take care.
+Speaker 1: Bye bye.
+Speaker 2: Oh, Holy Spirit, thank you.

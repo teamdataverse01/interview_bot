@@ -1,0 +1,453 @@
+Speaker 1: office, Ruskin governance, so we are the second line of defense, and we cater to the rest
+Speaker 1: of the world, which is excluding US and excluding China. We too work with a lot of like upstream
+Speaker 1: and downstream teams, which is engineering is downstream and legal is upstream. We have
+Speaker 1: a lot of different functional groups within the PDP or Ruskin governance, such as like incidents,
+Speaker 1: response, routine, validations, etc. And then privacy risk is also one of the teams that is
+Speaker 2: that that's the team that I lead. So our team is pretty lean at the moment. We have around four
+Speaker 2: people in the team, along with along with other contractors helping us out, but the team is
+Speaker 2: like rapidly growing, but when I started it was just me. So within a year we have grown like so much.
+Speaker 2: So we are Spanish, Spanish out in different geographies, so we have presence in Dublin, New York,
+Speaker 2: San Jose, and then in future we would also have presence in Singapore, so they probably like
+Speaker 1: covering different geographies, since we have stakeholders across. We do have an RTO of four days at the
+Speaker 1: moment and then moving to five days, maybe sometime next year I'm not sure yet, but just wanted to also
+Speaker 1: let you know the role requires a little bit of travel, both domestic and international,
+Speaker 1: because again, like we value a lot, the enforcing relationships and just like, you know,
+Speaker 1: getting to know as we work together as a team. So that's it about myself, the team and the role,
+Speaker 2: handing over the mic to you. Awesome. Thank you so much for that introduction. To me, as you already
+Speaker 2: know, my background is engineering, instead of my career doing engineering, but slowly people take
+Speaker 2: into compliance. So, done very, you know, experience with security and privacy compliance,
+Speaker 2: more recently being involved in more privacy work. So part of the work that I've done is standing
+Speaker 2: on privacy programs for various companies, where that from a regulatory readiness perspective,
+Speaker 1: or even from helping them set up privacy by design, across the different products, different business
+Speaker 1: processes, recently at meta, I started out of meta doing compliance, but then transition into
+Speaker 1: privacy risk. So my work until conducting privacy risk assessment extensively for the entire
+Speaker 1: organization for our regulatory audit purposes. And currently right now, I'm in the HR org where I
+Speaker 1: need our compliance and risk programs to help make sure that we are meeting the requirements of our
+Speaker 2: regulatory obligations and also making sure that from an operational perspective, we're measuring
+Speaker 2: risk and is standardized manner and that we're able to identify mitigations that will help us
+Speaker 2: treat the risk or even accept or you know, treat, you know, transfer whatever treatment we decide to put
+Speaker 2: on risk. So that's where I'm at right now. That's great. That's awesome. So just to clarify, you said
+Speaker 2: you're part of the HR org and part of the organization right now. God. And so is there a separate
+Speaker 1: privacy risk team and meta and curious. So we have a centralized privacy risk team that's focused on
+Speaker 1: user data. We also do have a privacy risk team, well it's not necessarily privacy risk team, it's a
+Speaker 1: privacy program that's focused on employee data. However, what I manage is risk that sometimes entails
+Speaker 1: the scope outside of employee data. So we think about risk from a financial standpoint, we think about
+Speaker 1: risk from technology and systems, operational standpoint, reputation, but I manage the whole
+Speaker 2: sphere of risk across the people organization. Understand. God. And do you interact with engineering
+Speaker 2: and legal point legal POCs? Yes, I my background has been very much closely been interacting with
+Speaker 2: engineers. What very closely with engineers for product development, especially with projects that
+Speaker 2: involve privacy by design ensuring that we're doing the right DPI is data protection impact assessments
+Speaker 2: whether it's from a 3DPI standpoint when we're launching or even for legacy products. So interactive
+Speaker 1: with engineering a lot and also legal is a core functional stakeholder that I've interacted with and
+Speaker 1: continue to interact with actually. God. That's cool. So can you walk me through and when
+Speaker 1: curious to learn about like you know the risk assessments that you're performing? So can you walk me through
+Speaker 1: from like the from the beginning from the life cycle of how you would intake a risk and then the assessment
+Speaker 1: piece because obviously like you know we operate in a very startup mode where we kind of like have very
+Speaker 2: dynamic risk review breaks like we are building. So I would like to understand like for your thought
+Speaker 2: processes that what are the different criteria to even assess the risk score and what your next steps
+Speaker 2: would be as part of the treatment planning and monitoring. Yeah. So I've worked in different capacities
+Speaker 2: when it comes to risk management. I've worked from a program at extent point where managed the entire
+Speaker 2: program and I've worked also from an execution mode where actually execute. When I think about the execution
+Speaker 1: mode if I'm going to that directly is number one we make sure that we have a risk register. The risk
+Speaker 1: register is what and comprises a repository of risk that we've identified over time that impacts the
+Speaker 1: different products and different business units across the organization and the importance of the
+Speaker 1: risk register is that allows us to identify risk in a very standardized manner. What I've seen in time
+Speaker 1: past is one team is identifying maybe like a data minimization risk. Another team is calling it something
+Speaker 2: different and there's always that like you know differentiation of how people understand risk and so identifying
+Speaker 2: our risk registry or risk repository as some people call it is the first step. Once we do that we
+Speaker 2: begin to assess we begin to define what the scope of our risk assessment is which is very important
+Speaker 2: and the purpose of objective of the risk assessment and the reason why I say that is because I've implemented
+Speaker 2: risk assessment for the department level at the org level and I've also done risk assessment at the
+Speaker 1: product level. So it's important that we're defining the scope and the objective is very important
+Speaker 1: because in many cases the risk assessment that I've done sometimes is to fulfill a regulatory requirement
+Speaker 1: and I've had regulatory requirements where we require to perform risk assessment annually. So we
+Speaker 1: have to establish the scope, the objective and then the cadence for the risk assessment. Now once we've done
+Speaker 1: that we begin to measure, how do we want to measure risk that we've now identified across the different
+Speaker 2: products and that's where the approach comes in, whether we want to take a qualitative or quantitative
+Speaker 2: and what I mean by that is I've performed quantitative approach where you use a point scale
+Speaker 2: in some cases I've used the five points scale in other cases I've used the three points scale
+Speaker 2: where you go from five which is the highest to number one which is the lowest and then you specify metrics
+Speaker 2: for each of those levels. So five high risk can look like and you specify them against different risk types.
+Speaker 1: Now before I go into the measurement I just want to call out that in your risk registry it also
+Speaker 1: has to be organized in a way that allows you to think about risk not just from a high level perspective
+Speaker 1: but how of organized my risk registry is think about it from a domain standpoint categorizing risk.
+Speaker 1: So in my risk registry for example I want to have like an operational risk user data risk I'm user engagement
+Speaker 1: risk and then from there you cascade it down to risk themes or risk areas and so in many cases
+Speaker 2: we measure the risk from the risk area level even though it would cascade up to the domain level for
+Speaker 2: the purpose of reporting and so I'm happy to I know I'm let me know if you want me to stop at any point and then
+Speaker 2: once we get the risk areas we measure using our five points scale if we're using a quantitative approach
+Speaker 2: if we're using a qualitative approach we do high medium low or we do very high medium low
+Speaker 2: and that allows us to provide an output. Now once we get we decide on the approach we want to take
+Speaker 1: whether it's quantitative or qualitative now we can begin to pass the products that we're going to be measuring
+Speaker 1: or in many cases the business processes through this evaluation processes so that involves stakeholders
+Speaker 1: at this point I'm happy to pause if you want me to pause at any point.
+Speaker 1: Yeah so can we can we take one example or a privacy risk so you mentioned that you've done assessments
+Speaker 1: both at org level and product level so can we take maybe two examples and we'd be great if you pick a
+Speaker 2: technical example of these risks that you identified both at like you know different organ product
+Speaker 2: and what was your course like you know how do you go about identification assessment and then different
+Speaker 2: yeah absolutely so at the organization level have implemented so I can take for example
+Speaker 2: when I implemented risk management for the marketing team so part of what we did was number one
+Speaker 2: identifying because we had this centralized repository of risk so identifying the risk that would apply
+Speaker 1: to the marketing team so in that instance what we evaluated was the user data risk so we bought that
+Speaker 1: down to data collection risk we bought that down to data use risk data transfer risk and we what
+Speaker 1: we were doing basically I think the best method that I've used in time class is thinking about risk
+Speaker 1: and the context of the life cycle of data within that organization so what we first did practically
+Speaker 1: speaking is we were we already defined the scope so we need was marketing we started to talk to the
+Speaker 2: different stakeholders that were within marketing that were watching user data in one form or the
+Speaker 2: other and so we walked them through our data life cycle and started to evaluate what are the risks within
+Speaker 2: each data life cycle so marketing for it can I let me know if you want me to pause I want yeah just one
+Speaker 2: for sorry sorry to you you said that the data life cycle was that data life cycle diagram handy like
+Speaker 2: was it available from that from the marketing team or is this something that you developed and
+Speaker 1: if yes how did you go about developing that because most tourists they don't even have a data life cycle
+Speaker 1: kind of like very clearly identified from collection to retention and deletion I agree so the way that we
+Speaker 1: think about that is thinking about what's the standardized way that data would flow and so the biggest
+Speaker 1: thing is data starts from collection by any chance so the first thing was who within the marketing
+Speaker 1: department is responsible for collecting data and the reason why this was important is because there were
+Speaker 2: different types of data collection methods in certain cases the marketing team was in necessarily
+Speaker 2: collecting data directly from the users it was collecting it was getting data transferred from other teams to them
+Speaker 2: and so we needed to think about what does data life cycle look like in general and then feel it
+Speaker 2: into what the marketing team was doing so we said the first point is data collection does this same
+Speaker 2: collect data how do you collect your data online processes direct processes third parties indirectly
+Speaker 1: and then we identified all the ways that the collected data the second thing is after data collection you
+Speaker 1: stored the data where is the data being stored is it being stored within the marketing team the
+Speaker 1: infrastructure that's storing the data who is the data custodian for that at the people in the marketing
+Speaker 1: team that are managing access to the data for example that are managing how people can get to the
+Speaker 1: data and then from there we went to use how is the data being used within the marketing team I'm happy to
+Speaker 2: pause at any point if you want me should I keep going yeah I think that's good I'm sure yeah
+Speaker 2: so you're talking about the data life cycle yeah that how the data like where the data stored can we take
+Speaker 2: a few examples like you know what kind of data that you look at and just like you know what was your
+Speaker 2: role in that in that whole process or project yeah so when I think about and what I'm referencing
+Speaker 2: actually the risk assessment process that I'm referencing in template form is the DPI it's the data
+Speaker 1: protection impact assessment and we're doing specifically for GDPR so what are types of data that
+Speaker 1: were collected user data personnel data so we're collecting name they were collecting names they were
+Speaker 1: collecting email addresses for email email email email email in people marketing information they were
+Speaker 1: collecting information about in certain cases about age they were collecting information
+Speaker 1: basically personal information in certain cases also because of some technical processes that
+Speaker 2: have been putting place across the organization the marketing team in certain cases for specific
+Speaker 2: purposes were collecting anonymized data from the engineering team so there were different types of
+Speaker 2: data that were being collected but it was mostly personal data that was collected I can go into how we
+Speaker 2: evaluated risk for the data types and then for the data use but I'm happy to pause if you're
+Speaker 2: good with the types of data so far so yeah let's let's dive deep so for data different data types how
+Speaker 1: did you do the assessment for each data type that what is you know high very high or like either quantitative
+Speaker 1: quality they're totally cool with data absolutely so part of what we've developed prior to even doing
+Speaker 1: that exercise we had developed a data classification standard and so that data classification standard
+Speaker 1: allowed us to classify data from a high medium loop perspective and it also allowed us to associate
+Speaker 1: a certain level of risk to the data type now tell you how this works practically speaking it's very hard
+Speaker 2: to measure data outside of its use or to measure the risk of data outside of its use because in certain
+Speaker 2: cases what we realized is well you can say anonymized data for example is low risk data so anonymized
+Speaker 2: data in our data classification standard was on the low however anonymized data was being used for heavy
+Speaker 2: data processing activities like AI being involved and the data sample in certain cases were small
+Speaker 2: and so in that regard from a GDPR perspective for example when you begin to perform high risk
+Speaker 1: processing on data that comes so when you begin to perform you know deep processing on data that
+Speaker 1: constitute high risk and so knowing that the data by itself constituted low risk we also had to measure
+Speaker 1: the risk of the pending use of that data associated with it so I wanted what I'm getting at is
+Speaker 1: when we were evaluating the risk of the data by itself but we were evaluating the risk of the data
+Speaker 1: against is used so I can walk through that practically what that looks like but I'm happy to post
+Speaker 2: to see if you had any questions based off of what I just said yeah so this is very helpful so
+Speaker 2: all the data that I've said you said that but the data classification policy is that was that done by you
+Speaker 2: or a different team so the data classification standard not policy so it wasn't a policy I want to
+Speaker 2: make sure the policy was more high level but the standard was one level down lower than the
+Speaker 2: than policies typical policies yeah so the data classification standard fed into our apps are
+Speaker 1: over actually their privacy policy I developed in partnership with legal in partnership with the
+Speaker 1: engineering team because they understand the different data in their system so we had to collect that
+Speaker 1: information so yes I was in charge I led that project actually to develop the data classification
+Speaker 1: standard I've also led projects to develop data sensitivity standards because the where cases where
+Speaker 1: we had to define the levels of risk for data at the right itself but we also had to define levels of
+Speaker 2: sensitivity for what we classify the sensitivity data so yes but I led that project in collaboration with legal
+Speaker 2: engineering understood credit thank you so a little bit of like devoting our pivoting from
+Speaker 2: the data types so how about the production issues like did you also review the issues that were
+Speaker 2: happening in production to do a risk assessment or kind of like a risk scoring a prioritization for
+Speaker 2: of for them so you can identify that what are your real risk in production and when you see production
+Speaker 1: what do you mean by production production production as in like in the life so after a product launch
+Speaker 1: happens or even like a pre product pre product product launch so there are different issues that
+Speaker 1: identify through you know technical reviews or even technical audits post production it could be through
+Speaker 1: incidents or it could also be true different vulnerability assessment pentest so all these issues where
+Speaker 1: we know that the product is either going to be live or is already live so identifying those live problems
+Speaker 2: yeah absolutely so if I might provide how we've treated so we have a process the process that are
+Speaker 2: run with different companies issues management the first thing that we do with issues management so
+Speaker 2: if I understand your question and I think I have very good understanding of what you're getting
+Speaker 2: at now when we think about pre launch we do privacy reviews and part of that what we provide we provide
+Speaker 2: medications now pre launch usually the risk that you identify having materialized yet because they
+Speaker 1: haven't launched them yet so those are necessarily issues that identify their risk now however if we're
+Speaker 1: talking about post launch where the product has already gone live and it's already you know happening
+Speaker 1: then some of those risk have materialized which will then now be issues so we do have what we call
+Speaker 1: an an issue severity rating process where we identify the issues and we provide some sort of
+Speaker 1: rating for each issues but in rating the issues the first thing that we do is we look for a way some
+Speaker 2: map the issues to risk because for every issue there is an appending risk that allowed that issue
+Speaker 2: to materialize now our process was a bit more mature where we had maps risk to safeguard or what you
+Speaker 2: want to call controls and so when we identify the issue the next step is to think about what is the
+Speaker 2: appending risk that maps to this issue and then after that do we have controls in our systems today
+Speaker 2: that are currently solving for that risk and then we apply those controls I can go really
+Speaker 1: deep into it because we have controls that exist at the central level controls that exist at the business
+Speaker 1: level and then in certain cases there are gaps and then we identify you know new controls and we recommend
+Speaker 1: those controls in collaboration with legal for them to implement those controls you know that's close
+Speaker 1: the gap to risk and then solve for the issues and I can go into like the programmatic part where
+Speaker 1: you assign issue owners you have to what we issue owners to think about even in certain cases you may
+Speaker 2: have to determine what treatment you want to put for the issue because sometimes you may not want to
+Speaker 2: mitigate the risk associated with issues I've had cases where we risk accepted there we decided yeah
+Speaker 2: so yeah I can go into the issue can we take an example of an issue like example of some maybe like a
+Speaker 2: few examples that led to a cluster or a thematic analysis because again like you know not every issue
+Speaker 2: would be a risk or it could be like sometimes in certain cases depends on what is the what is
+Speaker 1: the real root cause of the issue so can we take like maybe a few examples of an issue and then what risk
+Speaker 1: did it map to what were some of the what was the risk scoring and the risk scoring of both the
+Speaker 1: issue and and the actual risk and then the safeguards or the controls that that you map with them yeah
+Speaker 1: so one specific issue that I remember was data deletion issue so what had happened within our
+Speaker 1: systems was that number one data deletion jobs were completed unfortunately some of our systems
+Speaker 2: lost the issues with data wasn't necessarily deleted in some systems they haven't even set up a
+Speaker 2: retention period for those data and so after the completion of the privacy risk assessment those
+Speaker 2: came out as issues so the first thing that we did was to map it against risk in our grammar what
+Speaker 2: are the different risk good like I mentioned for the purpose of sometimes also solving risk it's very
+Speaker 2: important to think about mapping risk from a domain perspective and I'll tell you what that means in the
+Speaker 1: minute now we have different domains like the regulatory domain for example one of the ways that we
+Speaker 1: measure the risk associated with issues is to measure the regulatory impact associated with that risk
+Speaker 1: are we on the hook for regulatory scrutiny if we were not deleting that data within this case the
+Speaker 1: assessors were in between us we were going through an audit so it was an issue that was going to cause
+Speaker 1: us issues with the assessors and so we ran the risk associated with that issue high from a regulatory
+Speaker 2: standpoint from an opportunity from an operational perspective it was definitely a high issue because it
+Speaker 2: had to do with the operations of deletion jobs and then we had other different types of risk that we
+Speaker 2: are associated with that what did we do to solve for the issue we identified number one what where the
+Speaker 2: controls and where the controls working effectively so one thing that we've also seen is that I've seen
+Speaker 2: from my experience is that you may have controls that are helping to solve for a risk you know ideally
+Speaker 1: but the controls might not be working effectively and so what we typically do is going back to testing
+Speaker 1: information where the control has been tested and evaluating was this control working as it should have been working
+Speaker 1: in many cases if the control was working as it should have been working then the risk should have been
+Speaker 1: mitigated not leading to an issue and so for that specific use case we realized that number one certain
+Speaker 1: systems did not even have a retention timeline that they were following things were very ad hoc
+Speaker 2: so what that meant was that at the lowest level there weren't policies that were being adhered to
+Speaker 2: from a retention standpoint so training that awareness was the first thing incorporating the policy
+Speaker 2: number two we realized that some systems were not working properly some of them were not the
+Speaker 2: little jobs some of them were not been time properly and so the engineers had to fix that so we solved the
+Speaker 2: issue by implementing programmatic control from policy standpoint and systemmatic control from
+Speaker 1: an infrastructure standpoint got it and what was your role in this were you responsible for the issues
+Speaker 1: or the implementation of the fixes so I was responsible for the issues so I was the issue manager so I
+Speaker 1: because I was part of number one the risk assessment so I identified the issues so my role was number one
+Speaker 1: identifying the issue owner because that's also a very complicated process because you have to think about who
+Speaker 1: because this is a huge organization who is going to own this issue and so that takes like working in
+Speaker 2: engineering to figure out like what are the different infrastructures associated with this issue and who are
+Speaker 2: the custodians or the infrastructure that we need to talk to and then number two identifying
+Speaker 2: mitigations that we need to implement and then number three testing so part of the work that had been
+Speaker 2: done in time pass was evaluating the controls making sure that the controls were working but part of
+Speaker 2: what I also did as part of this issue was providing a framework that the teams took to be able to test
+Speaker 1: the controls that they said was mitigating the risk and then saying hey your your rate I mean your
+Speaker 1: control or your safeguard is not taking all these different boxes these are the areas that I identify and
+Speaker 1: gaps so my role was number one issue management identifying the issue owner gap analysis and
+Speaker 1: recommendation of controls and safeguards to fix the issues and did you also have a separate control
+Speaker 1: team that you work with yes we have a control we had a controls and safeguard team that was
+Speaker 2: managing so the way that our control I was on that team so it's very familiar with it so our controls
+Speaker 2: have different domains they were dividing to talk domains and so they were controlled on us that were
+Speaker 2: assigned to different domains of controls and so when you assign a risk to an issue the control domain
+Speaker 2: that's assigned to that risk would be associated with the control owner and that's the team that I work
+Speaker 2: too so I worked with so control owners I should say this very important existed at the second line of
+Speaker 1: defense and first line of defense now the reason why the existed at the second line of defense was that we
+Speaker 1: had controls like policies and policies were implemented by those who sat on the second line of defense
+Speaker 1: like legal compliance but on the first line of defense for systematic controls process controls we
+Speaker 1: had teams on the first line of defense that we're implementing do so controls existed at those two
+Speaker 1: different levels and those were the teams that I was interacting with God I think this was so helpful
+Speaker 2: shifting gears a little bit so you mentioned about the issues that you would get from production
+Speaker 2: and then map them to the rest how part of the root cause analysis like how like what were some of the
+Speaker 2: questions that you would ask typically to do a root cause analysis let's take an example of the
+Speaker 2: data retention case that you just brought out that what would be like how would you go about doing an
+Speaker 2: RCA yeah so the first thing is to identify what the source of the issue is so we did have a form
+Speaker 1: an intake form that we used to feel issues so number one is the source of the issue number two is the
+Speaker 1: frequency of the issue so we have an issue log and so it's very important what was important in part
+Speaker 1: of evaluating root cause analysis is that has this issue occurred in time passed and how frequent
+Speaker 1: has this issue occurred and then going back to the source of the issue we usually identified what is the
+Speaker 1: system source is it from a system is it from a system level what types of infrastructure impacted the number
+Speaker 2: three root cause analysis is what type of data was impacted as part of that issue we talking user
+Speaker 2: data and if we're talking user data we're talking sensitive user data was part of the root cause
+Speaker 2: analysis and then part of that also is that the issue constitute an incident but it was very important
+Speaker 2: because we also had so I can give you an overview and let me know if you want me to stop at any point
+Speaker 2: you know I can go and attend them but the incident management was a domain a control domain within
+Speaker 1: our controls environment and so whenever we were identifying an issue we needed to identify if the
+Speaker 1: issue constituted an incident because once the issue constituted an incident it would be passed over to the
+Speaker 1: incident management team to do continuous root cause analysis for anything that constituted an incident
+Speaker 1: and we had ways to classify incident we had some things that we referred to as covalve incident and things
+Speaker 1: like that the fourth thing that was very important for us also was the source of the incident from
+Speaker 2: a third party standpoint because we had the source of the issue not incident now the source of the issue
+Speaker 2: so we had issues that in many cities in house but we also had issues that in many cities from a third
+Speaker 2: party perspective so it was very it was very important to identify that and then part of the root cause
+Speaker 2: analysis issue was also thinking about people process technology because those also allowed us to evaluate
+Speaker 2: was it from people standpoint because the issue root cause analysis like you may already know
+Speaker 1: is that it would also allow us to implement controls or safeguards so when we thought about it from a
+Speaker 1: people process technology if it's people then we're thinking training and awareness we're thinking adoption
+Speaker 1: if it's process we're thinking what can we do from an operational standpoint and if it's technology
+Speaker 1: what can we do from a system standpoint so I think what really depends on it for those where the
+Speaker 1: high level cause analysis and these things were captured in forms when people when we have people
+Speaker 2: submit issues and to make sure that we're doing the analysis of the issue correctly.
+Speaker 2: Got it so as part of part of the analysis of the issue I'm curious to add learn about
+Speaker 2: that what were some of the triggers that you would use to identify if it was an incident or not
+Speaker 2: that is one second is that what was the timeline for that analysis because you would you would
+Speaker 2: want to sit on an incident for too long during your analysis right you would want to escalate
+Speaker 1: it to the incident response team so they're able to take the right action so I'm curious to understand
+Speaker 1: that what that classification triggers look like and then what were the timelines yeah so specifically
+Speaker 1: for that one we were I can talk about different regulations so for example for that specific use case we
+Speaker 1: call the covered incident it was based off of the number of user data that was impacted so we were
+Speaker 1: talking 500 or more so that was one it was also based off of what we called covered third parties is what
+Speaker 2: we had identified them so covered third parties were divided into several types of vendors that
+Speaker 2: had been classified certain types of high risk and so when we had any issues in managing from that
+Speaker 2: area we we classified it as an incident and then if there was any potential of exposure of data any
+Speaker 2: potential not necessarily reach I want to make sure that's clear because it reaches different from an
+Speaker 2: exposure like you may already know like a bridge could just be a bridge is when the data was actually
+Speaker 1: being done probably put an exposure doesn't necessarily mean that you know because in certain cases like
+Speaker 1: I'm mentioning we've seen where the data was potentially exposed but it wasn't cryptid right and so
+Speaker 1: part of that is making sure that we're understanding number one so the triggers for that again is
+Speaker 1: the number of personnel data that was involved number one if there was any potential of data exposure
+Speaker 1: as part of that the types of third parties that were involved in the data and then many sorry just that
+Speaker 2: does that help you know one quick follow so you mentioned about data exposure how would you know about the
+Speaker 2: data exposure from a system standpoint so one I can give you an example of one that I went through so
+Speaker 2: we had an issue reported to us this was specific to employee data that there were folks that shouldn't
+Speaker 2: have had access to a system that had changed team that still had access to those systems as a matter
+Speaker 2: of fact there were folks who were in our third part in government whose contract had ended but still somehow
+Speaker 1: now the reason why I say it wasn't we had to evaluate that is that we in certain cases these folks
+Speaker 1: were not necessarily still accessing data based off of the logs but they still had access to the data
+Speaker 1: that data had not yet been replicated now after conduct and to I know you asked the second question
+Speaker 1: around how long to be honest and practical there's really no time frame for this specific use case
+Speaker 1: when we initially saw the issue there were thousands of people who had access to data and we were
+Speaker 2: in sure who was still supposed to have access to that data versus who was not they had to be a deep dive
+Speaker 2: analysis on like who are the people accessing data right now and what teams do they see on and so those
+Speaker 2: deep dive analysis now allowed us to see that there were people who had no longer on that team or who had no
+Speaker 2: longer in that small group or who in scientist is no longer needed access these were people that just
+Speaker 2: needed time based access for that data at the end of the day we classified it as an incident because
+Speaker 1: we saw that data was exposed from a third-party perspective so like I was mentioning when there's
+Speaker 1: third-party involved with class for us instead because again when it comes to your third-party environment
+Speaker 1: you never know what's happening so it allowed us to classify that specific use case as an incident and
+Speaker 1: then we had some money to see how we spoke access to make sure that we were limiting access and then just
+Speaker 1: like looking at the logs and checking to make sure there weren't any unnecessary exposure of data.
+Speaker 2: Right but then this all this process seems like it would take multiple days to even get to a point where
+Speaker 2: you would know both their data exposure or not unless a third-party reports that to you actively.
+Speaker 2: Yeah so in those scenarios maybe like a different example is fine too but in those scenarios how would
+Speaker 2: you go by classifying an incident so that it's getting remediated at least the stop.
+Speaker 2: Stop the bleed is happening in time you know what I mean like sometimes an issue would come like
+Speaker 1: I'm just thinking about the process workflow that if they should would come to you and you would do
+Speaker 1: all the assessments you would look for data exposure review the logs that would take like multiple days
+Speaker 1: to even get to a point where you can identify what the real problem was and I'm pretty sure that there
+Speaker 1: must be like hundreds of those issues that must be escalated.
+Speaker 1: Yeah so again that was a one of issues so that's just one type of issue now.
+Speaker 2: If you're talking about the number of days I'm not sure where that's getting some of the
+Speaker 1: I can clarify so that yeah I can clarify some talking I'm trying to get to point where we can
+Speaker 1: understand the scalability like how do you scale that program because if you have like hundreds of issues
+Speaker 1: coming through the intake process the intake form and you are determining that which one is an incident
+Speaker 1: so basically the incidents go to the incident response team and then rest of the issues are more like
+Speaker 2: rest so they would be handled by your team as you were talking about so I just want to understand that
+Speaker 2: how do you scale that process if you're getting high volume. Yeah so one thing that I would say is
+Speaker 2: I wasn't working on all these different steps myself there were teams that were conducting the log analysis
+Speaker 2: and all of that. Now as far as the scaling process like the first thing that we think about is
+Speaker 2: like I mentioned if there's third party exposure involved that automatically goes to the incident
+Speaker 1: management team and the incident management team usually does a triage where we may have submitted
+Speaker 1: force negatives so there were metrics that allowed or so again the first real thing that we did to help us
+Speaker 1: assign issues to different teams was mapping it to risk and we did have so we had like a central
+Speaker 1: like tool that allowed us to map issues to risk and so when we mapped issues to risk and
+Speaker 1: mapping to control owners what we did was to pass on the issue using the control owner route so we weren't
+Speaker 2: just like sitting on a hundred issues and doing the evaluation so once we identified the risk
+Speaker 2: associated with an issue we identified the control that you know as is associated with that risk
+Speaker 2: we passed that onto the control owner to begin to evaluate what next steps they want to take now
+Speaker 2: what I can mention is practically speaking their work cases where we mapped and if we didn't identify
+Speaker 2: a risk in our repository associated with that issue and we also did not identify a control
+Speaker 1: associated with that issue and that's when setting cases we had to extra work to see if we needed to add more
+Speaker 1: risk you know into our risk registry or add more controls into our processes got it and the process
+Speaker 1: that you're talking about the tool was it automated the mapping of issues to risk or was that manual
+Speaker 1: so the tool already has the mapping of all risk in our repository's two controls and so
+Speaker 1: to have what mapping to prove issues to risk was that also automated no those were done manually
+Speaker 2: yes so those were done manually but they were done in the tool so we had an issue login the tool
+Speaker 2: and so you had to wait to pick the risk in the tool that was associated with an issue so those were
+Speaker 2: done in a manual fashion not automatically and how many risks like I'm just trying to get a
+Speaker 2: ballpark figure like what was the volume and the scale of the program so how many risks did you
+Speaker 2: have in the system I want to say we had for that particular project it's been a while I want to say we had
+Speaker 1: over 100 risk associated with that specific use case yes so we definitely have had over 100 risk and
+Speaker 1: maybe about 500 save cards or more control activities that were tied it wasn't even one to one
+Speaker 1: mapping necessarily in certain cases it was a one to many many to many mapping all right great so those
+Speaker 1: were the questions I had I mean this is really useful and helpful for me to understand about your background
+Speaker 1: so thank you so much for all the responses yeah I look at those for any questions yeah absolutely thank
+Speaker 2: so I know that you had so when you were describing the team the privacy risk management team
+Speaker 2: is there a cadence that you all performed risk assessment for or you just performed risk assessment
+Speaker 2: on a product launch basis like I want to understand what triggers risk assessment within your organization
+Speaker 2: sure I think that's a great question so for us because we are fresh team like we are less than a year
+Speaker 2: old team so you can imagine like we are moving from foundational to operational so
+Speaker 1: we are triggers are more so we have two two different kind of assessments that are happening actually three
+Speaker 1: different kind of assessments one is what is to avoid talking about issue management right so
+Speaker 1: excuse me we look at all the production issues so that is part of our intake channel okay that all the
+Speaker 1: production issues would come in and then we would assess the risk identity for what a false positive
+Speaker 1: duplicates even if it's so we have a separate instant response team and they are intake process
+Speaker 2: it's kind of like very separate from ours but if there's a mapping of an incident to a risk
+Speaker 2: that would happen by our team so that is one so we identify risk in real time from the privacy events
+Speaker 2: which are our issues yeah second is like another trigger would be what you measure a new product launch
+Speaker 2: so if there's a new product is launching so we would want to meet a minimum you know create a minimum
+Speaker 2: viable product and meet the minimum baseline depending on the regulatory framework etc so that's
+Speaker 1: a second one third is that we can trigger a risk assessment could be triggered based on a requirement
+Speaker 1: by a different by a singular process by singular process I mean an individual right team might
+Speaker 1: request for the risk assessment right so they would want to understand the process gaps there
+Speaker 1: tech gaps that have not been captured through reactive approach because there is a proactive
+Speaker 1: and a reactive approach reactive issues management what he spoke about but proactive is where you
+Speaker 2: actively look for any gaps which could be potential risk in future so that's how we have kind of
+Speaker 2: late the land and if defined our framework at the moment the team is kind of working on different
+Speaker 2: different assessments at the same time so there are different multiple projects that are happening
+Speaker 2: with engineering team there is privacy legal who's our upstream process that are involved in all
+Speaker 2: the risk scoring risk prioritization so all these efforts got it that's helpful and what I wanted to
+Speaker 1: add to your question earlier I know you were talking about scaling one of the things that I know that we
+Speaker 1: had built for issues management was we also choose towards the end of my channel we created a framework
+Speaker 1: to categorize issues as well so we created a framework that allowed us to categorize issues from
+Speaker 1: a programmatic system standpoint and so those also allowed us to quickly like when we saw an issue we
+Speaker 1: quickly moved into the categorization and in many cases also when we saw an issue that had already
+Speaker 2: occurred it allowed us to move them forward so we had things like what we labeled fast track issues
+Speaker 2: so those were issues that similar to issues that have occurred in time pass issues that we've seen
+Speaker 2: occur several times and then we also had a way to categorize these issues from like people in
+Speaker 2: infrastructure perspective that also allowed us to move issues pass so that makes sense I wanted to ask
+Speaker 2: in what would be your relate like I know you said that it sounds like legal those the measurement
+Speaker 1: of the risk when you talk about like the risk scoring your team and legal what does that collaboration
+Speaker 1: really look like I want to get a better sense of how you collaborate with legal like are you providing
+Speaker 1: them the framework and then they are providing imputes to the risk framework that you're using to score
+Speaker 1: or what does that look like in general just want to understand I think that's a very good question
+Speaker 1: so the way we align with legal so we have a privacy legal group, global privacy legal so we
+Speaker 2: gain we get the inputs on the regulatory and compliance piece because when you're doing an assessment
+Speaker 2: for a risk they're different factors right impact on the user data because we are very much
+Speaker 2: external facing versus like internal so we look for the user data impact we also look for like you know
+Speaker 2: if there's AI processing happening on the data so those would post like larger risk so all of that is
+Speaker 2: very technical in nature that our team does whereas like we want and we would want to get there
+Speaker 1: inputs the legal input on the regulatory piece that if there is any fact because we are not lawyers we
+Speaker 1: cannot tell that what would really be a breach of a regulatory compliance or a commitment for each so
+Speaker 1: that would come from legal or if there is like a reputation and impact that we can only provide
+Speaker 1: suggestions that there could be a reputation impact in terms of like negative media publicity however
+Speaker 1: it's the legal who can who can challenge for sure that whatever risk-coring that we are giving it's
+Speaker 2: accurate and it's kind of like aligned with their understanding so it's more like collaboration
+Speaker 2: where we are working together versus like you know trying to get their separate inputs
+Speaker 2: got it that's super helpful and do you engage with the engineering team so my understanding is when you
+Speaker 2: think about things like technology risk for example legal may not be able to weigh in as much into
+Speaker 2: what those levels would look like from an infrastructure perspective do you engage with like the
+Speaker 1: engineering teams product teams to evaluate what technology risk could look like? I beat too so we
+Speaker 1: weren't directly with the product to manage teams so the third kind of risk assessment where we
+Speaker 1: proactively do risk assessments on singular programs that is where we would engage directly with the
+Speaker 1: engineering teams to identify process gaps technology gaps and also for the remediation on the treatment
+Speaker 1: efforts we would we work very closely with engineering in general because there are so many like you
+Speaker 2: know quick fixes low hanging fruits that we can very very quickly we get them treated and are like you
+Speaker 2: know low effort high impact so we have these different criteria also that we get into.
+Speaker 2: Got it thank you so much that's super helpful. One just I'm not technical last question that I had
+Speaker 2: is you mentioned that you lead that team how would you describe your leadership style? Sure so we are
+Speaker 2: very collaborative because we work one so a couple of things one we work across geography locations so we have a
+Speaker 1: lot of like you know daily standards and daily things I encourage and not just me actually our leadership
+Speaker 1: and courageous that where we have more like in person things as well so that's why we travel to each other
+Speaker 1: making sure that we have that in person time by putting discussions strategy discussions all of that.
+Speaker 1: So that is one making sure that we are all on the same page kind of like working together.
+Speaker 1: Second is collaboration I value collaboration a lot where we are able to keep it each other in form and
+Speaker 2: work together on multiple things. So it is I like to keep the team very much accountable for each of
+Speaker 2: their tasks so that we are kind of working independently but also like you know they obviously like
+Speaker 2: within the team they can collaborate and ask suggestions and work together but also they're accountable
+Speaker 2: for their own tasks and able to produce results and create impact so that way that also helps in building
+Speaker 2: your own career because everyone is like responsible for their own career growth things that they would
+Speaker 1: like to do for this individual skill sets. So depending on what your individual interests and
+Speaker 1: skill sets are because we have like multiple projects going on different risk assessments so they
+Speaker 1: would be like an assignment based on what you would like to do and where you would like to build your
+Speaker 1: career on. So that is really really important for me and the fifth thing is flexibility and adaptability
+Speaker 1: that because we are working in different time zones so I like to keep it like very open
+Speaker 2: communication that whatever like your schedule would look like if you are taking morning meetings or
+Speaker 2: evening meetings then depending like you know you can manage your own schedule it's not like a nine to five
+Speaker 2: thing that we would like to encourage here. That makes sense thank you. Are you in New York?
+Speaker 2: So where are you? I am based in New York. Yes that's open also. Yes but we do have a huge team in
+Speaker 2: San Jose. Okay. Leadership, my leader, since San Jose and then we have like a huge presence in San Jose.
+Speaker 1: Okay. Yes. That makes sense. Thank you for answering my question. That's all the questions I have.
+Speaker 1: Of course it was such a pleasure talking to you and as next steps I'm going to share my feedback with
+Speaker 1: the recruiter and they will get in touch with you with the next rounds. Sounds good. Do you know
+Speaker 1: what the timelines look like? Is there any or that would be information from the recruiter?
+Speaker 1: I would say that recruiter would be the best person to share that information but you're pretty fast like
+Speaker 2: it by test. Things move very very fast. So I'm assuming in the next few days you would hear back about
+Speaker 2: the next steps and the process. Okay. Sounds good. Thank you so much. It was nice meeting you.
+Speaker 2: Nice meeting you as well. Have a great day. Thank you. Bye bye.

@@ -1,0 +1,136 @@
+Speaker 1: just to ground the trade-off options would have moved us a lot faster. So it is
+Speaker 1: bureaucracy, it is a process. We should make sure that that is efficient in that kind of
+Speaker 1: structure. But I think part of the bet here is that actually it was faster because we're not just
+Speaker 1: spinning in chat threads talking about things. 100%. Sorry. No, that was those that was great,
+Speaker 1: thank you so much. All right. So I'm doing a move. Wait. Let me before you. We want to. I just. Yes.
+Speaker 2: Are you going to get into in this deck like how that operating model would look like what it looks like?
+Speaker 2: I so I didn't plan to go through that here but I can send you the documentation for that. We
+Speaker 2: have a workflow that I'm building out that would highlight that and I can send that over to this team.
+Speaker 2: Okay. That's the things. No problem. All right. Real quick. What was our approach? So we took the approach
+Speaker 2: of rating risk by domains. So if you are familiar with our current risk taxonomy, the one that was built
+Speaker 1: last half for the PDR team, we have six domains in there. And so when you're thinking about rating risk,
+Speaker 1: we're thinking about rating risk for these different categories. For operational risk,
+Speaker 1: regulatory reputation, our technology and data, financial and extended enterprise. We did make some
+Speaker 1: tweets specifically to our organization from what we saw in the IRM team. And the reason why is
+Speaker 1: because while the IRM team might want to rank more financial risks higher. And now to me we don't have
+Speaker 2: a lot of financial risk. Our financial risk range from maybe $50,000 to $500,000. However,
+Speaker 2: there is a pending high reputation risk. Even if we were to think about the impact of financial
+Speaker 2: is not being as high. So there are cases where financial risk might be low where we may only be required
+Speaker 2: to pay a fine of $20,000 for non-compliance. However, the reputation risk associated with that
+Speaker 2: could be really high. And we might have things like not being able to launch products in certain regions
+Speaker 1: and things like that. So you may not see reputation risk represented in the IRM one,
+Speaker 1: I just wanted to call out that it was important for our team and kind of the feedback that we go from
+Speaker 1: legal. The reputation risk is a big deal here within the people organization, especially across our
+Speaker 1: global, you know, locations. The second thing here is using the quantitative risk rate in methodology
+Speaker 1: it's a five point scale. I'll show that here quickly. And the quantitative values have corresponding
+Speaker 2: metrics. So where you see a five, it tells you why it's a five in the financial and, you know,
+Speaker 2: all the way to one. Here I'm just going back to just reading it on your question Josh. We've utilized
+Speaker 2: industry frameworks like the NIST, all of these different frameworks, and we've also worked
+Speaker 2: very closely with the medical privacy team and our centralized risk monitoring team.
+Speaker 1: Pause again. Any questions? All right. Thank you. So just at a high level, what is our five point
+Speaker 2: impact scale look right? Right now for those of us who are like risk professionals or risk SMEs,
+Speaker 2: I know you might be looking for likely good here. We want to feedback that we're receiving from legal
+Speaker 2: impact is like, you know, the use of the word risk. And so there's a lot of confusion around like,
+Speaker 2: ideally what you might want to see is impact on slightly good, but we're focusing on impact for the meantime.
+Speaker 2: So we're focusing on the impact scale around risk and our impact scale is five point based. We have the
+Speaker 1: severe all the way down to minimal. And the severe is a point of five and then the minimum is one.
+Speaker 1: We run that across the different six risk domains that you see there that's just the short form for financial
+Speaker 1: or personal regulatory technology and data, reputational and then extended enterprise.
+Speaker 1: And so basically what the way that you point or you pull out this course is for each of the different types of risk,
+Speaker 1: you have different levels of reading or different rankings depending on the type of project.
+Speaker 2: And the total score across all the different risk categories then bring out a score that ends up being either high
+Speaker 2: or all the way down to blue. And example here we use the time tracking regulation. As an example here,
+Speaker 2: the financial risk or time tracking is medium. It's not very high and I'll show that in a minute,
+Speaker 2: all personal risk is really high here because of the impact of oppression,
+Speaker 2: started data centers and things like that, regularly to risk is not the highest. And I'll show how that comes out.
+Speaker 1: But the total score here ends up being 16. Now what I want to call out is we've seen several scenarios where
+Speaker 1: one of these risk domains may not apply to a project or a regulation. And so in that instance,
+Speaker 1: we just scored as zero and then it ends up bringing out a score that we then identify as either medium
+Speaker 1: blue or high. One thing that we would work on as we iterate on this and mind each into here is that we
+Speaker 1: may want to apply with it scoring to some of these. I know for example the IRM team have applied with
+Speaker 2: it scoring to regularly to a risk versus reputational. But that's something that we want to make show
+Speaker 2: we lunch the first iteration first and test and see how things are trending and then we can go back
+Speaker 2: and start applying with it scoring to these. I'll pause again to see if there are any questions.
+Speaker 1: Hi. I was going to ask about latest scoring and that for EE, we said it's extended
+Speaker 1: enterprise because that. Oh yes. So extended enterprise deals with our third-party risk and our
+Speaker 2: contingent workforce risk. So any project that somehow interfacing or integrating with third-party
+Speaker 2: two systems processes would fall under the enterprise extended enterprise and then from a seed of
+Speaker 2: this standpoint, we have a disorder of risk that associated with our contingent workforce. And so that
+Speaker 2: all those different types of risk would apply in the extended enterprise domain.
+Speaker 1: Hi. Okay. Thank you for that explanation. But the other question is this is like how what's been
+Speaker 1: where as we've talked about earlier in your presentation about potentially what we sign up to support
+Speaker 1: is like could be prioritized based off the risk level score. But then I assume that this is just like
+Speaker 1: one factor. It's like, you know, there's a mark level in it. Like he's like, I care a lot about this,
+Speaker 1: but the risk level is still medium or low. We would then still prioritize that work. So this is just
+Speaker 1: like one factor of how we would think about staffing and like justifying or getting across the team.
+Speaker 2: That's a very good point. Yes, absolutely 100%. And one thing that I wanted to highlight here is
+Speaker 2: the importance of seeing, you know, each of the risk scores across the different domains
+Speaker 2: individually. So for example, something can be a low or a medium. But then you see that it's high in a
+Speaker 2: particular risk domain area that you're most concerned about for that project. So for example,
+Speaker 2: while these time tracking projects may have a lot of mediums and lows, but in operational it has the highest,
+Speaker 1: like it has really high. So if operational is your major concern for that particular project,
+Speaker 1: you may want to bump it up and be like regardless that it's low or medium because operational risk
+Speaker 1: domain is something that I'm really concerned about. I want to prioritize that. So it allows also for some
+Speaker 1: level of flexibility where you can hone down on the different risk domains and be able to see like
+Speaker 1: what's trending high in a domain versus what's the total score overall that allows us to determine
+Speaker 2: how to prioritize that. Does that make sense? Okay, lovely. Actually, I'll give you one more example
+Speaker 2: for micro-admetting perspective as well. So we will get feedback, top down on things that the company
+Speaker 2: cares about, right? So like risk might be one of them that don't mean a curious about. Also a
+Speaker 2: efficiency gains might be one of them that we should, of course, about that might not overlap with risk
+Speaker 2: one to one. I could imagine certain halves where maybe we have a higher risk tolerance to not work
+Speaker 1: on projects, that would be higher support on the risk framework because we just want to drive
+Speaker 1: efficiency. So time tracking in Japan as an example might from a risk standpoint might not be that high because
+Speaker 1: we have a process in place, we have a policy in place but the tooling maybe really heard like PSD has to
+Speaker 1: manually take different spreadsheets. And we might just say even though we feel good about the risk mitigation
+Speaker 1: there, we want to get out spreadsheets and into tooling. So we use that one time tracking engineer to work
+Speaker 2: on that project, opposed to working on something that do that might be higher risk to the company.
+Speaker 2: And so it's just where we want to focus on our priorities. That's a good one. And just going back to
+Speaker 2: that, just to add on top of that, I wanted to go back to the weighted scoring again, actually what we were
+Speaker 2: seeing was that, you know, if we were automatically to apply weighted scoring for certain domains,
+Speaker 2: we're seeing that there's lots of nuances across different relations and different like projects.
+Speaker 1: So where regulatory risk might be higher for your particular project, reputation might be higher for
+Speaker 1: another one. So thinking about each of those nuances allows us to just, you know, start to test
+Speaker 1: and see how we want to apply those with exploring going forward across different types of project nuances.
+Speaker 1: All right. This is the last slide and then I'll go to timeline. I think one to take over your entire
+Speaker 1: time here, so thank you for your time again. So for this particular example, this is the time tracking
+Speaker 2: example and we've used that to test our risk reading framework. And so typically what you would have is
+Speaker 2: teams would apply each of these domains and the associated risk ranking and metrics to their projects
+Speaker 2: and provide levels and scoring and then give some sort of like context around why they've applied that
+Speaker 2: particular reading or scoring. So for here, we see that the reading for financial is
+Speaker 2: standing towards medium and that's because of the fine that's associated with that. Here, the fine is
+Speaker 1: not that high typically, you know, across like multiple workers and all of that. So that feeling the medium
+Speaker 1: category regulatory risk is medium here. The regulation is already in effect and teams are already working
+Speaker 1: on that to implement that. And then for operational business and operational risk here,
+Speaker 1: this is definitely a regulation that's heavily impacted by operation. So there's lots of like
+Speaker 1: operational risk here and that's why this was really high when you think about workforce management
+Speaker 2: when you think about the, you know, the nuance of it being the matters flexible hours is very different
+Speaker 2: from what you would typically have in your day to day work for a typical meta employee. And then when you
+Speaker 2: think about reputational risk, not a lot of reputational risk exists here, especially because most of
+Speaker 2: these are internal, they're about like internal workers. And then take knowledge of co-risk is medium here
+Speaker 2: and the reason why it's medium here is because we're thinking about our systems, but not a lot of like
+Speaker 1: systems and data is involved here. Opposed Josh, go ahead. Sorry, I think my hand is up from the,
+Speaker 1: oh, okay, one, yeah, no worries. No, I mean all of this makes sense. I, but just a very, very quick note
+Speaker 1: on the, on the last, like, for purpose of clarity, I know you kind of covered this verbally where you said,
+Speaker 1: if a domain doesn't apply at all to a particular issue, like it gets a score of zero, but when you look at the chart,
+Speaker 1: like that's not obvious. And so, like it looks like the minimum score should be six, but then it says zero. So I would just like
+Speaker 2: try to make sure that you're, I just try to make sure that this is a little clearer in saying like yes, it's a five point impact
+Speaker 2: style except kind of it's six because it's possible that you could get a zero if it doesn't apply. Mix it up.
+Speaker 2: It's just for visual clarity because that confused me and you off the bat. Okay.
+Speaker 2: Minor note. Yep, that's a good feedback. Thank you. Awesome. And so, what we have here again, you know,
+Speaker 2: back to, you know, the risk reading, this is what's been rated for time tracking and then what you see
+Speaker 1: underneath the different options that can be used to reduce or mitigate these risks level,
+Speaker 1: and also how the risk could reduce when you apply these different, you know, options. So, for example,
+Speaker 1: like when you apply the first one here, which has to do risk acceptance. So risk acceptance is basically saying
+Speaker 1: we're going to move forward. A lot of these, you know, is really around number one, we're either going to move
+Speaker 1: forward without implementing anything or we have alternative controls that are already in place that allows
+Speaker 2: us to minimize this risk. And so, these are the different ways that we can solve for the risk that
+Speaker 2: have been identified below to continue to reduce the risk to the minimum level. So, yeah, the last slide is really
+Speaker 2: just talking about our timelines. Our goal is to get this rule that on November 11th and what that means is that
+Speaker 2: we're going to be getting a comms post out and working very closely with just to make sure that we have all
+Speaker 2: that communication together. And by November 11th, folks will start leveraging the framework we'll have
+Speaker 1: table that folks can reference and know that to make sure they have all the information they need and continue
+Speaker 1: to iterate on the framework to make sure we're accommodating different use cases. So, yeah,
+Speaker 1: thank you all, any questions, additional questions, feedback?
+Speaker 2: All right, excited, did this come out? This is great. Thanks so much.
+Speaker 2: Thank you so much. Thank you for your time. I will go ahead and drop now and I hope you enjoyed the rest of
+Speaker 1: your day. Bye.

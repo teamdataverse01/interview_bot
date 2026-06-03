@@ -1,0 +1,18 @@
+# --- Core API (M2+) ---
+fastapi>=0.110
+uvicorn[standard]>=0.29
+httpx>=0.27
+pydantic>=2.6
+python-dotenv>=1.0
+
+# --- Data / persistence (M4) ---
+# Supabase Postgres + pgvector.
+psycopg[binary]>=3.1
+
+# --- RAG embeddings (optional, free local) ---
+# Enable semantic search by installing fastembed, then set EMBED_PROVIDER=fastembed.
+# Note: needs onnxruntime wheels for your Python version (use 3.11-3.12 if 3.14 wheels are missing).
+# fastembed>=0.3
+# numpy>=1.26
+
+# The M1 knowledge parser + TF-IDF retriever use only the Python standard library.
