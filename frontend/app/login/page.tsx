@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
+import { DEV_NO_AUTH } from "@/lib/devauth";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -11,6 +12,10 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (DEV_NO_AUTH) router.replace("/dashboard");
+  }, [router]);
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
