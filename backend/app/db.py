@@ -78,10 +78,16 @@ def execute(sql: str, params: tuple = ()) -> None:
 
 def ping() -> bool:
     """Return True if the DB is reachable."""
+    ok, _ = ping_detail()
+    return ok
+
+
+def ping_detail() -> tuple[bool, str | None]:
+    """Return DB reachability and a compact error message when unavailable."""
     try:
-        return query_one("select 1 as ok") == {"ok": 1}
-    except Exception:
-        return False
+        return query_one("select 1 as ok") == {"ok": 1}, None
+    except Exception as exc:
+        return False, str(exc)
 
 
 def ensure_schema() -> bool:

@@ -15,7 +15,7 @@ from pydantic import BaseModel
 from app import repository as repo
 from app.auth import User, resolve_user
 from app.config import settings
-from app.db import ensure_schema, ping
+from app.db import ensure_schema, ping_detail
 from app.evaluation import build_report, evaluate_answer
 from app.llm import LLMError
 from app.interviewer import next_turn
@@ -112,7 +112,11 @@ def _fallback_turn(engine: InterviewSession) -> dict:
 # --- meta ------------------------------------------------------------------------
 @app.get("/health")
 def health() -> dict:
-    return {"status": "ok", "db": ping(), "llm_provider": settings.llm_provider}
+    db_ok, db_error = ping_detail()
+    payload = {"status": "ok", "db": db_ok, "llm_provider": settings.llm_provider}
+    if not db_ok and db_error:
+        payload["db_error"] = db_error[:500]
+    return payload
 
 
 @app.get("/config")
