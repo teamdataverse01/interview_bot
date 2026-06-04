@@ -41,16 +41,20 @@ async function proxy(request: NextRequest, path: string[]) {
 
   try {
     const response = await fetch(target, init);
+    const headers = new Headers(response.headers);
+    headers.set("x-proxy-target", target.origin);
     return new NextResponse(response.body, {
       status: response.status,
       statusText: response.statusText,
-      headers: response.headers,
+      headers,
     });
   } catch {
-    return NextResponse.json(
+    const unavailable = NextResponse.json(
       { detail: `Backend unavailable at ${target.origin}` },
       { status: 502 },
     );
+    unavailable.headers.set("x-proxy-target", target.origin);
+    return unavailable;
   }
 }
 
