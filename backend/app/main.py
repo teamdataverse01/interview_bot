@@ -15,7 +15,7 @@ from pydantic import BaseModel
 from app import repository as repo
 from app.auth import User, resolve_user
 from app.config import settings
-from app.db import ping
+from app.db import ensure_schema, ping
 from app.evaluation import build_report, evaluate_answer
 from app.llm import LLMError
 from app.interviewer import next_turn
@@ -33,6 +33,15 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.on_event("startup")
+def bootstrap_schema() -> None:
+    try:
+        ensure_schema()
+    except Exception as exc:  # pragma: no cover
+        # Surface startup migration failures in Railway logs; handlers may still run.
+        print(f"[startup] schema bootstrap failed: {exc}")
 
 
 # --- auth dependency -------------------------------------------------------------

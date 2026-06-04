@@ -7,6 +7,7 @@ if needed. All rows come back as dicts.
 from __future__ import annotations
 
 from contextlib import contextmanager
+from pathlib import Path
 from typing import Any, Iterator
 
 from app.config import settings
@@ -14,6 +15,9 @@ from app.config import settings
 
 class DBNotConfigured(RuntimeError):
     pass
+
+
+_SCHEMA_APPLIED = False
 
 
 @contextmanager
@@ -58,3 +62,26 @@ def ping() -> bool:
         return query_one("select 1 as ok") == {"ok": 1}
     except Exception:
         return False
+
+
+def ensure_schema() -> bool:
+    """Apply db/schema.sql once per process when DB is configured.
+
+    Returns True when schema application succeeds, False when DB is not configured.
+    Raises on SQL/connectivity failures so startup logs show the real root cause.
+    """
+    global _SCHEMA_APPLIED
+
+    if _SCHEMA_APPLIED:
+        return True
+    if not settings.database_url:
+        return False
+
+    schema_path = Path(__file__).resolve().parents[1] / "db" / "schema.sql"
+    sql = schema_path.read_text(encoding="utf-8")
+
+    with get_conn() as conn, conn.cursor() as cur:
+        cur.execute(sql)
+
+    _SCHEMA_APPLIED = True
+    return True
