@@ -7,6 +7,7 @@ Railway:      uvicorn app.main:app --host 0.0.0.0 --port $PORT  (see railway.tom
 from __future__ import annotations
 
 from dataclasses import asdict
+import os
 
 from fastapi import Depends, FastAPI, Header, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -15,7 +16,7 @@ from pydantic import BaseModel
 from app import repository as repo
 from app.auth import User, resolve_user
 from app.config import settings
-from app.db import ensure_schema, ping_detail
+from app.db import db_runtime_info, ensure_schema, ping_detail
 from app.evaluation import build_report, evaluate_answer
 from app.llm import LLMError
 from app.interviewer import next_turn
@@ -113,7 +114,14 @@ def _fallback_turn(engine: InterviewSession) -> dict:
 @app.get("/health")
 def health() -> dict:
     db_ok, db_error = ping_detail()
-    payload = {"status": "ok", "db": db_ok, "llm_provider": settings.llm_provider}
+    payload = {
+        "status": "ok",
+        "db": db_ok,
+        "llm_provider": settings.llm_provider,
+        "app_env": settings.app_env,
+        "deploy_commit": os.getenv("RAILWAY_GIT_COMMIT_SHA") or os.getenv("GIT_COMMIT_SHA"),
+        **db_runtime_info(),
+    }
     if not db_ok and db_error:
         payload["db_error"] = db_error[:500]
     return payload

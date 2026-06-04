@@ -36,6 +36,32 @@ def _normalize_database_url(database_url: str) -> str:
     return urlunparse(parsed._replace(query=urlencode(query)))
 
 
+def db_runtime_info() -> dict:
+    """Return safe DB connection diagnostics without secrets."""
+    raw = settings.database_url or ""
+    if not raw:
+        return {
+            "database_url_present": False,
+            "database_host": None,
+            "database_port": None,
+            "database_name": None,
+            "database_sslmode": None,
+        }
+
+    normalized = _normalize_database_url(raw)
+    parsed = urlparse(normalized)
+    query = dict(parse_qsl(parsed.query, keep_blank_values=True))
+    db_name = parsed.path.lstrip("/") or None
+
+    return {
+        "database_url_present": True,
+        "database_host": parsed.hostname,
+        "database_port": parsed.port,
+        "database_name": db_name,
+        "database_sslmode": query.get("sslmode"),
+    }
+
+
 @contextmanager
 def get_conn() -> Iterator[Any]:
     if not settings.database_url:
