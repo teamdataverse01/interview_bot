@@ -48,15 +48,22 @@ export default function Dashboard() {
   useEffect(() => {
     async function load() {
       try {
-        const [cfg, me, list] = await Promise.all([
-          apiGet("/config"),
-          apiGet("/me"),
-          apiGet("/sessions"),
-        ]);
+        // Render the dashboard shell as soon as config is available.
+        const cfg = await apiGet("/config");
         setConfig(cfg);
-        setCredits(me.credits);
-        setEmail(me.email ?? "");
-        setSessions(list.sessions ?? []);
+
+        try {
+          const [me, list] = await Promise.all([apiGet("/me"), apiGet("/sessions")]);
+          setCredits(me.credits);
+          setEmail(me.email ?? "");
+          setSessions(list.sessions ?? []);
+        } catch (e) {
+          setError(
+            e instanceof Error
+              ? `Backend database is unavailable: ${e.message}`
+              : "Backend database is unavailable.",
+          );
+        }
       } catch (e) {
         setError(e instanceof Error ? e.message : "Failed to load.");
       }
