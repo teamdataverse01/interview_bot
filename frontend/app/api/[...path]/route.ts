@@ -2,6 +2,18 @@ import { NextRequest, NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
 
+function sanitizeProxyResponseHeaders(headers: Headers): Headers {
+  const out = new Headers(headers);
+
+  // Remove headers that can become invalid after proxy/body transformations.
+  out.delete("content-encoding");
+  out.delete("content-length");
+  out.delete("transfer-encoding");
+  out.delete("connection");
+
+  return out;
+}
+
 function backendBaseUrl(): string {
   const backend = process.env.API_URL || process.env.NEXT_PUBLIC_API_URL;
 
@@ -28,6 +40,8 @@ async function proxy(request: NextRequest, path: string[]) {
   const headers = new Headers(request.headers);
   headers.delete("host");
   headers.delete("content-length");
+  // Avoid compressed upstream payloads that can break browser decoding after proxying.
+  headers.delete("accept-encoding");
 
   const init: RequestInit = {
     method: request.method,
@@ -41,7 +55,7 @@ async function proxy(request: NextRequest, path: string[]) {
 
   try {
     const response = await fetch(target, init);
-    const headers = new Headers(response.headers);
+    const headers = sanitizeProxyResponseHeaders(response.headers);
     headers.set("x-proxy-target", target.origin);
     return new NextResponse(response.body, {
       status: response.status,
