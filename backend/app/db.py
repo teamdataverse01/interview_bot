@@ -9,6 +9,7 @@ from __future__ import annotations
 from contextlib import contextmanager
 from pathlib import Path
 from typing import Any, Iterator
+from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 
 from app.config import settings
 
@@ -20,6 +21,21 @@ class DBNotConfigured(RuntimeError):
 _SCHEMA_APPLIED = False
 
 
+def _normalize_database_url(database_url: str) -> str:
+    """Ensure Supabase Postgres URLs always use TLS."""
+    parsed = urlparse(database_url)
+    host = (parsed.hostname or "").lower()
+    if not host.endswith("supabase.co"):
+        return database_url
+
+    query = dict(parse_qsl(parsed.query, keep_blank_values=True))
+    if "sslmode" in query:
+        return database_url
+
+    query["sslmode"] = "require"
+    return urlunparse(parsed._replace(query=urlencode(query)))
+
+
 @contextmanager
 def get_conn() -> Iterator[Any]:
     if not settings.database_url:
@@ -27,7 +43,11 @@ def get_conn() -> Iterator[Any]:
     import psycopg
     from psycopg.rows import dict_row
 
-    conn = psycopg.connect(settings.database_url, row_factory=dict_row, connect_timeout=15)
+    conn = psycopg.connect(
+        _normalize_database_url(settings.database_url),
+        row_factory=dict_row,
+        connect_timeout=15,
+    )
     try:
         yield conn
         conn.commit()
