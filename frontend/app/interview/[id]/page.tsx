@@ -1,12 +1,17 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import { apiGet, apiPost } from "@/lib/api";
 import { DEV_NO_AUTH } from "@/lib/devauth";
-import type { AnswerResponse, Evaluation, Message, Report, SessionDetail } from "@/lib/types";
+import type {
+  AnswerResponse, AppConfig, Evaluation, Message, Report, SessionDetail,
+} from "@/lib/types";
 import { Scorecard } from "@/components/Scorecard";
+import { ScoreRing } from "@/components/ScoreRing";
+import { TermDefs } from "@/components/TermDefs";
+import { findTerms } from "@/lib/glossary";
 
 export default function InterviewPage() {
   const router = useRouter();
@@ -15,11 +20,20 @@ export default function InterviewPage() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [evals, setEvals] = useState<Evaluation[]>([]);
   const [status, setStatus] = useState("active");
-  const [mode, setMode] = useState("Coached");
-  const [stageLabel, setStageLabel] = useState("");
-  const [report, setReport] = useState<Report | null>(null);
+  const [mode, setMode] = useState("Practice");
   const [persona, setPersona] = useState("");
+  const [report, setReport] = useState<Report | null>(null);
+  const [round, setRound] = useState(1);
+  const [qInRound, setQInRound] = useState(1);
+  const [roundSize, setRoundSize] = useState(4);
+  const [roundComplete, setRoundComplete] = useState(false);
+  const [roundSummary, setRoundSummary] = useState<Report | null>(null);
+  const [topics, setTopics] = useState<string[]>([]);
+  const [switchTopic, setSwitchTopic] = useState("");
+
   const [input, setInput] = useState("");
+  const [clarifyInput, setClarifyInput] = useState("");
+  const [showClarify, setShowClarify] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
@@ -27,21 +41,33 @@ export default function InterviewPage() {
   useEffect(() => {
     async function load() {
       try {
-        const d: SessionDetail = await apiGet(`/sessions/${id}`);
+        const [d, cfg] = await Promise.all([
+          apiGet(`/sessions/${id}`) as Promise<SessionDetail>,
+          apiGet(`/config`) as Promise<AppConfig>,
+        ]);
         setMessages(d.messages);
         setEvals(
           d.evaluations.map((e) => ({
             scores: e.scores, principles: e.principles, confidence_score: e.confidence,
             stronger_answer: e.stronger_answer, missed_concepts: e.missed_concepts,
-            star_notes: e.star_notes,
+            star_notes: e.star_notes, to_improve: (e as { to_improve?: string }).to_improve,
           }))
         );
         setStatus(d.session.status);
-        setMode(d.session.config.mode ?? "Coached");
+        setMode(d.session.config.mode ?? "Practice");
         setPersona(d.session.config.persona_key ?? "");
+        setSwitchTopic(d.session.config.interview_type ?? "");
         setReport(d.session.report);
-        const lastInt = [...d.messages].reverse().find((m) => m.sender === "interviewer");
-        setStageLabel(lastInt ? `Stage ${lastInt.stage}` : "");
+        setRoundSize(cfg.round_size ?? 4);
+        setTopics([...cfg.interview_types.technical, ...cfg.interview_types.behavioral]);
+        const answered = d.messages.filter((m) => m.sender === "candidate" && m.kind !== "ask").length;
+        const askedQ = d.messages.filter((m) => m.sender === "interviewer" && m.kind !== "clarify").length;
+        setRound(Math.max(1, Math.floor((askedQ - 1) / (cfg.round_size ?? 4)) + 1));
+        setQInRound(askedQ ? ((askedQ - 1) % (cfg.round_size ?? 4)) + 1 : 0);
+        // If the last answered question completed a round and no new question followed, pause.
+        if (answered > 0 && answered % (cfg.round_size ?? 4) === 0 && d.session.status === "active" && askedQ === answered) {
+          setRoundComplete(true);
+        }
       } catch (e) {
         setError(e instanceof Error ? e.message : "Failed to load session.");
       }
@@ -55,24 +81,31 @@ export default function InterviewPage() {
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages, report]);
+  }, [messages, report, roundComplete]);
+
+  function applyRoundInfo(r: AnswerResponse) {
+    if (r.round) setRound(r.round);
+    if (typeof r.question_in_round === "number") setQInRound(r.question_in_round);
+  }
 
   async function send() {
     const answer = input.trim();
-    if (!answer || sending || status !== "active") return;
+    if (!answer || sending || status !== "active" || roundComplete) return;
     setSending(true);
     setError(null);
-    setMessages((m) => [...m, { sender: "candidate", stage: 0, lens: null, content: answer }]);
+    setMessages((m) => [...m, { sender: "candidate", stage: 0, lens: null, content: answer, kind: "answer" }]);
     setInput("");
     try {
       const r: AnswerResponse = await apiPost(`/sessions/${id}/answer`, { answer });
       if (r.evaluation) setEvals((e) => [...e, r.evaluation!]);
-      setMessages((m) => [...m, { sender: "interviewer", stage: r.stage, lens: r.lens, content: r.question }]);
-      setStageLabel(r.stage_label);
-      if (r.finished) {
-        setStatus("completed");
-        if (r.report) setReport(r.report);
+      applyRoundInfo(r);
+      if (r.round_complete) {
+        setRoundComplete(true);
+        setRoundSummary(r.round_summary ?? null);
+      } else if (r.question) {
+        setMessages((m) => [...m, { sender: "interviewer", stage: r.stage, lens: r.lens, content: r.question!, kind: "question" }]);
       }
+      if (r.finished) { setStatus("completed"); if (r.report) setReport(r.report); }
     } catch (e) {
       setError(e instanceof Error ? e.message : "Failed to send.");
     } finally {
@@ -80,53 +113,183 @@ export default function InterviewPage() {
     }
   }
 
-  // zip candidate messages with evaluations in order
-  let candIdx = -1;
+  async function doContinue(withSwitch: boolean) {
+    setSending(true);
+    setError(null);
+    try {
+      const body = withSwitch && switchTopic ? { switch_topic: switchTopic } : {};
+      const r: AnswerResponse = await apiPost(`/sessions/${id}/continue`, body);
+      setRoundComplete(false);
+      setRoundSummary(null);
+      applyRoundInfo(r);
+      if (r.question) {
+        setMessages((m) => [...m, { sender: "interviewer", stage: r.stage, lens: r.lens, content: r.question!, kind: "question" }]);
+      }
+      if (r.finished) { setStatus("completed"); if (r.report) setReport(r.report); }
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Failed to continue.");
+    } finally {
+      setSending(false);
+    }
+  }
+
+  async function finishNow() {
+    setSending(true);
+    try {
+      const r = await apiPost(`/sessions/${id}/end`);
+      setReport(r.report);
+      setStatus("completed");
+      setRoundComplete(false);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Failed to finish.");
+    } finally {
+      setSending(false);
+    }
+  }
+
+  async function askClarify() {
+    const request = clarifyInput.trim();
+    if (!request || sending) return;
+    setSending(true);
+    setError(null);
+    setClarifyInput("");
+    setShowClarify(false);
+    setMessages((m) => [...m, { sender: "candidate", stage: 0, lens: null, content: request, kind: "ask" }]);
+    try {
+      const r = await apiPost(`/sessions/${id}/clarify`, { request });
+      setMessages((m) => [...m, { sender: "interviewer", stage: 0, lens: null, content: r.clarification, kind: "clarify" }]);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Failed to get clarification.");
+    } finally {
+      setSending(false);
+    }
+  }
+
+  // Track glossary terms already shown, and align evals to answered candidate messages.
+  const seen = useMemo(() => new Set<string>(), [messages.length]);
+  let answerIdx = -1;
 
   return (
     <main className="flex-1 max-w-3xl w-full mx-auto px-4 py-6 flex flex-col">
       <header className="flex items-center justify-between">
-        <a href="/dashboard" className="text-sm text-slate-400 hover:text-slate-200">← Dashboard</a>
-        <span className="text-sm text-slate-400 capitalize">
-          {persona} · {stageLabel} · <span className="text-slate-500">{mode}</span>
-        </span>
+        <a href="/dashboard" className="text-sm text-slate-500 hover:text-slate-800">← Dashboard</a>
+        <div className="flex items-center gap-3 text-sm">
+          <span className="rounded-full bg-sky-100 text-sky-700 px-3 py-1 font-medium">
+            Round {round} · Q{qInRound || 1}/{roundSize}
+          </span>
+          <span className="text-slate-500 capitalize">{persona === "generic" ? "General" : persona} · {mode}</span>
+        </div>
       </header>
 
       <div className="mt-4 flex-1 overflow-y-auto scroll-thin space-y-4 pr-1">
         {report && <ReportBanner report={report} />}
 
         {messages.map((m, i) => {
-          if (m.sender === "candidate") candIdx++;
-          const ev = m.sender === "candidate" ? evals[candIdx] : undefined;
-          return (
-            <div key={i}>
-              <div className={m.sender === "interviewer" ? "flex" : "flex justify-end"}>
-                <div
-                  className={`max-w-[85%] rounded-2xl px-4 py-3 ${
-                    m.sender === "interviewer"
-                      ? "bg-slate-800 text-slate-100 rounded-tl-sm"
-                      : "bg-sky-600 text-white rounded-tr-sm"
-                  }`}
-                >
-                  {m.sender === "interviewer" && (
-                    <p className="text-[11px] uppercase tracking-wide text-sky-300/80 mb-1">
-                      Interviewer {m.lens ? `· ${m.lens}` : ""}
-                    </p>
-                  )}
-                  <p className="whitespace-pre-wrap leading-relaxed">{m.content}</p>
+          if (m.kind === "ask") {
+            return (
+              <div key={i} className="flex justify-end">
+                <div className="max-w-[80%] rounded-2xl rounded-tr-sm bg-slate-100 text-slate-600 px-4 py-2 text-sm italic">
+                  ❓ {m.content}
                 </div>
               </div>
-              {ev && <div className="mt-2">{<Scorecard ev={ev} />}</div>}
+            );
+          }
+          if (m.kind === "clarify") {
+            return (
+              <div key={i} className="flex">
+                <div className="max-w-[85%] rounded-2xl rounded-tl-sm bg-violet-50 border border-violet-200 text-violet-900 px-4 py-2 text-sm">
+                  <span className="text-[11px] uppercase tracking-wide text-violet-500">Clarification</span>
+                  <p className="mt-0.5">{m.content}</p>
+                </div>
+              </div>
+            );
+          }
+          if (m.sender === "candidate") {
+            answerIdx++;
+            const ev = evals[answerIdx];
+            return (
+              <div key={i}>
+                <div className="flex justify-end">
+                  <div className="max-w-[85%] rounded-2xl rounded-tr-sm bg-sky-600 text-white px-4 py-3 leading-relaxed whitespace-pre-wrap">
+                    {m.content}
+                  </div>
+                </div>
+                {ev && <div className="mt-2">{<Scorecard ev={ev} />}</div>}
+              </div>
+            );
+          }
+          // interviewer question
+          const newTerms = findTerms(m.content).filter((t) => !seen.has(t));
+          newTerms.forEach((t) => seen.add(t));
+          return (
+            <div key={i} className="flex">
+              <div className="max-w-[85%]">
+                <div className="card px-4 py-3 leading-relaxed">
+                  <p className="text-[11px] uppercase tracking-wide text-sky-500 mb-1">
+                    Interviewer {m.lens ? `· ${m.lens}` : ""}
+                  </p>
+                  <p className="whitespace-pre-wrap text-slate-800">{m.content}</p>
+                </div>
+                <TermDefs terms={newTerms} />
+              </div>
             </div>
           );
         })}
         <div ref={bottomRef} />
       </div>
 
-      {error && <p className="text-rose-400 text-sm mt-2">{error}</p>}
+      {error && <p className="text-rose-500 text-sm mt-2">{error}</p>}
 
-      {status === "active" ? (
-        <div className="mt-3 border-t border-slate-800 pt-3">
+      {/* Round summary pause (Temi §3A) */}
+      {roundComplete ? (
+        <div className="mt-3 card p-5">
+          <div className="flex items-center gap-4">
+            {roundSummary && <ScoreRing score={roundSummary.overall_confidence} size={92} label={`Round ${round}`} />}
+            <div className="flex-1">
+              <p className="font-semibold text-lg">🎉 Round {round} complete!</p>
+              <p className="text-sm text-slate-600 mt-1">{roundSummary?.summary}</p>
+              {roundSummary?.next_focus && (
+                <p className="text-sm text-amber-700 mt-1">{roundSummary.next_focus}</p>
+              )}
+            </div>
+          </div>
+          <div className="mt-4 flex flex-wrap items-center gap-2">
+            <button onClick={() => doContinue(false)} disabled={sending}
+              className="px-5 py-2 rounded-lg bg-sky-600 hover:bg-sky-500 disabled:opacity-50 text-white font-semibold">
+              Continue interview →
+            </button>
+            <span className="text-slate-400">or switch topic:</span>
+            <select value={switchTopic} onChange={(e) => setSwitchTopic(e.target.value)}
+              className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm">
+              {topics.map((t) => <option key={t} value={t}>{t}</option>)}
+            </select>
+            <button onClick={() => doContinue(true)} disabled={sending}
+              className="px-4 py-2 rounded-lg border border-sky-300 text-sky-700 hover:bg-sky-50 font-medium">
+              Switch
+            </button>
+            <button onClick={finishNow} disabled={sending}
+              className="ml-auto px-4 py-2 rounded-lg text-slate-500 hover:text-slate-800">
+              Finish & see report
+            </button>
+          </div>
+        </div>
+      ) : status === "active" ? (
+        <div className="mt-3 border-t border-slate-200 pt-3">
+          {showClarify && (
+            <div className="mb-2 flex gap-2">
+              <input
+                value={clarifyInput}
+                onChange={(e) => setClarifyInput(e.target.value)}
+                onKeyDown={(e) => { if (e.key === "Enter") askClarify(); }}
+                placeholder="e.g. Can you give an example of what you're looking for?"
+                className="flex-1 rounded-lg border border-violet-300 bg-violet-50 px-3 py-2 text-sm outline-none"
+              />
+              <button onClick={askClarify} disabled={sending}
+                className="px-3 py-2 rounded-lg bg-violet-600 text-white text-sm font-medium disabled:opacity-50">
+                Ask
+              </button>
+            </div>
+          )}
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
@@ -134,23 +297,26 @@ export default function InterviewPage() {
             placeholder="Type your answer…  (Ctrl/⌘+Enter to send)"
             rows={3}
             disabled={sending}
-            className="w-full rounded-xl bg-slate-900 border border-slate-700 px-4 py-3 outline-none focus:border-sky-500 resize-none"
+            className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none focus:border-sky-500 resize-none"
           />
           <div className="flex justify-between items-center mt-2">
-            <span className="text-xs text-slate-500">{sending ? "Interviewer is thinking…" : ""}</span>
-            <button
-              onClick={send}
-              disabled={sending || !input.trim()}
-              className="px-5 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 disabled:opacity-50 font-semibold text-slate-950 transition"
-            >
-              Send
+            <button onClick={() => setShowClarify((s) => !s)}
+              className="text-sm text-violet-600 hover:text-violet-800">
+              {showClarify ? "Hide" : "🤔 Ask a clarifying question (not scored)"}
             </button>
+            <div className="flex items-center gap-3">
+              <span className="text-xs text-slate-400">{sending ? "Interviewer is thinking…" : `${roundSize - (qInRound || 0)} to finish round ${round}`}</span>
+              <button onClick={send} disabled={sending || !input.trim()}
+                className="px-5 py-2 rounded-lg bg-sky-600 hover:bg-sky-500 disabled:opacity-50 text-white font-semibold">
+                Send
+              </button>
+            </div>
           </div>
         </div>
       ) : (
-        <div className="mt-3 border-t border-slate-800 pt-3 text-center">
-          <p className="text-slate-400 text-sm">Interview complete.</p>
-          <a href="/dashboard" className="inline-block mt-2 text-sky-300 hover:text-sky-200">Back to dashboard →</a>
+        <div className="mt-3 border-t border-slate-200 pt-3 text-center">
+          <p className="text-slate-500 text-sm">Interview complete.</p>
+          <a href="/dashboard" className="inline-block mt-2 text-sky-600 hover:text-sky-700 font-medium">Back to dashboard →</a>
         </div>
       )}
     </main>
@@ -159,18 +325,25 @@ export default function InterviewPage() {
 
 function ReportBanner({ report }: { report: Report }) {
   return (
-    <div className="rounded-2xl border border-sky-800 bg-sky-950/30 p-5">
-      <div className="flex items-baseline justify-between">
-        <h2 className="font-semibold text-lg">Session report</h2>
-        <span className="text-2xl font-bold text-sky-300">{report.overall_confidence}<span className="text-base text-slate-400">/100</span></span>
+    <div className="card p-5">
+      <div className="flex items-center gap-5">
+        <ScoreRing score={report.overall_confidence} />
+        <div className="flex-1">
+          <h2 className="font-semibold text-lg">Your interview report</h2>
+          <p className="mt-1 text-sm text-slate-600">{report.summary}</p>
+          {report.strengths.length > 0 && (
+            <p className="mt-2 text-sm"><span className="text-slate-400">Strengths: </span>{report.strengths.join(", ")}</p>
+          )}
+          {report.weaknesses.length > 0 && (
+            <p className="text-sm"><span className="text-slate-400">Focus areas: </span>{report.weaknesses.join(", ")}</p>
+          )}
+          {report.next_focus && (
+            <p className="mt-2 text-sm rounded-lg bg-amber-50 border border-amber-200 p-2 text-amber-900">
+              🎯 {report.next_focus}
+            </p>
+          )}
+        </div>
       </div>
-      <p className="mt-2 text-sm text-slate-300">{report.summary}</p>
-      {report.strengths.length > 0 && (
-        <p className="mt-2 text-sm"><span className="text-slate-500">Strengths: </span>{report.strengths.join(", ")}</p>
-      )}
-      {report.weaknesses.length > 0 && (
-        <p className="text-sm"><span className="text-slate-500">Focus areas: </span>{report.weaknesses.join(", ")}</p>
-      )}
     </div>
   );
 }

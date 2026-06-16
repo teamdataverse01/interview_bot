@@ -43,12 +43,12 @@ export default function LoginPage() {
 
   return (
     <main className="flex-1 flex items-center justify-center px-6">
-      <div className="w-full max-w-md">
-        <a href="/" className="text-sky-400 font-semibold tracking-wide">DATAVERSE</a>
-        <h1 className="mt-2 text-2xl font-bold">
+      <div className="w-full max-w-md card p-7">
+        <a href="/" className="text-sky-600 font-semibold tracking-wide">DATAVERSE</a>
+        <h1 className="mt-2 text-2xl font-bold text-slate-800">
           {mode === "signin" ? "Welcome back" : "Create your account"}
         </h1>
-        <p className="text-slate-400 text-sm mt-1">
+        <p className="text-slate-500 text-sm mt-1">
           {mode === "signin" ? "Sign in to start a mock interview." : "Start with 3 free interview credits."}
         </p>
 
@@ -59,7 +59,7 @@ export default function LoginPage() {
             placeholder="you@email.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full rounded-lg bg-slate-900 border border-slate-700 px-4 py-3 outline-none focus:border-sky-500"
+            className="w-full rounded-lg bg-white border border-slate-300 px-4 py-3 outline-none focus:border-sky-500"
           />
           <input
             type="password"
@@ -68,21 +68,21 @@ export default function LoginPage() {
             placeholder="Password (min 6 chars)"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full rounded-lg bg-slate-900 border border-slate-700 px-4 py-3 outline-none focus:border-sky-500"
+            className="w-full rounded-lg bg-white border border-slate-300 px-4 py-3 outline-none focus:border-sky-500"
           />
           <button
             disabled={busy}
-            className="w-full rounded-lg bg-sky-500 hover:bg-sky-400 disabled:opacity-50 font-semibold text-slate-950 py-3 transition"
+            className="w-full rounded-lg bg-sky-600 hover:bg-sky-500 disabled:opacity-50 font-semibold text-white py-3 transition"
           >
             {busy ? "..." : mode === "signin" ? "Sign in" : "Sign up"}
           </button>
         </form>
 
-        {msg && <p className="mt-4 text-sm text-amber-300">{msg}</p>}
+        {msg && <p className="mt-4 text-sm text-amber-600">{msg}</p>}
 
         <button
           onClick={() => { setMode(mode === "signin" ? "signup" : "signin"); setMsg(null); }}
-          className="mt-6 text-sm text-slate-400 hover:text-slate-200"
+          className="mt-6 text-sm text-slate-500 hover:text-slate-800"
         >
           {mode === "signin" ? "Need an account? Sign up" : "Already have an account? Sign in"}
         </button>

@@ -1,0 +1,141 @@
+# Dataverse AI Interview Coach - Presentation Guide
+
+## 1. Opening (30-45s)
+Good [morning/afternoon], everyone.
+Today I am presenting Dataverse AI Interview Coach, a platform that helps data privacy professionals practice realistic interview scenarios and receive structured feedback in real time.
+
+The core problem we solve is simple:
+- Interview prep is generic
+- Feedback is often delayed or subjective
+- Candidates struggle to practice role-specific privacy and governance scenarios under pressure
+
+Dataverse fixes this with a guided, adaptive mock interview engine.
+
+---
+
+## 2. Problem -> Solution Narrative (60s)
+### Problem
+Candidates preparing for privacy roles (DPO, Privacy Program Manager, Compliance Manager) need:
+- Scenario depth
+- Role and industry context
+- Actionable feedback
+
+### Solution
+Dataverse AI Interview Coach provides:
+- Persona-based interviews (TikTok, Netflix, Strava, Generic FAANG)
+- Configurable role, level, interview type, and difficulty
+- Stage-based interview progression
+- Coached mode with per-answer evaluation and stronger answer suggestions
+
+---
+
+## 3. Product Walkthrough Script (Live Demo, 3-5 min)
+### Step A: Dashboard
+Say:
+"This is the dashboard where I compose a mock interview by selecting persona, role, level, interview type, and difficulty."
+
+Highlight:
+- Credits
+- Config panel
+- Session history
+
+### Step B: Start Interview
+Say:
+"When I click Start Interview, the system generates a context-aware opening question and starts a staged flow."
+
+Highlight:
+- Stage labels
+- Persona tone
+- Interview mode (Coached/Real)
+
+### Step C: Answer and Feedback
+Say:
+"After each response, the coach evaluates my answer across multiple dimensions like clarity, structure, regulatory understanding, and business alignment."
+
+Highlight:
+- Confidence score
+- Principle hit/miss indicators
+- Missed concepts
+- Stronger answer rewrite
+
+### Step D: Continuation (Important)
+Say:
+"The flow now continues reliably across turns, and each answer advances the interview state properly."
+
+Optional proof line:
+"We validated multi-turn continuity end-to-end in production before this presentation."
+
+---
+
+## 4. Technical Credibility (60-90s)
+Say:
+"Architecturally, the system runs as a two-service deployment."
+
+- Frontend: Next.js (Railway)
+- Backend: FastAPI (Railway)
+- Database: Supabase Postgres
+- API proxy: same-origin `/api/*` runtime forwarding
+- Auth mode: no-auth dev mode available for reliable demos
+
+Reliability points to mention:
+- Backend health endpoint and DB readiness checks
+- Runtime API proxy (avoids brittle build-time URL issues)
+- Resilient flow when LLM providers fail (fallback interviewer turn)
+
+---
+
+## 5. Value Proposition (45s)
+Dataverse creates value for:
+- Candidates: realistic prep + instant coaching
+- Teams: consistent interview readiness standards
+- Privacy leaders: faster onboarding and better hiring confidence
+
+---
+
+## 6. Closing (30s)
+"Dataverse AI Interview Coach transforms interview preparation from guesswork into measurable practice. Instead of practicing randomly, candidates now train with structure, role context, and immediate improvement guidance."
+
+"Thank you. I am happy to take questions."
+
+---
+
+## 7. Q&A Quick Answers
+### Q: Is this only for privacy roles?
+A: It is optimized for privacy/data governance now, but the architecture supports expansion to other domains.
+
+### Q: How do you ensure realistic answers?
+A: Persona-specific prompts, staged interview logic, and rubric-based evaluation keep responses grounded and consistent.
+
+### Q: What if the AI provider fails?
+A: The backend includes fallback behavior so interview continuity is maintained instead of crashing.
+
+### Q: Can this be enterprise-ready?
+A: Yes. The deployment model already separates frontend/backend, supports environment-based auth modes, and can be extended with tenant controls and analytics.
+
+---
+
+## 8. Presenter Checklist (Before Going Live)
+- Open dashboard URL and refresh once
+- Confirm health endpoint responds
+- Keep one prepared session in history as backup
+- Keep 2-3 strong sample answers ready to paste
+- If latency appears, narrate what is happening before clicking again
+
+---
+
+## 9. 5-Minute Time Plan
+- 0:00-0:45 Intro + problem
+- 0:45-1:45 Solution overview
+- 1:45-4:15 Live demo
+- 4:15-5:00 Architecture + close
+My biggest privacy incident lesson was this: legal-only response does not scale when systems move faster than approvals. In one incident, we had cross-region exposure from a misconfigured service, and our old process bottlenecked at policy interpretation instead of containment. We redesigned response to be engineering-led with legal embedded: pre-approved decision trees by data class, automated containment runbooks, and a single command channel with clear owners. The result was faster containment, cleaner regulator-ready documentation, and fewer repeat incidents. The key takeaway is that privacy incident response must be an operational capability, not a legal escalation queue.
+
+
+
+The most impactful change I led was replacing manual DPIA and vendor-risk triage with an automation-first privacy intake program across product teams in three regions.  
+
+We built a centralized intake workflow that auto-classified requests by data type, geography, and risk score, then routed low-risk items through pre-approved control templates while escalating only high-risk cases to legal and security. We also integrated policy checks into CI/CD gates so launches with missing controls were blocked automatically before production.  
+
+I measured success on four metrics: time-to-triage, percentage of automated approvals, high-risk escalation accuracy, and launch delay reduction. In two quarters, triage time dropped from days to hours, over 60% of requests were auto-resolved, and launch delays tied to privacy review fell by about a third.  
+
+The business outcome was faster product delivery with stronger compliance evidence, and we achieved global scale without adding headcount because we shifted privacy from a review queue to embedded operational controls.

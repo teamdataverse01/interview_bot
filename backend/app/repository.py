@@ -59,6 +59,10 @@ def update_stage(session_id: str, stage: int) -> None:
     query("update public.sessions set stage = %s where id = %s", (stage, session_id))
 
 
+def update_config(session_id: str, config: dict) -> None:
+    query("update public.sessions set config = %s where id = %s", (json.dumps(config), session_id))
+
+
 def finish_session(session_id: str, report: dict) -> None:
     query(
         "update public.sessions set status = 'completed', ended_at = now(), report = %s where id = %s",
@@ -76,18 +80,18 @@ def list_sessions(user_id: str) -> list[dict]:
 
 
 # --- messages --------------------------------------------------------------------
-def add_message(session_id: str, sender: str, stage: int, lens: str, content: str) -> str:
+def add_message(session_id: str, sender: str, stage: int, lens: str, content: str, kind: str = "turn") -> str:
     row = query_one(
-        "insert into public.messages (session_id, sender, stage, lens, content) "
-        "values (%s, %s, %s, %s, %s) returning id",
-        (session_id, sender, stage, lens, content),
+        "insert into public.messages (session_id, sender, stage, lens, content, kind) "
+        "values (%s, %s, %s, %s, %s, %s) returning id",
+        (session_id, sender, stage, lens, content, kind),
     )
     return str(row["id"])
 
 
 def get_messages(session_id: str) -> list[dict]:
     return query(
-        "select id, sender, stage, lens, content, created_at "
+        "select id, sender, stage, lens, content, kind, created_at "
         "from public.messages where session_id = %s order by created_at",
         (session_id,),
     )
@@ -97,18 +101,19 @@ def get_messages(session_id: str) -> list[dict]:
 def add_evaluation(message_id: str, session_id: str, ev: AnswerEvaluation) -> None:
     query(
         "insert into public.evaluations "
-        "(message_id, session_id, scores, principles, confidence, stronger_answer, missed_concepts, star_notes) "
-        "values (%s, %s, %s, %s, %s, %s, %s, %s)",
+        "(message_id, session_id, scores, principles, confidence, stronger_answer, missed_concepts, star_notes, to_improve) "
+        "values (%s, %s, %s, %s, %s, %s, %s, %s, %s)",
         (
             message_id, session_id, json.dumps(ev.scores), json.dumps(ev.principles),
             ev.confidence_score, ev.stronger_answer, json.dumps(ev.missed_concepts), ev.star_notes,
+            ev.to_improve,
         ),
     )
 
 
 def get_evaluations(session_id: str) -> list[dict]:
     return query(
-        "select message_id, scores, principles, confidence, stronger_answer, missed_concepts, star_notes "
+        "select message_id, scores, principles, confidence, stronger_answer, missed_concepts, star_notes, to_improve "
         "from public.evaluations where session_id = %s order by created_at",
         (session_id,),
     )
@@ -126,6 +131,7 @@ def evaluations_as_objects(session_id: str) -> list[AnswerEvaluation]:
                 stronger_answer=r.get("stronger_answer") or "",
                 missed_concepts=_as_list(r.get("missed_concepts")),
                 star_notes=r.get("star_notes") or "",
+                to_improve=r.get("to_improve") or "",
             )
         )
     return out

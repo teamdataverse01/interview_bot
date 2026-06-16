@@ -40,6 +40,7 @@ create table if not exists public.messages (
     stage       integer not null,
     lens        text,
     content     text not null,
+    kind        text not null default 'turn',           -- turn | question | answer | ask | clarify
     created_at  timestamptz not null default now()
 );
 create index if not exists messages_session_idx on public.messages(session_id, created_at);
@@ -55,9 +56,14 @@ create table if not exists public.evaluations (
     stronger_answer text,
     missed_concepts jsonb,
     star_notes      text,
+    to_improve      text,
     created_at      timestamptz not null default now()
 );
 create index if not exists evaluations_session_idx on public.evaluations(session_id);
+
+-- Idempotent column adds for databases created before these columns existed.
+alter table public.messages     add column if not exists kind text not null default 'turn';
+alter table public.evaluations  add column if not exists to_improve text;
 
 -- Knowledge base (schema-reserved; V1 RAG runs from local JSONL, M-future moves it here).
 create table if not exists public.documents (

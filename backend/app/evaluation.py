@@ -70,12 +70,29 @@ def _eval_system_prompt(persona: Persona, config: SessionConfig) -> str:
         if executive
         else "Principles here are coaching signals: note misses but they do not hard-cap the score."
     )
-    return f"""\
-You are a {persona.company} hiring manager AND a strict interview evaluator for Dataverse.
-You grade a single candidate answer the way an elite, FAANG-scale privacy hiring manager would.
 
-This {persona.company} interviewer specifically REWARDS: {', '.join(persona.rewards)}.
-This interviewer is ALLERGIC to: {', '.join(persona.penalizes)}.
+    if config.company_mode:
+        framing = (
+            f"You are a {persona.company} hiring manager AND a strict interview evaluator for Dataverse.\n"
+            f"This {persona.company} interviewer specifically REWARDS: {', '.join(persona.rewards)}.\n"
+            f"This interviewer is ALLERGIC to: {', '.join(persona.penalizes)}."
+        )
+        stronger_hint = "a rewritten, stronger version (3-4 sentences) in this company's preferred frame"
+    else:
+        # Company-neutral evaluation (default) — feedback must be transferable (Temi §1A).
+        framing = (
+            "You are a seasoned, COMPANY-NEUTRAL privacy hiring manager and strict evaluator for "
+            "Dataverse. Keep ALL feedback broadly applicable and transferable across organizations. "
+            "Do NOT frame the stronger answer around any specific employer. You may note when a concept "
+            "is company-specific (e.g., 'radical candor is a Netflix value') only as a brief aside.\n"
+            f"Generally REWARD: {', '.join(persona.rewards)}.\n"
+            f"Generally PENALIZE: {', '.join(persona.penalizes)}."
+        )
+        stronger_hint = "a rewritten, stronger version (3-4 sentences), company-neutral and broadly transferable"
+
+    return f"""\
+{framing}
+Grade this single candidate answer the way an elite privacy hiring manager would.
 
 Score these 8 DIMENSIONS, each an integer 0-10:
 {_dimensions_block()}
@@ -96,9 +113,10 @@ Return ONLY this JSON object:
                   "chaos": bool, "collaboration": bool, "operational_enabler": bool }},
   "principle_notes": "1-2 lines: which principles were missed and why it matters",
   "confidence_score": int,   // 0-100 overall interview readiness for THIS answer
-  "stronger_answer": "a rewritten, stronger version (3-4 sentences) in this company's preferred frame",
+  "stronger_answer": "{stronger_hint}",
   "missed_concepts": ["up to 4 specific frameworks/regulations/points the answer should have hit"],
-  "star_notes": "1-2 sentences: how to restructure this into Situation-Task-Action-Result"
+  "star_notes": "1-2 sentences: how to restructure this into Situation-Task-Action-Result",
+  "to_improve": "ONE specific, concrete change that would move THIS answer closest to 100"
 }}
 Be honest and exacting. Do not inflate scores. Keep every string field concise so the JSON is complete."""
 
@@ -118,6 +136,7 @@ def _coerce_eval(data: dict) -> AnswerEvaluation:
         stronger_answer=str(data.get("stronger_answer", "")),
         missed_concepts=[str(m) for m in missed][:8],
         star_notes=str(data.get("star_notes", "")),
+        to_improve=str(data.get("to_improve", "")),
     )
 
 
@@ -168,4 +187,65 @@ def build_report(evaluations: list[AnswerEvaluation], config: SessionConfig) -> 
         + (f"Elite principles to develop: {', '.join(weakest_principles)}." if weakest_principles else
            "Solid coverage of the elite principles.")
     )
+
+    # Gap analysis — the concrete path toward a higher score (Temi §5).
+    gap = 100 - report.overall_confidence
+    if gap <= 10:
+        report.next_focus = "You're at a strong, hire-ready level. Polish delivery and keep answers tight."
+    else:
+        levers = list(report.weaknesses)
+        if weakest_principles:
+            levers.append(weakest_principles[0].split(" (")[0].lower())
+        report.next_focus = (
+            f"To close the {gap}-point gap to 100: strengthen "
+            f"{', '.join(levers[:3]) or 'depth and specificity'}. "
+            "Lead with measurable business impact, quantified risk reasoning, and an automation/scale angle."
+        )
     return report
+
+
+def model_answer(config: SessionConfig, question: str) -> dict:
+    """Answer Bank (Temi follow-up): generate a strong model answer to an imported question.
+
+    Returns {answer, key_points[], principles_demonstrated[], coaching_note}. Company-neutral
+    unless the user is in an explicit company mode.
+    """
+    persona = _persona_for(config)
+    company_clause = (
+        f"Frame the answer for a {persona.company} interview."
+        if config.company_mode
+        else "Keep the answer company-neutral and broadly transferable across organizations."
+    )
+    system = (
+        "You are an elite privacy-career interview coach for Dataverse. Given an interview question, "
+        "write a model answer a top candidate would give. " + company_clause + " Ground it in real "
+        "privacy practice (DSAR/DPIA/RoPA, GDPR/CCPA, risk registers, automation, cross-functional "
+        "diplomacy) and the STAR structure where it fits.\n"
+        f"{_gold_block(config)}"
+        "Return ONLY this JSON:\n"
+        "{\n"
+        '  "answer": "a strong, structured model answer (5-8 sentences)",\n'
+        '  "key_points": ["3-5 bullet points the answer hits"],\n'
+        '  "principles_demonstrated": ["which of: efficiency-over-budget, automation, cross-pollination, '
+        'ambiguity/pivots, collaboration, compliance-as-enabler"],\n'
+        '  "coaching_note": "1 sentence on how to deliver it well"\n'
+        "}"
+    )
+    messages = [
+        {"role": "system", "content": system},
+        {"role": "user", "content": f"INTERVIEW QUESTION:\n{question}"},
+    ]
+    data = chat_json(messages, max_tokens=900, temperature=0.4)
+    return {
+        "question": question,
+        "answer": str(data.get("answer", "")),
+        "key_points": [str(x) for x in (data.get("key_points") or [])][:6],
+        "principles_demonstrated": [str(x) for x in (data.get("principles_demonstrated") or [])][:6],
+        "coaching_note": str(data.get("coaching_note", "")),
+    }
+
+
+def _persona_for(config: SessionConfig) -> Persona:
+    from app.personas import get_persona
+
+    return get_persona(config.persona_key)

@@ -17,11 +17,11 @@ from app import repository as repo
 from app.auth import User, resolve_user
 from app.config import settings
 from app.db import db_runtime_info, ensure_schema, ping_detail
-from app.evaluation import build_report, evaluate_answer
+from app.evaluation import build_report, evaluate_answer, model_answer
 from app.llm import LLMError
-from app.interviewer import next_turn
+from app.interviewer import clarify, next_turn
 from app.personas import get_persona, personas_payload
-from app.schemas import InterviewerTurn, STAGE_META, SessionConfig, Stage
+from app.schemas import ROUND_SIZE, InterviewerTurn, STAGE_META, SessionConfig, Stage
 from app.state_manager import InterviewSession, rehydrate_session
 from app.taxonomy import config_payload
 
@@ -65,19 +65,48 @@ class StartSessionBody(BaseModel):
     industry: str = "Social Media"
     level: str = "Director"
     scale: str = "Multi-project"
-    persona_key: str = "tiktok"
+    persona_key: str = "generic"
     interview_type: str = "Incident response"
     difficulty: str = "Senior"
-    mode: str = "Coached"
+    mode: str = "Practice"
 
 
 class AnswerBody(BaseModel):
     answer: str
 
 
+class ClarifyBody(BaseModel):
+    request: str
+
+
+class ContinueBody(BaseModel):
+    switch_topic: str | None = None
+
+
+class AnswerBankBody(BaseModel):
+    questions: list[str]
+    persona_key: str = "generic"
+    interview_type: str = "Incident response"
+    role: str = "Data Privacy Program Manager"
+    level: str = "Director"
+    difficulty: str = "Senior"
+
+
 class CreditBody(BaseModel):
     user_id: str
     delta: int
+
+
+def _round_info(engine: InterviewSession) -> dict:
+    """Gamification fields for the UI (Temi §3A, §4D)."""
+    asked = engine.questions_asked
+    return {
+        "round": engine.current_round,
+        "round_size": ROUND_SIZE,
+        "question_in_round": engine.question_in_round,
+        "questions_left_in_round": (ROUND_SIZE - engine.question_in_round) if asked else ROUND_SIZE,
+        "questions_asked": asked,
+    }
 
 
 def _fallback_turn(engine: InterviewSession) -> dict:
@@ -149,7 +178,7 @@ def start_session(body: StartSessionBody, user: User = Depends(current_user)) ->
     engine = InterviewSession(config)
     turn = next_turn(engine)
     engine.record_interviewer(turn)
-    repo.add_message(session_id, "interviewer", int(engine.state.stage), turn.lens, turn.question)
+    repo.add_message(session_id, "interviewer", int(engine.state.stage), turn.lens, turn.question, kind="question")
     repo.update_stage(session_id, int(engine.state.stage))
 
     return {
@@ -160,6 +189,7 @@ def start_session(body: StartSessionBody, user: User = Depends(current_user)) ->
         "question": turn.question,
         "mode": config.mode,
         "credits": repo.get_balance(user.id),
+        **_round_info(engine),
     }
 
 
@@ -174,15 +204,22 @@ def answer(session_id: str, body: AnswerBody, user: User = Depends(current_user)
     config = SessionConfig.from_dict(row["config"])
     persona = get_persona(config.persona_key)
     messages = repo.get_messages(session_id)
-    last_question = next((m["content"] for m in reversed(messages) if m["sender"] == "interviewer"), "")
+    # The question being answered = the most recent REAL interviewer question (not a clarification).
+    last_question = next(
+        (m["content"] for m in reversed(messages)
+         if m["sender"] == "interviewer" and (m.get("kind") or "turn") != "clarify"),
+        "",
+    )
 
     engine = rehydrate_session(config, int(row["stage"]), messages)
 
     # Record + persist the candidate's answer.
     engine.record_candidate(body.answer)
-    cand_msg_id = repo.add_message(session_id, "candidate", int(engine.state.stage), engine.state.lens, body.answer)
+    cand_msg_id = repo.add_message(
+        session_id, "candidate", int(engine.state.stage), engine.state.lens, body.answer, kind="answer"
+    )
 
-    # Evaluate it (always stored; surfaced inline only in Coached mode).
+    # Evaluate it (always stored; surfaced inline only in Practice mode).
     try:
         ev = evaluate_answer(persona, config, last_question, body.answer)
     except LLMError:
@@ -190,7 +227,28 @@ def answer(session_id: str, body: AnswerBody, user: User = Depends(current_user)
     if ev is not None:
         repo.add_evaluation(cand_msg_id, session_id, ev)
 
-    # Generate the next interviewer turn.
+    inline_eval = asdict(ev) if (ev is not None and config.inline_feedback) else None
+
+    # Round boundary: pause for a round summary + continue/switch-topic choice (Temi §3A).
+    if engine.at_round_boundary():
+        evals = repo.evaluations_as_objects(session_id)
+        round_summary = asdict(build_report(evals[-ROUND_SIZE:], config))
+        resp = {
+            "stage": int(engine.state.stage),
+            "stage_label": engine.stage_label,
+            "lens": engine.state.lens,
+            "question": None,
+            "action": "round_complete",
+            "finished": False,
+            "round_complete": True,
+            "round_summary": round_summary,
+            **_round_info(engine),
+        }
+        if inline_eval:
+            resp["evaluation"] = inline_eval
+        return resp
+
+    # Otherwise, generate the next interviewer turn.
     try:
         turn = next_turn(engine)
         engine.record_interviewer(turn)
@@ -205,9 +263,9 @@ def answer(session_id: str, body: AnswerBody, user: User = Depends(current_user)
         )
         if fallback["action"] == "advance" and engine.state.stage < Stage.REVERSE_AND_CLOSE:
             repo.update_stage(session_id, int(engine.state.stage))
-        repo.add_message(session_id, "interviewer", int(engine.state.stage), fallback["lens"], fallback["question"])
+        repo.add_message(session_id, "interviewer", int(engine.state.stage), fallback["lens"], fallback["question"], kind="question")
     else:
-        repo.add_message(session_id, "interviewer", int(engine.state.stage), turn.lens, turn.question)
+        repo.add_message(session_id, "interviewer", int(engine.state.stage), turn.lens, turn.question, kind="question")
         repo.update_stage(session_id, int(engine.state.stage))
 
     finished = engine.state.finished or turn.action == "close"
@@ -224,12 +282,107 @@ def answer(session_id: str, body: AnswerBody, user: User = Depends(current_user)
         "question": turn.question,
         "action": turn.action,
         "finished": finished,
+        **_round_info(engine),
     }
-    if config.mode == "Coached" and ev is not None:
-        resp["evaluation"] = asdict(ev)
+    if inline_eval:
+        resp["evaluation"] = inline_eval
     if report:
         resp["report"] = report
     return resp
+
+
+@app.post("/sessions/{session_id}/clarify")
+def clarify_question(session_id: str, body: ClarifyBody, user: User = Depends(current_user)) -> dict:
+    """Candidate asks a clarifying question — answered without scoring or advancing (Temi §1B/§1C)."""
+    row = repo.get_session(session_id, user.id)
+    if not row:
+        raise HTTPException(status_code=404, detail="Session not found.")
+    if row["status"] != "active":
+        raise HTTPException(status_code=409, detail="Session is not active.")
+
+    config = SessionConfig.from_dict(row["config"])
+    messages = repo.get_messages(session_id)
+    current_q = next(
+        (m["content"] for m in reversed(messages)
+         if m["sender"] == "interviewer" and (m.get("kind") or "turn") != "clarify"),
+        "",
+    )
+    engine = rehydrate_session(config, int(row["stage"]), messages)
+    try:
+        text = clarify(engine, current_q, body.request)
+    except LLMError:
+        text = "Take the question at face value — answer with a concrete, structured example from your experience."
+
+    repo.add_message(session_id, "candidate", int(row["stage"]), "clarify", body.request, kind="ask")
+    repo.add_message(session_id, "interviewer", int(row["stage"]), "clarify", text, kind="clarify")
+    return {"clarification": text}
+
+
+@app.post("/sessions/{session_id}/continue")
+def continue_interview(session_id: str, body: ContinueBody, user: User = Depends(current_user)) -> dict:
+    """Resume after a round summary; optionally switch topic (Temi §3A)."""
+    row = repo.get_session(session_id, user.id)
+    if not row:
+        raise HTTPException(status_code=404, detail="Session not found.")
+    if row["status"] != "active":
+        raise HTTPException(status_code=409, detail="Session is not active.")
+
+    config = SessionConfig.from_dict(row["config"])
+    messages = repo.get_messages(session_id)
+    engine = rehydrate_session(config, int(row["stage"]), messages)
+
+    if body.switch_topic:
+        engine.switch_topic(body.switch_topic)
+        repo.update_config(session_id, engine.config.to_dict())
+        repo.update_stage(session_id, int(engine.state.stage))
+
+    try:
+        turn = next_turn(engine)
+        engine.record_interviewer(turn)
+        repo.add_message(session_id, "interviewer", int(engine.state.stage), turn.lens, turn.question, kind="question")
+        repo.update_stage(session_id, int(engine.state.stage))
+    except LLMError:
+        fallback = _fallback_turn(engine)
+        turn = InterviewerTurn(question=fallback["question"], action=fallback["action"], lens=fallback["lens"])
+        repo.add_message(session_id, "interviewer", int(engine.state.stage), fallback["lens"], fallback["question"], kind="question")
+        repo.update_stage(session_id, int(engine.state.stage))
+
+    finished = engine.state.finished or turn.action == "close"
+    report = None
+    if finished:
+        evals = repo.evaluations_as_objects(session_id)
+        report = asdict(build_report(evals, config))
+        repo.finish_session(session_id, report)
+
+    resp = {
+        "stage": int(engine.state.stage),
+        "stage_label": engine.stage_label,
+        "lens": turn.lens,
+        "question": turn.question,
+        "action": turn.action,
+        "finished": finished,
+        **_round_info(engine),
+    }
+    if report:
+        resp["report"] = report
+    return resp
+
+
+@app.post("/answer-bank")
+def answer_bank(body: AnswerBankBody, user: User = Depends(current_user)) -> dict:
+    """Import interview questions and get strong model answers (Temi follow-up)."""
+    config = SessionConfig.from_dict(body.model_dump())
+    questions = [q.strip() for q in body.questions if q.strip()][:10]
+    if not questions:
+        raise HTTPException(status_code=400, detail="Provide at least one question.")
+    results = []
+    for q in questions:
+        try:
+            results.append(model_answer(config, q))
+        except LLMError:
+            results.append({"question": q, "answer": "Could not generate an answer (LLM unavailable).",
+                            "key_points": [], "principles_demonstrated": [], "coaching_note": ""})
+    return {"results": results}
 
 
 @app.post("/sessions/{session_id}/end")
@@ -256,7 +409,8 @@ def get_session_detail(session_id: str, user: User = Depends(current_user)) -> d
             "status": row["status"], "report": row.get("report"),
         },
         "messages": [
-            {"sender": m["sender"], "stage": m["stage"], "lens": m["lens"], "content": m["content"]}
+            {"sender": m["sender"], "stage": m["stage"], "lens": m["lens"],
+             "content": m["content"], "kind": m.get("kind") or "turn"}
             for m in repo.get_messages(session_id)
         ],
         "evaluations": repo.get_evaluations(session_id),

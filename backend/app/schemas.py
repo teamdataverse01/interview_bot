@@ -57,10 +57,20 @@ class SessionConfig:
     industry: str = "Social Media"
     level: str = "Director"               # IC | Manager | Director | VP
     scale: str = "Multi-project"
-    persona_key: str = "tiktok"           # netflix | tiktok | strava | generic
+    persona_key: str = "generic"          # generic (company-neutral) | netflix | tiktok | strava
     interview_type: str = "Incident response"
     difficulty: str = "Senior"            # Foundational | Intermediate | Senior | Executive (FAANG bar)
-    mode: str = "Coached"                 # Coached | Real (PRD §6)
+    mode: str = "Practice"                # Practice (inline feedback) | Realistic (feedback at end)
+
+    @property
+    def company_mode(self) -> bool:
+        """True only when the user explicitly picked a specific company (not 'generic')."""
+        return (self.persona_key or "generic").lower() != "generic"
+
+    @property
+    def inline_feedback(self) -> bool:
+        """Show feedback after every answer? (Practice mode). Accepts legacy 'Coached'."""
+        return (self.mode or "").lower() in ("practice", "coached")
 
     @classmethod
     def from_dict(cls, d: dict) -> "SessionConfig":
@@ -74,6 +84,11 @@ class SessionConfig:
             "scale": self.scale, "persona_key": self.persona_key,
             "interview_type": self.interview_type, "difficulty": self.difficulty, "mode": self.mode,
         }
+
+
+# Round-based pacing (Temi feedback §3A): pause every ROUND_SIZE real questions for a round
+# summary + continue/switch-topic choice.
+ROUND_SIZE = 4
 
 
 # How many question "slots" each stage gets, scaled by difficulty (more = longer, harder).
@@ -143,6 +158,7 @@ class AnswerEvaluation:
     stronger_answer: str = ""
     missed_concepts: list[str] = field(default_factory=list)
     star_notes: str = ""
+    to_improve: str = ""                                           # gap analysis: what gets this to 100
 
     @property
     def avg_score(self) -> float:
@@ -161,3 +177,4 @@ class SessionReport:
     weaknesses: list[str] = field(default_factory=list)
     answers_evaluated: int = 0
     summary: str = ""
+    next_focus: str = ""                    # gap analysis: the path toward a higher score

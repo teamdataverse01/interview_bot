@@ -8,6 +8,8 @@ export interface AppConfig {
   interview_types: { technical: string[]; behavioral: string[] };
   difficulties: string[];
   modes: string[];
+  mode_help?: Record<string, string>;
+  round_size?: number;
   personas: { key: string; company: string; industry: string; values: string[] }[];
 }
 
@@ -20,6 +22,7 @@ export interface Evaluation {
   stronger_answer: string;
   missed_concepts: string[];
   star_notes: string;
+  to_improve?: string;
 }
 
 export interface Report {
@@ -30,6 +33,23 @@ export interface Report {
   weaknesses: string[];
   answers_evaluated: number;
   summary: string;
+  next_focus?: string;
+}
+
+export interface RoundInfo {
+  round: number;
+  round_size: number;
+  question_in_round: number;
+  questions_left_in_round: number;
+  questions_asked: number;
+}
+
+export interface ModelAnswer {
+  question: string;
+  answer: string;
+  key_points: string[];
+  principles_demonstrated: string[];
+  coaching_note: string;
 }
 
 export interface StartResponse {
@@ -46,11 +66,18 @@ export interface AnswerResponse {
   stage: number;
   stage_label: string;
   lens: string;
-  question: string;
+  question: string | null;
   action: string;
   finished: boolean;
   evaluation?: Evaluation;
   report?: Report;
+  round_complete?: boolean;
+  round_summary?: Report;
+  round?: number;
+  round_size?: number;
+  question_in_round?: number;
+  questions_left_in_round?: number;
+  questions_asked?: number;
 }
 
 export interface Message {
@@ -58,6 +85,7 @@ export interface Message {
   stage: number;
   lens: string | null;
   content: string;
+  kind?: string; // turn | question | answer | ask | clarify
 }
 
 export interface SessionDetail {

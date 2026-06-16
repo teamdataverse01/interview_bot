@@ -127,12 +127,13 @@ STRAVA = Persona(
 
 GENERIC_FAANG = Persona(
     key="generic",
-    company="Generic FAANG",
-    industry="FAANG",
+    company="Any company (general)",
+    industry="General",
     system_voice=(
-        "A seasoned FAANG-scale privacy hiring manager. Neutral but demanding. You default to the "
-        "6 Elite Principles: efficiency over budget, automation, cross-pollinated reasoning, comfort "
-        "in chaos, cross-functional diplomacy, and compliance as a business enabler."
+        "A seasoned, company-neutral privacy hiring manager. Demanding but fair, with NO bias toward "
+        "any specific employer. You default to the 6 Elite Principles: efficiency over budget, "
+        "automation, cross-pollinated reasoning, comfort in chaos, cross-functional diplomacy, and "
+        "compliance as a business enabler. Keep everything broadly transferable across organizations."
     ),
     values=["Efficiency & scale", "Automation-first", "Defensibility", "Cross-functional alignment"],
     rewards=[
@@ -167,8 +168,12 @@ def get_persona(key: str) -> Persona:
 
 
 def personas_payload() -> list[dict]:
-    """Lightweight persona list for `GET /config` (frontend persona picker)."""
+    """Lightweight persona list for `GET /config` (frontend persona picker).
+
+    Generic (company-neutral) is listed FIRST so it is the default choice (Temi feedback §1A).
+    """
+    ordered = [GENERIC_FAANG, NETFLIX, TIKTOK, STRAVA]
     return [
         {"key": p.key, "company": p.company, "industry": p.industry, "values": p.values}
-        for p in PERSONAS.values()
+        for p in ordered
     ]

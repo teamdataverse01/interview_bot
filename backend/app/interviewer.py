@@ -12,7 +12,7 @@ from __future__ import annotations
 
 import json
 
-from app.llm import LLMError, chat_json
+from app.llm import LLMError, chat, chat_json
 from app.personas import Persona
 from app.schemas import InterviewerTurn, SessionConfig, Stage
 from app.state_manager import InterviewSession
@@ -57,9 +57,21 @@ Return ONLY a JSON object with these keys:
 """
 
 
-def _persona_block(p: Persona) -> str:
+def _persona_block(p: Persona, company_mode: bool) -> str:
+    if not company_mode:
+        # Company-neutral interviewer (default). No company framing; broadly transferable.
+        return (
+            "You are a seasoned, COMPANY-NEUTRAL privacy interviewer.\n"
+            f"Voice: {p.system_voice}\n"
+            "Do NOT tailor questions to any specific employer or name a company as 'us/we/here'. "
+            "Keep every question broadly applicable across organizations. You may briefly note that a "
+            "concept is associated with a company ONLY as a quick example when truly relevant "
+            "(e.g., 'radical candor is a Netflix value') — never frame the whole question around one.\n"
+            f"You REWARD answers that show: {', '.join(p.rewards)}.\n"
+            f"You are ALLERGIC to: {', '.join(p.penalizes)}."
+        )
     return (
-        f"You ARE a {p.company} interviewer.\n"
+        f"You ARE a {p.company} interviewer (the candidate explicitly chose a {p.company} interview).\n"
         f"Voice: {p.system_voice}\n"
         f"Cultural values you embody: {', '.join(p.values)}.\n"
         f"You REWARD answers that show: {', '.join(p.rewards)}.\n"
@@ -78,7 +90,8 @@ def _config_block(c: SessionConfig) -> str:
 def _exemplar_block(session: InterviewSession, query: str) -> str:
     """Retrieve real transcript exemplars to ground the question style (RAG)."""
     kb = _kb()
-    company = session.persona.company if session.persona.key != "generic" else None
+    company_mode = session.config.company_mode
+    company = session.persona.company if company_mode else None
     # Pull interviewer-style questions first; fall back to candidate exemplars for substance.
     hits = kb.search(
         query,
@@ -89,13 +102,20 @@ def _exemplar_block(session: InterviewSession, query: str) -> str:
     if not hits:
         hits = kb.search(query, interview_type=session.config.interview_type, top_k=3)
     if not hits:
-        return "No transcript exemplars matched; rely on the persona and rules."
-    lines = []
-    for h in hits:
-        lines.append(f"- ({h.company}/{h.lens}) Q: {h.question[:200]}")
+        return "No transcript exemplars matched; rely on the rules."
+
+    if company_mode:
+        lines = [f"- ({h.company}/{h.lens}) Q: {h.question[:200]}" for h in hits]
+        return (
+            "Real interview exemplars from this company/topic (calibrate the STYLE and DEPTH of your "
+            "question — do NOT copy verbatim):\n" + "\n".join(lines)
+        )
+    # Generic mode: strip company labels so questions stay company-neutral.
+    lines = [f"- ({h.lens}) Q: {h.question[:200]}" for h in hits]
     return (
-        "Real interview exemplars from this company/topic (use them to calibrate the STYLE and "
-        "DEPTH of your question — do NOT copy verbatim):\n" + "\n".join(lines)
+        "Anonymized question patterns from real privacy interviews across DIFFERENT companies. Use them "
+        "to calibrate STYLE and DEPTH only; produce a company-neutral question. Do NOT mention or imply "
+        "any specific employer:\n" + "\n".join(lines)
     )
 
 
@@ -103,7 +123,7 @@ def build_system_prompt(session: InterviewSession, query: str) -> str:
     p = session.persona
     return "\n\n".join(
         [
-            _persona_block(p),
+            _persona_block(p, session.config.company_mode),
             _config_block(session.config),
             _BEHAVIOR_RULES,
             _exemplar_block(session, query),
@@ -120,6 +140,29 @@ def _directive_with_memory(session: InterviewSession) -> str:
         directive += f"\n\nQuestions ALREADY asked (never repeat these):\n{recent}"
     directive += f"\n\nCurrent default lens: {session.state.lens}."
     return directive
+
+
+def clarify(session: InterviewSession, current_question: str, request: str) -> str:
+    """Answer a candidate's clarifying question about the CURRENT question (Temi §1B/§1C).
+
+    Does NOT reveal a model answer and does NOT advance state or get scored — it just helps the
+    candidate understand the question (rephrase, give an example of what's being asked, or define a
+    term/acronym). Returns the interviewer's short clarification text.
+    """
+    company_mode = session.config.company_mode
+    voice = session.persona.system_voice if company_mode else "a professional, company-neutral interviewer"
+    system = (
+        f"You are {voice}. The candidate asked a clarifying question about the question you just asked. "
+        "Briefly help them understand it: rephrase it more simply, give a concrete example of the KIND "
+        "of answer you're looking for, or define any term/acronym they ask about. "
+        "Do NOT answer the interview question for them and do NOT give away a model answer. "
+        "Keep it to 1-3 sentences, warm and encouraging. Return plain text only."
+    )
+    messages = [
+        {"role": "system", "content": system},
+        {"role": "user", "content": f"YOUR QUESTION:\n{current_question}\n\nCANDIDATE'S CLARIFYING REQUEST:\n{request}"},
+    ]
+    return chat(messages, max_tokens=180, temperature=0.5).strip()
 
 
 def next_turn(session: InterviewSession) -> InterviewerTurn:

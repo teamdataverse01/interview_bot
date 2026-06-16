@@ -17,6 +17,7 @@ from dataclasses import dataclass, field
 from app.personas import Persona, get_persona
 from app.schemas import (
     DIFFICULTY_SLOTS,
+    ROUND_SIZE,
     STAGE_META,
     InterviewerTurn,
     SessionConfig,
@@ -139,6 +140,35 @@ class InterviewSession:
     def _next_lens(self) -> str:
         return "operational" if self.state.stage == Stage.TECHNICAL else self.state.lens
 
+    # --- rounds (Temi §3A) ----------------------------------------------------------
+    @property
+    def questions_asked(self) -> int:
+        """Total real interview questions asked so far (excludes clarifications)."""
+        return len(self.state.asked_questions)
+
+    @property
+    def current_round(self) -> int:
+        return max(1, (self.questions_asked - 1) // ROUND_SIZE + 1)
+
+    @property
+    def question_in_round(self) -> int:
+        """1-based index of the most recent question within its round (1..ROUND_SIZE)."""
+        n = self.questions_asked
+        return ((n - 1) % ROUND_SIZE) + 1 if n else 0
+
+    def at_round_boundary(self) -> bool:
+        """True right after a round's last (ROUND_SIZE-th) question has been answered."""
+        return self.questions_asked > 0 and self.questions_asked % ROUND_SIZE == 0
+
+    def switch_topic(self, new_type: str) -> None:
+        """Begin a fresh technical round on a new interview type (Temi §3A switch-topic)."""
+        self.config.interview_type = new_type
+        self.state.config.interview_type = new_type
+        if self.state.stage >= Stage.TECHNICAL:
+            self.state.stage = Stage.TECHNICAL
+            self.state.questions_in_stage = 0
+            self.state.lens = "operational"
+
     # --- convenience ----------------------------------------------------------------
     def history_for_prompt(self, max_turns: int = 10) -> list[dict[str, str]]:
         """Recent transcript as chat messages (candidate=user, interviewer=assistant)."""
@@ -162,18 +192,21 @@ def rehydrate_session(config: SessionConfig, stage: int, messages: list[dict]) -
     session.state.stage = Stage(stage)
     for m in messages:
         sender = m["sender"]
+        kind = m.get("kind") or "turn"
         session.state.transcript.append(
             Turn(sender=sender, content=m["content"], stage=int(m["stage"]), lens=m.get("lens") or "mixed")
         )
-        if sender == "interviewer":
+        # Only real interviewer questions count as "asked" (exclude clarifications).
+        if sender == "interviewer" and kind != "clarify":
             session.state.asked_questions.append(m["content"])
-    # questions_in_stage = interviewer questions already asked in the current stage.
+    # questions_in_stage = real interviewer questions already asked in the current stage.
     session.state.questions_in_stage = sum(
-        1 for m in messages if m["sender"] == "interviewer" and int(m["stage"]) == stage
+        1 for m in messages
+        if m["sender"] == "interviewer" and (m.get("kind") or "turn") != "clarify" and int(m["stage"]) == stage
     )
-    # Carry the most recent interviewer lens.
+    # Carry the most recent interviewer (non-clarify) lens.
     for m in reversed(messages):
-        if m["sender"] == "interviewer":
+        if m["sender"] == "interviewer" and (m.get("kind") or "turn") != "clarify":
             session.state.lens = m.get("lens") or session.state.lens
             break
     return session

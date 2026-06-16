@@ -77,7 +77,12 @@ DIFFICULTIES: list[str] = [
     "Executive (FAANG bar)",
 ]
 
-RUN_MODES: list[str] = ["Coached", "Real"]  # PRD §6
+# Renamed for clarity (Temi feedback §1D). Internal logic still accepts legacy "Coached"/"Real".
+RUN_MODES: list[str] = ["Practice", "Realistic"]
+MODE_HELP: dict[str, str] = {
+    "Practice": "Coaching mode — you get a full scorecard and feedback after every answer.",
+    "Realistic": "Real-interview mode — no feedback mid-interview; you get the full report at the end.",
+}
 
 
 # --- Keyword classifiers (used by the ingestion pipeline to auto-tag transcript chunks) ---
@@ -140,4 +145,6 @@ def config_payload() -> dict:
         },
         "difficulties": DIFFICULTIES,
         "modes": RUN_MODES,
+        "mode_help": MODE_HELP,
+        "round_size": 4,
     }
