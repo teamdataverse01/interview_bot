@@ -41,3 +41,14 @@ export async function apiPost(path: string, body?: unknown) {
   });
   return handle(res);
 }
+
+// Multipart upload (e.g. audio for /transcribe). Don't set Content-Type — the browser adds the
+// multipart boundary automatically.
+export async function apiUpload(path: string, form: FormData) {
+  const res = await fetch(buildUrl(path), {
+    method: "POST",
+    headers: { ...(await authHeaders()) },
+    body: form,
+  });
+  return handle(res);
+}

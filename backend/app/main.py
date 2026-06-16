@@ -9,7 +9,7 @@ from __future__ import annotations
 from dataclasses import asdict
 import os
 
-from fastapi import Depends, FastAPI, Header, HTTPException
+from fastapi import Depends, FastAPI, File, Header, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
@@ -24,6 +24,7 @@ from app.personas import get_persona, personas_payload
 from app.schemas import ROUND_SIZE, InterviewerTurn, STAGE_META, SessionConfig, Stage
 from app.state_manager import InterviewSession, rehydrate_session
 from app.taxonomy import config_payload
+from app.transcribe import TranscribeError, transcribe_audio
 
 app = FastAPI(title="Dataverse AI Interview Coach", version="1.0")
 
@@ -164,6 +165,17 @@ def get_config() -> dict:
 @app.get("/me")
 def me(user: User = Depends(current_user)) -> dict:
     return {"id": user.id, "email": user.email, "is_admin": user.is_admin, "credits": repo.get_balance(user.id)}
+
+
+@app.post("/transcribe")
+async def transcribe(file: UploadFile = File(...), user: User = Depends(current_user)) -> dict:
+    """Speech-to-text for voice answers (Groq Whisper). Returns {text}."""
+    content = await file.read()
+    try:
+        text = transcribe_audio(content, file.filename or "audio.webm", file.content_type or "audio/webm")
+    except TranscribeError as e:
+        raise HTTPException(status_code=502, detail=str(e))
+    return {"text": text}
 
 
 # --- interview flow --------------------------------------------------------------

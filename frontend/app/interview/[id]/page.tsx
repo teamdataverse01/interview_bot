@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
-import { apiGet, apiPost } from "@/lib/api";
+import { apiGet, apiPost, apiUpload } from "@/lib/api";
 import { DEV_NO_AUTH } from "@/lib/devauth";
 import type {
   AnswerResponse, AppConfig, Evaluation, Message, Report, SessionDetail,
@@ -12,6 +12,7 @@ import { Scorecard } from "@/components/Scorecard";
 import { ScoreRing } from "@/components/ScoreRing";
 import { TermDefs } from "@/components/TermDefs";
 import { findTerms } from "@/lib/glossary";
+import { useAudioRecorder, useTextToSpeech } from "@/lib/useSpeech";
 
 export default function InterviewPage() {
   const router = useRouter();
@@ -37,6 +38,13 @@ export default function InterviewPage() {
   const [sending, setSending] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
+
+  // --- speech (Web Speech API) ---
+  const tts = useTextToSpeech();
+  const recorder = useAudioRecorder();
+  const [voiceOn, setVoiceOn] = useState(false);
+  const [transcribing, setTranscribing] = useState(false);
+  const lastSpokenRef = useRef("");
 
   useEffect(() => {
     async function load() {
@@ -83,6 +91,50 @@ export default function InterviewPage() {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, report, roundComplete]);
 
+  // Read the latest interviewer message aloud when voice is on.
+  useEffect(() => {
+    if (!voiceOn) return;
+    const lastInt = [...messages].reverse().find((m) => m.sender === "interviewer");
+    if (lastInt && lastInt.content !== lastSpokenRef.current) {
+      lastSpokenRef.current = lastInt.content;
+      tts.speak(lastInt.content);
+    }
+  }, [messages, voiceOn, tts]);
+
+  function toggleVoice() {
+    if (voiceOn) { tts.stop(); setVoiceOn(false); }
+    else {
+      setVoiceOn(true);
+      const lastInt = [...messages].reverse().find((m) => m.sender === "interviewer");
+      if (lastInt) { lastSpokenRef.current = lastInt.content; tts.speak(lastInt.content); }
+    }
+  }
+
+  async function toggleMic() {
+    if (transcribing) return;
+    if (recorder.recording) {
+      let blob: Blob;
+      try { blob = await recorder.stop(); } catch { return; }
+      setTranscribing(true);
+      setError(null);
+      try {
+        const ext = blob.type.includes("mp4") ? "mp4" : blob.type.includes("ogg") ? "ogg" : "webm";
+        const form = new FormData();
+        form.append("file", blob, `answer.${ext}`);
+        const r = await apiUpload("/transcribe", form);
+        const text: string = (r.text || "").trim();
+        if (text) setInput((prev) => (prev.trim() ? prev.trim() + " " : "") + text);
+      } catch (e) {
+        setError(e instanceof Error ? e.message : "Transcription failed.");
+      } finally {
+        setTranscribing(false);
+      }
+    } else {
+      setError(null);
+      try { await recorder.start(); } catch { setError("Microphone access denied or unavailable."); }
+    }
+  }
+
   function applyRoundInfo(r: AnswerResponse) {
     if (r.round) setRound(r.round);
     if (typeof r.question_in_round === "number") setQInRound(r.question_in_round);
@@ -90,7 +142,7 @@ export default function InterviewPage() {
 
   async function send() {
     const answer = input.trim();
-    if (!answer || sending || status !== "active" || roundComplete) return;
+    if (!answer || sending || status !== "active" || roundComplete || recorder.recording || transcribing) return;
     setSending(true);
     setError(null);
     setMessages((m) => [...m, { sender: "candidate", stage: 0, lens: null, content: answer, kind: "answer" }]);
@@ -174,6 +226,17 @@ export default function InterviewPage() {
       <header className="flex items-center justify-between">
         <a href="/dashboard" className="text-sm text-slate-500 hover:text-slate-800">← Dashboard</a>
         <div className="flex items-center gap-3 text-sm">
+          {tts.supported && (
+            <button
+              onClick={toggleVoice}
+              title={voiceOn ? "Turn off the interviewer's voice" : "Have the interviewer read questions aloud"}
+              className={`rounded-full px-3 py-1 font-medium border ${
+                voiceOn ? "bg-sky-600 text-white border-sky-600" : "border-slate-300 text-slate-600 hover:bg-slate-50"
+              }`}
+            >
+              {voiceOn ? "🔊 Voice on" : "🔈 Voice"}
+            </button>
+          )}
           <span className="rounded-full bg-sky-100 text-sky-700 px-3 py-1 font-medium">
             Round {round} · Q{qInRound || 1}/{roundSize}
           </span>
@@ -305,7 +368,21 @@ export default function InterviewPage() {
               {showClarify ? "Hide" : "🤔 Ask a clarifying question (not scored)"}
             </button>
             <div className="flex items-center gap-3">
-              <span className="text-xs text-slate-400">{sending ? "Interviewer is thinking…" : `${roundSize - (qInRound || 0)} to finish round ${round}`}</span>
+              <span className="text-xs text-slate-400">
+                {recorder.recording ? "🎙️ Recording… click 🎤 to stop" : transcribing ? "Transcribing…" : sending ? "Interviewer is thinking…" : `${roundSize - (qInRound || 0)} to finish round ${round}`}
+              </span>
+              {recorder.supported && (
+                <button
+                  onClick={toggleMic}
+                  disabled={sending || transcribing}
+                  title={recorder.recording ? "Stop & transcribe" : "Answer by voice"}
+                  className={`h-10 w-10 rounded-full border flex items-center justify-center disabled:opacity-50 ${
+                    recorder.recording ? "bg-rose-500 border-rose-500 text-white animate-pulse" : "border-slate-300 text-slate-600 hover:bg-slate-50"
+                  }`}
+                >
+                  {transcribing ? "…" : "🎤"}
+                </button>
+              )}
               <button onClick={send} disabled={sending || !input.trim()}
                 className="px-5 py-2 rounded-lg bg-sky-600 hover:bg-sky-500 disabled:opacity-50 text-white font-semibold">
                 Send
