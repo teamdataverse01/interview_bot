@@ -299,7 +299,7 @@ export default function InterviewPage() {
               <div className="max-w-[85%]">
                 <div className="card px-4 py-3 leading-relaxed">
                   <p className="text-[11px] uppercase tracking-wide text-violet-500 mb-1">
-                    Interviewer {m.lens ? `· ${m.lens}` : ""}
+                    Interviewer
                   </p>
                   <p className="whitespace-pre-wrap text-slate-800">{m.content}</p>
                 </div>
