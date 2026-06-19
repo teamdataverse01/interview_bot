@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { CookieConsent } from "@/components/CookieConsent";
 
 export const metadata: Metadata = {
   title: "Dataverse AI Interview Coach",
@@ -11,7 +12,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <CookieConsent />
+      </body>
     </html>
   );
 }

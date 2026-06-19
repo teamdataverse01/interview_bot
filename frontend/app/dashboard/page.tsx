@@ -101,26 +101,27 @@ export default function Dashboard() {
 
   return (
     <main className="flex-1 max-w-5xl w-full mx-auto px-6 py-8">
-      <header className="flex items-center justify-between">
+      <header className="rounded-2xl p-6 text-white shadow-lg flex items-center justify-between bg-linear-to-r from-violet-600 via-purple-600 to-fuchsia-600">
         <div>
-          <p className="text-violet-600 font-semibold tracking-wide">DATAVERSE</p>
-          <h1 className="text-2xl font-bold text-slate-800">Interview Coach</h1>
+          <p className="text-violet-100/90 font-semibold tracking-widest text-xs">DATAVERSE</p>
+          <h1 className="text-2xl font-bold">AI Interview Coach</h1>
+          <p className="text-violet-100/90 text-sm mt-1">Practice. Get scored. Level up. 🚀</p>
         </div>
         <div className="text-right text-sm">
-          <a href="/answer-bank" className="inline-block mb-1 rounded-lg border border-violet-300 text-violet-700 px-3 py-1.5 hover:bg-violet-50 font-medium">
+          <a href="/answer-bank" className="inline-block mb-2 rounded-lg bg-white/15 hover:bg-white/25 backdrop-blur px-3 py-1.5 font-medium transition">
             📚 Answer Bank
           </a>
-          <p className="text-slate-500">
-            Credits: <b className="text-violet-600">{credits ?? "…"}</b>
-            {!DEV_NO_AUTH && (<>{" · "}<button onClick={signOut} className="hover:text-slate-800 underline">Sign out</button></>)}
+          <p>
+            <span className="inline-flex items-center gap-1 rounded-full bg-white/20 px-3 py-1 font-semibold">💎 {credits ?? "…"} credits</span>
+            {!DEV_NO_AUTH && (<>{" "}<button onClick={signOut} className="ml-2 text-violet-100 hover:text-white underline">Sign out</button></>)}
           </p>
         </div>
       </header>
 
       {error && <p className="mt-4 text-rose-500 text-sm">{error}</p>}
 
-      <section className="mt-8 card p-6">
-        <h2 className="font-semibold text-lg text-slate-800">Start a mock interview</h2>
+      <section className="mt-8 card p-6 border-t-4 border-t-violet-500">
+        <h2 className="font-semibold text-lg text-slate-800">🎯 Start a mock interview</h2>
         <p className="text-sm text-slate-500">Compose your interview. Each session uses 1 credit.</p>
 
         <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -144,27 +145,27 @@ export default function Dashboard() {
         </p>
 
         <button onClick={start} disabled={starting || (credits ?? 0) <= 0}
-          className="mt-5 px-6 py-3 rounded-lg bg-violet-600 hover:bg-violet-500 disabled:opacity-50 text-white font-semibold transition">
-          {starting ? "Starting…" : (credits ?? 0) <= 0 ? "No credits left" : "Start interview"}
+          className="mt-5 px-6 py-3 rounded-lg bg-linear-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 disabled:opacity-50 text-white font-semibold transition shadow-md">
+          {starting ? "Starting…" : (credits ?? 0) <= 0 ? "No credits left" : "Start interview →"}
         </button>
       </section>
 
       <section className="mt-8">
-        <h2 className="font-semibold text-lg text-slate-800">Your sessions</h2>
+        <h2 className="font-semibold text-lg text-slate-800">📊 Your sessions</h2>
         {sessions.length === 0 ? (
           <p className="text-sm text-slate-500 mt-2">No interviews yet — start one above.</p>
         ) : (
           <div className="mt-3 space-y-2">
             {sessions.map((s) => (
               <a key={s.id} href={`/interview/${s.id}`}
-                className="flex items-center justify-between card px-4 py-3 hover:border-violet-300 transition">
+                className={`flex items-center justify-between card px-4 py-3 border-l-4 hover:shadow-md transition ${s.status === "completed" ? "border-l-emerald-400" : "border-l-amber-400"}`}>
                 <div className="text-sm">
-                  <span className="font-medium">{personaLabel(s.config.persona_key) || s.config.persona_key}</span>
+                  <span className="font-medium text-violet-700">{personaLabel(s.config.persona_key) || s.config.persona_key}</span>
                   <span className="text-slate-500"> · {s.config.interview_type} · {s.config.level} · {s.config.difficulty}</span>
                 </div>
                 <div className="text-sm text-slate-500">
-                  {s.overall_confidence ? <span className="text-violet-600 font-semibold">{s.overall_confidence}/100</span> : null}
-                  <span className={`ml-3 px-2 py-0.5 rounded-full text-xs ${s.status === "completed" ? "bg-emerald-50 text-emerald-700" : "bg-amber-50 text-amber-700"}`}>
+                  {s.overall_confidence ? <span className="rounded-full bg-violet-100 text-violet-700 px-2.5 py-0.5 font-bold">{s.overall_confidence}/100</span> : null}
+                  <span className={`ml-3 px-2 py-0.5 rounded-full text-xs ${s.status === "completed" ? "bg-emerald-100 text-emerald-700" : "bg-amber-100 text-amber-700"}`}>
                     {s.status}
                   </span>
                 </div>
