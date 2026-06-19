@@ -3,19 +3,21 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
-import { DEMO_MODE, DEV_NO_AUTH } from "@/lib/devauth";
+import { DEV_NO_AUTH } from "@/lib/devauth";
+import { isDemoMode } from "@/lib/gate";
 
 export default function Home() {
   const router = useRouter();
   const [checking, setChecking] = useState(true);
 
   useEffect(() => {
-    if (DEMO_MODE) { router.replace("/demo"); return; }
-    if (DEV_NO_AUTH) { router.replace("/dashboard"); return; }
-    supabase.auth.getSession().then(({ data }) => {
+    (async () => {
+      if (await isDemoMode()) { router.replace("/demo"); return; }
+      if (DEV_NO_AUTH) { router.replace("/dashboard"); return; }
+      const { data } = await supabase.auth.getSession();
       if (data.session) router.replace("/dashboard");
       else setChecking(false);
-    });
+    })();
   }, [router]);
 
   if (checking) return null;

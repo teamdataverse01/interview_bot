@@ -4,7 +4,8 @@ import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import { apiGet, apiPost } from "@/lib/api";
-import { DEMO_MODE, DEV_NO_AUTH, getDemoToken } from "@/lib/devauth";
+import { DEV_NO_AUTH, getDemoToken } from "@/lib/devauth";
+import { isDemoMode } from "@/lib/gate";
 import type { AppConfig, SessionListItem, StartResponse } from "@/lib/types";
 
 function Select({
@@ -53,17 +54,18 @@ export default function Dashboard() {
         setError(e instanceof Error ? e.message : "Failed to load.");
       }
     }
-    // In demo mode, only a redeemed token (e.g. the boss master code) can reach the dashboard.
-    if (DEMO_MODE) {
-      if (getDemoToken()) { load(); return; }
-      router.replace("/demo"); return;
-    }
-    if (DEV_NO_AUTH) { load(); return; }
-    supabase.auth.getSession().then(({ data }) => {
+    (async () => {
+      // In demo mode, only a redeemed token (e.g. the boss master code) can reach the dashboard.
+      if (await isDemoMode()) {
+        if (getDemoToken()) { load(); return; }
+        router.replace("/demo"); return;
+      }
+      if (DEV_NO_AUTH) { load(); return; }
+      const { data } = await supabase.auth.getSession();
       if (!data.session) { router.replace("/login"); return; }
       setEmail(data.session.user.email ?? "");
       load();
-    });
+    })();
   }, [router]);
 
   const typeOptions = useMemo(() => {
