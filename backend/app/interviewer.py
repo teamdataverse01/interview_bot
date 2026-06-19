@@ -14,7 +14,7 @@ import json
 
 from app.llm import LLMError, chat, chat_json
 from app.personas import Persona
-from app.schemas import InterviewerTurn, SessionConfig, Stage
+from app.schemas import InterviewerTurn, SessionConfig, Stage, difficulty_guidance
 from app.state_manager import InterviewSession
 from knowledge.retriever import KnowledgeBase
 
@@ -83,7 +83,8 @@ def _persona_block(p: Persona, company_mode: bool) -> str:
 def _config_block(c: SessionConfig) -> str:
     return (
         f"Candidate is interviewing for: {c.role} ({c.level}) in {c.industry}, scope: {c.scale}.\n"
-        f"Interview type focus: {c.interview_type}. Difficulty: {c.difficulty}."
+        f"Interview type focus: {c.interview_type}.\n"
+        f"{difficulty_guidance(c.difficulty)}"
     )
 
 
@@ -151,11 +152,17 @@ def clarify(session: InterviewSession, current_question: str, request: str) -> s
     """
     company_mode = session.config.company_mode
     voice = session.persona.system_voice if company_mode else "a professional, company-neutral interviewer"
+    beginner = session.config.difficulty == "Beginner"
+    level_note = (
+        " The candidate is a BEGINNER — explain in plain language, spell out any acronym, and keep it simple."
+        if beginner else ""
+    )
     system = (
         f"You are {voice}. The candidate asked a clarifying question about the question you just asked. "
         "Briefly help them understand it: rephrase it more simply, give a concrete example of the KIND "
-        "of answer you're looking for, or define any term/acronym they ask about. "
+        "of answer you're looking for, or define any term/acronym they ask about." + level_note + " "
         "Do NOT answer the interview question for them and do NOT give away a model answer. "
+        "This is NOT scored — reassure them it's fine to ask. "
         "Keep it to 1-3 sentences, warm and encouraging. Return plain text only."
     )
     messages = [

@@ -14,7 +14,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 from app import repository as repo
-from app.auth import User, resolve_user
+from app.auth import User, demo_user_id, resolve_user, sign_demo_token
 from app.config import settings
 from app.db import db_runtime_info, ensure_schema, ping_detail
 from app.evaluation import build_report, evaluate_answer, model_answer
@@ -80,6 +80,11 @@ class ClarifyBody(BaseModel):
     request: str
 
 
+class RetryBody(BaseModel):
+    question: str
+    answer: str
+
+
 class ContinueBody(BaseModel):
     switch_topic: str | None = None
 
@@ -96,6 +101,23 @@ class AnswerBankBody(BaseModel):
 class CreditBody(BaseModel):
     user_id: str
     delta: int
+
+
+class DemoRedeemBody(BaseModel):
+    code: str
+    role: str = "Data Privacy Program Manager"
+    industry: str = "Social Media"
+    level: str = "IC"
+    scale: str = "One project"
+    persona_key: str = "generic"
+    interview_type: str = "DSAR"
+    difficulty: str = "Beginner"
+    mode: str = "Practice"
+
+
+class DemoCodesBody(BaseModel):
+    count: int = 20
+    note: str = ""
 
 
 def _round_info(engine: InterviewSession) -> dict:
@@ -159,7 +181,7 @@ def health() -> dict:
 
 @app.get("/config")
 def get_config() -> dict:
-    return {**config_payload(), "personas": personas_payload()}
+    return {**config_payload(), "personas": personas_payload(), "demo_mode": settings.demo_mode}
 
 
 @app.get("/me")
@@ -176,6 +198,70 @@ async def transcribe(file: UploadFile = File(...), user: User = Depends(current_
     except TranscribeError as e:
         raise HTTPException(status_code=502, detail=str(e))
     return {"text": text}
+
+
+# --- demo mode (single-use access codes) -----------------------------------------
+@app.post("/demo/redeem")
+def demo_redeem(body: DemoRedeemBody) -> dict:
+    """Redeem a single-use demo code → creates ONE session and returns a code-scoped token.
+
+    Abuse-resistant: the code is claimed atomically (can't be reused), the demo identity gets
+    ZERO spare credits (so it can't start a second session), and the token is HMAC-signed.
+    """
+    code = (body.code or "").strip().upper()
+    if not code:
+        raise HTTPException(status_code=400, detail="Enter an access code.")
+
+    rec = repo.get_demo_code(code)
+    if not rec:
+        raise HTTPException(status_code=403, detail="Invalid access code.")
+
+    # Master (boss) code: reusable, unlocks the dashboard with plenty of credits.
+    if rec.get("kind") == "master":
+        uid = demo_user_id(code)
+        repo.ensure_master_user(uid)
+        return {"token": sign_demo_token(code), "master": True}
+
+    # Student code: single-use. Claim atomically so it can never be reused.
+    if rec.get("used_at") is not None or not repo.claim_demo_code(code):
+        raise HTTPException(status_code=403, detail="This access code has already been used.")
+
+    uid = demo_user_id(code)
+    repo.ensure_demo_user(uid)
+    config = SessionConfig.from_dict(body.model_dump())
+    try:
+        session_id = repo.create_session(uid, config.to_dict())
+        engine = InterviewSession(config)
+        turn = next_turn(engine)
+        engine.record_interviewer(turn)
+        repo.add_message(session_id, "interviewer", int(engine.state.stage), turn.lens, turn.question, kind="question")
+        repo.update_stage(session_id, int(engine.state.stage))
+        repo.attach_demo_session(code, session_id)
+    except Exception:
+        repo.release_demo_code(code)  # let the student retry if start failed
+        raise HTTPException(status_code=502, detail="Could not start the demo. Please try again.")
+
+    return {
+        "token": sign_demo_token(code),
+        "session_id": session_id,
+        "stage": int(engine.state.stage),
+        "stage_label": engine.stage_label,
+        "lens": turn.lens,
+        "question": turn.question,
+        "mode": config.mode,
+        **_round_info(engine),
+    }
+
+
+@app.post("/admin/demo-codes")
+def admin_create_demo_codes(body: DemoCodesBody, _: User = Depends(admin_user)) -> dict:
+    n = max(1, min(body.count, 500))
+    return {"codes": repo.generate_demo_codes(n, body.note)}
+
+
+@app.get("/admin/demo-codes")
+def admin_get_demo_codes(_: User = Depends(admin_user)) -> dict:
+    return {"codes": repo.admin_list_demo_codes()}
 
 
 # --- interview flow --------------------------------------------------------------
@@ -328,6 +414,28 @@ def clarify_question(session_id: str, body: ClarifyBody, user: User = Depends(cu
     repo.add_message(session_id, "candidate", int(row["stage"]), "clarify", body.request, kind="ask")
     repo.add_message(session_id, "interviewer", int(row["stage"]), "clarify", text, kind="clarify")
     return {"clarification": text}
+
+
+@app.post("/sessions/{session_id}/retry")
+def retry_answer(session_id: str, body: RetryBody, user: User = Depends(current_user)) -> dict:
+    """Re-attempt a question to see if the candidate has learned (Temi §2).
+
+    Re-scores a fresh answer to the SAME question and returns the new evaluation. This is a
+    learning tool: it does NOT advance the interview and does NOT count toward the session report
+    (so the final readiness score reflects first attempts). Practice mode only.
+    """
+    row = repo.get_session(session_id, user.id)
+    if not row:
+        raise HTTPException(status_code=404, detail="Session not found.")
+    config = SessionConfig.from_dict(row["config"])
+    persona = get_persona(config.persona_key)
+    if not body.answer.strip():
+        raise HTTPException(status_code=400, detail="Provide an answer to score.")
+    try:
+        ev = evaluate_answer(persona, config, body.question, body.answer)
+    except LLMError:
+        raise HTTPException(status_code=502, detail="Could not score the retry. Please try again.")
+    return {"evaluation": asdict(ev)}
 
 
 @app.post("/sessions/{session_id}/continue")

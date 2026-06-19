@@ -63,13 +63,22 @@ def _gold_block(config: SessionConfig) -> str:
 
 def _eval_system_prompt(persona: Persona, config: SessionConfig) -> str:
     executive = config.difficulty == "Executive (FAANG bar)"
-    gating = (
-        "This is an EXECUTIVE (FAANG-bar) interview. The 6 Elite Principles are HARD GATES: for "
-        "each principle the answer misses, lower the confidence_score substantially. A great-sounding "
-        "answer that ignores automation/scale or treats compliance as a checklist CANNOT score high."
-        if executive
-        else "Principles here are coaching signals: note misses but they do not hard-cap the score."
-    )
+    beginner = config.difficulty == "Beginner"
+    if executive:
+        gating = (
+            "This is an EXECUTIVE (FAANG-bar) interview. The 6 Elite Principles are HARD GATES: for "
+            "each principle the answer misses, lower the confidence_score substantially. A great-sounding "
+            "answer that ignores automation/scale or treats compliance as a checklist CANNOT score high."
+        )
+    elif beginner:
+        gating = (
+            "This is a BEGINNER interview. Grade ENCOURAGINGLY and against a beginner bar: reward correct "
+            "fundamentals, clear thinking, and good communication. Do NOT penalize for missing automation, "
+            "scale, or cross-pollination — those are advanced. The 6 Elite Principles are BONUS only, never "
+            "required. A clear, correct, basic answer should score well (70-90). Keep feedback supportive."
+        )
+    else:
+        gating = "Principles here are coaching signals: note misses but they do not hard-cap the score."
 
     if config.company_mode:
         framing = (

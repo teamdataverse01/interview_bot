@@ -6,10 +6,15 @@ Keeps SQL in one place so the API handlers stay thin.
 from __future__ import annotations
 
 import json
+import secrets
+import string
 from typing import Any
 
 from app.db import query, query_one
 from app.schemas import AnswerEvaluation, SessionReport
+
+# Unambiguous alphabet (no O/0/I/1) for human-friendly demo codes.
+_CODE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"
 
 
 # --- credits ---------------------------------------------------------------------
@@ -135,6 +140,91 @@ def evaluations_as_objects(session_id: str) -> list[AnswerEvaluation]:
             )
         )
     return out
+
+
+# --- demo codes (single-use gate) ------------------------------------------------
+def _new_code() -> str:
+    return "DV-" + "".join(secrets.choice(_CODE_ALPHABET) for _ in range(6))
+
+
+def generate_demo_codes(n: int, note: str = "") -> list[str]:
+    """Generate and persist `n` fresh single-use demo codes; return them."""
+    codes: list[str] = []
+    while len(codes) < n:
+        code = _new_code()
+        row = query_one(
+            "insert into public.demo_codes (code, note) values (%s, %s) "
+            "on conflict (code) do nothing returning code",
+            (code, note),
+        )
+        if row:
+            codes.append(code)
+    return codes
+
+
+def ensure_demo_user(user_id: str) -> None:
+    """Create the demo profile with ZERO credits (the one session is created by redeem)."""
+    query("insert into public.profiles (id, email) values (%s, 'demo') on conflict (id) do nothing", (user_id,))
+    query(
+        "insert into public.credits (user_id, balance) values (%s, 0) "
+        "on conflict (user_id) do update set balance = 0",
+        (user_id,),
+    )
+
+
+def get_demo_code(code: str) -> dict | None:
+    return query_one(
+        "select code, kind, used_at from public.demo_codes where code = %s", (code,)
+    )
+
+
+def create_master_code(code: str, note: str = "boss master code") -> None:
+    """A reusable admin code that unlocks the dashboard with plenty of credits."""
+    query(
+        "insert into public.demo_codes (code, note, kind) values (%s, %s, 'master') "
+        "on conflict (code) do update set kind = 'master'",
+        (code, note),
+    )
+
+
+def ensure_master_user(user_id: str) -> None:
+    """Admin demo identity with a big credit balance, topped up on every redeem (reusable)."""
+    query(
+        "insert into public.profiles (id, email, is_admin) values (%s, 'boss', true) "
+        "on conflict (id) do update set is_admin = true",
+        (user_id,),
+    )
+    query(
+        "insert into public.credits (user_id, balance) values (%s, 9999) "
+        "on conflict (user_id) do update set balance = 9999",
+        (user_id,),
+    )
+
+
+def claim_demo_code(code: str) -> bool:
+    """Atomically mark a code used. Returns False if it's invalid or already used."""
+    row = query_one(
+        "update public.demo_codes set used_at = now() "
+        "where code = %s and used_at is null returning code",
+        (code,),
+    )
+    return row is not None
+
+
+def attach_demo_session(code: str, session_id: str) -> None:
+    query("update public.demo_codes set session_id = %s where code = %s", (session_id, code))
+
+
+def release_demo_code(code: str) -> None:
+    """Roll back a claim if session creation failed after claiming."""
+    query("update public.demo_codes set used_at = null where code = %s", (code,))
+
+
+def admin_list_demo_codes() -> list[dict]:
+    return query(
+        "select code, note, session_id, used_at, created_at "
+        "from public.demo_codes order by created_at desc limit 500"
+    )
 
 
 # --- admin -----------------------------------------------------------------------

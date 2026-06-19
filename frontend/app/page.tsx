@@ -3,13 +3,14 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
-import { DEV_NO_AUTH } from "@/lib/devauth";
+import { DEMO_MODE, DEV_NO_AUTH } from "@/lib/devauth";
 
 export default function Home() {
   const router = useRouter();
   const [checking, setChecking] = useState(true);
 
   useEffect(() => {
+    if (DEMO_MODE) { router.replace("/demo"); return; }
     if (DEV_NO_AUTH) { router.replace("/dashboard"); return; }
     supabase.auth.getSession().then(({ data }) => {
       if (data.session) router.replace("/dashboard");
@@ -22,9 +23,9 @@ export default function Home() {
   return (
     <main className="flex-1 flex items-center justify-center px-6">
       <div className="max-w-2xl text-center">
-        <p className="text-sky-600 font-semibold tracking-wide">DATAVERSE</p>
+        <p className="text-violet-600 font-semibold tracking-wide">DATAVERSE</p>
         <h1 className="mt-3 text-4xl sm:text-5xl font-bold leading-tight text-slate-800">
-          AI Interview Coach for <span className="text-sky-600">privacy careers</span>
+          AI Interview Coach for <span className="text-violet-600">privacy careers</span>
         </h1>
         <p className="mt-5 text-slate-600 text-lg">
           Practice realistic mock interviews with an AI trained on real privacy interviews.
@@ -34,7 +35,7 @@ export default function Home() {
         <div className="mt-8 flex gap-3 justify-center">
           <a
             href="/login"
-            className="px-6 py-3 rounded-lg bg-sky-600 hover:bg-sky-500 font-semibold text-white transition shadow-sm"
+            className="px-6 py-3 rounded-lg bg-violet-600 hover:bg-violet-500 font-semibold text-white transition shadow-sm"
           >
             Get started
           </a>
@@ -46,7 +47,7 @@ export default function Home() {
             ["Scored on 8 metrics + 6 principles", "Readiness score, stronger answers, gap analysis."],
           ].map(([t, d]) => (
             <div key={t} className="card p-4">
-              <p className="font-semibold text-sky-700">{t}</p>
+              <p className="font-semibold text-violet-700">{t}</p>
               <p className="text-sm text-slate-500 mt-1">{d}</p>
             </div>
           ))}

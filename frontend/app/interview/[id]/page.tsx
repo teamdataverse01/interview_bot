@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import { apiGet, apiPost, apiUpload } from "@/lib/api";
-import { DEV_NO_AUTH } from "@/lib/devauth";
+import { DEMO_MODE, DEV_NO_AUTH, getDemoToken } from "@/lib/devauth";
 import type {
   AnswerResponse, AppConfig, Evaluation, Message, Report, SessionDetail,
 } from "@/lib/types";
@@ -80,7 +80,7 @@ export default function InterviewPage() {
         setError(e instanceof Error ? e.message : "Failed to load session.");
       }
     }
-    if (DEV_NO_AUTH) { load(); return; }
+    if (DEV_NO_AUTH || DEMO_MODE || getDemoToken()) { load(); return; }
     supabase.auth.getSession().then(({ data }) => {
       if (!data.session) { router.replace("/login"); return; }
       load();
@@ -231,13 +231,13 @@ export default function InterviewPage() {
               onClick={toggleVoice}
               title={voiceOn ? "Turn off the interviewer's voice" : "Have the interviewer read questions aloud"}
               className={`rounded-full px-3 py-1 font-medium border ${
-                voiceOn ? "bg-sky-600 text-white border-sky-600" : "border-slate-300 text-slate-600 hover:bg-slate-50"
+                voiceOn ? "bg-violet-600 text-white border-violet-600" : "border-slate-300 text-slate-600 hover:bg-slate-50"
               }`}
             >
               {voiceOn ? "🔊 Voice on" : "🔈 Voice"}
             </button>
           )}
-          <span className="rounded-full bg-sky-100 text-sky-700 px-3 py-1 font-medium">
+          <span className="rounded-full bg-violet-100 text-violet-700 px-3 py-1 font-medium">
             Round {round} · Q{qInRound || 1}/{roundSize}
           </span>
           <span className="text-slate-500 capitalize">{persona === "generic" ? "General" : persona} · {mode}</span>
@@ -270,14 +270,24 @@ export default function InterviewPage() {
           if (m.sender === "candidate") {
             answerIdx++;
             const ev = evals[answerIdx];
+            let qForAnswer = "";
+            for (let j = i - 1; j >= 0; j--) {
+              if (messages[j].sender === "interviewer" && messages[j].kind !== "clarify") {
+                qForAnswer = messages[j].content;
+                break;
+              }
+            }
             return (
               <div key={i}>
                 <div className="flex justify-end">
-                  <div className="max-w-[85%] rounded-2xl rounded-tr-sm bg-sky-600 text-white px-4 py-3 leading-relaxed whitespace-pre-wrap">
+                  <div className="max-w-[85%] rounded-2xl rounded-tr-sm bg-violet-600 text-white px-4 py-3 leading-relaxed whitespace-pre-wrap">
                     {m.content}
                   </div>
                 </div>
                 {ev && <div className="mt-2">{<Scorecard ev={ev} />}</div>}
+                {ev && mode === "Practice" && qForAnswer && (
+                  <RetryPanel sessionId={id} question={qForAnswer} originalScore={ev.confidence_score} />
+                )}
               </div>
             );
           }
@@ -288,7 +298,7 @@ export default function InterviewPage() {
             <div key={i} className="flex">
               <div className="max-w-[85%]">
                 <div className="card px-4 py-3 leading-relaxed">
-                  <p className="text-[11px] uppercase tracking-wide text-sky-500 mb-1">
+                  <p className="text-[11px] uppercase tracking-wide text-violet-500 mb-1">
                     Interviewer {m.lens ? `· ${m.lens}` : ""}
                   </p>
                   <p className="whitespace-pre-wrap text-slate-800">{m.content}</p>
@@ -318,7 +328,7 @@ export default function InterviewPage() {
           </div>
           <div className="mt-4 flex flex-wrap items-center gap-2">
             <button onClick={() => doContinue(false)} disabled={sending}
-              className="px-5 py-2 rounded-lg bg-sky-600 hover:bg-sky-500 disabled:opacity-50 text-white font-semibold">
+              className="px-5 py-2 rounded-lg bg-violet-600 hover:bg-violet-500 disabled:opacity-50 text-white font-semibold">
               Continue interview →
             </button>
             <span className="text-slate-400">or switch topic:</span>
@@ -327,7 +337,7 @@ export default function InterviewPage() {
               {topics.map((t) => <option key={t} value={t}>{t}</option>)}
             </select>
             <button onClick={() => doContinue(true)} disabled={sending}
-              className="px-4 py-2 rounded-lg border border-sky-300 text-sky-700 hover:bg-sky-50 font-medium">
+              className="px-4 py-2 rounded-lg border border-violet-300 text-violet-700 hover:bg-violet-50 font-medium">
               Switch
             </button>
             <button onClick={finishNow} disabled={sending}
@@ -360,7 +370,7 @@ export default function InterviewPage() {
             placeholder="Type your answer…  (Ctrl/⌘+Enter to send)"
             rows={3}
             disabled={sending}
-            className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none focus:border-sky-500 resize-none"
+            className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none focus:border-violet-500 resize-none"
           />
           <div className="flex justify-between items-center mt-2">
             <button onClick={() => setShowClarify((s) => !s)}
@@ -384,7 +394,7 @@ export default function InterviewPage() {
                 </button>
               )}
               <button onClick={send} disabled={sending || !input.trim()}
-                className="px-5 py-2 rounded-lg bg-sky-600 hover:bg-sky-500 disabled:opacity-50 text-white font-semibold">
+                className="px-5 py-2 rounded-lg bg-violet-600 hover:bg-violet-500 disabled:opacity-50 text-white font-semibold">
                 Send
               </button>
             </div>
@@ -393,7 +403,7 @@ export default function InterviewPage() {
       ) : (
         <div className="mt-3 border-t border-slate-200 pt-3 text-center">
           <p className="text-slate-500 text-sm">Interview complete.</p>
-          <a href="/dashboard" className="inline-block mt-2 text-sky-600 hover:text-sky-700 font-medium">Back to dashboard →</a>
+          <a href="/dashboard" className="inline-block mt-2 text-violet-600 hover:text-violet-700 font-medium">Back to dashboard →</a>
         </div>
       )}
     </main>
@@ -421,6 +431,74 @@ function ReportBanner({ report }: { report: Report }) {
           )}
         </div>
       </div>
+    </div>
+  );
+}
+
+// Retry a question to see if you've learned (Temi §2). Re-scores a fresh answer to the SAME
+// question; does not advance the interview or affect the final report.
+function RetryPanel({ sessionId, question, originalScore }: { sessionId: string; question: string; originalScore: number }) {
+  const [open, setOpen] = useState(false);
+  const [text, setText] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [result, setResult] = useState<Evaluation | null>(null);
+  const [err, setErr] = useState<string | null>(null);
+
+  async function submit() {
+    if (!text.trim() || busy) return;
+    setBusy(true);
+    setErr(null);
+    try {
+      const r = await apiPost(`/sessions/${sessionId}/retry`, { question, answer: text.trim() });
+      setResult(r.evaluation as Evaluation);
+    } catch (e) {
+      setErr(e instanceof Error ? e.message : "Could not score the retry.");
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  if (!open) {
+    return (
+      <button onClick={() => setOpen(true)} className="mt-2 text-sm text-violet-600 hover:text-violet-800 font-medium">
+        🔁 Try this question again
+      </button>
+    );
+  }
+
+  const delta = result ? result.confidence_score - originalScore : 0;
+  return (
+    <div className="mt-2 card p-4">
+      <p className="text-sm font-medium text-slate-700">
+        Practice this question again — see if you can raise your score (was {originalScore}/100).
+      </p>
+      <textarea
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        rows={3}
+        placeholder="Re-answer the question with what you just learned…"
+        className="mt-2 w-full rounded-lg bg-white border border-slate-300 px-3 py-2 outline-none focus:border-violet-500 resize-none"
+      />
+      <div className="flex items-center gap-3 mt-2 flex-wrap">
+        <button onClick={submit} disabled={busy || !text.trim()}
+          className="px-4 py-1.5 rounded-lg btn-brand text-sm font-semibold disabled:opacity-50">
+          {busy ? "Scoring…" : "Score my retry"}
+        </button>
+        <button onClick={() => { setOpen(false); setResult(null); setText(""); setErr(null); }}
+          className="text-sm text-slate-500 hover:text-slate-700">
+          Close
+        </button>
+        {result && (
+          <span className="text-sm">
+            New score: <b className="text-violet-700">{result.confidence_score}/100</b>{" "}
+            <span className={delta >= 0 ? "text-emerald-600" : "text-rose-500"}>
+              ({delta >= 0 ? "+" : ""}{delta})
+            </span>
+          </span>
+        )}
+      </div>
+      {err && <p className="text-rose-500 text-sm mt-2">{err}</p>}
+      {result?.to_improve && <p className="mt-2 text-sm text-amber-700">💡 {result.to_improve}</p>}
     </div>
   );
 }

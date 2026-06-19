@@ -13,6 +13,9 @@ venv/
 Transcriptions/temp.wav
 boss_doc.txt
 
+# Live access codes — never commit
+studentscodes.md
+
 # OS
 .DS_Store
 Thumbs.db

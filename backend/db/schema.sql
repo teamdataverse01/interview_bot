@@ -65,6 +65,18 @@ create index if not exists evaluations_session_idx on public.evaluations(session
 alter table public.messages     add column if not exists kind text not null default 'turn';
 alter table public.evaluations  add column if not exists to_improve text;
 
+-- Demo access codes — single-use gate for student demos (abuse-resistant).
+-- Each code permits exactly ONE interview session; claimed atomically on redeem.
+create table if not exists public.demo_codes (
+    code        text primary key,
+    note        text,
+    kind        text not null default 'student',        -- student (single-use) | master (reusable admin)
+    session_id  uuid,                                   -- the one session this code created
+    used_at     timestamptz,                            -- null = unused
+    created_at  timestamptz not null default now()
+);
+alter table public.demo_codes add column if not exists kind text not null default 'student';
+
 -- Knowledge base (schema-reserved; V1 RAG runs from local JSONL, M-future moves it here).
 create table if not exists public.documents (
     id              uuid primary key default gen_random_uuid(),

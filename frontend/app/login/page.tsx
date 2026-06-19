@@ -44,7 +44,7 @@ export default function LoginPage() {
   return (
     <main className="flex-1 flex items-center justify-center px-6">
       <div className="w-full max-w-md card p-7">
-        <a href="/" className="text-sky-600 font-semibold tracking-wide">DATAVERSE</a>
+        <a href="/" className="text-violet-600 font-semibold tracking-wide">DATAVERSE</a>
         <h1 className="mt-2 text-2xl font-bold text-slate-800">
           {mode === "signin" ? "Welcome back" : "Create your account"}
         </h1>
@@ -59,7 +59,7 @@ export default function LoginPage() {
             placeholder="you@email.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full rounded-lg bg-white border border-slate-300 px-4 py-3 outline-none focus:border-sky-500"
+            className="w-full rounded-lg bg-white border border-slate-300 px-4 py-3 outline-none focus:border-violet-500"
           />
           <input
             type="password"
@@ -68,11 +68,11 @@ export default function LoginPage() {
             placeholder="Password (min 6 chars)"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full rounded-lg bg-white border border-slate-300 px-4 py-3 outline-none focus:border-sky-500"
+            className="w-full rounded-lg bg-white border border-slate-300 px-4 py-3 outline-none focus:border-violet-500"
           />
           <button
             disabled={busy}
-            className="w-full rounded-lg bg-sky-600 hover:bg-sky-500 disabled:opacity-50 font-semibold text-white py-3 transition"
+            className="w-full rounded-lg bg-violet-600 hover:bg-violet-500 disabled:opacity-50 font-semibold text-white py-3 transition"
           >
             {busy ? "..." : mode === "signin" ? "Sign in" : "Sign up"}
           </button>

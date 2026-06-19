@@ -7,9 +7,11 @@ export interface AppConfig {
   scales: string[];
   interview_types: { technical: string[]; behavioral: string[] };
   difficulties: string[];
+  difficulty_help?: Record<string, string>;
   modes: string[];
   mode_help?: Record<string, string>;
   round_size?: number;
+  demo_mode?: boolean;
   personas: { key: string; company: string; industry: string; values: string[] }[];
 }
 

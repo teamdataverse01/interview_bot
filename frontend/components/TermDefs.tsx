@@ -9,7 +9,7 @@ export function TermDefs({ terms }: { terms: string[] }) {
         <span
           key={t}
           title={GLOSSARY[t]}
-          className="cursor-help rounded-full border border-sky-200 bg-sky-50 px-2 py-0.5 text-[11px] text-sky-700"
+          className="cursor-help rounded-full border border-violet-200 bg-violet-50 px-2 py-0.5 text-[11px] text-violet-700"
         >
           {t} <span className="opacity-60">ⓘ</span>
         </span>

@@ -1,5 +1,5 @@
 import { supabase } from "./supabase";
-import { DEV_NO_AUTH } from "./devauth";
+import { DEMO_MODE, DEV_NO_AUTH, getDemoToken } from "./devauth";
 
 function buildUrl(path: string): string {
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
@@ -7,6 +7,11 @@ function buildUrl(path: string): string {
 }
 
 async function authHeaders(): Promise<Record<string, string>> {
+  // A redeemed demo token always wins (single-use, code-scoped identity).
+  const demo = getDemoToken();
+  if (demo) return { Authorization: `Bearer ${demo}` };
+  // In demo mode there is no dev/anon fallback — access requires a demo token.
+  if (DEMO_MODE) return {};
   if (DEV_NO_AUTH) return { Authorization: "Bearer dev" };
   const { data } = await supabase.auth.getSession();
   const token = data.session?.access_token;

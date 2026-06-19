@@ -93,11 +93,39 @@ ROUND_SIZE = 4
 
 # How many question "slots" each stage gets, scaled by difficulty (more = longer, harder).
 DIFFICULTY_SLOTS: dict[str, dict[Stage, int]] = {
-    "Foundational": {Stage.INTRODUCTION: 1, Stage.EXPERIENCE: 1, Stage.TECHNICAL: 2, Stage.BEHAVIORAL: 1, Stage.REVERSE_AND_CLOSE: 1},
+    "Beginner":     {Stage.INTRODUCTION: 1, Stage.EXPERIENCE: 1, Stage.TECHNICAL: 2, Stage.BEHAVIORAL: 1, Stage.REVERSE_AND_CLOSE: 1},
     "Intermediate": {Stage.INTRODUCTION: 1, Stage.EXPERIENCE: 2, Stage.TECHNICAL: 2, Stage.BEHAVIORAL: 2, Stage.REVERSE_AND_CLOSE: 1},
     "Senior":       {Stage.INTRODUCTION: 1, Stage.EXPERIENCE: 2, Stage.TECHNICAL: 3, Stage.BEHAVIORAL: 3, Stage.REVERSE_AND_CLOSE: 2},
     "Executive (FAANG bar)": {Stage.INTRODUCTION: 1, Stage.EXPERIENCE: 2, Stage.TECHNICAL: 4, Stage.BEHAVIORAL: 3, Stage.REVERSE_AND_CLOSE: 2},
 }
+
+# How the interviewer should pitch questions at each difficulty (Temi §3 — Beginner was too hard).
+# Injected into the interviewer + evaluator prompts so the level genuinely changes the experience.
+DIFFICULTY_GUIDANCE: dict[str, str] = {
+    "Beginner": (
+        "DIFFICULTY = BEGINNER. The candidate is NEW to privacy. Ask plain-language, single-concept "
+        "questions about fundamentals (what a term means, why it matters, a basic 'what would you do'). "
+        "ALWAYS expand an acronym the first time you use it, e.g. 'a DSAR (Data Subject Access Request)'. "
+        "NO multi-part scenarios, NO obscure edge cases, NO heavy jargon, NO 'at scale / automation / "
+        "cross-functional' expectations. One short, approachable question at a time. Be warm and encouraging."
+    ),
+    "Intermediate": (
+        "DIFFICULTY = INTERMEDIATE. Working knowledge. Single-threaded scenario questions are fine. "
+        "Light jargon is OK but briefly clarify any niche term. Expect a clear process, not deep edge cases."
+    ),
+    "Senior": (
+        "DIFFICULTY = SENIOR. Experienced practitioner. Multi-part scenarios, lens switching, and probing "
+        "follow-ups are expected. Push for depth, trade-offs, and measurable impact."
+    ),
+    "Executive (FAANG bar)": (
+        "DIFFICULTY = EXECUTIVE (FAANG bar). Demanding. Ambiguous, high-stakes scenarios; expect automation, "
+        "scale, defensibility, and cross-functional strategy. Probe hard and do not accept surface answers."
+    ),
+}
+
+
+def difficulty_guidance(difficulty: str) -> str:
+    return DIFFICULTY_GUIDANCE.get(difficulty, DIFFICULTY_GUIDANCE["Senior"])
 
 
 @dataclass

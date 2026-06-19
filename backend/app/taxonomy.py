@@ -71,11 +71,19 @@ BEHAVIORAL_TYPES: list[str] = [
 INTERVIEW_TYPES: list[str] = TECHNICAL_TYPES + BEHAVIORAL_TYPES
 
 DIFFICULTIES: list[str] = [
-    "Foundational",
+    "Beginner",
     "Intermediate",
     "Senior",
     "Executive (FAANG bar)",
 ]
+
+# Plain-language help shown under the difficulty picker (Temi §3 — beginner was too hard).
+DIFFICULTY_HELP: dict[str, str] = {
+    "Beginner": "New to privacy — plain-language questions on the fundamentals, acronyms explained.",
+    "Intermediate": "Working knowledge — clear scenario questions, light jargon.",
+    "Senior": "Experienced — multi-part scenarios, follow-ups, trade-offs.",
+    "Executive (FAANG bar)": "Top bar — ambiguous, high-stakes, expects automation, scale & strategy.",
+}
 
 # Renamed for clarity (Temi feedback §1D). Internal logic still accepts legacy "Coached"/"Real".
 RUN_MODES: list[str] = ["Practice", "Realistic"]
@@ -144,6 +152,7 @@ def config_payload() -> dict:
             "behavioral": BEHAVIORAL_TYPES,
         },
         "difficulties": DIFFICULTIES,
+        "difficulty_help": DIFFICULTY_HELP,
         "modes": RUN_MODES,
         "mode_help": MODE_HELP,
         "round_size": 4,

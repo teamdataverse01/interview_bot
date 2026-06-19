@@ -128,6 +128,15 @@ class Settings:
     app_env: str = _get("APP_ENV", "development")
     # Comma-separated allowed CORS origins (the frontend URL in prod); "*" allows all.
     cors_origins: str = _get("CORS_ORIGINS", "*")
+    # Demo mode: gate access behind single-use codes and DISABLE the `Bearer dev` bypass.
+    demo_mode: bool = _get("DEMO_MODE", "false").lower() in ("1", "true", "yes")
+    # Secret used to sign demo session tokens (falls back to the service key).
+    demo_secret: str = _get("DEMO_SECRET", "") or _first_env("SUPABASE_SERVICE_KEY", "APIKEY") or "dataverse-demo"
+
+    @property
+    def dev_bypass_enabled(self) -> bool:
+        """The `Bearer dev` shortcut is allowed only outside production AND outside demo mode."""
+        return self.app_env != "production" and not self.demo_mode
 
     @property
     def has_llm(self) -> bool:

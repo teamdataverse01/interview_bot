@@ -10,6 +10,9 @@ fixed dev user, so the API is testable without a real frontend login.
 
 from __future__ import annotations
 
+import hashlib
+import hmac
+import uuid
 from dataclasses import dataclass
 
 from app.config import settings
@@ -17,12 +20,37 @@ from app.config import settings
 DEV_USER_ID = "00000000-0000-0000-0000-000000000001"
 DEV_USER_EMAIL = "dev@dataverse.local"
 
+_DEMO_NS = uuid.UUID("da000000-0000-4000-8000-000000000001")
+
 
 @dataclass
 class User:
     id: str
     email: str
     is_admin: bool = False
+    is_demo: bool = False
+
+
+# --- demo session tokens (single-use code grants a signed, code-scoped token) ----
+def demo_user_id(code: str) -> str:
+    """Deterministic, isolated user id for a demo code (so its session can't be reused)."""
+    return str(uuid.uuid5(_DEMO_NS, code))
+
+
+def sign_demo_token(code: str) -> str:
+    """Return an unforgeable token `demo.<code>.<sig>` for a redeemed code."""
+    sig = hmac.new(settings.demo_secret.encode(), code.encode(), hashlib.sha256).hexdigest()[:32]
+    return f"demo.{code}.{sig}"
+
+
+def _verify_demo_token(token: str) -> str | None:
+    """Return the code if the demo token signature is valid, else None."""
+    parts = token.split(".")
+    if len(parts) != 3 or parts[0] != "demo":
+        return None
+    code, sig = parts[1], parts[2]
+    expected = hmac.new(settings.demo_secret.encode(), code.encode(), hashlib.sha256).hexdigest()[:32]
+    return code if hmac.compare_digest(sig, expected) else None
 
 
 def _verify_supabase_token(token: str) -> tuple[str, str] | None:
@@ -49,8 +77,17 @@ def resolve_user(auth_header: str | None) -> User | None:
         return None
     token = auth_header.split(" ", 1)[1].strip()
 
-    # Local dev shortcut.
-    if token == "dev" and settings.app_env != "production":
+    # Demo token (single-use code-scoped identity) — valid even in demo mode.
+    if token.startswith("demo."):
+        code = _verify_demo_token(token)
+        if not code:
+            return None
+        uid = demo_user_id(code)
+        is_admin = _ensure_profile(uid, f"demo+{code}@dataverse.local")
+        return User(id=uid, email="demo", is_admin=is_admin, is_demo=True)
+
+    # Local dev shortcut (disabled in production AND in demo mode).
+    if token == "dev" and settings.dev_bypass_enabled:
         _ensure_profile(DEV_USER_ID, DEV_USER_EMAIL)
         return User(id=DEV_USER_ID, email=DEV_USER_EMAIL, is_admin=True)
 

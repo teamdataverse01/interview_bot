@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import { apiGet, apiPost } from "@/lib/api";
-import { DEV_NO_AUTH } from "@/lib/devauth";
+import { DEMO_MODE, DEV_NO_AUTH, getDemoToken } from "@/lib/devauth";
 import type { AppConfig, SessionListItem, StartResponse } from "@/lib/types";
 
 function Select({
@@ -16,7 +16,7 @@ function Select({
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 outline-none focus:border-sky-500"
+        className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 outline-none focus:border-violet-500"
       >
         {options.map((o) => (
           <option key={o} value={o}>{render ? render(o) : o}</option>
@@ -52,6 +52,11 @@ export default function Dashboard() {
       } catch (e) {
         setError(e instanceof Error ? e.message : "Failed to load.");
       }
+    }
+    // In demo mode, only a redeemed token (e.g. the boss master code) can reach the dashboard.
+    if (DEMO_MODE) {
+      if (getDemoToken()) { load(); return; }
+      router.replace("/demo"); return;
     }
     if (DEV_NO_AUTH) { load(); return; }
     supabase.auth.getSession().then(({ data }) => {
@@ -96,15 +101,15 @@ export default function Dashboard() {
     <main className="flex-1 max-w-5xl w-full mx-auto px-6 py-8">
       <header className="flex items-center justify-between">
         <div>
-          <p className="text-sky-600 font-semibold tracking-wide">DATAVERSE</p>
+          <p className="text-violet-600 font-semibold tracking-wide">DATAVERSE</p>
           <h1 className="text-2xl font-bold text-slate-800">Interview Coach</h1>
         </div>
         <div className="text-right text-sm">
-          <a href="/answer-bank" className="inline-block mb-1 rounded-lg border border-sky-300 text-sky-700 px-3 py-1.5 hover:bg-sky-50 font-medium">
+          <a href="/answer-bank" className="inline-block mb-1 rounded-lg border border-violet-300 text-violet-700 px-3 py-1.5 hover:bg-violet-50 font-medium">
             📚 Answer Bank
           </a>
           <p className="text-slate-500">
-            Credits: <b className="text-sky-600">{credits ?? "…"}</b>
+            Credits: <b className="text-violet-600">{credits ?? "…"}</b>
             {!DEV_NO_AUTH && (<>{" · "}<button onClick={signOut} className="hover:text-slate-800 underline">Sign out</button></>)}
           </p>
         </div>
@@ -129,14 +134,15 @@ export default function Dashboard() {
         </div>
 
         <p className="mt-2 text-xs text-slate-500">
+          {config.difficulty_help?.[difficulty] ? `${difficulty}: ${config.difficulty_help[difficulty]} · ` : ""}
           {persona === "generic"
-            ? "General mode: feedback stays transferable across companies."
+            ? "General mode keeps feedback transferable across companies."
             : `${personaLabel(persona)} mode: tailored to ${personaLabel(persona)}'s culture.`}
           {config.mode_help?.[mode] ? ` · ${config.mode_help[mode]}` : ""}
         </p>
 
         <button onClick={start} disabled={starting || (credits ?? 0) <= 0}
-          className="mt-5 px-6 py-3 rounded-lg bg-sky-600 hover:bg-sky-500 disabled:opacity-50 text-white font-semibold transition">
+          className="mt-5 px-6 py-3 rounded-lg bg-violet-600 hover:bg-violet-500 disabled:opacity-50 text-white font-semibold transition">
           {starting ? "Starting…" : (credits ?? 0) <= 0 ? "No credits left" : "Start interview"}
         </button>
       </section>
@@ -149,13 +155,13 @@ export default function Dashboard() {
           <div className="mt-3 space-y-2">
             {sessions.map((s) => (
               <a key={s.id} href={`/interview/${s.id}`}
-                className="flex items-center justify-between card px-4 py-3 hover:border-sky-300 transition">
+                className="flex items-center justify-between card px-4 py-3 hover:border-violet-300 transition">
                 <div className="text-sm">
                   <span className="font-medium">{personaLabel(s.config.persona_key) || s.config.persona_key}</span>
                   <span className="text-slate-500"> · {s.config.interview_type} · {s.config.level} · {s.config.difficulty}</span>
                 </div>
                 <div className="text-sm text-slate-500">
-                  {s.overall_confidence ? <span className="text-sky-600 font-semibold">{s.overall_confidence}/100</span> : null}
+                  {s.overall_confidence ? <span className="text-violet-600 font-semibold">{s.overall_confidence}/100</span> : null}
                   <span className={`ml-3 px-2 py-0.5 rounded-full text-xs ${s.status === "completed" ? "bg-emerald-50 text-emerald-700" : "bg-amber-50 text-amber-700"}`}>
                     {s.status}
                   </span>
