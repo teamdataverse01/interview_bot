@@ -512,7 +512,7 @@ def end_session(session_id: str, user: User = Depends(current_user)) -> dict:
         raise HTTPException(status_code=404, detail="Session not found.")
     config = SessionConfig.from_dict(row["config"])
     evals = repo.evaluations_as_objects(session_id)
-    report = asdict(build_report(evals, config))
+    report = asdict(build_report(evals, config, final=True))
     if row["status"] == "active":
         repo.finish_session(session_id, report)
     return {"session_id": session_id, "report": report}
