@@ -13,6 +13,7 @@ import { ScoreRing } from "@/components/ScoreRing";
 import { TermDefs } from "@/components/TermDefs";
 import { findTerms } from "@/lib/glossary";
 import { useAudioRecorder, useTextToSpeech } from "@/lib/useSpeech";
+import { downloadReportPdf } from "@/lib/pdf";
 
 export default function InterviewPage() {
   const router = useRouter();
@@ -23,6 +24,7 @@ export default function InterviewPage() {
   const [status, setStatus] = useState("active");
   const [mode, setMode] = useState("Practice");
   const [persona, setPersona] = useState("");
+  const [meta, setMeta] = useState<Record<string, string>>({});
   const [report, setReport] = useState<Report | null>(null);
   const [round, setRound] = useState(1);
   const [qInRound, setQInRound] = useState(1);
@@ -64,6 +66,7 @@ export default function InterviewPage() {
         setStatus(d.session.status);
         setMode(d.session.config.mode ?? "Practice");
         setPersona(d.session.config.persona_key ?? "");
+        setMeta(d.session.config as Record<string, string>);
         setSwitchTopic(d.session.config.interview_type ?? "");
         setReport(d.session.report);
         setRoundSize(cfg.round_size ?? 4);
@@ -245,7 +248,7 @@ export default function InterviewPage() {
       </header>
 
       <div className="mt-4 flex-1 overflow-y-auto scroll-thin space-y-4 pr-1">
-        {report && <ReportBanner report={report} />}
+        {report && <ReportBanner report={report} meta={meta} />}
 
         {messages.map((m, i) => {
           if (m.kind === "ask") {
@@ -417,7 +420,7 @@ const REC_STYLES: Record<string, string> = {
   "no hire": "bg-rose-100 text-rose-800 border-rose-300",
 };
 
-function ReportBanner({ report }: { report: Report }) {
+function ReportBanner({ report, meta }: { report: Report; meta: Record<string, string> }) {
   const rec = report.recommendation || "";
   const recStyle = REC_STYLES[rec.toLowerCase()] || "bg-violet-100 text-violet-800 border-violet-300";
 
@@ -449,10 +452,19 @@ function ReportBanner({ report }: { report: Report }) {
             </span>
           )}
         </div>
-        <button onClick={speakDebrief}
-          className="rounded-lg border border-violet-300 text-violet-700 px-3 py-1.5 text-sm font-medium hover:bg-violet-50">
-          🔊 Hear your debrief
-        </button>
+        <div className="flex gap-2">
+          <button onClick={speakDebrief}
+            className="rounded-lg border border-violet-300 text-violet-700 px-3 py-1.5 text-sm font-medium hover:bg-violet-50">
+            🔊 Hear your debrief
+          </button>
+          <button onClick={() => downloadReportPdf(report, {
+            role: meta.role, level: meta.level, interview_type: meta.interview_type,
+            difficulty: meta.difficulty, persona: meta.persona_key,
+          })}
+            className="rounded-lg btn-brand px-3 py-1.5 text-sm font-semibold">
+            ⬇ Download PDF
+          </button>
+        </div>
       </div>
 
       {report.debrief_intro && <p className="mt-3 text-slate-700 leading-relaxed">{report.debrief_intro}</p>}
