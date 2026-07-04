@@ -36,6 +36,13 @@ export interface Report {
   answers_evaluated: number;
   summary: string;
   next_focus?: string;
+  // Recruiter-style hiring debrief (Temi round-4)
+  recommendation?: string;
+  did_well?: string[];
+  held_back?: string[];
+  how_to_improve?: string[];
+  absolute_hire?: string;
+  debrief_intro?: string;
 }
 
 export interface RoundInfo {

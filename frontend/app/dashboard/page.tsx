@@ -125,7 +125,7 @@ export default function Dashboard() {
         <p className="text-sm text-slate-500">Compose your interview. Each session uses 1 credit.</p>
 
         <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-4">
-          <Select label="Company" value={persona} onChange={setPersona}
+          <Select label="Interviewer" value={persona} onChange={setPersona}
             options={config.personas.map((p) => p.key)} render={personaLabel} />
           <Select label="Industry" value={industry} onChange={setIndustry} options={config.industries} />
           <Select label="Role" value={role} onChange={setRole} options={config.roles} />
@@ -139,8 +139,8 @@ export default function Dashboard() {
         <p className="mt-2 text-xs text-slate-500">
           {config.difficulty_help?.[difficulty] ? `${difficulty}: ${config.difficulty_help[difficulty]} · ` : ""}
           {persona === "generic"
-            ? "General mode keeps feedback transferable across companies."
-            : `${personaLabel(persona)} mode: tailored to ${personaLabel(persona)}'s culture.`}
+            ? "General interviewer — feedback stays transferable across companies."
+            : `Interviewed by a ${personaLabel(persona)}.`}
           {config.mode_help?.[mode] ? ` · ${config.mode_help[mode]}` : ""}
         </p>
 

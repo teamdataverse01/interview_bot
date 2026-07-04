@@ -17,6 +17,7 @@ from dataclasses import dataclass, field
 from app.personas import Persona, get_persona
 from app.schemas import (
     DIFFICULTY_SLOTS,
+    ROUND_PLAN,
     ROUND_SIZE,
     STAGE_META,
     InterviewerTurn,
@@ -88,53 +89,50 @@ class InterviewSession:
 
     # --- directive for the interviewer model ---------------------------------------
     def phase_directive(self) -> str:
-        """Plain-language instruction telling the interviewer what to do this turn.
+        """Instruction telling the interviewer what KIND of question to ask this turn.
 
-        Encodes the deterministic stage logic so the model can focus on phrasing + probing.
+        Each round follows a fixed plan (Temi round-4): intro → privacy → privacy → behavioral.
         """
-        meta = STAGE_META[self.state.stage]
         opening = not self.state.transcript
+        topic = self.config.interview_type
 
-        if opening:
+        # Close backstop: once the final stage is exhausted, wrap up.
+        if self.state.stage == Stage.REVERSE_AND_CLOSE and self.stage_is_exhausted() and not opening:
             return (
-                f"This is the OPENING turn. You are in Stage {int(self.state.stage)} "
-                f"({meta['name']}). Greet the candidate briefly in character and ask your first "
-                f"question. Goal: {meta['goal']}"
+                "CLOSE the interview now: thank the candidate warmly in character and end. "
+                "Set action='close'. Do not ask another question."
             )
 
-        if self.state.stage == Stage.REVERSE_AND_CLOSE:
-            if self.stage_is_exhausted():
-                return (
-                    "CLOSE the interview now: thank the candidate warmly in character and end. "
-                    "Set action='close'. Do not ask another question."
-                )
+        # Position of the NEXT question within its round, and the round number.
+        asked = self.questions_asked
+        pos = asked % ROUND_SIZE
+        rnd = asked // ROUND_SIZE + 1
+        slot = ROUND_PLAN[pos] if pos < len(ROUND_PLAN) else "privacy"
+
+        if opening or (slot == "intro" and rnd == 1):
             return (
-                f"Stage 5 ({meta['name']}). The dynamic flips: INVITE the candidate's questions, and "
-                f"if they just asked one, ANSWER it in character as the interviewer, then ask if they "
-                f"have more. Goal: {meta['goal']}"
+                "OPENING turn. Greet the candidate warmly in character, then ask the classic "
+                "'Tell me about yourself and your background in data privacy.' One question only."
             )
 
-        if self.can_advance():
-            nxt = Stage(self.state.stage + 1)
-            nmeta = STAGE_META[nxt]
-            type_hint = ""
-            if nxt == Stage.TECHNICAL:
-                type_hint = (
-                    f" The deep-dive topic is '{self.config.interview_type}'. Pose a concrete, realistic "
-                    f"scenario in that area and judge the answer on the {self._next_lens()} lens."
-                )
+        if slot == "intro":
             return (
-                f"The current stage is complete. ADVANCE to Stage {int(nxt)} ({nmeta['name']}). "
-                f"Set action='advance'. Goal: {nmeta['goal']}.{type_hint}"
+                f"Start of ROUND {rnd}. Briefly re-orient, then ask a short warm-up/background question "
+                f"that opens a NEW area of data privacy (e.g. a different domain than earlier). One question."
             )
 
-        # Mid-stage: probe deeper or ask the next question in this stage.
-        depth = "Probe deeper on their last answer (tennis match: pull on the thread they opened)."
-        if self.config.difficulty in ("Senior", "Executive (FAANG bar)"):
-            depth += " Consider switching lens to test whether they can move between the operational 'how' and the programmatic 'big picture'."
+        if slot == "privacy":
+            return (
+                f"Ask ONE data-privacy question in the area of '{topic}' (or a closely related privacy "
+                f"area such as DSAR, DPIA, RoPA, consent, retention, incident response, or vendor risk). "
+                f"Make it concrete and answerable. Probe for specifics. One question only."
+            )
+
+        # behavioral
         return (
-            f"Stay in Stage {int(self.state.stage)} ({meta['name']}). {depth} "
-            f"Set action='probe' (or 'switch_lens'). Goal: {meta['goal']}"
+            "Ask ONE behavioral question — pick from conflict resolution, stakeholder management, "
+            "leadership, prioritization, or change management. Ask for a specific past example (STAR). "
+            "One question only."
         )
 
     def _next_lens(self) -> str:

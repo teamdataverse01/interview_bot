@@ -163,8 +163,13 @@ def evaluate_answer(
     return _coerce_eval(data)
 
 
-def build_report(evaluations: list[AnswerEvaluation], config: SessionConfig) -> SessionReport:
-    """Aggregate per-answer evaluations into the end-of-session report (PRD §5.3)."""
+def build_report(
+    evaluations: list[AnswerEvaluation], config: SessionConfig, final: bool = False
+) -> SessionReport:
+    """Aggregate per-answer evaluations into the end-of-session report (PRD §5.3).
+
+    When `final` is True, also generate the recruiter-style hiring debrief (Temi round-4 §2).
+    """
     report = SessionReport(answers_evaluated=len(evaluations))
     if not evaluations:
         return report
@@ -210,7 +215,73 @@ def build_report(evaluations: list[AnswerEvaluation], config: SessionConfig) -> 
             f"{', '.join(levers[:3]) or 'depth and specificity'}. "
             "Lead with measurable business impact, quantified risk reasoning, and an automation/scale angle."
         )
+
+    if final:
+        try:
+            _attach_hiring_debrief(report, evaluations, config)
+        except LLMError:
+            # Fallback so the report still renders without the LLM narrative.
+            report.recommendation = _recommendation_band(report.overall_confidence)
+            report.did_well = report.strengths[:3]
+            report.held_back = report.weaknesses[:3]
     return report
+
+
+def _recommendation_band(overall: int) -> str:
+    if overall >= 80:
+        return "Strong Hire"
+    if overall >= 60:
+        return "Hire"
+    if overall >= 40:
+        return "Hire with Reservations"
+    return "No Hire"
+
+
+def _attach_hiring_debrief(report: SessionReport, evaluations: list[AnswerEvaluation], config: SessionConfig) -> None:
+    """Generate a recruiter-style debrief and attach it to the report (Temi round-4 §2)."""
+    overall = report.overall_confidence
+    band = _recommendation_band(overall)
+    missed = sorted({m for e in evaluations for m in e.missed_concepts})[:8]
+    strong = ", ".join(report.strengths) or "clear communication"
+    weak = ", ".join(report.weaknesses) or "depth and specificity"
+
+    system = (
+        "You are an experienced hiring manager writing your post-interview debrief for a privacy/"
+        "compliance candidate. Write like a recruiter's real hiring notes — direct, human, specific. "
+        "Do NOT use numeric scores anywhere in your output.\n"
+        f"Internal signal (do not mention numbers): overall readiness ~{overall}/100, so your "
+        f"recommendation MUST be '{band}'. Only ever use 'No Hire' when readiness is below 40.\n"
+        f"Observed strengths: {strong}. Observed weaknesses: {weak}. "
+        f"Missed/likely-missed points: {', '.join(missed) or 'n/a'}.\n"
+        "Return ONLY this JSON:\n"
+        "{\n"
+        f'  "recommendation": "{band}",\n'
+        '  "debrief_intro": "1-2 warm, personal sentences addressed to the candidate, as if debriefing them",\n'
+        '  "did_well": ["3-4 specific strengths they demonstrated"],\n'
+        '  "held_back": ["3-4 specific things that reduced hiring confidence, e.g. answers lacked structure, '
+        'didn\'t quantify impact, too generic, missed leadership examples, weak stakeholder communication"],\n'
+        '  "how_to_improve": ["3-4 practical, actionable coaching tips"],\n'
+        '  "absolute_hire": "2-3 sentences: exactly what would elevate them to an absolute, no-doubt hire"\n'
+        "}"
+    )
+    data = chat_json(
+        [
+            {"role": "system", "content": system},
+            {"role": "user", "content": f"Interview: {config.interview_type} · {config.role} ({config.level})."},
+        ],
+        max_tokens=900,
+        temperature=0.5,
+    )
+    rec = str(data.get("recommendation", band)).strip()
+    # Enforce the rule: No Hire only below 40.
+    if overall >= 40 and rec.lower().startswith("no hire"):
+        rec = "Hire with Reservations"
+    report.recommendation = rec or band
+    report.debrief_intro = str(data.get("debrief_intro", ""))
+    report.did_well = [str(x) for x in (data.get("did_well") or [])][:5]
+    report.held_back = [str(x) for x in (data.get("held_back") or [])][:5]
+    report.how_to_improve = [str(x) for x in (data.get("how_to_improve") or [])][:5]
+    report.absolute_hire = str(data.get("absolute_hire", ""))
 
 
 def model_answer(config: SessionConfig, question: str) -> dict:

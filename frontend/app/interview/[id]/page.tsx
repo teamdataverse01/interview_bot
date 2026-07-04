@@ -410,27 +410,88 @@ export default function InterviewPage() {
   );
 }
 
+const REC_STYLES: Record<string, string> = {
+  "strong hire": "bg-emerald-100 text-emerald-800 border-emerald-300",
+  "hire": "bg-green-100 text-green-800 border-green-300",
+  "hire with reservations": "bg-amber-100 text-amber-800 border-amber-300",
+  "no hire": "bg-rose-100 text-rose-800 border-rose-300",
+};
+
 function ReportBanner({ report }: { report: Report }) {
+  const rec = report.recommendation || "";
+  const recStyle = REC_STYLES[rec.toLowerCase()] || "bg-violet-100 text-violet-800 border-violet-300";
+
+  function speakDebrief() {
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+    const parts = [
+      report.debrief_intro,
+      rec ? `My recommendation: ${rec}.` : "",
+      report.did_well?.length ? "What you did well: " + report.did_well.join(". ") : "",
+      report.held_back?.length ? "What held you back: " + report.held_back.join(". ") : "",
+      report.how_to_improve?.length ? "How to improve: " + report.how_to_improve.join(". ") : "",
+      report.absolute_hire ? "To become an absolute hire: " + report.absolute_hire : "",
+    ].filter(Boolean).join(" ");
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(new SpeechSynthesisUtterance(parts));
+  }
+
+  // Fallback if the LLM debrief didn't generate.
+  const hasDebrief = !!(rec || report.did_well?.length || report.held_back?.length);
+
   return (
-    <div className="card p-5">
-      <div className="flex items-center gap-5">
-        <ScoreRing score={report.overall_confidence} />
-        <div className="flex-1">
-          <h2 className="font-semibold text-lg">Your interview report</h2>
-          <p className="mt-1 text-sm text-slate-600">{report.summary}</p>
-          {report.strengths.length > 0 && (
-            <p className="mt-2 text-sm"><span className="text-slate-400">Strengths: </span>{report.strengths.join(", ")}</p>
-          )}
-          {report.weaknesses.length > 0 && (
-            <p className="text-sm"><span className="text-slate-400">Focus areas: </span>{report.weaknesses.join(", ")}</p>
-          )}
-          {report.next_focus && (
-            <p className="mt-2 text-sm rounded-lg bg-amber-50 border border-amber-200 p-2 text-amber-900">
-              🎯 {report.next_focus}
-            </p>
+    <div className="card p-6">
+      <div className="flex items-center justify-between flex-wrap gap-3">
+        <div>
+          <p className="text-xs uppercase tracking-wide text-slate-400">Hiring manager debrief</p>
+          {rec && (
+            <span className={`mt-1 inline-block rounded-full border px-4 py-1.5 text-lg font-bold ${recStyle}`}>
+              {rec}
+            </span>
           )}
         </div>
+        <button onClick={speakDebrief}
+          className="rounded-lg border border-violet-300 text-violet-700 px-3 py-1.5 text-sm font-medium hover:bg-violet-50">
+          🔊 Hear your debrief
+        </button>
       </div>
+
+      {report.debrief_intro && <p className="mt-3 text-slate-700 leading-relaxed">{report.debrief_intro}</p>}
+
+      {!hasDebrief && <p className="mt-3 text-sm text-slate-600">{report.summary}</p>}
+
+      {report.did_well?.length ? (
+        <DebriefList title="✅ What you did well" items={report.did_well} tone="emerald" />
+      ) : null}
+      {report.held_back?.length ? (
+        <DebriefList title="⚠️ What held you back" items={report.held_back} tone="amber" />
+      ) : null}
+      {report.how_to_improve?.length ? (
+        <DebriefList title="🚀 How to improve" items={report.how_to_improve} tone="violet" />
+      ) : null}
+
+      {report.absolute_hire && (
+        <div className="mt-4 rounded-lg bg-violet-50 border border-violet-200 p-3">
+          <p className="font-semibold text-violet-800">🌟 What would make you an absolute hire</p>
+          <p className="mt-1 text-sm text-slate-700">{report.absolute_hire}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function DebriefList({ title, items, tone }: { title: string; items: string[]; tone: string }) {
+  const dot: Record<string, string> = { emerald: "text-emerald-500", amber: "text-amber-500", violet: "text-violet-500" };
+  return (
+    <div className="mt-4">
+      <p className="font-semibold text-slate-800">{title}</p>
+      <ul className="mt-1 space-y-1">
+        {items.map((it, i) => (
+          <li key={i} className="text-sm text-slate-700 flex gap-2">
+            <span className={dot[tone] || "text-slate-400"}>•</span>
+            <span>{it}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

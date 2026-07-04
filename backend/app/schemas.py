@@ -64,8 +64,8 @@ class SessionConfig:
 
     @property
     def company_mode(self) -> bool:
-        """True only when the user explicitly picked a specific company (not 'generic')."""
-        return (self.persona_key or "generic").lower() != "generic"
+        """True only when the user picked a real COMPANY (not generic or a role persona)."""
+        return (self.persona_key or "generic").lower() in ("netflix", "tiktok", "strava")
 
     @property
     def inline_feedback(self) -> bool:
@@ -89,6 +89,13 @@ class SessionConfig:
 # Round-based pacing (Temi feedback §3A): pause every ROUND_SIZE real questions for a round
 # summary + continue/switch-topic choice.
 ROUND_SIZE = 4
+
+# Fixed question plan within each round (Temi round-4): 1 intro/background, 2 privacy-area
+# questions, 1 behavioral question. Positions are 0-based within the round.
+ROUND_PLAN = ["intro", "privacy", "privacy", "behavioral"]
+
+# Recruiter-style hiring recommendations (Temi round-4 §2). "No Hire" only when overall < 40.
+HIRING_RECOMMENDATIONS = ["Strong Hire", "Hire", "Hire with Reservations", "No Hire"]
 
 
 # How many question "slots" each stage gets, scaled by difficulty (more = longer, harder).
@@ -206,3 +213,10 @@ class SessionReport:
     answers_evaluated: int = 0
     summary: str = ""
     next_focus: str = ""                    # gap analysis: the path toward a higher score
+    # Recruiter-style hiring debrief (Temi round-4 §2) — the user-facing narrative.
+    recommendation: str = ""                # one of HIRING_RECOMMENDATIONS
+    did_well: list[str] = field(default_factory=list)
+    held_back: list[str] = field(default_factory=list)
+    how_to_improve: list[str] = field(default_factory=list)
+    absolute_hire: str = ""                 # what would make them an "absolute hire"
+    debrief_intro: str = ""                 # 1-2 warm sentences, spoken by the coach

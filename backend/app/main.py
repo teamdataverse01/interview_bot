@@ -370,7 +370,7 @@ def answer(session_id: str, body: AnswerBody, user: User = Depends(current_user)
     report = None
     if finished:
         evals = repo.evaluations_as_objects(session_id)
-        report = asdict(build_report(evals, config))
+        report = asdict(build_report(evals, config, final=True))
         repo.finish_session(session_id, report)
 
     resp = {
@@ -471,7 +471,7 @@ def continue_interview(session_id: str, body: ContinueBody, user: User = Depends
     report = None
     if finished:
         evals = repo.evaluations_as_objects(session_id)
-        report = asdict(build_report(evals, config))
+        report = asdict(build_report(evals, config, final=True))
         repo.finish_session(session_id, report)
 
     resp = {
