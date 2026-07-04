@@ -14,6 +14,7 @@ import { TermDefs } from "@/components/TermDefs";
 import { findTerms } from "@/lib/glossary";
 import { useAudioRecorder, useTextToSpeech } from "@/lib/useSpeech";
 import { downloadReportPdf, downloadRoadmapPdf } from "@/lib/pdf";
+import { Avatar, SpeakingIndicator } from "@/components/Avatar";
 
 export default function InterviewPage() {
   const router = useRouter();
@@ -24,6 +25,7 @@ export default function InterviewPage() {
   const [status, setStatus] = useState("active");
   const [mode, setMode] = useState("Practice");
   const [persona, setPersona] = useState("");
+  const [personaName, setPersonaName] = useState("Interviewer");
   const [meta, setMeta] = useState<Record<string, string>>({});
   const [report, setReport] = useState<Report | null>(null);
   const [round, setRound] = useState(1);
@@ -65,7 +67,9 @@ export default function InterviewPage() {
         );
         setStatus(d.session.status);
         setMode(d.session.config.mode ?? "Practice");
-        setPersona(d.session.config.persona_key ?? "");
+        const pk = d.session.config.persona_key ?? "";
+        setPersona(pk);
+        setPersonaName(cfg.personas.find((p) => p.key === pk)?.company ?? "Interviewer");
         setMeta(d.session.config as Record<string, string>);
         setSwitchTopic(d.session.config.interview_type ?? "");
         setReport(d.session.report);
@@ -247,7 +251,24 @@ export default function InterviewPage() {
         </div>
       </header>
 
-      <div className="mt-4 flex-1 overflow-y-auto scroll-thin space-y-4 pr-1">
+      <div className="mt-3 card p-3 flex items-center gap-3">
+        <Avatar personaKey={persona} size={52} speaking={tts.speaking} />
+        <div className="flex-1 min-w-0">
+          <p className="font-semibold text-slate-800 truncate">
+            {personaName === "Any company (general)" ? "Your interviewer" : personaName}
+          </p>
+          <p className="text-xs text-slate-500 flex items-center gap-2">
+            {tts.speaking ? <>Speaking <SpeakingIndicator show /></> : status === "active" ? "Listening…" : "Interview complete"}
+          </p>
+        </div>
+        {tts.supported && !voiceOn && (
+          <button onClick={toggleVoice} className="text-xs rounded-full brand-gradient text-white px-3 py-1 font-medium">
+            🔈 Turn on voice
+          </button>
+        )}
+      </div>
+
+      <div className="mt-3 flex-1 overflow-y-auto scroll-thin space-y-4 pr-1">
         {report && <ReportBanner report={report} meta={meta} />}
 
         {messages.map((m, i) => {
@@ -298,11 +319,12 @@ export default function InterviewPage() {
           const newTerms = findTerms(m.content).filter((t) => !seen.has(t));
           newTerms.forEach((t) => seen.add(t));
           return (
-            <div key={i} className="flex">
+            <div key={i} className="flex gap-2">
+              <Avatar personaKey={persona} size={34} />
               <div className="max-w-[85%]">
                 <div className="card px-4 py-3 leading-relaxed">
                   <p className="text-[11px] uppercase tracking-wide text-violet-500 mb-1">
-                    Interviewer
+                    {personaName === "Any company (general)" ? "Interviewer" : personaName}
                   </p>
                   <p className="whitespace-pre-wrap text-slate-800">{m.content}</p>
                 </div>
@@ -423,9 +445,11 @@ const REC_STYLES: Record<string, string> = {
 function ReportBanner({ report, meta }: { report: Report; meta: Record<string, string> }) {
   const rec = report.recommendation || "";
   const recStyle = REC_STYLES[rec.toLowerCase()] || "bg-violet-100 text-violet-800 border-violet-300";
+  const [speaking, setSpeaking] = useState(false);
 
   function speakDebrief() {
     if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+    if (speaking) { window.speechSynthesis.cancel(); setSpeaking(false); return; }
     const parts = [
       report.debrief_intro,
       rec ? `My recommendation: ${rec}.` : "",
@@ -435,7 +459,11 @@ function ReportBanner({ report, meta }: { report: Report; meta: Record<string, s
       report.absolute_hire ? "To become an absolute hire: " + report.absolute_hire : "",
     ].filter(Boolean).join(" ");
     window.speechSynthesis.cancel();
-    window.speechSynthesis.speak(new SpeechSynthesisUtterance(parts));
+    const u = new SpeechSynthesisUtterance(parts);
+    u.onstart = () => setSpeaking(true);
+    u.onend = () => setSpeaking(false);
+    u.onerror = () => setSpeaking(false);
+    window.speechSynthesis.speak(u);
   }
 
   // Fallback if the LLM debrief didn't generate.
@@ -444,13 +472,16 @@ function ReportBanner({ report, meta }: { report: Report; meta: Record<string, s
   return (
     <div className="card p-6">
       <div className="flex items-center justify-between flex-wrap gap-3">
-        <div>
-          <p className="text-xs uppercase tracking-wide text-slate-400">Hiring manager debrief</p>
-          {rec && (
-            <span className={`mt-1 inline-block rounded-full border px-4 py-1.5 text-lg font-bold ${recStyle}`}>
-              {rec}
-            </span>
-          )}
+        <div className="flex items-center gap-3">
+          <Avatar personaKey={meta.persona_key || "generic"} size={52} speaking={speaking} />
+          <div>
+            <p className="text-xs uppercase tracking-wide text-slate-400">Hiring manager debrief</p>
+            {rec && (
+              <span className={`mt-1 inline-block rounded-full border px-4 py-1.5 text-lg font-bold ${recStyle}`}>
+                {rec}
+              </span>
+            )}
+          </div>
         </div>
         <div className="flex gap-2">
           <button onClick={speakDebrief}
