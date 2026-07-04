@@ -99,6 +99,15 @@ export default function Dashboard() {
     return <main className="flex-1 grid place-items-center text-slate-500">{error ?? "Loading…"}</main>;
   }
 
+  // Completed interviews with a readiness score, oldest -> newest (for the progress chart).
+  const completedAsc = sessions
+    .filter((s) => s.status === "completed" && s.overall_confidence != null)
+    .slice()
+    .reverse();
+  const first = completedAsc.length ? Number(completedAsc[0].overall_confidence) : 0;
+  const last = completedAsc.length ? Number(completedAsc[completedAsc.length - 1].overall_confidence) : 0;
+  const trend = last - first;
+
   return (
     <main className="flex-1 max-w-5xl w-full mx-auto px-6 py-8">
       <header className="rounded-2xl p-6 text-white shadow-lg flex items-center justify-between bg-linear-to-r from-violet-600 via-purple-600 to-fuchsia-600">
@@ -149,6 +158,35 @@ export default function Dashboard() {
           {starting ? "Starting…" : (credits ?? 0) <= 0 ? "No credits left" : "Start interview →"}
         </button>
       </section>
+
+      {completedAsc.length >= 2 && (
+        <section className="mt-8 card p-6 border-t-4 border-t-fuchsia-500">
+          <div className="flex items-center justify-between flex-wrap gap-2">
+            <div>
+              <h2 className="font-semibold text-lg text-slate-800">📈 Your progress</h2>
+              <p className="text-sm text-slate-500">Interview readiness across your completed interviews.</p>
+            </div>
+            <span className={`rounded-full px-3 py-1 text-sm font-semibold ${trend >= 0 ? "bg-emerald-100 text-emerald-700" : "bg-amber-100 text-amber-700"}`}>
+              {trend >= 0 ? `▲ +${trend} since your first` : `▼ ${trend} since your first`}
+            </span>
+          </div>
+          <div className="mt-5 flex items-end gap-2 h-40">
+            {completedAsc.map((s) => {
+              const v = Number(s.overall_confidence) || 0;
+              return (
+                <div key={s.id} className="flex-1 flex flex-col items-center justify-end h-full"
+                  title={`${personaLabel(s.config.persona_key)} · ${s.config.interview_type} — ${v}/100`}>
+                  <span className="text-xs font-bold text-violet-700">{v}</span>
+                  <div className="w-full max-w-[46px] rounded-t-md brand-gradient" style={{ height: `${Math.max(6, v)}%` }} />
+                  <span className="text-[10px] text-slate-400 mt-1">
+                    {new Date(s.started_at).toLocaleDateString(undefined, { month: "short", day: "numeric" })}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      )}
 
       <section className="mt-8">
         <h2 className="font-semibold text-lg text-slate-800">📊 Your sessions</h2>

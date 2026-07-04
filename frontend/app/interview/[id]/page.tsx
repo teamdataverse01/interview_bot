@@ -13,7 +13,7 @@ import { ScoreRing } from "@/components/ScoreRing";
 import { TermDefs } from "@/components/TermDefs";
 import { findTerms } from "@/lib/glossary";
 import { useAudioRecorder, useTextToSpeech } from "@/lib/useSpeech";
-import { downloadReportPdf } from "@/lib/pdf";
+import { downloadReportPdf, downloadRoadmapPdf } from "@/lib/pdf";
 
 export default function InterviewPage() {
   const router = useRouter();
@@ -240,7 +240,7 @@ export default function InterviewPage() {
               {voiceOn ? "🔊 Voice on" : "🔈 Voice"}
             </button>
           )}
-          <span className="rounded-full bg-violet-100 text-violet-700 px-3 py-1 font-medium">
+          <span className="rounded-full brand-gradient text-white px-3 py-1 font-semibold shadow-sm">
             Round {round} · Q{qInRound || 1}/{roundSize}
           </span>
           <span className="text-slate-500 capitalize">{persona === "generic" ? "General" : persona} · {mode}</span>
@@ -462,7 +462,14 @@ function ReportBanner({ report, meta }: { report: Report; meta: Record<string, s
             difficulty: meta.difficulty, persona: meta.persona_key,
           })}
             className="rounded-lg btn-brand px-3 py-1.5 text-sm font-semibold">
-            ⬇ Download PDF
+            ⬇ Report PDF
+          </button>
+          <button onClick={() => downloadRoadmapPdf(report, {
+            role: meta.role, level: meta.level, interview_type: meta.interview_type,
+            difficulty: meta.difficulty, persona: meta.persona_key,
+          })}
+            className="rounded-lg border border-violet-300 text-violet-700 px-3 py-1.5 text-sm font-medium hover:bg-violet-50">
+            🗺️ Roadmap
           </button>
         </div>
       </div>

@@ -30,12 +30,15 @@ export default function DemoPage() {
 
   return (
     <main className="flex-1 flex items-center justify-center px-6">
-      <div className="w-full max-w-md card p-8 text-center">
-        <p className="text-violet-600 font-semibold tracking-wide">DATAVERSE</p>
-        <h1 className="mt-2 text-2xl font-bold text-slate-800">Welcome 👋</h1>
-        <p className="text-slate-500 mt-2">
-          Enter your access code to start your AI mock interview. Each code is good for one session.
-        </p>
+      <div className="w-full max-w-md card overflow-hidden text-center">
+        <div className="brand-gradient text-white px-8 pt-7 pb-8">
+          <p className="font-bold tracking-[0.2em] text-violet-100">DATAVERSE</p>
+          <h1 className="mt-1 text-2xl font-extrabold">Welcome 👋</h1>
+          <p className="text-violet-100/90 mt-2 text-sm">
+            Enter your access code to start your AI mock interview. Each code is good for one session.
+          </p>
+        </div>
+        <div className="p-8 pt-6">
 
         <form onSubmit={redeem} className="mt-6 space-y-4">
           <input
@@ -58,6 +61,7 @@ export default function DemoPage() {
         <p className="mt-6 text-xs text-slate-400">
           Don&apos;t have a code? Ask your facilitator.
         </p>
+        </div>
       </div>
     </main>
   );

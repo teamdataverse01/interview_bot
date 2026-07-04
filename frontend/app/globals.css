@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  /* Dataverse brand: warm, welcoming purple (Temi §4A/§4B) */
-  --background: #f6f3fc;
-  --foreground: #2a2342;
+  /* Dataverse brand: bold, vibrant purple */
+  --background: #f3efff;
+  --foreground: #241a45;
   --brand: #7c3aed;       /* violet-600 */
   --brand-dark: #6d28d9;  /* violet-700 */
 }
@@ -17,16 +17,17 @@
 
 body {
   background:
-    radial-gradient(1100px 520px at 100% -10%, #ede9fe 0%, transparent 55%),
-    radial-gradient(900px 520px at -10% 110%, #fde7ef 0%, transparent 55%),
+    radial-gradient(760px 520px at 92% -6%, #c4b5fd 0%, transparent 46%),   /* violet-300 */
+    radial-gradient(680px 520px at -4% 8%, #f5b8dd 0%, transparent 42%),    /* pink */
+    radial-gradient(900px 640px at 50% 116%, #a5b4fc 0%, transparent 48%),  /* indigo-300 */
     var(--background);
+  background-attachment: fixed;
   color: var(--foreground);
   min-height: 100vh;
   position: relative;
 }
 
-/* Subtle human imagery layer — adds warmth/life behind everything (Temi §4B/§4C).
-   Falls back gracefully to the gradient if the image can't load. */
+/* Subtle human-imagery texture with a PURPLE tint (adds colour, not paleness). */
 body::before {
   content: "";
   position: fixed;
@@ -34,33 +35,42 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background-image:
-    linear-gradient(180deg, rgba(246, 243, 252, 0.92), rgba(246, 243, 252, 0.97)),
+    linear-gradient(180deg, rgba(124, 58, 237, 0.28), rgba(236, 72, 153, 0.18)),
     url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=60");
   background-size: cover;
   background-position: center;
-  opacity: 0.5;
+  opacity: 0.12;
 }
 
-.scroll-thin::-webkit-scrollbar {
-  width: 8px;
-}
-.scroll-thin::-webkit-scrollbar-thumb {
-  background: #c9bdf0;
-  border-radius: 4px;
-}
+.scroll-thin::-webkit-scrollbar { width: 8px; }
+.scroll-thin::-webkit-scrollbar-thumb { background: #b9a7f0; border-radius: 4px; }
 
-/* Soft, modern card */
+/* Modern card with a purple-tinted glow */
 .card {
   background: #ffffff;
-  border: 1px solid #ece7f8;
+  border: 1px solid #e7defb;
   border-radius: 1rem;
-  box-shadow: 0 1px 2px rgba(76, 29, 149, 0.05), 0 10px 30px rgba(76, 29, 149, 0.06);
+  box-shadow: 0 1px 2px rgba(76, 29, 149, 0.06), 0 12px 34px rgba(109, 40, 217, 0.10);
 }
 
-/* Brand button helper */
+/* Brand button — vibrant gradient */
 .btn-brand {
-  background: var(--brand);
+  background-image: linear-gradient(90deg, #7c3aed, #c026d3);
   color: #fff;
-  transition: background 0.15s ease;
+  transition: filter 0.15s ease, transform 0.05s ease;
 }
-.btn-brand:hover { background: var(--brand-dark); }
+.btn-brand:hover { filter: brightness(1.08); }
+.btn-brand:active { transform: translateY(1px); }
+
+/* Reusable brand gradient (headers/hero) */
+.brand-gradient {
+  background-image: linear-gradient(120deg, #6d28d9 0%, #7c3aed 45%, #c026d3 100%);
+}
+
+/* Gradient text for headings */
+.brand-text {
+  background-image: linear-gradient(90deg, #7c3aed, #db2777);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
