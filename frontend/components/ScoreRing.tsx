@@ -35,10 +35,10 @@ export function ScoreRing({
         </svg>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <span className="text-4xl font-bold" style={{ color }}>{pct}</span>
-          <span className="text-xs text-slate-400">/ 100</span>
+          <span className="text-xs text-violet-200/70">/ 100</span>
         </div>
       </div>
-      <span className="mt-2 text-sm font-medium text-slate-600">{label}</span>
+      <span className="mt-2 text-sm font-medium text-violet-100">{label}</span>
     </div>
   );
 }

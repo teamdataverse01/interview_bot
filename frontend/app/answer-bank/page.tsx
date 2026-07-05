@@ -47,9 +47,9 @@ export default function AnswerBankPage() {
     <main className="flex-1 max-w-3xl w-full mx-auto px-6 py-8">
       <header className="flex items-center justify-between">
         <div>
-          <a href="/dashboard" className="text-sm text-slate-500 hover:text-slate-800">← Dashboard</a>
-          <h1 className="text-2xl font-bold text-slate-800 mt-1">📚 Answer Bank</h1>
-          <p className="text-sm text-slate-500">Paste interview questions and get strong model answers, graded by what they demonstrate.</p>
+          <a href="/dashboard" className="text-sm text-violet-200 hover:text-white">← Dashboard</a>
+          <h1 className="text-2xl font-bold text-white mt-1">📚 Answer Bank</h1>
+          <p className="text-sm text-violet-200">Paste interview questions and get strong model answers, graded by what they demonstrate.</p>
         </div>
       </header>
 
@@ -59,22 +59,22 @@ export default function AnswerBankPage() {
           onChange={(e) => setText(e.target.value)}
           rows={5}
           placeholder={"Paste questions, one per line:\nHow would you handle a DSAR backlog?\nTell me about a time you drove change against resistance."}
-          className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none focus:border-violet-500 resize-none"
+          className="w-full rounded-xl border border-white/20 bg-white text-slate-900 placeholder:text-slate-400 px-4 py-3 outline-none focus:border-violet-500 resize-none"
         />
         <div className="mt-3 flex flex-wrap items-end gap-3">
           {config && (
             <>
               <label className="block">
-                <span className="text-xs font-medium text-slate-500">Company frame</span>
+                <span className="text-xs font-medium text-violet-200">Company frame</span>
                 <select value={persona} onChange={(e) => setPersona(e.target.value)}
-                  className="mt-1 block rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm">
+                  className="mt-1 block rounded-lg border border-white/20 bg-white text-slate-900 placeholder:text-slate-400 px-3 py-2 text-sm">
                   {config.personas.map((p) => <option key={p.key} value={p.key}>{personaLabel(p.key)}</option>)}
                 </select>
               </label>
               <label className="block">
-                <span className="text-xs font-medium text-slate-500">Topic</span>
+                <span className="text-xs font-medium text-violet-200">Topic</span>
                 <select value={interviewType} onChange={(e) => setInterviewType(e.target.value)}
-                  className="mt-1 block rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm">
+                  className="mt-1 block rounded-lg border border-white/20 bg-white text-slate-900 placeholder:text-slate-400 px-3 py-2 text-sm">
                   {typeOptions.map((t) => <option key={t} value={t}>{t}</option>)}
                 </select>
               </label>
@@ -91,10 +91,10 @@ export default function AnswerBankPage() {
       <section className="mt-6 space-y-4">
         {results.map((r, i) => (
           <div key={i} className="card p-5">
-            <p className="font-semibold text-slate-800">{r.question}</p>
-            <p className="mt-2 text-slate-700 whitespace-pre-wrap leading-relaxed">{r.answer}</p>
+            <p className="font-semibold text-white">{r.question}</p>
+            <p className="mt-2 text-violet-100 whitespace-pre-wrap leading-relaxed">{r.answer}</p>
             {r.key_points.length > 0 && (
-              <ul className="mt-3 list-disc list-inside text-sm text-slate-600 space-y-0.5">
+              <ul className="mt-3 list-disc list-inside text-sm text-violet-100 space-y-0.5">
                 {r.key_points.map((k, j) => <li key={j}>{k}</li>)}
               </ul>
             )}

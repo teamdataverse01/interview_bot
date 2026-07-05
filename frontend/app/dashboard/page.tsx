@@ -13,11 +13,11 @@ function Select({
 }: { label: string; value: string; onChange: (v: string) => void; options: string[]; render?: (v: string) => string }) {
   return (
     <label className="block">
-      <span className="text-xs font-medium text-slate-500">{label}</span>
+      <span className="text-xs font-medium text-violet-200">{label}</span>
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 outline-none focus:border-violet-500"
+        className="mt-1 w-full rounded-lg border border-white/20 bg-white px-3 py-2 outline-none focus:border-violet-500"
       >
         {options.map((o) => (
           <option key={o} value={o}>{render ? render(o) : o}</option>
@@ -96,7 +96,7 @@ export default function Dashboard() {
   }
 
   if (!config) {
-    return <main className="flex-1 grid place-items-center text-slate-500">{error ?? "Loading…"}</main>;
+    return <main className="flex-1 grid place-items-center text-violet-200">{error ?? "Loading…"}</main>;
   }
 
   // Completed interviews with a readiness score, oldest -> newest (for the progress chart).
@@ -130,8 +130,8 @@ export default function Dashboard() {
       {error && <p className="mt-4 text-rose-500 text-sm">{error}</p>}
 
       <section className="mt-8 card p-6 border-t-4 border-t-violet-500">
-        <h2 className="font-semibold text-lg text-slate-800">🎯 Start a mock interview</h2>
-        <p className="text-sm text-slate-500">Compose your interview. Each session uses 1 credit.</p>
+        <h2 className="font-semibold text-lg text-white">🎯 Start a mock interview</h2>
+        <p className="text-sm text-violet-200">Compose your interview. Each session uses 1 credit.</p>
 
         <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-4">
           <Select label="Interviewer" value={persona} onChange={setPersona}
@@ -145,7 +145,7 @@ export default function Dashboard() {
           <Select label="Mode" value={mode} onChange={setMode} options={config.modes} />
         </div>
 
-        <p className="mt-2 text-xs text-slate-500">
+        <p className="mt-2 text-xs text-violet-200">
           {config.difficulty_help?.[difficulty] ? `${difficulty}: ${config.difficulty_help[difficulty]} · ` : ""}
           {persona === "generic"
             ? "General interviewer — feedback stays transferable across companies."
@@ -163,8 +163,8 @@ export default function Dashboard() {
         <section className="mt-8 card p-6 border-t-4 border-t-fuchsia-500">
           <div className="flex items-center justify-between flex-wrap gap-2">
             <div>
-              <h2 className="font-semibold text-lg text-slate-800">📈 Your progress</h2>
-              <p className="text-sm text-slate-500">Interview readiness across your completed interviews.</p>
+              <h2 className="font-semibold text-lg text-white">📈 Your progress</h2>
+              <p className="text-sm text-violet-200">Interview readiness across your completed interviews.</p>
             </div>
             <span className={`rounded-full px-3 py-1 text-sm font-semibold ${trend >= 0 ? "bg-emerald-100 text-emerald-700" : "bg-amber-100 text-amber-700"}`}>
               {trend >= 0 ? `▲ +${trend} since your first` : `▼ ${trend} since your first`}
@@ -178,7 +178,7 @@ export default function Dashboard() {
                   title={`${personaLabel(s.config.persona_key)} · ${s.config.interview_type} — ${v}/100`}>
                   <span className="text-xs font-bold text-violet-700">{v}</span>
                   <div className="w-full max-w-[46px] rounded-t-md brand-gradient" style={{ height: `${Math.max(6, v)}%` }} />
-                  <span className="text-[10px] text-slate-400 mt-1">
+                  <span className="text-[10px] text-violet-300 mt-1">
                     {new Date(s.started_at).toLocaleDateString(undefined, { month: "short", day: "numeric" })}
                   </span>
                 </div>
@@ -189,9 +189,9 @@ export default function Dashboard() {
       )}
 
       <section className="mt-8">
-        <h2 className="font-semibold text-lg text-slate-800">📊 Your sessions</h2>
+        <h2 className="font-semibold text-lg text-white">📊 Your sessions</h2>
         {sessions.length === 0 ? (
-          <p className="text-sm text-slate-500 mt-2">No interviews yet — start one above.</p>
+          <p className="text-sm text-violet-200 mt-2">No interviews yet — start one above.</p>
         ) : (
           <div className="mt-3 space-y-2">
             {sessions.map((s) => (
@@ -199,9 +199,9 @@ export default function Dashboard() {
                 className={`flex items-center justify-between card px-4 py-3 border-l-4 hover:shadow-md transition ${s.status === "completed" ? "border-l-emerald-400" : "border-l-amber-400"}`}>
                 <div className="text-sm">
                   <span className="font-medium text-violet-700">{personaLabel(s.config.persona_key) || s.config.persona_key}</span>
-                  <span className="text-slate-500"> · {s.config.interview_type} · {s.config.level} · {s.config.difficulty}</span>
+                  <span className="text-violet-200"> · {s.config.interview_type} · {s.config.level} · {s.config.difficulty}</span>
                 </div>
-                <div className="text-sm text-slate-500">
+                <div className="text-sm text-violet-200">
                   {s.overall_confidence ? <span className="rounded-full bg-violet-100 text-violet-700 px-2.5 py-0.5 font-bold">{s.overall_confidence}/100</span> : null}
                   <span className={`ml-3 px-2 py-0.5 rounded-full text-xs ${s.status === "completed" ? "bg-emerald-100 text-emerald-700" : "bg-amber-100 text-amber-700"}`}>
                     {s.status}

@@ -49,10 +49,10 @@ export default function LoginPage() {
     <main className="flex-1 flex items-center justify-center px-6">
       <div className="w-full max-w-md card p-7">
         <a href="/" className="text-violet-600 font-semibold tracking-wide">DATAVERSE</a>
-        <h1 className="mt-2 text-2xl font-bold text-slate-800">
+        <h1 className="mt-2 text-2xl font-bold text-white">
           {mode === "signin" ? "Welcome back" : "Create your account"}
         </h1>
-        <p className="text-slate-500 text-sm mt-1">
+        <p className="text-violet-200 text-sm mt-1">
           {mode === "signin" ? "Sign in to start a mock interview." : "Start with 3 free interview credits."}
         </p>
 
@@ -63,7 +63,7 @@ export default function LoginPage() {
             placeholder="you@email.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full rounded-lg bg-white border border-slate-300 px-4 py-3 outline-none focus:border-violet-500"
+            className="w-full rounded-lg bg-white text-slate-900 placeholder:text-violet-300 border border-white/20 px-4 py-3 outline-none focus:border-violet-500"
           />
           <input
             type="password"
@@ -72,7 +72,7 @@ export default function LoginPage() {
             placeholder="Password (min 6 chars)"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full rounded-lg bg-white border border-slate-300 px-4 py-3 outline-none focus:border-violet-500"
+            className="w-full rounded-lg bg-white text-slate-900 placeholder:text-violet-300 border border-white/20 px-4 py-3 outline-none focus:border-violet-500"
           />
           <button
             disabled={busy}
@@ -86,7 +86,7 @@ export default function LoginPage() {
 
         <button
           onClick={() => { setMode(mode === "signin" ? "signup" : "signin"); setMsg(null); }}
-          className="mt-6 text-sm text-slate-500 hover:text-slate-800"
+          className="mt-6 text-sm text-violet-200 hover:text-white"
         >
           {mode === "signin" ? "Need an account? Sign up" : "Already have an account? Sign in"}
         </button>

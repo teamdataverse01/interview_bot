@@ -46,7 +46,7 @@ export default function DemoPage() {
             value={code}
             onChange={(e) => setCode(e.target.value)}
             placeholder="DV-XXXXXX"
-            className="w-full text-center tracking-widest uppercase rounded-lg bg-white border border-slate-300 px-4 py-3 text-lg outline-none focus:border-violet-500"
+            className="w-full text-center tracking-widest uppercase field px-4 py-3 text-lg font-semibold"
           />
           <button
             disabled={busy || !code.trim()}
@@ -56,9 +56,9 @@ export default function DemoPage() {
           </button>
         </form>
 
-        {error && <p className="mt-4 text-sm text-rose-500">{error}</p>}
+        {error && <p className="mt-4 text-sm text-rose-300">{error}</p>}
 
-        <p className="mt-6 text-xs text-slate-400">
+        <p className="mt-6 text-xs text-violet-200/70">
           Don&apos;t have a code? Ask your facilitator.
         </p>
         </div>

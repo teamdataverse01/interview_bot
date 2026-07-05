@@ -231,14 +231,14 @@ export default function InterviewPage() {
   return (
     <main className="flex-1 max-w-3xl w-full mx-auto px-4 py-6 flex flex-col">
       <header className="flex items-center justify-between">
-        <a href="/dashboard" className="text-sm text-slate-500 hover:text-slate-800">← Dashboard</a>
+        <a href="/dashboard" className="text-sm text-violet-200 hover:text-white">← Dashboard</a>
         <div className="flex items-center gap-3 text-sm">
           {tts.supported && (
             <button
               onClick={toggleVoice}
               title={voiceOn ? "Turn off the interviewer's voice" : "Have the interviewer read questions aloud"}
               className={`rounded-full px-3 py-1 font-medium border ${
-                voiceOn ? "bg-violet-600 text-white border-violet-600" : "border-slate-300 text-slate-600 hover:bg-slate-50"
+                voiceOn ? "bg-violet-600 text-white border-violet-600" : "border-white/20 text-violet-100 hover:bg-white/10"
               }`}
             >
               {voiceOn ? "🔊 Voice on" : "🔈 Voice"}
@@ -247,17 +247,17 @@ export default function InterviewPage() {
           <span className="rounded-full brand-gradient text-white px-3 py-1 font-semibold shadow-sm">
             Round {round} · Q{qInRound || 1}/{roundSize}
           </span>
-          <span className="text-slate-500 capitalize">{persona === "generic" ? "General" : persona} · {mode}</span>
+          <span className="text-violet-200 capitalize">{persona === "generic" ? "General" : persona} · {mode}</span>
         </div>
       </header>
 
       <div className="mt-3 card p-3 flex items-center gap-3">
         <Avatar personaKey={persona} size={52} speaking={tts.speaking} />
         <div className="flex-1 min-w-0">
-          <p className="font-semibold text-slate-800 truncate">
+          <p className="font-semibold text-white truncate">
             {personaName === "Any company (general)" ? "Your interviewer" : personaName}
           </p>
-          <p className="text-xs text-slate-500 flex items-center gap-2">
+          <p className="text-xs text-violet-200 flex items-center gap-2">
             {tts.speaking ? <>Speaking <SpeakingIndicator show /></> : status === "active" ? "Listening…" : "Interview complete"}
           </p>
         </div>
@@ -275,7 +275,7 @@ export default function InterviewPage() {
           if (m.kind === "ask") {
             return (
               <div key={i} className="flex justify-end">
-                <div className="max-w-[80%] rounded-2xl rounded-tr-sm bg-slate-100 text-slate-600 px-4 py-2 text-sm italic">
+                <div className="max-w-[80%] rounded-2xl rounded-tr-sm bg-white/15 text-violet-100 px-4 py-2 text-sm italic">
                   ❓ {m.content}
                 </div>
               </div>
@@ -326,7 +326,7 @@ export default function InterviewPage() {
                   <p className="text-[11px] uppercase tracking-wide text-violet-500 mb-1">
                     {personaName === "Any company (general)" ? "Interviewer" : personaName}
                   </p>
-                  <p className="whitespace-pre-wrap text-slate-800">{m.content}</p>
+                  <p className="whitespace-pre-wrap text-white">{m.content}</p>
                 </div>
                 <TermDefs terms={newTerms} />
               </div>
@@ -345,7 +345,7 @@ export default function InterviewPage() {
             {roundSummary && <ScoreRing score={roundSummary.overall_confidence} size={92} label={`Round ${round}`} />}
             <div className="flex-1">
               <p className="font-semibold text-lg">🎉 Round {round} complete!</p>
-              <p className="text-sm text-slate-600 mt-1">{roundSummary?.summary}</p>
+              <p className="text-sm text-violet-100 mt-1">{roundSummary?.summary}</p>
               {roundSummary?.next_focus && (
                 <p className="text-sm text-amber-700 mt-1">{roundSummary.next_focus}</p>
               )}
@@ -353,26 +353,26 @@ export default function InterviewPage() {
           </div>
           <div className="mt-4 flex flex-wrap items-center gap-2">
             <button onClick={() => doContinue(false)} disabled={sending}
-              className="px-5 py-2 rounded-lg bg-violet-600 hover:bg-violet-500 disabled:opacity-50 text-white font-semibold">
+              className="px-5 py-2 rounded-lg bg-violet-600 hover:bg-white/100 disabled:opacity-50 text-white font-semibold">
               Continue interview →
             </button>
-            <span className="text-slate-400">or switch topic:</span>
+            <span className="text-violet-300">or switch topic:</span>
             <select value={switchTopic} onChange={(e) => setSwitchTopic(e.target.value)}
-              className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm">
+              className="rounded-lg border border-white/20 bg-white text-slate-900 placeholder:text-slate-400 px-3 py-2 text-sm">
               {topics.map((t) => <option key={t} value={t}>{t}</option>)}
             </select>
             <button onClick={() => doContinue(true)} disabled={sending}
-              className="px-4 py-2 rounded-lg border border-violet-300 text-violet-700 hover:bg-violet-50 font-medium">
+              className="px-4 py-2 rounded-lg border border-violet-300 text-violet-200 hover:bg-white/10 font-medium">
               Switch
             </button>
             <button onClick={finishNow} disabled={sending}
-              className="ml-auto px-4 py-2 rounded-lg text-slate-500 hover:text-slate-800">
+              className="ml-auto px-4 py-2 rounded-lg text-violet-200 hover:text-white">
               Finish & see report
             </button>
           </div>
         </div>
       ) : status === "active" ? (
-        <div className="mt-3 border-t border-slate-200 pt-3">
+        <div className="mt-3 border-t border-white/15 pt-3">
           {showClarify && (
             <div className="mb-2 flex gap-2">
               <input
@@ -380,7 +380,7 @@ export default function InterviewPage() {
                 onChange={(e) => setClarifyInput(e.target.value)}
                 onKeyDown={(e) => { if (e.key === "Enter") askClarify(); }}
                 placeholder="e.g. Can you give an example of what you're looking for?"
-                className="flex-1 rounded-lg border border-violet-300 bg-violet-50 px-3 py-2 text-sm outline-none"
+                className="flex-1 field px-3 py-2 text-sm"
               />
               <button onClick={askClarify} disabled={sending}
                 className="px-3 py-2 rounded-lg bg-violet-600 text-white text-sm font-medium disabled:opacity-50">
@@ -395,15 +395,15 @@ export default function InterviewPage() {
             placeholder="Type your answer…  (Ctrl/⌘+Enter to send)"
             rows={3}
             disabled={sending}
-            className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none focus:border-violet-500 resize-none"
+            className="w-full rounded-xl border border-white/20 bg-white text-slate-900 placeholder:text-slate-400 px-4 py-3 outline-none focus:border-violet-500 resize-none"
           />
           <div className="flex justify-between items-center mt-2">
             <button onClick={() => setShowClarify((s) => !s)}
-              className="text-sm text-violet-600 hover:text-violet-800">
+              className="text-sm text-fuchsia-300 hover:text-white">
               {showClarify ? "Hide" : "🤔 Ask a clarifying question (not scored)"}
             </button>
             <div className="flex items-center gap-3">
-              <span className="text-xs text-slate-400">
+              <span className="text-xs text-violet-300">
                 {recorder.recording ? "🎙️ Recording… click 🎤 to stop" : transcribing ? "Transcribing…" : sending ? "Interviewer is thinking…" : `${roundSize - (qInRound || 0)} to finish round ${round}`}
               </span>
               {recorder.supported && (
@@ -412,23 +412,23 @@ export default function InterviewPage() {
                   disabled={sending || transcribing}
                   title={recorder.recording ? "Stop & transcribe" : "Answer by voice"}
                   className={`h-10 w-10 rounded-full border flex items-center justify-center disabled:opacity-50 ${
-                    recorder.recording ? "bg-rose-500 border-rose-500 text-white animate-pulse" : "border-slate-300 text-slate-600 hover:bg-slate-50"
+                    recorder.recording ? "bg-rose-500 border-rose-500 text-white animate-pulse" : "border-white/20 text-violet-100 hover:bg-white/10"
                   }`}
                 >
                   {transcribing ? "…" : "🎤"}
                 </button>
               )}
               <button onClick={send} disabled={sending || !input.trim()}
-                className="px-5 py-2 rounded-lg bg-violet-600 hover:bg-violet-500 disabled:opacity-50 text-white font-semibold">
+                className="px-5 py-2 rounded-lg bg-violet-600 hover:bg-white/100 disabled:opacity-50 text-white font-semibold">
                 Send
               </button>
             </div>
           </div>
         </div>
       ) : (
-        <div className="mt-3 border-t border-slate-200 pt-3 text-center">
-          <p className="text-slate-500 text-sm">Interview complete.</p>
-          <a href="/dashboard" className="inline-block mt-2 text-violet-600 hover:text-violet-700 font-medium">Back to dashboard →</a>
+        <div className="mt-3 border-t border-white/15 pt-3 text-center">
+          <p className="text-violet-200 text-sm">Interview complete.</p>
+          <a href="/dashboard" className="inline-block mt-2 text-violet-600 hover:text-violet-200 font-medium">Back to dashboard →</a>
         </div>
       )}
     </main>
@@ -475,7 +475,7 @@ function ReportBanner({ report, meta }: { report: Report; meta: Record<string, s
         <div className="flex items-center gap-3">
           <Avatar personaKey={meta.persona_key || "generic"} size={52} speaking={speaking} />
           <div>
-            <p className="text-xs uppercase tracking-wide text-slate-400">Hiring manager debrief</p>
+            <p className="text-xs uppercase tracking-wide text-violet-300">Hiring manager debrief</p>
             {rec && (
               <span className={`mt-1 inline-block rounded-full border px-4 py-1.5 text-lg font-bold ${recStyle}`}>
                 {rec}
@@ -485,7 +485,7 @@ function ReportBanner({ report, meta }: { report: Report; meta: Record<string, s
         </div>
         <div className="flex gap-2">
           <button onClick={speakDebrief}
-            className="rounded-lg border border-violet-300 text-violet-700 px-3 py-1.5 text-sm font-medium hover:bg-violet-50">
+            className="rounded-lg border border-violet-300 text-violet-200 px-3 py-1.5 text-sm font-medium hover:bg-white/10">
             🔊 Hear your debrief
           </button>
           <button onClick={() => downloadReportPdf(report, {
@@ -499,15 +499,15 @@ function ReportBanner({ report, meta }: { report: Report; meta: Record<string, s
             role: meta.role, level: meta.level, interview_type: meta.interview_type,
             difficulty: meta.difficulty, persona: meta.persona_key,
           })}
-            className="rounded-lg border border-violet-300 text-violet-700 px-3 py-1.5 text-sm font-medium hover:bg-violet-50">
+            className="rounded-lg border border-violet-300 text-violet-200 px-3 py-1.5 text-sm font-medium hover:bg-white/10">
             🗺️ Roadmap
           </button>
         </div>
       </div>
 
-      {report.debrief_intro && <p className="mt-3 text-slate-700 leading-relaxed">{report.debrief_intro}</p>}
+      {report.debrief_intro && <p className="mt-3 text-violet-100 leading-relaxed">{report.debrief_intro}</p>}
 
-      {!hasDebrief && <p className="mt-3 text-sm text-slate-600">{report.summary}</p>}
+      {!hasDebrief && <p className="mt-3 text-sm text-violet-100">{report.summary}</p>}
 
       {report.did_well?.length ? (
         <DebriefList title="✅ What you did well" items={report.did_well} tone="emerald" />
@@ -520,9 +520,9 @@ function ReportBanner({ report, meta }: { report: Report; meta: Record<string, s
       ) : null}
 
       {report.absolute_hire && (
-        <div className="mt-4 rounded-lg bg-violet-50 border border-violet-200 p-3">
-          <p className="font-semibold text-violet-800">🌟 What would make you an absolute hire</p>
-          <p className="mt-1 text-sm text-slate-700">{report.absolute_hire}</p>
+        <div className="mt-4 rounded-lg bg-white/10 border border-white/20 p-3">
+          <p className="font-semibold text-fuchsia-200">🌟 What would make you an absolute hire</p>
+          <p className="mt-1 text-sm text-violet-50">{report.absolute_hire}</p>
         </div>
       )}
     </div>
@@ -533,11 +533,11 @@ function DebriefList({ title, items, tone }: { title: string; items: string[]; t
   const dot: Record<string, string> = { emerald: "text-emerald-500", amber: "text-amber-500", violet: "text-violet-500" };
   return (
     <div className="mt-4">
-      <p className="font-semibold text-slate-800">{title}</p>
+      <p className="font-semibold text-white">{title}</p>
       <ul className="mt-1 space-y-1">
         {items.map((it, i) => (
-          <li key={i} className="text-sm text-slate-700 flex gap-2">
-            <span className={dot[tone] || "text-slate-400"}>•</span>
+          <li key={i} className="text-sm text-violet-100 flex gap-2">
+            <span className={dot[tone] || "text-violet-300"}>•</span>
             <span>{it}</span>
           </li>
         ))}
@@ -571,7 +571,7 @@ function RetryPanel({ sessionId, question, originalScore }: { sessionId: string;
 
   if (!open) {
     return (
-      <button onClick={() => setOpen(true)} className="mt-2 text-sm text-violet-600 hover:text-violet-800 font-medium">
+      <button onClick={() => setOpen(true)} className="mt-2 text-sm text-fuchsia-300 hover:text-white font-medium">
         🔁 Try this question again
       </button>
     );
@@ -580,7 +580,7 @@ function RetryPanel({ sessionId, question, originalScore }: { sessionId: string;
   const delta = result ? result.confidence_score - originalScore : 0;
   return (
     <div className="mt-2 card p-4">
-      <p className="text-sm font-medium text-slate-700">
+      <p className="text-sm font-medium text-violet-100">
         Practice this question again — see if you can raise your score (was {originalScore}/100).
       </p>
       <textarea
@@ -588,7 +588,7 @@ function RetryPanel({ sessionId, question, originalScore }: { sessionId: string;
         onChange={(e) => setText(e.target.value)}
         rows={3}
         placeholder="Re-answer the question with what you just learned…"
-        className="mt-2 w-full rounded-lg bg-white border border-slate-300 px-3 py-2 outline-none focus:border-violet-500 resize-none"
+        className="mt-2 w-full rounded-lg bg-white text-slate-900 placeholder:text-slate-400 border border-white/20 px-3 py-2 outline-none focus:border-violet-500 resize-none"
       />
       <div className="flex items-center gap-3 mt-2 flex-wrap">
         <button onClick={submit} disabled={busy || !text.trim()}
@@ -596,12 +596,12 @@ function RetryPanel({ sessionId, question, originalScore }: { sessionId: string;
           {busy ? "Scoring…" : "Score my retry"}
         </button>
         <button onClick={() => { setOpen(false); setResult(null); setText(""); setErr(null); }}
-          className="text-sm text-slate-500 hover:text-slate-700">
+          className="text-sm text-violet-200 hover:text-violet-100">
           Close
         </button>
         {result && (
           <span className="text-sm">
-            New score: <b className="text-violet-700">{result.confidence_score}/100</b>{" "}
+            New score: <b className="text-violet-200">{result.confidence_score}/100</b>{" "}
             <span className={delta >= 0 ? "text-emerald-600" : "text-rose-500"}>
               ({delta >= 0 ? "+" : ""}{delta})
             </span>

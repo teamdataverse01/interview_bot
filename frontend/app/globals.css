@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  /* Dataverse brand: bold, vibrant purple */
-  --background: #f3efff;
-  --foreground: #241a45;
-  --brand: #7c3aed;       /* violet-600 */
-  --brand-dark: #6d28d9;  /* violet-700 */
+  --background: #2a1361;   /* deep Dataverse purple */
+  --foreground: #f3efff;
+  --brand: #7c3aed;
+  --brand-dark: #6d28d9;
+  --ink: #241a45;          /* dark text for white inputs */
 }
 
 @theme inline {
@@ -17,17 +17,17 @@
 
 body {
   background:
-    radial-gradient(760px 520px at 92% -6%, #c4b5fd 0%, transparent 46%),   /* violet-300 */
-    radial-gradient(680px 520px at -4% 8%, #f5b8dd 0%, transparent 42%),    /* pink */
-    radial-gradient(900px 640px at 50% 116%, #a5b4fc 0%, transparent 48%),  /* indigo-300 */
-    var(--background);
+    radial-gradient(820px 560px at 88% -8%, rgba(192, 38, 211, 0.55) 0%, transparent 46%),
+    radial-gradient(720px 560px at -6% 6%, rgba(99, 102, 241, 0.50) 0%, transparent 44%),
+    radial-gradient(900px 680px at 50% 118%, rgba(217, 70, 239, 0.35) 0%, transparent 50%),
+    linear-gradient(160deg, #2a1361 0%, #3b1a7a 55%, #4a1d86 100%);
   background-attachment: fixed;
   color: var(--foreground);
   min-height: 100vh;
   position: relative;
 }
 
-/* Subtle human-imagery texture with a PURPLE tint (adds colour, not paleness). */
+/* Subtle human-imagery texture blended into the purple. */
 body::before {
   content: "";
   position: fixed;
@@ -35,41 +35,62 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background-image:
-    linear-gradient(180deg, rgba(124, 58, 237, 0.28), rgba(236, 72, 153, 0.18)),
+    linear-gradient(180deg, rgba(42, 19, 97, 0.55), rgba(42, 19, 97, 0.72)),
     url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=60");
   background-size: cover;
   background-position: center;
-  opacity: 0.12;
+  opacity: 0.22;
+  mix-blend-mode: luminosity;
 }
 
 .scroll-thin::-webkit-scrollbar { width: 8px; }
-.scroll-thin::-webkit-scrollbar-thumb { background: #b9a7f0; border-radius: 4px; }
+.scroll-thin::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.25); border-radius: 4px; }
 
-/* Modern card with a purple-tinted glow */
+/* Glass panel — translucent purple, NOT flat white. Light text lives on it. */
 .card {
-  background: #ffffff;
-  border: 1px solid #e7defb;
-  border-radius: 1rem;
-  box-shadow: 0 1px 2px rgba(76, 29, 149, 0.06), 0 12px 34px rgba(109, 40, 217, 0.10);
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 1.1rem;
+  box-shadow: 0 10px 40px rgba(20, 8, 55, 0.45);
+  color: #f3efff;
 }
 
-/* Brand button — vibrant gradient */
+/* Brighter glass for emphasis panels */
+.glass-strong {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(22px) saturate(150%);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1.1rem;
+  box-shadow: 0 16px 50px rgba(20, 8, 55, 0.5);
+}
+
+/* White input field — the only white surfaces in the app */
+.field {
+  background: #ffffff;
+  color: var(--ink);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 0.7rem;
+  outline: none;
+}
+.field::placeholder { color: #9a8fc0; }
+.field:focus { box-shadow: 0 0 0 3px rgba(192, 38, 211, 0.35); }
+
+/* Vibrant gradient button */
 .btn-brand {
-  background-image: linear-gradient(90deg, #7c3aed, #c026d3);
+  background-image: linear-gradient(90deg, #a855f7, #ec4899);
   color: #fff;
   transition: filter 0.15s ease, transform 0.05s ease;
 }
 .btn-brand:hover { filter: brightness(1.08); }
 .btn-brand:active { transform: translateY(1px); }
 
-/* Reusable brand gradient (headers/hero) */
-.brand-gradient {
-  background-image: linear-gradient(120deg, #6d28d9 0%, #7c3aed 45%, #c026d3 100%);
-}
+.brand-gradient { background-image: linear-gradient(120deg, #7c3aed 0%, #a855f7 45%, #ec4899 100%); }
 
-/* Gradient text for headings */
 .brand-text {
-  background-image: linear-gradient(90deg, #7c3aed, #db2777);
+  background-image: linear-gradient(90deg, #d8b4fe, #f9a8d4);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
