@@ -446,6 +446,20 @@ function ReportBanner({ report, meta }: { report: Report; meta: Record<string, s
   const rec = report.recommendation || "";
   const recStyle = REC_STYLES[rec.toLowerCase()] || "bg-violet-100 text-violet-800 border-violet-300";
   const [speaking, setSpeaking] = useState(false);
+  const [pdfError, setPdfError] = useState<string | null>(null);
+
+  const metaArg = {
+    role: meta.role, level: meta.level, interview_type: meta.interview_type,
+    difficulty: meta.difficulty, persona: meta.persona_key,
+  };
+  async function makePdf(fn: (r: Report, m: typeof metaArg) => Promise<void>) {
+    setPdfError(null);
+    try {
+      await fn(report, metaArg);
+    } catch (e) {
+      setPdfError("Couldn't create the PDF: " + (e instanceof Error ? e.message : "unknown error"));
+    }
+  }
 
   function speakDebrief() {
     if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
@@ -488,22 +502,17 @@ function ReportBanner({ report, meta }: { report: Report; meta: Record<string, s
             className="rounded-lg border border-violet-300 text-violet-200 px-3 py-1.5 text-sm font-medium hover:bg-white/10">
             🔊 Hear your debrief
           </button>
-          <button onClick={() => downloadReportPdf(report, {
-            role: meta.role, level: meta.level, interview_type: meta.interview_type,
-            difficulty: meta.difficulty, persona: meta.persona_key,
-          })}
+          <button onClick={() => makePdf(downloadReportPdf)}
             className="rounded-lg btn-brand px-3 py-1.5 text-sm font-semibold">
             ⬇ Report PDF
           </button>
-          <button onClick={() => downloadRoadmapPdf(report, {
-            role: meta.role, level: meta.level, interview_type: meta.interview_type,
-            difficulty: meta.difficulty, persona: meta.persona_key,
-          })}
+          <button onClick={() => makePdf(downloadRoadmapPdf)}
             className="rounded-lg border border-violet-300 text-violet-200 px-3 py-1.5 text-sm font-medium hover:bg-white/10">
             🗺️ Roadmap
           </button>
         </div>
       </div>
+      {pdfError && <p className="mt-2 text-sm text-rose-300">{pdfError}</p>}
 
       {report.debrief_intro && <p className="mt-3 text-violet-100 leading-relaxed">{report.debrief_intro}</p>}
 

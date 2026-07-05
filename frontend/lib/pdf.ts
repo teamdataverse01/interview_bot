@@ -27,7 +27,8 @@ function label(key?: string): string {
 }
 
 export async function downloadReportPdf(report: Report, meta: Meta = {}) {
-  const { jsPDF } = await import("jspdf");
+  const _m = await import("jspdf");
+  const jsPDF = (_m as unknown as { jsPDF?: typeof import("jspdf").jsPDF; default?: typeof import("jspdf").jsPDF }).jsPDF ?? (_m as { default?: typeof import("jspdf").jsPDF }).default!;
   const doc = new jsPDF({ unit: "pt", format: "a4" });
   const W = doc.internal.pageSize.getWidth();
   const H = doc.internal.pageSize.getHeight();
@@ -140,7 +141,8 @@ export async function downloadReportPdf(report: Report, meta: Meta = {}) {
 
 // Focused one-page improvement roadmap (Temi round-4 premium).
 export async function downloadRoadmapPdf(report: Report, meta: Meta = {}) {
-  const { jsPDF } = await import("jspdf");
+  const _m = await import("jspdf");
+  const jsPDF = (_m as unknown as { jsPDF?: typeof import("jspdf").jsPDF; default?: typeof import("jspdf").jsPDF }).jsPDF ?? (_m as { default?: typeof import("jspdf").jsPDF }).default!;
   const doc = new jsPDF({ unit: "pt", format: "a4" });
   const W = doc.internal.pageSize.getWidth();
   const H = doc.internal.pageSize.getHeight();
