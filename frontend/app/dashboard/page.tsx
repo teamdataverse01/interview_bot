@@ -17,10 +17,10 @@ function Select({
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="mt-1 w-full rounded-lg border border-white/20 bg-white px-3 py-2 outline-none focus:border-violet-500"
+        className="mt-1 w-full rounded-lg border border-white/20 bg-white text-slate-900 px-3 py-2 outline-none focus:border-violet-500"
       >
         {options.map((o) => (
-          <option key={o} value={o}>{render ? render(o) : o}</option>
+          <option key={o} value={o} className="text-slate-900">{render ? render(o) : o}</option>
         ))}
       </select>
     </label>

@@ -347,7 +347,9 @@ export default function InterviewPage() {
               <p className="font-semibold text-lg">🎉 Round {round} complete!</p>
               <p className="text-sm text-violet-100 mt-1">{roundSummary?.summary}</p>
               {roundSummary?.next_focus && (
-                <p className="text-sm text-amber-700 mt-1">{roundSummary.next_focus}</p>
+                <p className="text-sm mt-2 rounded-lg bg-white/10 border border-white/15 p-2.5 text-violet-50">
+                  {roundSummary.next_focus}
+                </p>
               )}
             </div>
           </div>
@@ -399,8 +401,9 @@ export default function InterviewPage() {
           />
           <div className="flex justify-between items-center mt-2">
             <button onClick={() => setShowClarify((s) => !s)}
-              className="text-sm text-fuchsia-300 hover:text-white">
-              {showClarify ? "Hide" : "🤔 Ask a clarifying question (not scored)"}
+              title="Ask the interviewer to clarify — this is never scored"
+              className="text-sm rounded-lg border border-white/25 text-violet-100 px-3 py-1.5 font-medium hover:bg-white/10">
+              {showClarify ? "Hide clarification" : "Ask a clarifying question"}
             </button>
             <div className="flex items-center gap-3">
               <span className="text-xs text-violet-300">
@@ -580,8 +583,9 @@ function RetryPanel({ sessionId, question, originalScore }: { sessionId: string;
 
   if (!open) {
     return (
-      <button onClick={() => setOpen(true)} className="mt-2 text-sm text-fuchsia-300 hover:text-white font-medium">
-        🔁 Try this question again
+      <button onClick={() => setOpen(true)}
+        className="mt-2 text-sm rounded-lg border border-white/25 text-violet-100 px-3 py-1.5 font-medium hover:bg-white/10">
+        Try this question again
       </button>
     );
   }

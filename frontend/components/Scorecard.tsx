@@ -13,7 +13,7 @@ export function Scorecard({ ev }: { ev: Evaluation }) {
         <span className="font-semibold text-violet-100">Feedback</span>
         <span className="text-violet-100">
           Interview Readiness{" "}
-          <b className="text-xl text-violet-600">{ev.confidence_score}</b>
+          <b className="text-xl text-fuchsia-300">{ev.confidence_score}</b>
           <span className="text-violet-300">/100</span>
         </span>
       </div>
@@ -61,13 +61,13 @@ export function Scorecard({ ev }: { ev: Evaluation }) {
       )}
       {ev.stronger_answer && (
         <details className="mt-2 group">
-          <summary className="cursor-pointer text-violet-600 font-medium">💪 Stronger answer</summary>
+          <summary className="cursor-pointer text-fuchsia-300 font-medium">💪 Stronger answer</summary>
           <p className="mt-1 text-violet-100">{ev.stronger_answer}</p>
         </details>
       )}
       {ev.star_notes && (
         <details className="mt-1">
-          <summary className="cursor-pointer text-violet-600 font-medium">⭐ STAR optimization</summary>
+          <summary className="cursor-pointer text-fuchsia-300 font-medium">⭐ STAR optimization</summary>
           <p className="mt-1 text-violet-100">{ev.star_notes}</p>
         </details>
       )}
