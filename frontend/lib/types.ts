@@ -12,6 +12,7 @@ export interface AppConfig {
   mode_help?: Record<string, string>;
   round_size?: number;
   demo_mode?: boolean;
+  avatar_enabled?: boolean;
   personas: { key: string; company: string; industry: string; values: string[] }[];
 }
 

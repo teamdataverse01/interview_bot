@@ -100,22 +100,32 @@ def resolve_user(auth_header: str | None) -> User | None:
 
 
 def _ensure_profile(user_id: str, email: str) -> bool:
-    """Create profile + starter credits on first sight; return is_admin."""
+    """Create profile + starter credits on first sight; return is_admin.
+
+    Accounts whose email is in ADMIN_EMAILS are promoted to admin with unlimited credits.
+    """
     from app.db import query_one
 
+    is_admin_email = (email or "").strip().lower() in settings.admin_emails
     try:
         row = query_one("select is_admin from public.profiles where id = %s", (user_id,))
         if row is None:
             query_one(
-                "insert into public.profiles (id, email) values (%s, %s) "
+                "insert into public.profiles (id, email, is_admin) values (%s, %s, %s) "
                 "on conflict (id) do nothing returning is_admin",
-                (user_id, email),
+                (user_id, email, is_admin_email),
             )
             query_one(
-                "insert into public.credits (user_id) values (%s) on conflict (user_id) do nothing returning balance",
-                (user_id,),
+                "insert into public.credits (user_id, balance) values (%s, %s) "
+                "on conflict (user_id) do nothing returning balance",
+                (user_id, 999999 if is_admin_email else 3),
             )
-            return False
+            return is_admin_email
+        # Existing profile: keep admin flag in sync with the configured admin list.
+        if is_admin_email and not row.get("is_admin"):
+            query_one("update public.profiles set is_admin = true where id = %s returning id", (user_id,))
+            query_one("update public.credits set balance = 999999 where user_id = %s returning user_id", (user_id,))
+            return True
         return bool(row.get("is_admin"))
     except Exception:
         # If the DB isn't reachable yet, don't block dev auth resolution.

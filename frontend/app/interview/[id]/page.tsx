@@ -49,6 +49,9 @@ export default function InterviewPage() {
   const [voiceOn, setVoiceOn] = useState(false);
   const [transcribing, setTranscribing] = useState(false);
   const lastSpokenRef = useRef("");
+  const [avatarEnabled, setAvatarEnabled] = useState(false);
+  const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
+  const [avatarLoading, setAvatarLoading] = useState(false);
 
   useEffect(() => {
     async function load() {
@@ -74,6 +77,7 @@ export default function InterviewPage() {
         setSwitchTopic(d.session.config.interview_type ?? "");
         setReport(d.session.report);
         setRoundSize(cfg.round_size ?? 4);
+        setAvatarEnabled(!!cfg.avatar_enabled);
         setTopics([...cfg.interview_types.technical, ...cfg.interview_types.behavioral]);
         const answered = d.messages.filter((m) => m.sender === "candidate" && m.kind !== "ask").length;
         const askedQ = d.messages.filter((m) => m.sender === "interviewer" && m.kind !== "clarify").length;
@@ -114,6 +118,21 @@ export default function InterviewPage() {
       setVoiceOn(true);
       const lastInt = [...messages].reverse().find((m) => m.sender === "interviewer");
       if (lastInt) { lastSpokenRef.current = lastInt.content; tts.speak(lastInt.content); }
+    }
+  }
+
+  async function playAvatar() {
+    const lastInt = [...messages].reverse().find((m) => m.sender === "interviewer");
+    if (!lastInt || avatarLoading) return;
+    setAvatarLoading(true);
+    setError(null);
+    try {
+      const r = await apiPost("/avatar/speak", { text: lastInt.content });
+      setAvatarUrl(r.video_url);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Avatar failed.");
+    } finally {
+      setAvatarLoading(false);
     }
   }
 
@@ -261,12 +280,29 @@ export default function InterviewPage() {
             {tts.speaking ? <>Speaking <SpeakingIndicator show /></> : status === "active" ? "Listening…" : "Interview complete"}
           </p>
         </div>
-        {tts.supported && !voiceOn && (
-          <button onClick={toggleVoice} className="text-xs rounded-full brand-gradient text-white px-3 py-1 font-medium">
-            🔈 Turn on voice
-          </button>
-        )}
+        <div className="flex items-center gap-2">
+          {avatarEnabled && (
+            <button onClick={playAvatar} disabled={avatarLoading}
+              className="text-xs rounded-full border border-white/25 text-violet-100 px-3 py-1 font-medium hover:bg-white/10 disabled:opacity-50">
+              {avatarLoading ? "Rendering…" : "🎥 Live avatar"}
+            </button>
+          )}
+          {tts.supported && !voiceOn && (
+            <button onClick={toggleVoice} className="text-xs rounded-full brand-gradient text-white px-3 py-1 font-medium">
+              🔈 Turn on voice
+            </button>
+          )}
+        </div>
       </div>
+
+      {avatarUrl && (
+        <div className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-4" onClick={() => setAvatarUrl(null)}>
+          <div className="w-full max-w-md" onClick={(e) => e.stopPropagation()}>
+            <video src={avatarUrl} autoPlay controls className="w-full rounded-2xl shadow-2xl" />
+            <button onClick={() => setAvatarUrl(null)} className="mt-3 mx-auto block text-white/80 hover:text-white text-sm">Close</button>
+          </div>
+        </div>
+      )}
 
       <div className="mt-3 flex-1 overflow-y-auto scroll-thin space-y-4 pr-1">
         {report && <ReportBanner report={report} meta={meta} />}

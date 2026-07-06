@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import { apiGet, apiPost } from "@/lib/api";
-import { DEV_NO_AUTH, getDemoToken } from "@/lib/devauth";
+import { DEV_NO_AUTH, getDemoToken, clearDemoToken } from "@/lib/devauth";
 import { isDemoMode } from "@/lib/gate";
 import type { AppConfig, SessionListItem, StartResponse } from "@/lib/types";
 
@@ -32,6 +32,7 @@ export default function Dashboard() {
   const [config, setConfig] = useState<AppConfig | null>(null);
   const [credits, setCredits] = useState<number | null>(null);
   const [email, setEmail] = useState("");
+  const [isAdmin, setIsAdmin] = useState(false);
   const [sessions, setSessions] = useState<SessionListItem[]>([]);
   const [starting, setStarting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -49,7 +50,7 @@ export default function Dashboard() {
     async function load() {
       try {
         const [cfg, me, list] = await Promise.all([apiGet("/config"), apiGet("/me"), apiGet("/sessions")]);
-        setConfig(cfg); setCredits(me.credits); setEmail(me.email ?? ""); setSessions(list.sessions ?? []);
+        setConfig(cfg); setCredits(me.credits); setEmail(me.email ?? ""); setIsAdmin(!!me.is_admin); setSessions(list.sessions ?? []);
       } catch (e) {
         setError(e instanceof Error ? e.message : "Failed to load.");
       }
@@ -91,7 +92,8 @@ export default function Dashboard() {
   }
 
   async function signOut() {
-    await supabase.auth.signOut();
+    clearDemoToken();
+    try { await supabase.auth.signOut(); } catch { /* ignore */ }
     router.replace("/login");
   }
 
@@ -117,12 +119,21 @@ export default function Dashboard() {
           <p className="text-violet-100/90 text-sm mt-1">Practice. Get scored. Level up. 🚀</p>
         </div>
         <div className="text-right text-sm">
-          <a href="/answer-bank" className="inline-block mb-2 rounded-lg bg-white/15 hover:bg-white/25 backdrop-blur px-3 py-1.5 font-medium transition">
-            📚 Answer Bank
-          </a>
+          <div className="mb-2 flex justify-end gap-2">
+            {isAdmin && (
+              <a href="/admin/metrics" className="rounded-lg bg-white/15 hover:bg-white/25 backdrop-blur px-3 py-1.5 font-medium transition">
+                📊 Metrics
+              </a>
+            )}
+            <a href="/answer-bank" className="rounded-lg bg-white/15 hover:bg-white/25 backdrop-blur px-3 py-1.5 font-medium transition">
+              📚 Answer Bank
+            </a>
+          </div>
           <p>
-            <span className="inline-flex items-center gap-1 rounded-full bg-white/20 px-3 py-1 font-semibold">💎 {credits ?? "…"} credits</span>
-            {!DEV_NO_AUTH && (<>{" "}<button onClick={signOut} className="ml-2 text-violet-100 hover:text-white underline">Sign out</button></>)}
+            <span className="inline-flex items-center gap-1 rounded-full bg-white/20 px-3 py-1 font-semibold">
+              💎 {isAdmin ? "Unlimited" : `${credits ?? "…"} credits`}
+            </span>
+            <button onClick={signOut} className="ml-2 text-violet-100 hover:text-white underline">Sign out</button>
           </p>
         </div>
       </header>

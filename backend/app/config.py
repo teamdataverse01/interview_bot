@@ -132,6 +132,21 @@ class Settings:
     demo_mode: bool = _get("DEMO_MODE", "false").lower() in ("1", "true", "yes")
     # Secret used to sign demo session tokens (falls back to the service key).
     demo_secret: str = _get("DEMO_SECRET", "") or _first_env("SUPABASE_SERVICE_KEY", "APIKEY") or "dataverse-demo"
+    # Admin accounts (unlimited credits + metrics dashboard). Comma-separated emails.
+    admin_emails_raw: str = _get(
+        "ADMIN_EMAILS",
+        "msalaudeen@dataversesolutions.org,tolaniyan@dataversesolutions.org",
+    )
+    # Live avatar (paid) — D-ID by default. Empty key => feature disabled.
+    did_api_key: str = _get("DID_API_KEY", "")
+    avatar_image_url: str = _get(
+        "AVATAR_IMAGE_URL",
+        "https://create-images-results.d-id.com/DefaultPresenters/Emma_f/image.jpeg",
+    )
+
+    @property
+    def admin_emails(self) -> set[str]:
+        return {e.strip().lower() for e in self.admin_emails_raw.split(",") if e.strip()}
 
     @property
     def dev_bypass_enabled(self) -> bool:

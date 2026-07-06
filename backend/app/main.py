@@ -25,6 +25,7 @@ from app.schemas import ROUND_SIZE, InterviewerTurn, STAGE_META, SessionConfig, 
 from app.state_manager import InterviewSession, rehydrate_session
 from app.taxonomy import config_payload
 from app.transcribe import TranscribeError, transcribe_audio
+from app.avatar import AvatarError, avatar_enabled, speak as avatar_speak_fn
 
 app = FastAPI(title="Dataverse AI Interview Coach", version="1.0")
 
@@ -181,12 +182,32 @@ def health() -> dict:
 
 @app.get("/config")
 def get_config() -> dict:
-    return {**config_payload(), "personas": personas_payload(), "demo_mode": settings.demo_mode}
+    return {
+        **config_payload(),
+        "personas": personas_payload(),
+        "demo_mode": settings.demo_mode,
+        "avatar_enabled": avatar_enabled(),
+    }
 
 
 @app.get("/me")
 def me(user: User = Depends(current_user)) -> dict:
     return {"id": user.id, "email": user.email, "is_admin": user.is_admin, "credits": repo.get_balance(user.id)}
+
+
+class AvatarBody(BaseModel):
+    text: str
+
+
+@app.post("/avatar/speak")
+def avatar_speak(body: AvatarBody, user: User = Depends(current_user)) -> dict:
+    """Render a talking-avatar video for the given text (D-ID; needs DID_API_KEY)."""
+    if not avatar_enabled():
+        raise HTTPException(status_code=503, detail="Live avatar isn't enabled. Add DID_API_KEY.")
+    try:
+        return {"video_url": avatar_speak_fn(body.text)}
+    except AvatarError as e:
+        raise HTTPException(status_code=502, detail=str(e))
 
 
 @app.post("/transcribe")
@@ -557,3 +578,22 @@ def admin_sessions(_: User = Depends(admin_user)) -> dict:
 def admin_credits(body: CreditBody, _: User = Depends(admin_user)) -> dict:
     balance = repo.adjust_credits(body.user_id, body.delta)
     return {"user_id": body.user_id, "balance": balance}
+
+
+@app.get("/admin/metrics")
+def admin_metrics(_: User = Depends(admin_user)) -> dict:
+    """Platform metrics for the admin dashboard (computable now; more at launch)."""
+    from pathlib import Path
+
+    m = repo.admin_metrics()
+    kb_path = Path(__file__).resolve().parents[1] / "knowledge" / "knowledge_base.jsonl"
+    try:
+        m["kb_chunks"] = sum(1 for line in kb_path.open(encoding="utf-8") if line.strip()) if kb_path.exists() else 0
+    except Exception:
+        m["kb_chunks"] = None
+    # Metrics that need billing/telemetry we don't collect yet — surfaced as "planned".
+    m["planned"] = [
+        "Revenue & subscriptions", "AI token usage & cost", "Session duration & streaks",
+        "Interview ratings / NPS", "Retention & churn (DAU/WAU/MAU)",
+    ]
+    return m

@@ -243,6 +243,79 @@ def admin_list_sessions() -> list[dict]:
     )
 
 
+def _scalar(sql: str, params: tuple = ()) -> Any:
+    row = query_one(sql, params)
+    if not row:
+        return None
+    return next(iter(row.values()))
+
+
+def admin_metrics() -> dict:
+    """Aggregate platform metrics for the admin dashboard (computable from current data)."""
+    dims = [
+        "clarity", "structure", "privacy_terminology", "confidence",
+        "risk_reasoning", "regulatory_understanding", "business_alignment", "org_context",
+    ]
+    dim_avg_sql = ", ".join(
+        f"round(avg(nullif(scores->>'{d}','')::numeric),1) as {d}" for d in dims
+    )
+    dimension_averages = query_one(
+        f"select {dim_avg_sql} from public.evaluations"
+    ) or {}
+
+    return {
+        # --- Platform overview ---
+        "total_users": _scalar("select count(*) from public.profiles"),
+        "signups_today": _scalar("select count(*) from public.profiles where created_at::date = now()::date"),
+        "signups_week": _scalar("select count(*) from public.profiles where created_at > now() - interval '7 days'"),
+        "active_today": _scalar(
+            "select count(distinct user_id) from public.sessions where started_at::date = now()::date"
+        ),
+        "active_week": _scalar(
+            "select count(distinct user_id) from public.sessions where started_at > now() - interval '7 days'"
+        ),
+        "total_interviews": _scalar("select count(*) from public.sessions"),
+        "interviews_completed": _scalar("select count(*) from public.sessions where status = 'completed'"),
+        "interviews_active": _scalar("select count(*) from public.sessions where status = 'active'"),
+        "answers_evaluated": _scalar("select count(*) from public.evaluations"),
+        "avg_questions_per_interview": _scalar(
+            "select round(avg(q),1) from ("
+            "  select count(*) as q from public.messages where sender='interviewer' and kind != 'clarify' "
+            "  group by session_id) t"
+        ),
+        # --- Performance ---
+        "avg_readiness": _scalar(
+            "select round(avg((report->>'overall_confidence')::numeric)) "
+            "from public.sessions where report is not null"
+        ),
+        "dimension_averages": {k: (float(v) if v is not None else None) for k, v in dimension_averages.items()},
+        "recommendations": query(
+            "select coalesce(report->>'recommendation','(in progress)') as label, count(*) as n "
+            "from public.sessions where status='completed' group by label order by n desc"
+        ),
+        # --- Content analytics ---
+        "by_type": query(
+            "select config->>'interview_type' as label, count(*) as n "
+            "from public.sessions group by label order by n desc limit 10"
+        ),
+        "by_interviewer": query(
+            "select config->>'persona_key' as label, count(*) as n "
+            "from public.sessions group by label order by n desc limit 10"
+        ),
+        "by_difficulty": query(
+            "select config->>'difficulty' as label, count(*) as n "
+            "from public.sessions group by label order by n desc limit 10"
+        ),
+        # --- Activity feed (recent) ---
+        "activity": query(
+            "select s.status, s.started_at, s.config->>'interview_type' as type, "
+            "  s.config->>'persona_key' as persona, coalesce(p.email,'user') as email "
+            "from public.sessions s left join public.profiles p on p.id = s.user_id "
+            "order by s.started_at desc limit 12"
+        ),
+    }
+
+
 # --- helpers ---------------------------------------------------------------------
 def _as_dict(v: Any) -> dict:
     if isinstance(v, dict):
