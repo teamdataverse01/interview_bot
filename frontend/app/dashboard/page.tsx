@@ -4,8 +4,8 @@ import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import { apiGet, apiPost } from "@/lib/api";
-import { DEV_NO_AUTH, getDemoToken, clearDemoToken } from "@/lib/devauth";
-import { isDemoMode } from "@/lib/gate";
+import { clearDemoToken } from "@/lib/devauth";
+import { useAuthGate } from "@/lib/useAuthGate";
 import type { AppConfig, SessionListItem, StartResponse } from "@/lib/types";
 import { BrandLogo } from "@/components/BrandLogo";
 
@@ -47,28 +47,19 @@ export default function Dashboard() {
   const [difficulty, setDifficulty] = useState("Senior");
   const [mode, setMode] = useState("Practice");
 
+  const { ready } = useAuthGate();
+
   useEffect(() => {
-    async function load() {
+    if (!ready) return;
+    (async () => {
       try {
         const [cfg, me, list] = await Promise.all([apiGet("/config"), apiGet("/me"), apiGet("/sessions")]);
         setConfig(cfg); setCredits(me.credits); setEmail(me.email ?? ""); setIsAdmin(!!me.is_admin); setSessions(list.sessions ?? []);
       } catch (e) {
         setError(e instanceof Error ? e.message : "Failed to load.");
       }
-    }
-    (async () => {
-      // A real signed-in user (admin/team) always gets in — even in demo mode.
-      const { data } = await supabase.auth.getSession();
-      if (data.session) { setEmail(data.session.user.email ?? ""); load(); return; }
-      // In demo mode, otherwise require a redeemed code token (e.g. the boss master code).
-      if (await isDemoMode()) {
-        if (getDemoToken()) { load(); return; }
-        router.replace("/demo"); return;
-      }
-      if (DEV_NO_AUTH) { load(); return; }
-      router.replace("/login");
     })();
-  }, [router]);
+  }, [ready]);
 
   const typeOptions = useMemo(() => {
     if (!config) return [];

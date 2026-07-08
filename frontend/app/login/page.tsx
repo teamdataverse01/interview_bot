@@ -70,16 +70,6 @@ export default function LoginPage() {
               judgment, and executive-level storytelling.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-3 text-sm">
-            <div className="rounded-xl border border-white/10 bg-white/5 p-3">
-              <p className="text-violet-300">Dimensions</p>
-              <p className="mt-1 text-xl font-semibold text-white">8</p>
-            </div>
-            <div className="rounded-xl border border-white/10 bg-white/5 p-3">
-              <p className="text-violet-300">Hiring Principles</p>
-              <p className="mt-1 text-xl font-semibold text-white">6</p>
-            </div>
-          </div>
         </section>
 
         <div className="card w-full p-8 sm:p-9 rise-in">

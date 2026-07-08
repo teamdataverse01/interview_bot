@@ -1,0 +1,318 @@
+<style>
+  :root {
+    --paper: #f8f6fc;
+    --panel: #ffffff;
+    --ink: #191325;
+    --muted: #6a6280;
+    --faint: #8b84a0;
+    --line: #e8e3f2;
+    --accent: #6d28d9;
+    --accent-2: #4f46e5;
+    --accent-wash: #f3eefe;
+    --live: #15803d;
+    --live-bg: #e7f6 ;
+    --live-bg: #e6f5ec;
+    --ready: #b45309;
+    --ready-bg: #fdf1e3;
+    --planned: #1d4ed8;
+    --planned-bg: #e8eefe;
+    --shadow: 0 1px 2px rgba(30,20,55,.04), 0 18px 40px -28px rgba(60,30,120,.30);
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0e0b16; --panel: #17131f; --ink: #ece9f5; --muted: #9a93ad; --faint: #7a7390;
+      --line: rgba(255,255,255,.10); --accent: #a78bfa; --accent-2: #818cf8; --accent-wash: rgba(139,92,246,.12);
+      --live: #4ade80; --live-bg: rgba(74,222,128,.12); --ready: #fbbf24; --ready-bg: rgba(251,191,36,.12);
+      --planned: #93b4ff; --planned-bg: rgba(96,140,255,.14);
+      --shadow: 0 24px 60px -34px rgba(0,0,0,.8);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0e0b16; --panel: #17131f; --ink: #ece9f5; --muted: #9a93ad; --faint: #7a7390;
+    --line: rgba(255,255,255,.10); --accent: #a78bfa; --accent-2: #818cf8; --accent-wash: rgba(139,92,246,.12);
+    --live: #4ade80; --live-bg: rgba(74,222,128,.12); --ready: #fbbf24; --ready-bg: rgba(251,191,36,.12);
+    --planned: #93b4ff; --planned-bg: rgba(96,140,255,.14);
+    --shadow: 0 24px 60px -34px rgba(0,0,0,.8);
+  }
+  :root[data-theme="light"] {
+    --paper: #f8f6fc; --panel: #ffffff; --ink: #191325; --muted: #6a6280; --faint: #8b84a0;
+    --line: #e8e3f2; --accent: #6d28d9; --accent-2: #4f46e5; --accent-wash: #f3eefe;
+    --live: #15803d; --live-bg: #e6f5ec; --ready: #b45309; --ready-bg: #fdf1e3;
+    --planned: #1d4ed8; --planned-bg: #e8eefe;
+    --shadow: 0 1px 2px rgba(30,20,55,.04), 0 18px 40px -28px rgba(60,30,120,.30);
+  }
+
+  * { box-sizing: border-box; }
+  .wrap { background: var(--paper); color: var(--ink); font-family: var(--sans);
+    -webkit-font-smoothing: antialiased; line-height: 1.55; }
+  .page { max-width: 940px; margin: 0 auto; padding: 0 28px 72px; }
+  .eyebrow { font-size: 11px; letter-spacing: .28em; text-transform: uppercase; color: var(--accent);
+    font-weight: 700; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 600; letter-spacing: -.01em; text-wrap: balance;
+    margin: 0; }
+  p { margin: 0; }
+  .muted { color: var(--muted); }
+  .tnum { font-variant-numeric: tabular-nums; }
+
+  /* Cover */
+  .cover { padding: 64px 0 40px; border-bottom: 1px solid var(--line); }
+  .cover h1 { font-size: clamp(34px, 6vw, 58px); line-height: 1.02; margin-top: 16px; }
+  .cover .sub { font-size: 19px; color: var(--muted); margin-top: 18px; max-width: 60ch; }
+  .thesis { margin-top: 28px; padding-left: 18px; border-left: 3px solid var(--accent);
+    font-family: var(--serif); font-size: 20px; font-style: italic; color: var(--ink); max-width: 62ch; }
+  .cover-meta { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 30px; font-size: 13px; color: var(--faint); }
+
+  section { padding-top: 52px; }
+  .sec-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 8px; }
+  .sec-no { font-family: var(--serif); font-size: 14px; color: var(--accent); font-weight: 600;
+    font-variant-numeric: tabular-nums; }
+  h2 { font-size: 27px; }
+  .lead { color: var(--muted); font-size: 16px; margin-top: 6px; max-width: 68ch; }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 22px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px;
+    box-shadow: var(--shadow); }
+  .card h3 { font-size: 17px; }
+  .card p { color: var(--muted); font-size: 14.5px; margin-top: 6px; }
+  .num { font-family: var(--serif); font-size: 30px; color: var(--accent); }
+
+  /* North star feature */
+  .star { margin-top: 26px; border-radius: 18px; padding: 34px 34px; color: #fff;
+    background: linear-gradient(135deg, #2e1065 0%, #4c1d95 48%, #3730a3 100%);
+    box-shadow: 0 30px 70px -34px rgba(60,20,120,.6); }
+  .star .eyebrow { color: #c9b8ff; }
+  .star h2 { color: #fff; font-size: 30px; margin-top: 12px; }
+  .star .q { font-family: var(--serif); font-style: italic; font-size: 22px; margin-top: 14px; color:#efe9ff; }
+  .star p { color: #d9d0f5; margin-top: 16px; max-width: 70ch; }
+
+  /* Tables */
+  .tbl-wrap { overflow-x: auto; margin-top: 18px; border: 1px solid var(--line); border-radius: 12px;
+    background: var(--panel); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 560px; }
+  th { text-align: left; font-weight: 600; font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--faint); padding: 12px 16px; border-bottom: 1px solid var(--line); background: var(--accent-wash); }
+  td { padding: 12px 16px; border-bottom: 1px solid var(--line); vertical-align: top; color: var(--ink); }
+  tr:last-child td { border-bottom: 0; }
+  td.m { font-weight: 600; white-space: nowrap; }
+  td.w { color: var(--muted); }
+
+  .pill { display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 600;
+    padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+  .pill::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+  .pill.live { color: var(--live); background: var(--live-bg); }
+  .pill.ready { color: var(--ready); background: var(--ready-bg); }
+  .pill.plan { color: var(--planned); background: var(--planned-bg); }
+
+  .dims { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .chip { font-size: 13px; padding: 5px 11px; border-radius: 8px; background: var(--accent-wash);
+    color: var(--accent); font-weight: 600; }
+
+  .phases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 22px; }
+  .phase { border: 1px solid var(--line); border-radius: 14px; padding: 20px; background: var(--panel); }
+  .phase .tag { font-size: 12px; font-weight: 700; letter-spacing: .04em; }
+  .phase.p1 .tag { color: var(--live); } .phase.p2 .tag { color: var(--ready); } .phase.p3 .tag { color: var(--planned); }
+  .phase h3 { font-size: 16px; margin-top: 8px; } .phase p { color: var(--muted); font-size: 14px; margin-top: 8px; }
+
+  .score { margin-top: 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 30px; }
+  .score .row { display: flex; gap: 14px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .score .n { font-family: var(--serif); color: var(--accent); font-size: 18px; width: 22px; flex: none; }
+  .score .row b { font-weight: 600; } .score .row span { color: var(--muted); }
+
+  .live-band { margin-top: 22px; border: 1px solid var(--line); border-left: 3px solid var(--live);
+    border-radius: 12px; padding: 20px 22px; background: var(--panel); }
+  .live-band ul { margin: 12px 0 0; padding-left: 18px; color: var(--muted); font-size: 14.5px; }
+  .live-band li { margin: 5px 0; }
+
+  .foot { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--faint);
+    font-size: 12.5px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+  @media (max-width: 720px) {
+    .grid2, .phases, .score { grid-template-columns: 1fr; }
+  }
+  @media print {
+    .wrap { background: #fff; }
+    .card, .phase, .tbl-wrap, .live-band { box-shadow: none; }
+    section { break-inside: avoid; }
+    .star { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="page">
+
+    <header class="cover">
+      <div class="eyebrow">Dataverse · AI Interview Coach</div>
+      <h1>Metrics &amp; Measurement Framework</h1>
+      <p class="sub">How we will judge whether the platform is working — for our users and for the business.</p>
+      <p class="thesis">We don't just simulate interviews. We measurably make people more hireable — and this framework is how we prove it.</p>
+      <div class="cover-meta">
+        <span>Prepared for leadership review</span>
+        <span>·</span>
+        <span>10 metric categories</span>
+        <span>·</span>
+        <span>Phase&nbsp;1 already instrumented</span>
+      </div>
+    </header>
+
+    <section>
+      <div class="sec-head"><span class="sec-no">01</span><h2>Our measurement philosophy</h2></div>
+      <p class="lead">Every number answers one of four questions. If a metric doesn't, we don't track it.</p>
+      <div class="grid2">
+        <div class="card"><div class="num">1</div><h3>Are people showing up?</h3><p>Growth &amp; activation — signups, and whether they reach the first real interview.</p></div>
+        <div class="card"><div class="num">2</div><h3>Are they using it?</h3><p>Engagement — active users, interviews run, depth and cadence of practice.</p></div>
+        <div class="card"><div class="num">3</div><h3>Is it making them better?</h3><p>Outcome — the readiness score rising over time. This is our differentiator.</p></div>
+        <div class="card"><div class="num">4</div><h3>Is it a real business?</h3><p>Cost &amp; monetization — unit economics, conversion, and revenue as we scale.</p></div>
+      </div>
+      <p class="lead" style="margin-top:20px">We stack metrics in three layers so we never drown in numbers — a single <b>North Star</b>, one or two <b>headline KPIs</b> per category, and the <b>operational detail</b> we drill into only when a KPI moves.</p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-no">02</span><h2>The North Star</h2></div>
+      <div class="star">
+        <div class="eyebrow">The one number that captures value</div>
+        <h2>Weekly interviews completed that raise a user's Interview Readiness.</h2>
+        <p class="q">It only goes up if people come back, finish, and actually improve.</p>
+        <p>It fuses engagement and outcome into one honest figure. We protect it with three guardrail counter-metrics — completion rate, cost per interview, and satisfaction — so the North Star can never be gamed at the expense of quality.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-no">03</span><h2>Platform &amp; growth</h2></div>
+      <p class="lead">Top of the funnel: who arrives, and who comes back.</p>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>Metric</th><th>What it tells us</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td class="m">Total Users</td><td class="w">Size of the registered base</td><td><span class="pill live">Live</span></td></tr>
+          <tr><td class="m">New Signups (today / week)</td><td class="w">Growth velocity</td><td><span class="pill live">Live</span></td></tr>
+          <tr><td class="m">Active Users (today / week)</td><td class="w">Real usage, not just accounts</td><td><span class="pill live">Live</span></td></tr>
+          <tr><td class="m">Activation Rate</td><td class="w">% of signups who finish ≥1 interview — the "aha"</td><td><span class="pill ready">Ready</span></td></tr>
+          <tr><td class="m">DAU / WAU / MAU</td><td class="w">Standard SaaS engagement health</td><td><span class="pill ready">Ready</span></td></tr>
+          <tr><td class="m">Retention &amp; Returning Users</td><td class="w">Do people build a habit?</td><td><span class="pill ready">Ready</span></td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-no">04</span><h2>Product engagement — interviews</h2></div>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>Metric</th><th>What it tells us</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td class="m">Interviews Started / Completed</td><td class="w">Intent vs. follow-through</td><td><span class="pill live">Live</span></td></tr>
+          <tr><td class="m">Completion Rate</td><td class="w">Friction and quality signal</td><td><span class="pill live">Live</span></td></tr>
+          <tr><td class="m">Avg Questions per Interview</td><td class="w">Depth of each practice session</td><td><span class="pill live">Live</span></td></tr>
+          <tr><td class="m">Interviews per User</td><td class="w">Practice volume &amp; habit</td><td><span class="pill ready">Ready</span></td></tr>
+          <tr><td class="m">Avg Session Length</td><td class="w">Engagement depth</td><td><span class="pill plan">At launch</span></td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-no">05</span><h2>Interview performance — our core value</h2></div>
+      <p class="lead">This is where the product earns its keep. Every answer is graded by our evaluation engine on eight dimensions, then rolled into a readiness score and a recruiter-style verdict.</p>
+      <div class="dims">
+        <span class="chip">Clarity</span><span class="chip">Structure (STAR)</span><span class="chip">Privacy terminology</span>
+        <span class="chip">Confidence</span><span class="chip">Risk-based reasoning</span><span class="chip">Regulatory understanding</span>
+        <span class="chip">Business alignment</span><span class="chip">Org-context</span>
+      </div>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>Metric</th><th>What it tells us</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td class="m">Avg Interview Readiness (0–100)</td><td class="w">Are our users hire-ready?</td><td><span class="pill live">Live</span></td></tr>
+          <tr><td class="m">Dimension Averages</td><td class="w">Exactly where users are strong or weak</td><td><span class="pill live">Live</span></td></tr>
+          <tr><td class="m">Hiring Recommendation Mix</td><td class="w">Strong Hire / Hire / Reservations / No Hire — cohort quality</td><td><span class="pill live">Live</span></td></tr>
+          <tr><td class="m">STAR Usage · Strong vs Weak Answers</td><td class="w">Behavioral answer quality trend</td><td><span class="pill ready">Ready</span></td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-no">06</span><h2>Improvement — the retention engine</h2></div>
+      <p class="lead">The most valuable story we can tell: users measurably improving, week over week.</p>
+      <div class="grid2">
+        <div class="card">
+          <h3>Readiness over time</h3>
+          <p>Confidence, as an example, climbing across sessions:</p>
+          <p style="margin-top:10px; color:var(--ink); font-family:var(--serif); font-size:19px" class="tnum">
+            Wk 1 &nbsp;62% &nbsp;→&nbsp; Wk 2 &nbsp;71% &nbsp;→&nbsp; Wk 3 &nbsp;81%</p>
+        </div>
+        <div class="card">
+          <h3>Practice habit</h3>
+          <p>Interviews this week/month, current and longest practice streaks, and improvement by skill area (Communication, Leadership, Behavioral).</p>
+          <p style="margin-top:8px"><span class="pill ready">Ready</span> &nbsp;<span class="pill plan">Streaks at launch</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-no">07</span><h2>Content, knowledge base &amp; AI cost</h2></div>
+      <div class="grid2">
+        <div class="card">
+          <h3>Content analytics</h3>
+          <p>Interviews by type, interviewer and difficulty <span class="pill live" style="margin-left:4px">Live</span>; hardest and lowest-scoring topics, most-asked and skipped questions <span class="pill ready" style="margin-left:4px">Ready</span>. Tells us where to add coaching and improve the question bank.</p>
+        </div>
+        <div class="card">
+          <h3>Knowledge base (RAG) health</h3>
+          <p>Documents and chunks indexed <span class="pill live" style="margin-left:4px">Live · 132</span>; retrieval success rate and most-useful sources <span class="pill plan" style="margin-left:4px">At launch</span>.</p>
+        </div>
+        <div class="card">
+          <h3>AI usage &amp; cost</h3>
+          <p>Messages, response time, tokens per session, and <b>cost per interview</b>. Today we run free-tier models with automatic failover, so spend ≈ $0 — this dashboard becomes essential the moment we move to paid models.</p>
+          <p style="margin-top:8px"><span class="pill plan">At launch</span></p>
+        </div>
+        <div class="card">
+          <h3>Feedback &amp; satisfaction</h3>
+          <p>Post-interview rating (1–5), AI helpfulness and realism, and NPS (would recommend). Our qualitative pulse alongside the hard numbers.</p>
+          <p style="margin-top:8px"><span class="pill plan">At launch</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-no">08</span><h2>What's already live today</h2></div>
+      <p class="lead">We are not starting from zero. The admin dashboard renders real data right now — admin-gated to the two leadership accounts.</p>
+      <div class="live-band">
+        <ul>
+          <li>Total users · active today &amp; this week · new signups</li>
+          <li>Interviews started &amp; completed · average questions per interview</li>
+          <li><b>Average Interview Readiness</b> and per-dimension averages</li>
+          <li><b>Hiring recommendation distribution</b> across completed interviews</li>
+          <li>Breakdowns by interview type, interviewer, and difficulty</li>
+          <li>Knowledge-base size (chunks indexed) and a live <b>activity feed</b></li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-no">09</span><h2>Rollout plan</h2></div>
+      <div class="phases">
+        <div class="phase p1"><div class="tag">PHASE 1 · NOW</div><h3>Value &amp; usage</h3><p>Platform, engagement, performance, content, activity feed. Judge whether the product works — today.</p></div>
+        <div class="phase p2"><div class="tag">PHASE 2 · PRE-LAUNCH</div><h3>Outcomes &amp; retention</h3><p>DAU/WAU/MAU, streaks, improvement-over-time, STAR usage, question-level analytics, ratings &amp; NPS.</p></div>
+        <div class="phase p3"><div class="tag">PHASE 3 · AT LAUNCH</div><h3>Business health</h3><p>AI token &amp; cost dashboard, subscriptions, MRR, churn, cost per interview.</p></div>
+      </div>
+      <p class="lead" style="margin-top:16px">Phase 2 needs light event tracking; Phase 3 needs billing and AI-usage logging.</p>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="sec-no">10</span><h2>The launch scorecard</h2></div>
+      <p class="lead">If we watch only seven numbers each week, these are the ones.</p>
+      <div class="score">
+        <div class="row"><span class="n tnum">1</span><div><b>North Star</b> <span>— weekly completed interviews that raise readiness</span></div></div>
+        <div class="row"><span class="n tnum">2</span><div><b>Activation rate</b> <span>— % of signups finishing ≥1 interview</span></div></div>
+        <div class="row"><span class="n tnum">3</span><div><b>Weekly Active Users</b></div></div>
+        <div class="row"><span class="n tnum">4</span><div><b>Interview completion rate</b></div></div>
+        <div class="row"><span class="n tnum">5</span><div><b>Avg Interview Readiness</b> <span>&amp; its trend</span></div></div>
+        <div class="row"><span class="n tnum">6</span><div><b>Week-over-week improvement</b> <span>per returning user</span></div></div>
+        <div class="row"><span class="n tnum">7</span><div><b>Cost per interview</b> <span>(once on paid models)</span></div></div>
+      </div>
+      <p class="lead" style="margin-top:16px">Plus one qualitative pulse: <b>average interview rating / NPS</b>.</p>
+    </section>
+
+    <div class="foot">
+      <span>Dataverse AI Interview Coach — Metrics Framework</span>
+      <span>Prepared for leadership review</span>
+    </div>
+
+  </div>
+</div>

@@ -2,9 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { supabase } from "@/lib/supabase";
 import { apiGet, apiPost } from "@/lib/api";
-import { DEV_NO_AUTH } from "@/lib/devauth";
+import { useAuthGate } from "@/lib/useAuthGate";
 import type { AppConfig, ModelAnswer } from "@/lib/types";
 import { BrandLogo } from "@/components/BrandLogo";
 
@@ -18,14 +17,10 @@ export default function AnswerBankPage() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  const { ready } = useAuthGate();
   useEffect(() => {
-    const load = () => apiGet("/config").then(setConfig).catch(() => {});
-    if (DEV_NO_AUTH) { load(); return; }
-    supabase.auth.getSession().then(({ data }) => {
-      if (!data.session) { router.replace("/login"); return; }
-      load();
-    });
-  }, [router]);
+    if (ready) apiGet("/config").then(setConfig).catch(() => {});
+  }, [ready]);
 
   async function generate() {
     const questions = text.split("\n").map((q) => q.trim()).filter(Boolean);

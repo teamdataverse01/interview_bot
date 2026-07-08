@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { apiGet } from "@/lib/api";
 import { DIMENSION_LABELS } from "@/lib/types";
 import { BrandLogo } from "@/components/BrandLogo";
+import { useAuthGate } from "@/lib/useAuthGate";
 
 type Row = { label: string; n: number };
 type Metrics = {
@@ -51,7 +52,9 @@ export default function MetricsPage() {
   const [m, setM] = useState<Metrics | null>(null);
   const [error, setError] = useState<string | null>(null);
 
+  const { ready } = useAuthGate();
   useEffect(() => {
+    if (!ready) return;
     (async () => {
       try {
         const me = await apiGet("/me");
@@ -61,7 +64,7 @@ export default function MetricsPage() {
         setError(e instanceof Error ? e.message : "Failed to load metrics.");
       }
     })();
-  }, [router]);
+  }, [ready, router]);
 
   if (error) return <main className="flex-1 grid place-items-center text-rose-300">{error}</main>;
   if (!m) return <main className="flex-1 grid place-items-center text-violet-200">Loading metrics…</main>;

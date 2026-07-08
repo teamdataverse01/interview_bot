@@ -2,9 +2,8 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-import { supabase } from "@/lib/supabase";
 import { apiGet, apiPost, apiUpload } from "@/lib/api";
-import { DEMO_MODE, DEV_NO_AUTH, getDemoToken } from "@/lib/devauth";
+import { useAuthGate } from "@/lib/useAuthGate";
 import type {
   AnswerResponse, AppConfig, Evaluation, Message, Report, SessionDetail,
 } from "@/lib/types";
@@ -54,6 +53,8 @@ export default function InterviewPage() {
   const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
   const [avatarLoading, setAvatarLoading] = useState(false);
 
+  const { ready } = useAuthGate();
+
   useEffect(() => {
     async function load() {
       try {
@@ -92,12 +93,8 @@ export default function InterviewPage() {
         setError(e instanceof Error ? e.message : "Failed to load session.");
       }
     }
-    if (DEV_NO_AUTH || DEMO_MODE || getDemoToken()) { load(); return; }
-    supabase.auth.getSession().then(({ data }) => {
-      if (!data.session) { router.replace("/login"); return; }
-      load();
-    });
-  }, [id, router]);
+    if (ready) load();
+  }, [id, ready]);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
