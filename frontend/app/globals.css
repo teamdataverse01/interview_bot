@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0715;
-  --foreground: #f4f2ff;
-  --muted: #b7afd5;
+  --background: #41207f;
+  --foreground: #f7f4ff;
+  --muted: #d5cbf6;
   --brand: #8b5cf6;
   --brand-strong: #7c3aed;
   --brand-soft: #c4b5fd;
-  --ink: #171428;
-  --surface: rgba(26, 20, 44, 0.7);
-  --surface-strong: rgba(31, 24, 52, 0.82);
-  --border: rgba(255, 255, 255, 0.1);
+  --ink: #21124a;
+  --surface: rgba(74, 47, 140, 0.66);
+  --surface-strong: rgba(91, 57, 170, 0.78);
+  --border: rgba(255, 255, 255, 0.18);
 }
 
 @theme inline {
@@ -36,11 +36,11 @@ body::before {
   z-index: -2;
   pointer-events: none;
   background-image:
-    linear-gradient(180deg, rgba(10, 7, 21, 0.75) 0%, rgba(10, 7, 21, 0.88) 44%, rgba(10, 7, 21, 0.98) 100%),
+    linear-gradient(180deg, rgba(88, 55, 168, 0.36) 0%, rgba(82, 44, 168, 0.52) 45%, rgba(60, 28, 127, 0.72) 100%),
     url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1800&q=70");
   background-size: cover;
   background-position: center top;
-  filter: saturate(0.48) contrast(1.08);
+  filter: saturate(0.78) contrast(1.08);
 }
 
 body::after {
@@ -50,28 +50,29 @@ body::after {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(880px 420px at 14% -8%, rgba(196, 181, 253, 0.14), transparent 62%),
-    radial-gradient(1200px 580px at 88% -14%, rgba(139, 92, 246, 0.2), transparent 64%);
+    radial-gradient(760px 440px at 14% -10%, rgba(245, 181, 255, 0.28), transparent 63%),
+    radial-gradient(1080px 540px at 88% -16%, rgba(139, 92, 246, 0.34), transparent 66%),
+    radial-gradient(820px 420px at 50% 110%, rgba(96, 165, 250, 0.14), transparent 68%);
 }
 
 .scroll-thin::-webkit-scrollbar { width: 8px; }
 .scroll-thin::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.18); border-radius: 4px; }
 
 .card {
-  background: linear-gradient(145deg, rgba(35, 28, 56, 0.72), rgba(22, 17, 38, 0.74));
+  background: linear-gradient(145deg, rgba(102, 66, 189, 0.72), rgba(74, 43, 148, 0.72));
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border);
   border-radius: 20px;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 28px 70px -34px rgba(0, 0, 0, 0.85);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 28px 70px -34px rgba(36, 15, 88, 0.82);
   color: var(--foreground);
 }
 
 .glass-strong {
   background: var(--surface-strong);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 18px;
-  box-shadow: 0 30px 70px -35px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 30px 70px -35px rgba(31, 9, 83, 0.8);
 }
 
 .field {
@@ -108,7 +109,7 @@ body::after {
 }
 
 .brand-gradient {
-  background-image: linear-gradient(128deg, #2a0f58 0%, #4d1d95 50%, #6d28d9 100%);
+  background-image: linear-gradient(128deg, #4f1ba6 0%, #7c3aed 52%, #a855f7 100%);
 }
 
 .brand-text {
@@ -135,8 +136,8 @@ h1, h2, h3 {
   align-items: center;
   gap: 8px;
   border-radius: 999px;
-  border: 1px solid rgba(196, 181, 253, 0.35);
-  background: rgba(76, 29, 149, 0.24);
+  border: 1px solid rgba(233, 213, 255, 0.46);
+  background: rgba(124, 58, 237, 0.34);
   padding: 7px 14px;
   color: #ddd6fe;
   font-weight: 600;
