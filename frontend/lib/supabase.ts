@@ -1,7 +1,13 @@
 import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+// Next.js only inlines EXACT `process.env.NEXT_PUBLIC_*` literals, so we list each accepted name
+// explicitly (publishable OR anon OR key) to tolerate however the Railway var was named.
+const supabaseUrl =
+  process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_PROJECT_URL;
+const supabaseKey =
+  process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ||
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
+  process.env.NEXT_PUBLIC_SUPABASE_KEY;
 
 // In no-auth mode we intentionally allow missing Supabase env vars.
 // This prevents build-time crashes during static generation.
