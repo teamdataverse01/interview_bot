@@ -15,6 +15,7 @@ import { findTerms } from "@/lib/glossary";
 import { useAudioRecorder, useTextToSpeech } from "@/lib/useSpeech";
 import { downloadReportPdf, downloadRoadmapPdf } from "@/lib/pdf";
 import { Avatar, SpeakingIndicator } from "@/components/Avatar";
+import { BrandLogo } from "@/components/BrandLogo";
 
 export default function InterviewPage() {
   const router = useRouter();
@@ -252,6 +253,7 @@ export default function InterviewPage() {
       <header className="flex items-center justify-between">
         <a href="/dashboard" className="text-sm text-violet-200 hover:text-white">← Dashboard</a>
         <div className="flex items-center gap-3 text-sm">
+          <BrandLogo compact className="hidden sm:inline-flex mr-2" />
           {tts.supported && (
             <button
               onClick={toggleVoice}
@@ -260,7 +262,7 @@ export default function InterviewPage() {
                 voiceOn ? "bg-violet-600 text-white border-violet-600" : "border-white/20 text-violet-100 hover:bg-white/10"
               }`}
             >
-              {voiceOn ? "🔊 Voice on" : "🔈 Voice"}
+                {voiceOn ? "Voice on" : "Voice"}
             </button>
           )}
           <span className="rounded-full brand-gradient text-white px-3 py-1 font-semibold shadow-sm">
@@ -284,12 +286,12 @@ export default function InterviewPage() {
           {avatarEnabled && (
             <button onClick={playAvatar} disabled={avatarLoading}
               className="text-xs rounded-full border border-white/25 text-violet-100 px-3 py-1 font-medium hover:bg-white/10 disabled:opacity-50">
-              {avatarLoading ? "Rendering…" : "🎥 Live avatar"}
+              {avatarLoading ? "Rendering..." : "Live avatar"}
             </button>
           )}
           {tts.supported && !voiceOn && (
             <button onClick={toggleVoice} className="text-xs rounded-full brand-gradient text-white px-3 py-1 font-medium">
-              🔈 Turn on voice
+              Turn on voice
             </button>
           )}
         </div>
@@ -391,8 +393,8 @@ export default function InterviewPage() {
           </div>
           <div className="mt-4 flex flex-wrap items-center gap-2">
             <button onClick={() => doContinue(false)} disabled={sending}
-              className="px-5 py-2 rounded-lg bg-violet-600 hover:bg-white/100 disabled:opacity-50 text-white font-semibold">
-              Continue interview →
+              className="px-5 py-2 rounded-lg bg-violet-600 hover:bg-white disabled:opacity-50 text-white font-semibold">
+              Continue interview {"->"}
             </button>
             <span className="text-violet-300">or switch topic:</span>
             <select value={switchTopic} onChange={(e) => setSwitchTopic(e.target.value)}
@@ -443,7 +445,7 @@ export default function InterviewPage() {
             </button>
             <div className="flex items-center gap-3">
               <span className="text-xs text-violet-300">
-                {recorder.recording ? "🎙️ Recording… click 🎤 to stop" : transcribing ? "Transcribing…" : sending ? "Interviewer is thinking…" : `${roundSize - (qInRound || 0)} to finish round ${round}`}
+                {recorder.recording ? "Recording... click mic to stop" : transcribing ? "Transcribing..." : sending ? "Interviewer is thinking..." : `${roundSize - (qInRound || 0)} to finish round ${round}`}
               </span>
               {recorder.supported && (
                 <button
@@ -454,11 +456,11 @@ export default function InterviewPage() {
                     recorder.recording ? "bg-rose-500 border-rose-500 text-white animate-pulse" : "border-white/20 text-violet-100 hover:bg-white/10"
                   }`}
                 >
-                  {transcribing ? "…" : "🎤"}
+                  {transcribing ? "..." : "Mic"}
                 </button>
               )}
               <button onClick={send} disabled={sending || !input.trim()}
-                className="px-5 py-2 rounded-lg bg-violet-600 hover:bg-white/100 disabled:opacity-50 text-white font-semibold">
+                className="px-5 py-2 rounded-lg bg-violet-600 hover:bg-white disabled:opacity-50 text-white font-semibold">
                 Send
               </button>
             </div>

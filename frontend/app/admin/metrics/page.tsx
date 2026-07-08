@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { apiGet } from "@/lib/api";
 import { DIMENSION_LABELS } from "@/lib/types";
+import { BrandLogo } from "@/components/BrandLogo";
 
 type Row = { label: string; n: number };
 type Metrics = {
@@ -67,9 +68,10 @@ export default function MetricsPage() {
 
   return (
     <main className="flex-1 max-w-6xl w-full mx-auto px-6 py-8">
-      <header className="rounded-2xl p-6 text-white shadow-lg flex items-center justify-between brand-gradient">
+      <header className="rounded-2xl p-6 text-white shadow-lg flex items-center justify-between brand-gradient rise-in">
         <div>
-          <p className="text-violet-100/90 font-semibold tracking-widest text-xs">DATAVERSE · ADMIN</p>
+          <BrandLogo compact className="mb-2" />
+          <p className="text-violet-100/90 font-semibold tracking-widest text-xs">ADMIN</p>
           <h1 className="text-2xl font-bold">Metrics Dashboard</h1>
         </div>
         <a href="/dashboard" className="rounded-lg bg-white/15 hover:bg-white/25 px-3 py-1.5 text-sm font-medium">← Dashboard</a>

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase, SUPABASE_CONFIGURED } from "@/lib/supabase";
+import { BrandLogo } from "@/components/BrandLogo";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -52,68 +53,89 @@ export default function LoginPage() {
     }
   }
 
-  const field =
-    "w-full rounded-xl bg-slate-50 text-slate-900 placeholder:text-slate-400 border border-slate-200 " +
-    "px-4 py-3 outline-none focus:border-violet-500 focus:bg-white focus:ring-4 focus:ring-violet-100 transition";
+  const field = "w-full field px-4 py-3 transition";
 
   return (
-    <main className="flex-1 flex items-center justify-center px-6 py-10">
-      <div className="w-full max-w-sm rounded-3xl bg-white shadow-[0_20px_70px_-15px_rgba(76,29,149,0.45)] p-8">
-        <div className="flex items-center gap-2">
-          <span className="grid place-items-center h-9 w-9 rounded-xl bg-linear-to-br from-violet-600 to-fuchsia-500 text-white font-bold">D</span>
-          <span className="font-bold tracking-tight text-slate-900">Dataverse</span>
-        </div>
+    <main className="flex-1 px-6 py-10 sm:py-14">
+      <div className="w-full max-w-5xl mx-auto grid lg:grid-cols-[1.1fr_0.9fr] gap-5 items-stretch">
+        <section className="hidden lg:flex card p-8 xl:p-10 flex-col justify-between rise-in">
+          <div>
+            <BrandLogo />
+            <span className="hero-chip mt-8">Built for High Bar Interviews</span>
+            <h1 className="mt-4 text-4xl font-bold leading-tight text-white">
+              Train like a top-tier candidate before the real panel
+            </h1>
+            <p className="mt-4 text-violet-100/90 leading-relaxed max-w-md">
+              Dataverse simulates realistic interview pressure, then delivers sharp coaching on clarity,
+              judgment, and executive-level storytelling.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-3 text-sm">
+            <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+              <p className="text-violet-300">Dimensions</p>
+              <p className="mt-1 text-xl font-semibold text-white">8</p>
+            </div>
+            <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+              <p className="text-violet-300">Hiring Principles</p>
+              <p className="mt-1 text-xl font-semibold text-white">6</p>
+            </div>
+          </div>
+        </section>
 
-        <h1 className="mt-6 text-2xl font-bold text-slate-900">
-          {mode === "signin" ? "Sign in" : "Create account"}
-        </h1>
-        <p className="text-slate-500 text-sm mt-1">
-          {mode === "signin" ? "Welcome back — let's practice." : "Start with 3 free interview credits."}
-        </p>
+        <div className="card w-full p-8 sm:p-9 rise-in">
+          <BrandLogo tone="light" compact />
 
-        {!SUPABASE_CONFIGURED && (
-          <p className="mt-5 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-sm p-3">
-            Sign-in isn&apos;t configured on this deployment yet (missing Supabase keys at build).
-            Set <code>NEXT_PUBLIC_SUPABASE_URL</code> and <code>NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY</code>,
-            then redeploy the frontend.
+          <h1 className="mt-6 text-3xl font-bold text-white">
+            {mode === "signin" ? "Sign in" : "Create account"}
+          </h1>
+          <p className="text-violet-200 text-sm mt-1">
+            {mode === "signin" ? "Welcome back - let's practice." : "Start with 3 free interview credits."}
           </p>
-        )}
 
-        <button
-          onClick={google}
-          disabled={busy || !SUPABASE_CONFIGURED}
-          className="mt-6 w-full rounded-xl border border-slate-200 bg-white text-slate-800 font-semibold py-3 flex items-center justify-center gap-2 hover:bg-slate-50 disabled:opacity-50 transition"
-        >
-          <GoogleIcon /> Continue with Google
-        </button>
+          {!SUPABASE_CONFIGURED && (
+            <p className="mt-5 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-sm p-3">
+              Sign-in isn&apos;t configured on this deployment yet (missing Supabase keys at build).
+              Set <code>NEXT_PUBLIC_SUPABASE_URL</code> and <code>NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY</code>,
+              then redeploy the frontend.
+            </p>
+          )}
 
-        <div className="flex items-center gap-3 my-5">
-          <div className="flex-1 h-px bg-slate-200" />
-          <span className="text-xs text-slate-400">or</span>
-          <div className="flex-1 h-px bg-slate-200" />
-        </div>
-
-        <form onSubmit={submit} className="space-y-3">
-          <input type="email" required placeholder="you@email.com"
-            value={email} onChange={(e) => setEmail(e.target.value)} className={field} />
-          <input type="password" required minLength={6} placeholder="Password"
-            value={password} onChange={(e) => setPassword(e.target.value)} className={field} />
-          <button disabled={busy || !SUPABASE_CONFIGURED}
-            className="w-full rounded-xl bg-linear-to-r from-violet-600 to-fuchsia-600 hover:brightness-110 text-white font-semibold py-3 shadow-md shadow-violet-300/40 disabled:opacity-50 transition">
-            {busy ? "…" : mode === "signin" ? "Sign in" : "Create account"}
-          </button>
-        </form>
-
-        {msg && <p className="mt-4 text-sm text-rose-600">{msg}</p>}
-
-        <div className="mt-6 flex items-center justify-between text-sm">
           <button
-            onClick={() => { setMode(mode === "signin" ? "signup" : "signin"); setMsg(null); }}
-            className="text-violet-600 hover:text-violet-800 font-medium"
+            onClick={google}
+            disabled={busy || !SUPABASE_CONFIGURED}
+            className="mt-6 w-full rounded-xl border border-white/20 bg-white/95 text-slate-800 font-semibold py-3 flex items-center justify-center gap-2 hover:bg-white disabled:opacity-50 transition"
           >
-            {mode === "signin" ? "Create an account" : "Have an account? Sign in"}
+            <GoogleIcon /> Continue with Google
           </button>
-          <a href="/demo" className="text-slate-400 hover:text-slate-600">Have a code?</a>
+
+          <div className="flex items-center gap-3 my-5">
+            <div className="flex-1 h-px bg-white/20" />
+            <span className="text-xs text-violet-200/80">or</span>
+            <div className="flex-1 h-px bg-white/20" />
+          </div>
+
+          <form onSubmit={submit} className="space-y-3">
+            <input type="email" required placeholder="you@email.com"
+              value={email} onChange={(e) => setEmail(e.target.value)} className={field} />
+            <input type="password" required minLength={6} placeholder="Password"
+              value={password} onChange={(e) => setPassword(e.target.value)} className={field} />
+            <button disabled={busy || !SUPABASE_CONFIGURED}
+              className="w-full rounded-xl btn-brand text-white font-semibold py-3 disabled:opacity-50 transition">
+              {busy ? "..." : mode === "signin" ? "Sign in" : "Create account"}
+            </button>
+          </form>
+
+          {msg && <p className="mt-4 text-sm text-rose-300">{msg}</p>}
+
+          <div className="mt-6 flex items-center justify-between text-sm">
+            <button
+              onClick={() => { setMode(mode === "signin" ? "signup" : "signin"); setMsg(null); }}
+              className="text-violet-200 hover:text-white font-medium"
+            >
+              {mode === "signin" ? "Create an account" : "Have an account? Sign in"}
+            </button>
+            <a href="/demo" className="text-violet-300 hover:text-violet-100">Have a code?</a>
+          </div>
         </div>
       </div>
     </main>

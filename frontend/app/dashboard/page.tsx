@@ -7,6 +7,7 @@ import { apiGet, apiPost } from "@/lib/api";
 import { DEV_NO_AUTH, getDemoToken, clearDemoToken } from "@/lib/devauth";
 import { isDemoMode } from "@/lib/gate";
 import type { AppConfig, SessionListItem, StartResponse } from "@/lib/types";
+import { BrandLogo } from "@/components/BrandLogo";
 
 function Select({
   label, value, onChange, options, render,
@@ -112,26 +113,26 @@ export default function Dashboard() {
 
   return (
     <main className="flex-1 max-w-5xl w-full mx-auto px-6 py-8">
-      <header className="rounded-2xl p-7 text-white shadow-lg flex items-center justify-between brand-gradient border border-white/10">
+      <header className="rounded-2xl p-7 text-white shadow-lg flex items-center justify-between brand-gradient border border-white/10 rise-in">
         <div>
-          <p className="text-violet-200/80 font-medium tracking-[0.25em] text-[11px]">DATAVERSE</p>
-          <h1 className="text-[26px] font-semibold mt-1">AI Interview Coach</h1>
+          <BrandLogo className="mb-3" compact />
+          <h1 className="text-[26px] font-semibold">Interview Control Center</h1>
           <p className="text-violet-100/70 text-sm mt-1.5">Practice. Get scored. Get hired.</p>
         </div>
         <div className="text-right text-sm">
           <div className="mb-2 flex justify-end gap-2">
             {isAdmin && (
               <a href="/admin/metrics" className="rounded-lg bg-white/15 hover:bg-white/25 backdrop-blur px-3 py-1.5 font-medium transition">
-                📊 Metrics
+                Metrics
               </a>
             )}
             <a href="/answer-bank" className="rounded-lg bg-white/15 hover:bg-white/25 backdrop-blur px-3 py-1.5 font-medium transition">
-              📚 Answer Bank
+              Answer Bank
             </a>
           </div>
           <p>
             <span className="inline-flex items-center gap-1 rounded-full bg-white/20 px-3 py-1 font-semibold">
-              💎 {isAdmin ? "Unlimited" : `${credits ?? "…"} credits`}
+              {isAdmin ? "Unlimited" : `${credits ?? "..."} credits`}
             </span>
             <button onClick={signOut} className="ml-2 text-violet-100 hover:text-white underline">Sign out</button>
           </p>
@@ -140,7 +141,7 @@ export default function Dashboard() {
 
       {error && <p className="mt-4 text-rose-500 text-sm">{error}</p>}
 
-      <section className="mt-6 card p-6">
+      <section className="mt-6 card p-6 rise-in">
         <h2 className="font-semibold text-lg text-white">Start a mock interview</h2>
         <p className="text-sm text-violet-200/80 mt-0.5">Compose your interview. Each session uses 1 credit.</p>
 
@@ -188,7 +189,7 @@ export default function Dashboard() {
                 <div key={s.id} className="flex-1 flex flex-col items-center justify-end h-full"
                   title={`${personaLabel(s.config.persona_key)} · ${s.config.interview_type} — ${v}/100`}>
                   <span className="text-xs font-bold text-violet-700">{v}</span>
-                  <div className="w-full max-w-[46px] rounded-t-md brand-gradient" style={{ height: `${Math.max(6, v)}%` }} />
+                  <div className="w-full max-w-11.5 rounded-t-md brand-gradient" style={{ height: `${Math.max(6, v)}%` }} />
                   <span className="text-[10px] text-violet-300 mt-1">
                     {new Date(s.started_at).toLocaleDateString(undefined, { month: "short", day: "numeric" })}
                   </span>

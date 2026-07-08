@@ -6,6 +6,7 @@ import { supabase } from "@/lib/supabase";
 import { apiGet, apiPost } from "@/lib/api";
 import { DEV_NO_AUTH } from "@/lib/devauth";
 import type { AppConfig, ModelAnswer } from "@/lib/types";
+import { BrandLogo } from "@/components/BrandLogo";
 
 export default function AnswerBankPage() {
   const router = useRouter();
@@ -48,9 +49,10 @@ export default function AnswerBankPage() {
       <header className="flex items-center justify-between">
         <div>
           <a href="/dashboard" className="text-sm text-violet-200 hover:text-white">← Dashboard</a>
-          <h1 className="text-2xl font-bold text-white mt-1">📚 Answer Bank</h1>
+          <h1 className="text-2xl font-bold text-white mt-1">Answer Bank</h1>
           <p className="text-sm text-violet-200">Paste interview questions and get strong model answers, graded by what they demonstrate.</p>
         </div>
+        <BrandLogo compact className="hidden sm:inline-flex" />
       </header>
 
       <section className="mt-6 card p-5">

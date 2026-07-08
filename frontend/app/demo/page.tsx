@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { apiPost } from "@/lib/api";
 import { setDemoToken } from "@/lib/devauth";
+import { BrandLogo } from "@/components/BrandLogo";
 
 export default function DemoPage() {
   const router = useRouter();
@@ -29,12 +30,12 @@ export default function DemoPage() {
   }
 
   return (
-    <main className="flex-1 flex items-center justify-center px-6">
-      <div className="w-full max-w-md card overflow-hidden text-center">
+    <main className="flex-1 flex items-center justify-center px-6 py-10">
+      <div className="w-full max-w-md card overflow-hidden rise-in text-center">
         <div className="brand-gradient text-white px-8 pt-7 pb-8">
-          <p className="font-bold tracking-[0.2em] text-violet-100">DATAVERSE</p>
-          <h1 className="mt-1 text-2xl font-extrabold">Welcome 👋</h1>
-          <p className="text-violet-100/90 mt-2 text-sm">
+          <BrandLogo className="justify-center" compact />
+          <h1 className="mt-3 text-3xl font-bold">Welcome</h1>
+          <p className="text-violet-100/90 mt-2 text-sm leading-relaxed">
             Enter your access code to start your AI mock interview. Each code is good for one session.
           </p>
         </div>
@@ -52,7 +53,7 @@ export default function DemoPage() {
             disabled={busy || !code.trim()}
             className="w-full rounded-lg btn-brand disabled:opacity-50 font-semibold py-3"
           >
-            {busy ? "Starting your interview…" : "Start interview"}
+            {busy ? "Starting your interview..." : "Start interview"}
           </button>
         </form>
 
