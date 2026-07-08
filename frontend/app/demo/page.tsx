@@ -61,6 +61,11 @@ export default function DemoPage() {
         <p className="mt-6 text-xs text-violet-200/70">
           Don&apos;t have a code? Ask your facilitator.
         </p>
+        <div className="mt-4 pt-4 border-t border-white/10">
+          <a href="/login" className="text-sm font-medium text-fuchsia-300 hover:text-white">
+            Team or admin? Sign in →
+          </a>
+        </div>
         </div>
       </div>
     </main>

@@ -1,5 +1,5 @@
 import { supabase } from "./supabase";
-import { DEMO_MODE, DEV_NO_AUTH, getDemoToken } from "./devauth";
+import { DEMO_MODE, getDemoToken } from "./devauth";
 
 function buildUrl(path: string): string {
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
@@ -7,17 +7,21 @@ function buildUrl(path: string): string {
 }
 
 async function authHeaders(): Promise<Record<string, string>> {
-  // A redeemed demo token always wins (single-use, code-scoped identity).
+  // 1) A redeemed demo token wins (single-use, code-scoped identity).
   const demo = getDemoToken();
   if (demo) return { Authorization: `Bearer ${demo}` };
-  // In demo mode there is no dev/anon fallback — access requires a demo token.
+  // 2) A real signed-in user (admin/team) — works even in demo mode.
+  try {
+    const { data } = await supabase.auth.getSession();
+    const token = data.session?.access_token;
+    if (token) return { Authorization: `Bearer ${token}` };
+  } catch {
+    /* ignore */
+  }
+  // 3) No session: in demo mode, access requires a code (no fallback).
   if (DEMO_MODE) return {};
-  if (DEV_NO_AUTH) return { Authorization: "Bearer dev" };
-  const { data } = await supabase.auth.getSession();
-  const token = data.session?.access_token;
-  // Deployment-safe fallback: if there is no Supabase session token yet,
-  // still send dev auth so no-auth environments keep working.
-  return token ? { Authorization: `Bearer ${token}` } : { Authorization: "Bearer dev" };
+  // 4) Dev/no-auth convenience for non-demo environments.
+  return { Authorization: "Bearer dev" };
 }
 
 async function handle(res: Response) {
