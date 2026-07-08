@@ -112,11 +112,11 @@ export default function Dashboard() {
 
   return (
     <main className="flex-1 max-w-5xl w-full mx-auto px-6 py-8">
-      <header className="rounded-2xl p-6 text-white shadow-lg flex items-center justify-between bg-linear-to-r from-violet-600 via-purple-600 to-fuchsia-600">
+      <header className="rounded-2xl p-7 text-white shadow-lg flex items-center justify-between brand-gradient border border-white/10">
         <div>
-          <p className="text-violet-100/90 font-semibold tracking-widest text-xs">DATAVERSE</p>
-          <h1 className="text-2xl font-bold">AI Interview Coach</h1>
-          <p className="text-violet-100/90 text-sm mt-1">Practice. Get scored. Level up. 🚀</p>
+          <p className="text-violet-200/80 font-medium tracking-[0.25em] text-[11px]">DATAVERSE</p>
+          <h1 className="text-[26px] font-semibold mt-1">AI Interview Coach</h1>
+          <p className="text-violet-100/70 text-sm mt-1.5">Practice. Get scored. Get hired.</p>
         </div>
         <div className="text-right text-sm">
           <div className="mb-2 flex justify-end gap-2">
@@ -140,9 +140,9 @@ export default function Dashboard() {
 
       {error && <p className="mt-4 text-rose-500 text-sm">{error}</p>}
 
-      <section className="mt-8 card p-6 border-t-4 border-t-violet-500">
-        <h2 className="font-semibold text-lg text-white">🎯 Start a mock interview</h2>
-        <p className="text-sm text-violet-200">Compose your interview. Each session uses 1 credit.</p>
+      <section className="mt-6 card p-6">
+        <h2 className="font-semibold text-lg text-white">Start a mock interview</h2>
+        <p className="text-sm text-violet-200/80 mt-0.5">Compose your interview. Each session uses 1 credit.</p>
 
         <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-4">
           <Select label="Interviewer" value={persona} onChange={setPersona}
@@ -165,8 +165,8 @@ export default function Dashboard() {
         </p>
 
         <button onClick={start} disabled={starting || (credits ?? 0) <= 0}
-          className="mt-5 px-6 py-3 rounded-lg bg-linear-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 disabled:opacity-50 text-white font-semibold transition shadow-md">
-          {starting ? "Starting…" : (credits ?? 0) <= 0 ? "No credits left" : "Start interview →"}
+          className="mt-6 px-6 py-3 btn-brand disabled:opacity-50 font-semibold">
+          {starting ? "Starting…" : (credits ?? 0) <= 0 ? "No credits left" : "Start interview"}
         </button>
       </section>
 
@@ -200,7 +200,7 @@ export default function Dashboard() {
       )}
 
       <section className="mt-8">
-        <h2 className="font-semibold text-lg text-white">📊 Your sessions</h2>
+        <h2 className="font-semibold text-lg text-white">Your sessions</h2>
         {sessions.length === 0 ? (
           <p className="text-sm text-violet-200 mt-2">No interviews yet — start one above.</p>
         ) : (
