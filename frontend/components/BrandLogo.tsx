@@ -9,27 +9,22 @@ export function BrandLogo({
   tone?: "light" | "dark";
   className?: string;
 }) {
-  const textTone = tone === "light" ? "text-white" : "text-zinc-900";
-  const subTone = tone === "light" ? "text-violet-200/90" : "text-violet-700";
-  const logoSize = compact ? 48 : 64;
+  const logoSize = compact ? 62 : 88;
+  const shellTone = tone === "light"
+    ? "ring-white/35 bg-white/14 shadow-[0_22px_52px_-28px_rgba(245,158,255,0.9)]"
+    : "ring-violet-300/70 bg-violet-50 shadow-[0_16px_36px_-22px_rgba(109,40,217,0.45)]";
 
   return (
-    <div className={`inline-flex items-center ${compact ? "gap-3" : "gap-4"} ${className}`.trim()}>
-      <div className={`relative overflow-hidden rounded-2xl ring-1 ${tone === "light" ? "ring-white/25 bg-white/12" : "ring-violet-200 bg-violet-50"}`}>
+    <div className={`inline-flex items-center ${className}`.trim()}>
+      <div className={`relative overflow-hidden rounded-[1.45rem] ring-1 ${shellTone}`}>
         <Image
           src="/dataverse-logo.png"
           alt="Dataverse logo"
           width={logoSize}
           height={logoSize}
-          className="h-auto w-auto"
+          className="h-auto w-auto scale-[1.03]"
           priority
         />
-      </div>
-      <div>
-        <p className={`leading-none font-semibold tracking-[0.14em] uppercase ${compact ? "text-[10px]" : "text-[11px]"} ${subTone}`}>
-          Dataverse
-        </p>
-        {!compact && <p className={`leading-tight mt-1.5 font-semibold text-[18px] ${textTone}`}>AI Interview Coach</p>}
       </div>
     </div>
   );
