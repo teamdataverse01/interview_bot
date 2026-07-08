@@ -12,11 +12,12 @@ export default function Home() {
 
   useEffect(() => {
     (async () => {
+      // A signed-in user always goes to the dashboard, even in demo mode.
+      const { data } = await supabase.auth.getSession();
+      if (data.session) { router.replace("/dashboard"); return; }
       if (await isDemoMode()) { router.replace("/demo"); return; }
       if (DEV_NO_AUTH) { router.replace("/dashboard"); return; }
-      const { data } = await supabase.auth.getSession();
-      if (data.session) router.replace("/dashboard");
-      else setChecking(false);
+      setChecking(false);
     })();
   }, [router]);
 

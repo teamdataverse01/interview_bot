@@ -56,16 +56,16 @@ export default function Dashboard() {
       }
     }
     (async () => {
-      // In demo mode, only a redeemed token (e.g. the boss master code) can reach the dashboard.
+      // A real signed-in user (admin/team) always gets in — even in demo mode.
+      const { data } = await supabase.auth.getSession();
+      if (data.session) { setEmail(data.session.user.email ?? ""); load(); return; }
+      // In demo mode, otherwise require a redeemed code token (e.g. the boss master code).
       if (await isDemoMode()) {
         if (getDemoToken()) { load(); return; }
         router.replace("/demo"); return;
       }
       if (DEV_NO_AUTH) { load(); return; }
-      const { data } = await supabase.auth.getSession();
-      if (!data.session) { router.replace("/login"); return; }
-      setEmail(data.session.user.email ?? "");
-      load();
+      router.replace("/login");
     })();
   }, [router]);
 
